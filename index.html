@@ -9,7 +9,7 @@ layout: default
 
 <h2>Latest Analysis</h2>
 
-{% assign posts = site.published %}
+{% assign posts = site.published | sort: 'date' | reverse %}
 
 {% if posts.size > 0 %}
 <div class="posts-list">
