@@ -1,8 +1,8 @@
 # Site settings
 title: Eastbound Reports
 description: Russian media analysis and translation for English-speaking audiences
-baseurl: ""
-url: "https://petesumners.github.io/eastbound"
+baseurl: "/eastbound"
+url: "https://petesumners.github.io"
 twitter_username: eastboundreport
 github_username: PeteSumners
 
