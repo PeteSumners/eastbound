@@ -3,7 +3,7 @@ title: "TEST - My First Automated Post"
 subtitle: "Testing the Eastbound automation system"
 date: "2025-11-05"
 publish_time: "14:40"  # Time in UTC
-status: scheduled  # draft, scheduled, published
+status: published  # draft, scheduled, published
 type: weekly-analysis
 tags:
   - analysis
