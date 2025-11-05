@@ -13,7 +13,7 @@ layout: default
 <div class="posts-list">
     {% for post in site.posts limit:10 %}
     <article class="post-preview">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
         {% if post.subtitle %}
         <p class="subtitle">{{ post.subtitle }}</p>
         {% endif %}
@@ -28,7 +28,7 @@ layout: default
         {% if post.excerpt %}
         <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
         {% endif %}
-        <a href="{{ post.url | relative_url }}" class="read-more">Read full post →</a>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read full post →</a>
     </article>
     {% endfor %}
 </div>
