@@ -25,7 +25,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Create directories
-        run: mkdir -p research content/drafts content/published
+        run: mkdir -p research content/drafts content/_published
 
       - name: Monitor Russian media
         run: |
@@ -51,7 +51,7 @@ jobs:
             sed -i 's/status: draft/status: published/' "$DRAFT"
 
             # Move to published
-            mv "$DRAFT" "content/published/$(basename $DRAFT)"
+            mv "$DRAFT" "content/_published/$(basename $DRAFT)"
 
             echo "Published: $(basename $DRAFT)"
           fi
@@ -77,7 +77,7 @@ jobs:
           TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
           TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
         run: |
-          PUBLISHED=$(ls -t content/published/*.md 2>/dev/null | head -1)
+          PUBLISHED=$(ls -t content/_published/*.md 2>/dev/null | head -1)
 
           if [ -f "$PUBLISHED" ]; then
             python scripts/post_to_twitter.py --file "$PUBLISHED" || true
@@ -89,7 +89,7 @@ jobs:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_USER_URN: ${{ secrets.LINKEDIN_USER_URN }}
         run: |
-          PUBLISHED=$(ls -t content/published/*.md 2>/dev/null | head -1)
+          PUBLISHED=$(ls -t content/_published/*.md 2>/dev/null | head -1)
 
           if [ -f "$PUBLISHED" ]; then
             python scripts/post_to_linkedin.py --file "$PUBLISHED" || true

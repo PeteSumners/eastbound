@@ -19,7 +19,7 @@ collections:
 # Defaults
 defaults:
   - scope:
-      path: "content/published"
+      path: "content/_published"
       type: "published"
     values:
       layout: "post"
@@ -44,7 +44,7 @@ exclude:
 
 # Include published content
 include:
-  - content/published/
+  - content/_published/
 
 # Plugins
 plugins:
