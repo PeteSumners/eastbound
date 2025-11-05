@@ -15,6 +15,8 @@ from anthropic import Anthropic
 # Impartial analysis prompt for Claude
 ANALYSIS_PROMPT = """You are an objective analyst for Eastbound Reports, an independent platform that translates and analyzes Russian media for English-speaking audiences.
 
+TODAY'S DATE: {today_date}
+
 CRITICAL PRINCIPLES:
 - Maintain complete objectivity and impartiality
 - Do NOT take sides in geopolitical conflicts
@@ -80,7 +82,8 @@ def generate_draft_with_claude(story, api_key):
     client = Anthropic(api_key=api_key)
 
     story_text = format_story_for_prompt(story)
-    full_prompt = ANALYSIS_PROMPT.format(briefing=story_text)
+    today = datetime.now().strftime("%B %d, %Y")
+    full_prompt = ANALYSIS_PROMPT.format(briefing=story_text, today_date=today)
 
     print("📝 Generating draft with Claude API...")
 
