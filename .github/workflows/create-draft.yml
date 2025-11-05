@@ -1,0 +1,76 @@
+name: Create New Draft
+
+# This workflow creates a new draft post from a template
+on:
+  workflow_dispatch:
+    inputs:
+      type:
+        description: 'Content type'
+        required: true
+        type: choice
+        options:
+          - weekly-analysis
+          - translation
+      title:
+        description: 'Post title'
+        required: true
+        type: string
+      original_url:
+        description: 'Original Russian source URL (for translations)'
+        required: false
+        type: string
+      schedule_days:
+        description: 'Schedule N days from now (leave empty for today)'
+        required: false
+        type: string
+
+jobs:
+  create-draft:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Create draft
+        run: |
+          ARGS="--type ${{ github.event.inputs.type }} --title \"${{ github.event.inputs.title }}\""
+
+          if [ -n "${{ github.event.inputs.original_url }}" ]; then
+            ARGS="$ARGS --original-url \"${{ github.event.inputs.original_url }}\""
+          fi
+
+          if [ -n "${{ github.event.inputs.schedule_days }}" ]; then
+            ARGS="$ARGS --schedule-days ${{ github.event.inputs.schedule_days }}"
+          fi
+
+          echo "Creating draft with: $ARGS"
+          eval "python scripts/create_draft.py $ARGS"
+
+      - name: Commit new draft
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add content/drafts/
+          git diff --staged --quiet || git commit -m "Created draft: ${{ github.event.inputs.title }} [automated]"
+          git push
+
+      - name: Summary
+        run: |
+          echo "✅ Draft created successfully!"
+          echo ""
+          echo "📝 Next steps:"
+          echo "1. Pull the latest changes from the repo"
+          echo "2. Find your draft in content/drafts/"
+          echo "3. Fill in the content sections"
+          echo "4. Change status from 'draft' to 'scheduled' when ready"
+          echo "5. Push changes - the post will be published automatically at the scheduled time"

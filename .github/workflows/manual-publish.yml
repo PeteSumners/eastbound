@@ -1,0 +1,119 @@
+name: Manual Publish Post
+
+# This workflow allows you to manually publish a specific post from GitHub UI
+on:
+  workflow_dispatch:
+    inputs:
+      filename:
+        description: 'Filename to publish (e.g., 2024-11-05-my-post.md)'
+        required: true
+        type: string
+      skip_substack:
+        description: 'Skip Substack publishing'
+        required: false
+        type: boolean
+        default: false
+      skip_twitter:
+        description: 'Skip Twitter posting'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml markdown tweepy
+
+      - name: Find file to publish
+        id: find_file
+        run: |
+          FILENAME="${{ github.event.inputs.filename }}"
+
+          # Check drafts, scheduled, and published directories
+          for dir in drafts scheduled published; do
+            FILE_PATH="content/${dir}/${FILENAME}"
+            if [ -f "$FILE_PATH" ]; then
+              echo "Found file: $FILE_PATH"
+              echo "file_path=${FILE_PATH}" >> $GITHUB_OUTPUT
+              echo "found=true" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          done
+
+          echo "❌ Error: File not found: ${FILENAME}"
+          echo "Checked: content/drafts/, content/scheduled/, content/published/"
+          echo "found=false" >> $GITHUB_OUTPUT
+          exit 1
+
+      - name: Publish to Substack
+        if: steps.find_file.outputs.found == 'true' && github.event.inputs.skip_substack != 'true'
+        env:
+          SUBSTACK_EMAIL: ${{ secrets.SUBSTACK_EMAIL }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: |
+          # First move to scheduled if it's in drafts
+          FILE_PATH="${{ steps.find_file.outputs.file_path }}"
+
+          if [[ "$FILE_PATH" == content/drafts/* ]]; then
+            echo "Moving draft to scheduled..."
+            FILENAME=$(basename "$FILE_PATH")
+            mkdir -p content/scheduled
+            cp "$FILE_PATH" "content/scheduled/$FILENAME"
+            FILE_PATH="content/scheduled/$FILENAME"
+
+            # Update status to scheduled
+            sed -i 's/status: draft/status: scheduled/' "$FILE_PATH"
+          fi
+
+          echo "Publishing: $FILE_PATH"
+          python scripts/publish_to_substack.py --file "$FILE_PATH"
+
+      - name: Post to Twitter/X
+        if: steps.find_file.outputs.found == 'true' && github.event.inputs.skip_twitter != 'true'
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: |
+          # Wait for Substack to process
+          if [ "${{ github.event.inputs.skip_substack }}" != "true" ]; then
+            echo "Waiting 3 minutes for Substack to process..."
+            sleep 180
+          fi
+
+          # Find published file
+          FILENAME=$(basename "${{ steps.find_file.outputs.file_path }}")
+          PUBLISHED_FILE="content/published/${FILENAME}"
+
+          if [ -f "$PUBLISHED_FILE" ]; then
+            echo "Posting to Twitter: $PUBLISHED_FILE"
+            python scripts/post_to_twitter.py --file "$PUBLISHED_FILE"
+          else
+            echo "Warning: Published file not found: $PUBLISHED_FILE"
+          fi
+
+      - name: Commit changes
+        if: steps.find_file.outputs.found == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add content/
+          git diff --staged --quiet || git commit -m "Published: ${{ github.event.inputs.filename }} [manual]"
+          git push
