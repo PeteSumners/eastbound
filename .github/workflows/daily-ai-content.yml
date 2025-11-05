@@ -1,4 +1,5 @@
 name: Daily AI Content Generation
+# Automated Russian media monitoring and AI content generation
 
 on:
   schedule:
