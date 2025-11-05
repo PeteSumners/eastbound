@@ -86,7 +86,7 @@ def generate_draft_with_claude(story, api_key):
 
     try:
         message = client.messages.create(
-            model="claude-3-sonnet-20240229",
+            model="claude-haiku-4-5-20251001",
             max_tokens=4000,
             temperature=0.7,
             messages=[{
