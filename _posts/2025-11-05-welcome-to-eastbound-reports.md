@@ -1,8 +1,7 @@
 ---
 title: "Welcome to Eastbound Reports"
 subtitle: "Introducing an independent, open-source platform for Russian media analysis"
-date: "2025-11-05"
-publish_time: "15:45"
+date: 2025-11-05 15:45:00 +0000
 status: published
 type: weekly-analysis
 tags:
