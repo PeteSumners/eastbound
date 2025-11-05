@@ -1,0 +1,84 @@
+name: Daily AI Content
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Daily at 8 AM UTC
+  workflow_dispatch:
+    inputs:
+      auto_publish:
+        description: 'Auto-publish (true) or create draft (false)'
+        type: boolean
+        default: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create directories
+        run: mkdir -p research content/drafts content/published
+
+      - name: Monitor Russian media
+        run: |
+          python scripts/monitor_russian_media.py \
+            --output "research/$(date -u +%Y-%m-%d)-briefing.json"
+
+      - name: Generate AI content
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python scripts/generate_ai_draft.py \
+            --briefing "research/$(date -u +%Y-%m-%d)-briefing.json" \
+            --output "content/drafts/"
+
+      - name: Auto-publish
+        if: github.event.inputs.auto_publish != 'false' && github.event_name == 'schedule'
+        run: |
+          # Find latest draft
+          DRAFT=$(ls -t content/drafts/*.md 2>/dev/null | head -1)
+
+          if [ -f "$DRAFT" ]; then
+            # Update frontmatter: draft -> published
+            sed -i 's/status: draft/status: published/' "$DRAFT"
+
+            # Move to published
+            mv "$DRAFT" "content/published/$(basename $DRAFT)"
+
+            echo "Published: $(basename $DRAFT)"
+          fi
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add content/ research/
+
+          if ! git diff --staged --quiet; then
+            git commit -m "AI content: $(date -u +%Y-%m-%d) [automated]"
+            git push
+          fi
+
+      - name: Post to Twitter
+        if: github.event.inputs.auto_publish != 'false' && github.event_name == 'schedule'
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: |
+          PUBLISHED=$(ls -t content/published/*.md 2>/dev/null | head -1)
+
+          if [ -f "$PUBLISHED" ]; then
+            python scripts/post_to_twitter.py --file "$PUBLISHED" || true
+          fi

@@ -1,0 +1,71 @@
+name: Publish Post
+
+on:
+  workflow_dispatch:
+    inputs:
+      filename:
+        description: 'Filename to publish (e.g., 2025-11-05-my-post.md)'
+        required: true
+      post_to_twitter:
+        description: 'Post to Twitter'
+        type: boolean
+        default: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Publish post
+        run: |
+          FILE="${{ github.event.inputs.filename }}"
+
+          # Find file in drafts or scheduled
+          if [ -f "content/drafts/$FILE" ]; then
+            SOURCE="content/drafts/$FILE"
+          elif [ -f "content/scheduled/$FILE" ]; then
+            SOURCE="content/scheduled/$FILE"
+          else
+            echo "ERROR: File not found: $FILE"
+            exit 1
+          fi
+
+          # Update status
+          sed -i 's/status: draft/status: published/' "$SOURCE"
+          sed -i 's/status: scheduled/status: published/' "$SOURCE"
+
+          # Remove scheduled_time if present
+          sed -i '/^scheduled_time:/d' "$SOURCE"
+
+          # Move to published
+          mkdir -p content/published
+          mv "$SOURCE" "content/published/$FILE"
+
+          echo "PUBLISHED_FILE=content/published/$FILE" >> $GITHUB_ENV
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add content/
+          git commit -m "Publish: ${{ github.event.inputs.filename }}"
+          git push
+
+      - name: Post to Twitter
+        if: github.event.inputs.post_to_twitter == 'true'
+        env:
+          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+        run: |
+          pip install tweepy pyyaml
+          python scripts/post_to_twitter.py --file "$PUBLISHED_FILE" || true
