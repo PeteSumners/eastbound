@@ -8,7 +8,6 @@ github_username: PeteSumners
 
 # Build settings
 markdown: kramdown
-theme: minima
 
 # Use content/published as the posts directory
 collections_dir: content
