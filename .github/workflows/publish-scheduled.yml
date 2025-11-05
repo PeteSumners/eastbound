@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pyyaml markdown tweepy
+          pip install pyyaml tweepy
 
       - name: Find posts ready to publish
         id: find_posts
@@ -67,18 +67,21 @@ jobs:
             echo "posts=" >> $GITHUB_OUTPUT
           fi
 
-      - name: Publish to Substack
+      - name: Move to published
         if: steps.find_posts.outputs.posts != ''
-        env:
-          SUBSTACK_EMAIL: ${{ secrets.SUBSTACK_EMAIL }}
-          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
         run: |
           for file in ${{ steps.find_posts.outputs.posts }}; do
+            FILENAME=$(basename "$file")
             echo "Publishing: $file"
-            python scripts/publish_to_substack.py --file "$file"
+
+            # Update status to published
+            sed -i 's/status: scheduled/status: published/' "$file"
+
+            # Move to published directory
+            mkdir -p content/published
+            mv "$file" "content/published/$FILENAME"
+
+            echo "✅ Published: content/published/$FILENAME"
           done
 
       - name: Post to Twitter/X
@@ -90,21 +93,24 @@ jobs:
           TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
           TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
         run: |
-          # Wait a few minutes for Substack to process the email
-          echo "Waiting 3 minutes for Substack to process..."
-          sleep 180
-
           for file in ${{ steps.find_posts.outputs.posts }}; do
-            # File has been moved to published/ by publish_to_substack.py
-            published_file=$(echo "$file" | sed 's/scheduled/published/')
+            FILENAME=$(basename "$file")
+            PUBLISHED_FILE="content/published/${FILENAME}"
 
-            if [ -f "$published_file" ]; then
-              echo "Posting to Twitter: $published_file"
-              python scripts/post_to_twitter.py --file "$published_file"
-            else
-              echo "Warning: Published file not found: $published_file"
+            if [ -f "$PUBLISHED_FILE" ]; then
+              echo "Posting to Twitter: $PUBLISHED_FILE"
+              python scripts/post_to_twitter.py --file "$PUBLISHED_FILE" || echo "Twitter posting failed, continuing..."
             fi
           done
+
+      - name: Trigger GitHub Pages rebuild
+        if: steps.find_posts.outputs.posts != ''
+        run: |
+          # Create an empty commit to trigger Pages rebuild
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Pages will rebuild automatically when we push
 
       - name: Commit changes
         if: steps.find_posts.outputs.posts != ''

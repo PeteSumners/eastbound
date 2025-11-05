@@ -1,0 +1,167 @@
+---
+layout: default
+---
+
+<article class="post">
+    <header class="post-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <p class="subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+        <div class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%B %d, %Y" }}
+            </time>
+            {% if page.author %}
+            <span class="author">by {{ page.author }}</span>
+            {% endif %}
+        </div>
+        {% if page.tags %}
+        <div class="post-tags">
+            {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <footer class="post-footer">
+        <p>
+            <strong>Share this post:</strong>
+            <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}&via={{ site.twitter_username }}" target="_blank">Twitter</a>
+        </p>
+
+        <div class="subscribe-cta">
+            <h3>Stay Updated</h3>
+            <p>Follow <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">@{{ site.twitter_username }}</a> for updates, or subscribe via <a href="{{ site.baseurl }}/feed.xml">RSS</a>.</p>
+        </div>
+    </footer>
+</article>
+
+<style>
+    .post-header {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #ecf0f1;
+    }
+
+    .post-header h1 {
+        font-size: 2.5em;
+        line-height: 1.2;
+        margin-bottom: 10px;
+        color: #2c3e50;
+    }
+
+    .subtitle {
+        font-size: 1.3em;
+        color: #7f8c8d;
+        font-weight: 300;
+        margin-bottom: 15px;
+    }
+
+    .post-meta {
+        color: #95a5a6;
+        font-size: 0.95em;
+    }
+
+    .post-meta time {
+        margin-right: 15px;
+    }
+
+    .post-tags {
+        margin-top: 15px;
+    }
+
+    .tag {
+        display: inline-block;
+        background: #ecf0f1;
+        color: #7f8c8d;
+        padding: 4px 12px;
+        border-radius: 3px;
+        font-size: 0.85em;
+        margin-right: 8px;
+    }
+
+    .post-content {
+        font-size: 1.1em;
+        line-height: 1.8;
+        margin-bottom: 40px;
+    }
+
+    .post-content h2 {
+        font-size: 1.8em;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+
+    .post-content h3 {
+        font-size: 1.4em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        color: #34495e;
+    }
+
+    .post-content p {
+        margin-bottom: 20px;
+    }
+
+    .post-content ul, .post-content ol {
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    .post-content li {
+        margin-bottom: 10px;
+    }
+
+    .post-content a {
+        color: #3498db;
+        text-decoration: none;
+        border-bottom: 1px solid #3498db;
+    }
+
+    .post-content a:hover {
+        background: #e8f4f8;
+    }
+
+    .post-content blockquote {
+        border-left: 4px solid #3498db;
+        padding-left: 20px;
+        margin: 30px 0;
+        color: #555;
+        font-style: italic;
+    }
+
+    .post-content strong {
+        color: #2c3e50;
+        font-weight: 600;
+    }
+
+    .post-footer {
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 2px solid #ecf0f1;
+    }
+
+    .subscribe-cta {
+        background: #e8f4f8;
+        padding: 25px;
+        border-radius: 8px;
+        margin-top: 30px;
+    }
+
+    .subscribe-cta h3 {
+        margin-bottom: 10px;
+        color: #2c3e50;
+    }
+
+    .subscribe-cta a {
+        color: #3498db;
+        font-weight: 500;
+    }
+</style>

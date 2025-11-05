@@ -1,0 +1,60 @@
+# Site settings
+title: Eastbound Reports
+description: Russian media analysis and translation for English-speaking audiences
+baseurl: ""
+url: "https://petesumners.github.io/eastbound"
+twitter_username: eastboundreport
+github_username: PeteSumners
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Use content/published as the posts directory
+collections_dir: content
+collections:
+  published:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: "content/published"
+      type: "published"
+    values:
+      layout: "post"
+      comments: false
+
+# Exclude from processing
+exclude:
+  - scripts/
+  - content/drafts/
+  - content/scheduled/
+  - templates/
+  - .github/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - CLAUDE.md
+  - PHASE1_GAMEPLAN.md
+  - AUTOMATION_SETUP.md
+  - QUICK_REFERENCE.md
+
+# Include published content
+include:
+  - content/published/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# RSS Feed
+feed:
+  path: feed.xml
+
+# SEO
+lang: en_US

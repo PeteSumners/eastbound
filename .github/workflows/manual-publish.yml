@@ -8,11 +8,6 @@ on:
         description: 'Filename to publish (e.g., 2024-11-05-my-post.md)'
         required: true
         type: string
-      skip_substack:
-        description: 'Skip Substack publishing'
-        required: false
-        type: boolean
-        default: false
       skip_twitter:
         description: 'Skip Twitter posting'
         required: false
@@ -34,7 +29,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pyyaml markdown tweepy
+          pip install pyyaml tweepy
 
       - name: Find file to publish
         id: find_file
@@ -57,18 +52,12 @@ jobs:
           echo "found=false" >> $GITHUB_OUTPUT
           exit 1
 
-      - name: Publish to Substack
-        if: steps.find_file.outputs.found == 'true' && github.event.inputs.skip_substack != 'true'
-        env:
-          SUBSTACK_EMAIL: ${{ secrets.SUBSTACK_EMAIL }}
-          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
-          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      - name: Publish post
+        if: steps.find_file.outputs.found == 'true'
         run: |
-          # First move to scheduled if it's in drafts
           FILE_PATH="${{ steps.find_file.outputs.file_path }}"
 
+          # If in drafts, move to scheduled first
           if [[ "$FILE_PATH" == content/drafts/* ]]; then
             echo "Moving draft to scheduled..."
             FILENAME=$(basename "$FILE_PATH")
@@ -80,8 +69,19 @@ jobs:
             sed -i 's/status: draft/status: scheduled/' "$FILE_PATH"
           fi
 
+          # Move to published
+          FILENAME=$(basename "$FILE_PATH")
           echo "Publishing: $FILE_PATH"
-          python scripts/publish_to_substack.py --file "$FILE_PATH"
+
+          # Update status to published
+          sed -i 's/status: scheduled/status: published/' "$FILE_PATH"
+          sed -i 's/status: draft/status: published/' "$FILE_PATH"
+
+          # Move to published directory
+          mkdir -p content/published
+          mv "$FILE_PATH" "content/published/$FILENAME"
+
+          echo "✅ Published to: content/published/$FILENAME"
 
       - name: Post to Twitter/X
         if: steps.find_file.outputs.found == 'true' && github.event.inputs.skip_twitter != 'true'
@@ -92,19 +92,12 @@ jobs:
           TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
           TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
         run: |
-          # Wait for Substack to process
-          if [ "${{ github.event.inputs.skip_substack }}" != "true" ]; then
-            echo "Waiting 3 minutes for Substack to process..."
-            sleep 180
-          fi
-
-          # Find published file
           FILENAME=$(basename "${{ steps.find_file.outputs.file_path }}")
           PUBLISHED_FILE="content/published/${FILENAME}"
 
           if [ -f "$PUBLISHED_FILE" ]; then
             echo "Posting to Twitter: $PUBLISHED_FILE"
-            python scripts/post_to_twitter.py --file "$PUBLISHED_FILE"
+            python scripts/post_to_twitter.py --file "$PUBLISHED_FILE" || echo "Twitter posting failed, continuing..."
           else
             echo "Warning: Published file not found: $PUBLISHED_FILE"
           fi

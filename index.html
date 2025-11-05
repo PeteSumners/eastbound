@@ -1,0 +1,113 @@
+---
+layout: default
+---
+
+<div class="mission">
+    <h3>Our Mission</h3>
+    <p>Eastbound Reports provides accurate translations, context, and analysis of Russian media sources to English-speaking audiences. We help readers understand Russian perspectives, compare them with Western coverage, and navigate the complex information landscape between Russia and the West.</p>
+</div>
+
+<h2>Latest Analysis</h2>
+
+{% assign posts = site.published %}
+
+{% if posts.size > 0 %}
+<div class="posts-list">
+    {% for post in posts limit:10 %}
+    <article class="post-preview">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.subtitle %}
+        <p class="subtitle">{{ post.subtitle }}</p>
+        {% endif %}
+        <div class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%B %d, %Y" }}
+            </time>
+            {% if post.type %}
+            <span class="post-type">{{ post.type }}</span>
+            {% endif %}
+        </div>
+        {% if post.excerpt %}
+        <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+        {% endif %}
+        <a href="{{ post.url | relative_url }}" class="read-more">Read full post →</a>
+    </article>
+    {% endfor %}
+</div>
+{% else %}
+<p class="no-posts">No posts published yet. Check back soon!</p>
+{% endif %}
+
+<style>
+    .posts-list {
+        margin-top: 30px;
+    }
+
+    .post-preview {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #ecf0f1;
+    }
+
+    .post-preview:last-child {
+        border-bottom: none;
+    }
+
+    .post-preview h3 {
+        font-size: 1.8em;
+        margin-bottom: 8px;
+    }
+
+    .post-preview h3 a {
+        color: #2c3e50;
+        text-decoration: none;
+    }
+
+    .post-preview h3 a:hover {
+        color: #3498db;
+    }
+
+    .post-preview .subtitle {
+        font-size: 1.1em;
+        color: #7f8c8d;
+        margin-bottom: 12px;
+    }
+
+    .post-preview .post-meta {
+        color: #95a5a6;
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+
+    .post-type {
+        display: inline-block;
+        background: #ecf0f1;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 0.85em;
+        margin-left: 10px;
+    }
+
+    .excerpt {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .read-more {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    .no-posts {
+        text-align: center;
+        color: #95a5a6;
+        padding: 60px 20px;
+        font-size: 1.1em;
+    }
+</style>
