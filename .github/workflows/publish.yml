@@ -10,6 +10,10 @@ on:
         description: 'Post to Twitter'
         type: boolean
         default: true
+      post_to_linkedin:
+        description: 'Post to LinkedIn'
+        type: boolean
+        default: true
 
 jobs:
   publish:
@@ -69,3 +73,12 @@ jobs:
         run: |
           pip install tweepy pyyaml
           python scripts/post_to_twitter.py --file "$PUBLISHED_FILE" || true
+
+      - name: Post to LinkedIn
+        if: github.event.inputs.post_to_linkedin == 'true'
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_USER_URN: ${{ secrets.LINKEDIN_USER_URN }}
+        run: |
+          pip install requests pyyaml
+          python scripts/post_to_linkedin.py --file "$PUBLISHED_FILE" || true

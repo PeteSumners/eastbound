@@ -82,3 +82,15 @@ jobs:
           if [ -f "$PUBLISHED" ]; then
             python scripts/post_to_twitter.py --file "$PUBLISHED" || true
           fi
+
+      - name: Post to LinkedIn
+        if: github.event.inputs.auto_publish != 'false' && github.event_name == 'schedule'
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_USER_URN: ${{ secrets.LINKEDIN_USER_URN }}
+        run: |
+          PUBLISHED=$(ls -t content/published/*.md 2>/dev/null | head -1)
+
+          if [ -f "$PUBLISHED" ]; then
+            python scripts/post_to_linkedin.py --file "$PUBLISHED" || true
+          fi
