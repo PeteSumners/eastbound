@@ -79,11 +79,12 @@ def publish_via_email(frontmatter, content_html, content_md):
     msg = MIMEMultipart('alternative')
     msg['From'] = smtp_username
     msg['To'] = substack_email
-    msg['Subject'] = frontmatter.get('title', 'Untitled Post')
 
-    # Add subtitle if present
+    # Build subject line (set once to avoid multiple Subject headers)
+    subject = frontmatter.get('title', 'Untitled Post')
     if frontmatter.get('subtitle'):
-        msg['Subject'] += f" - {frontmatter['subtitle']}"
+        subject += f" - {frontmatter['subtitle']}"
+    msg['Subject'] = subject
 
     # Attach both plain text and HTML versions
     part_text = MIMEText(content_md, 'plain', 'utf-8')
