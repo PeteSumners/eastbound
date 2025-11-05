@@ -41,7 +41,7 @@ jobs:
           TODAY=$(date -u +"%Y-%m-%d")
           BRIEFING="research/${TODAY}-briefing.json"
 
-          echo "📡 Monitoring Russian media..."
+          echo "Monitoring Russian media..."
           python scripts/monitor_russian_media.py --output "$BRIEFING"
 
           echo "briefing_file=${BRIEFING}" >> $GITHUB_OUTPUT
@@ -51,7 +51,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          echo "🤖 Generating draft with Claude AI..."
+          echo "Generating draft with Claude AI..."
           python scripts/generate_ai_draft.py \
             --briefing "${{ steps.monitor.outputs.briefing_file }}" \
             --output "content/drafts/"
@@ -64,10 +64,10 @@ jobs:
           if [ -f "$LATEST_DRAFT" ]; then
             echo "draft_file=${LATEST_DRAFT}" >> $GITHUB_OUTPUT
             echo "found=true" >> $GITHUB_OUTPUT
-            echo "✅ Draft found: $LATEST_DRAFT"
+            echo "Draft found: $LATEST_DRAFT"
           else
             echo "found=false" >> $GITHUB_OUTPUT
-            echo "❌ No draft generated"
+            echo "No draft generated"
           fi
 
       - name: Auto-publish draft (if enabled)
@@ -78,7 +78,7 @@ jobs:
           DRAFT_FILE="${{ steps.find_draft.outputs.draft_file }}"
           FILENAME=$(basename "$DRAFT_FILE")
 
-          echo "🚀 Auto-publishing draft: $FILENAME"
+          echo "Auto-publishing draft: $FILENAME"
 
           # Update status to published and move to published/
           sed -i 's/status: draft/status: published/' "$DRAFT_FILE"
@@ -86,7 +86,7 @@ jobs:
           mkdir -p content/published
           mv "$DRAFT_FILE" "content/published/$FILENAME"
 
-          echo "✅ Published: content/published/$FILENAME"
+          echo "Published: content/published/$FILENAME"
 
       - name: Create review issue (if not auto-published)
         if: |
@@ -157,7 +157,7 @@ jobs:
           PUBLISHED_FILE="content/published/${FILENAME}"
 
           if [ -f "$PUBLISHED_FILE" ]; then
-            echo "🐦 Posting to Twitter..."
+            echo "Posting to Twitter..."
             python scripts/post_to_twitter.py --file "$PUBLISHED_FILE" || echo "Twitter posting failed, continuing..."
           fi
 
@@ -165,10 +165,10 @@ jobs:
         if: steps.find_draft.outputs.found == 'true'
         run: |
           if [ "${{ github.event.inputs.auto_publish }}" == "true" ] || [ "${{ github.event_name }}" == "schedule" ]; then
-            echo "✅ AI-generated content auto-published"
-            echo "🌐 Check: https://petesumners.github.io/eastbound"
+            echo "AI-generated content auto-published"
+            echo "Check: https://petesumners.github.io/eastbound"
           else
-            echo "✅ AI-generated draft created"
-            echo "📝 Review required before publishing"
-            echo "📋 Check GitHub Issues for review task"
+            echo "AI-generated draft created"
+            echo "Review required before publishing"
+            echo "Check GitHub Issues for review task"
           fi

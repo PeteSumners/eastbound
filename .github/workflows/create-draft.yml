@@ -1,6 +1,5 @@
 name: Create New Draft
 
-# This workflow creates a new draft post from a template
 on:
   workflow_dispatch:
     inputs:
@@ -15,14 +14,15 @@ on:
         description: 'Post title'
         required: true
         type: string
-      original_url:
-        description: 'Original Russian source URL (for translations)'
+      url:
+        description: 'Source URL (optional)'
         required: false
         type: string
       schedule_days:
-        description: 'Schedule N days from now (leave empty for today)'
+        description: 'Days until publish (0 for draft only)'
         required: false
-        type: string
+        type: number
+        default: 0
 
 jobs:
   create-draft:
@@ -43,34 +43,17 @@ jobs:
 
       - name: Create draft
         run: |
-          ARGS="--type ${{ github.event.inputs.type }} --title \"${{ github.event.inputs.title }}\""
-
-          if [ -n "${{ github.event.inputs.original_url }}" ]; then
-            ARGS="$ARGS --original-url \"${{ github.event.inputs.original_url }}\""
-          fi
-
-          if [ -n "${{ github.event.inputs.schedule_days }}" ]; then
-            ARGS="$ARGS --schedule-days ${{ github.event.inputs.schedule_days }}"
-          fi
-
-          echo "Creating draft with: $ARGS"
-          eval "python scripts/create_draft.py $ARGS"
+          python scripts/create_draft.py \
+            --type "${{ github.event.inputs.type }}" \
+            --title "${{ github.event.inputs.title }}" \
+            ${{ github.event.inputs.url && format('--url "{0}"', github.event.inputs.url) || '' }} \
+            ${{ github.event.inputs.schedule_days != '0' && format('--schedule-days {0}', github.event.inputs.schedule_days) || '' }}
 
       - name: Commit new draft
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add content/drafts/
-          git diff --staged --quiet || git commit -m "Created draft: ${{ github.event.inputs.title }} [automated]"
-          git push
 
-      - name: Summary
-        run: |
-          echo "✅ Draft created successfully!"
-          echo ""
-          echo "📝 Next steps:"
-          echo "1. Pull the latest changes from the repo"
-          echo "2. Find your draft in content/drafts/"
-          echo "3. Fill in the content sections"
-          echo "4. Change status from 'draft' to 'scheduled' when ready"
-          echo "5. Push changes - the post will be published automatically at the scheduled time"
+          git add content/
+          git commit -m "Created draft: ${{ github.event.inputs.title }} [automated]"
+          git push

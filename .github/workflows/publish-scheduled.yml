@@ -1,16 +1,13 @@
 name: Publish Scheduled Posts
 
-# This workflow runs every hour to check for posts that are ready to publish
 on:
   schedule:
-    # Run every hour at minute 0
+    # Check every hour for scheduled posts
     - cron: '0 * * * *'
-
-  # Allow manual trigger
   workflow_dispatch:
 
 jobs:
-  publish:
+  publish-scheduled:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,68 +21,89 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pyyaml tweepy
+          pip install pyyaml
 
-      - name: Find posts ready to publish
-        id: find_posts
+      - name: Check for scheduled posts
+        id: check
         run: |
-          echo "Checking for scheduled posts..."
+          python - <<'EOF'
+          import os
+          import yaml
+          from datetime import datetime, timezone
+          from pathlib import Path
 
-          # Get current date and time
-          CURRENT_DATETIME=$(date -u +"%Y-%m-%d %H:%M")
-          echo "Current UTC time: $CURRENT_DATETIME"
+          scheduled_dir = Path("content/scheduled")
+          if not scheduled_dir.exists():
+              print("No scheduled directory found")
+              exit(0)
 
-          # Find all markdown files in scheduled directory
-          if [ -d "content/scheduled" ]; then
-            POSTS_TO_PUBLISH=""
+          now = datetime.now(timezone.utc)
+          published_any = False
 
-            for file in content/scheduled/*.md; do
-              if [ -f "$file" ]; then
-                # Extract date and time from frontmatter
-                POST_DATE=$(grep "^date:" "$file" | cut -d'"' -f2 | tr -d ' ')
-                POST_TIME=$(grep "^publish_time:" "$file" | cut -d'"' -f2 | tr -d ' ')
-                POST_STATUS=$(grep "^status:" "$file" | awk '{print $2}' | tr -d ' ')
+          for md_file in scheduled_dir.glob("*.md"):
+              with open(md_file, 'r', encoding='utf-8') as f:
+                  content = f.read()
 
-                echo "Found: $file (date: $POST_DATE, time: $POST_TIME, status: $POST_STATUS)"
+              # Parse frontmatter
+              if content.startswith('---'):
+                  parts = content.split('---', 2)
+                  if len(parts) >= 3:
+                      frontmatter = yaml.safe_load(parts[1])
 
-                # Check if post is scheduled and time has passed
-                if [ "$POST_STATUS" = "scheduled" ]; then
-                  POST_DATETIME="${POST_DATE} ${POST_TIME}"
-                  if [[ "$POST_DATETIME" < "$CURRENT_DATETIME" ]]; then
-                    echo "  ✅ Ready to publish: $file"
-                    POSTS_TO_PUBLISH="${POSTS_TO_PUBLISH} ${file}"
-                  else
-                    echo "  ⏰ Not yet time: $file"
-                  fi
-                fi
-              fi
-            done
+                      # Check if scheduled time has passed
+                      scheduled_time = frontmatter.get('scheduled_time')
+                      if scheduled_time:
+                          scheduled_dt = datetime.fromisoformat(scheduled_time.replace('Z', '+00:00'))
 
-            echo "posts=${POSTS_TO_PUBLISH}" >> $GITHUB_OUTPUT
-          else
-            echo "No scheduled directory found"
-            echo "posts=" >> $GITHUB_OUTPUT
-          fi
+                          if scheduled_dt <= now:
+                              print(f"Publishing: {md_file.name}")
 
-      - name: Move to published
-        if: steps.find_posts.outputs.posts != ''
+                              # Update status to published
+                              frontmatter['status'] = 'published'
+                              del frontmatter['scheduled_time']
+
+                              # Reconstruct file
+                              new_content = f"---\n{yaml.dump(frontmatter, default_flow_style=False)}---{parts[2]}"
+
+                              # Move to published
+                              published_dir = Path("content/published")
+                              published_dir.mkdir(exist_ok=True)
+
+                              new_path = published_dir / md_file.name
+                              with open(new_path, 'w', encoding='utf-8') as f:
+                                  f.write(new_content)
+
+                              # Remove from scheduled
+                              md_file.unlink()
+
+                              published_any = True
+
+                              # Save filename for Twitter
+                              with open('published_file.txt', 'w') as f:
+                                  f.write(str(new_path))
+
+          if published_any:
+              print("published=true")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                  f.write("published=true\n")
+          else:
+              print("published=false")
+              with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                  f.write("published=false\n")
+          EOF
+
+      - name: Commit published posts
+        if: steps.check.outputs.published == 'true'
         run: |
-          for file in ${{ steps.find_posts.outputs.posts }}; do
-            FILENAME=$(basename "$file")
-            echo "Publishing: $file"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
 
-            # Update status to published
-            sed -i 's/status: scheduled/status: published/' "$file"
+          git add content/
+          git commit -m "Auto-publish scheduled post(s) [automated]"
+          git push
 
-            # Move to published directory
-            mkdir -p content/published
-            mv "$file" "content/published/$FILENAME"
-
-            echo "✅ Published: content/published/$FILENAME"
-          done
-
-      - name: Post to Twitter/X
-        if: steps.find_posts.outputs.posts != ''
+      - name: Post to Twitter
+        if: steps.check.outputs.published == 'true'
         env:
           TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
           TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
@@ -93,30 +111,10 @@ jobs:
           TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
           TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
         run: |
-          for file in ${{ steps.find_posts.outputs.posts }}; do
-            FILENAME=$(basename "$file")
-            PUBLISHED_FILE="content/published/${FILENAME}"
+          pip install tweepy pyyaml
 
-            if [ -f "$PUBLISHED_FILE" ]; then
-              echo "Posting to Twitter: $PUBLISHED_FILE"
-              python scripts/post_to_twitter.py --file "$PUBLISHED_FILE" || echo "Twitter posting failed, continuing..."
-            fi
-          done
-
-      - name: Trigger GitHub Pages rebuild
-        if: steps.find_posts.outputs.posts != ''
-        run: |
-          # Create an empty commit to trigger Pages rebuild
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-
-          # Pages will rebuild automatically when we push
-
-      - name: Commit changes
-        if: steps.find_posts.outputs.posts != ''
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add content/
-          git diff --staged --quiet || git commit -m "Published scheduled posts [automated]"
-          git push
+          if [ -f published_file.txt ]; then
+            PUBLISHED_FILE=$(cat published_file.txt)
+            echo "Posting to Twitter..."
+            python scripts/post_to_twitter.py --file "$PUBLISHED_FILE" || echo "Twitter posting failed, continuing..."
+          fi

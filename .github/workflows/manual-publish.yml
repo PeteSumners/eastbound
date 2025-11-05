@@ -1,11 +1,10 @@
-name: Manual Publish Post
+name: Manual Publish
 
-# This workflow allows you to manually publish a specific post from GitHub UI
 on:
   workflow_dispatch:
     inputs:
       filename:
-        description: 'Filename to publish (e.g., 2024-11-05-my-post.md)'
+        description: 'Filename to publish (e.g., 2025-11-05-my-post.md)'
         required: true
         type: string
       skip_twitter:
@@ -29,62 +28,81 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pyyaml tweepy
-
-      - name: Find file to publish
-        id: find_file
-        run: |
-          FILENAME="${{ github.event.inputs.filename }}"
-
-          # Check drafts, scheduled, and published directories
-          for dir in drafts scheduled published; do
-            FILE_PATH="content/${dir}/${FILENAME}"
-            if [ -f "$FILE_PATH" ]; then
-              echo "Found file: $FILE_PATH"
-              echo "file_path=${FILE_PATH}" >> $GITHUB_OUTPUT
-              echo "found=true" >> $GITHUB_OUTPUT
-              exit 0
-            fi
-          done
-
-          echo "❌ Error: File not found: ${FILENAME}"
-          echo "Checked: content/drafts/, content/scheduled/, content/published/"
-          echo "found=false" >> $GITHUB_OUTPUT
-          exit 1
+          pip install pyyaml
 
       - name: Publish post
-        if: steps.find_file.outputs.found == 'true'
+        id: publish
         run: |
-          FILE_PATH="${{ steps.find_file.outputs.file_path }}"
+          python - <<'EOF'
+          import os
+          import yaml
+          from pathlib import Path
 
-          # If in drafts, move to scheduled first
-          if [[ "$FILE_PATH" == content/drafts/* ]]; then
-            echo "Moving draft to scheduled..."
-            FILENAME=$(basename "$FILE_PATH")
-            mkdir -p content/scheduled
-            cp "$FILE_PATH" "content/scheduled/$FILENAME"
-            FILE_PATH="content/scheduled/$FILENAME"
+          filename = "${{ github.event.inputs.filename }}"
 
-            # Update status to scheduled
-            sed -i 's/status: draft/status: scheduled/' "$FILE_PATH"
-          fi
+          # Find the file in drafts or scheduled
+          draft_file = Path(f"content/drafts/{filename}")
+          scheduled_file = Path(f"content/scheduled/{filename}")
 
-          # Move to published
-          FILENAME=$(basename "$FILE_PATH")
-          echo "Publishing: $FILE_PATH"
+          source_file = None
+          if draft_file.exists():
+              source_file = draft_file
+          elif scheduled_file.exists():
+              source_file = scheduled_file
+          else:
+              print(f"ERROR: File not found: {filename}")
+              exit(1)
 
-          # Update status to published
-          sed -i 's/status: scheduled/status: published/' "$FILE_PATH"
-          sed -i 's/status: draft/status: published/' "$FILE_PATH"
+          # Read and update frontmatter
+          with open(source_file, 'r', encoding='utf-8') as f:
+              content = f.read()
 
-          # Move to published directory
-          mkdir -p content/published
-          mv "$FILE_PATH" "content/published/$FILENAME"
+          if content.startswith('---'):
+              parts = content.split('---', 2)
+              if len(parts) >= 3:
+                  frontmatter = yaml.safe_load(parts[1])
 
-          echo "✅ Published to: content/published/$FILENAME"
+                  # Update status
+                  frontmatter['status'] = 'published'
+                  if 'scheduled_time' in frontmatter:
+                      del frontmatter['scheduled_time']
 
-      - name: Post to Twitter/X
-        if: steps.find_file.outputs.found == 'true' && github.event.inputs.skip_twitter != 'true'
+                  # Reconstruct file
+                  new_content = f"---\n{yaml.dump(frontmatter, default_flow_style=False)}---{parts[2]}"
+
+                  # Move to published
+                  published_dir = Path("content/published")
+                  published_dir.mkdir(exist_ok=True)
+
+                  new_path = published_dir / filename
+                  with open(new_path, 'w', encoding='utf-8') as f:
+                      f.write(new_content)
+
+                  # Remove from source
+                  source_file.unlink()
+
+                  print(f"Published: {new_path}")
+
+                  # Save for Twitter
+                  with open('published_file.txt', 'w') as f:
+                      f.write(str(new_path))
+
+                  with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                      f.write("success=true\n")
+          EOF
+
+      - name: Commit changes
+        if: steps.publish.outputs.success == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add content/
+          git commit -m "Published: ${{ github.event.inputs.filename }} [manual]"
+          git push
+
+      - name: Post to Twitter
+        if: steps.publish.outputs.success == 'true' && github.event.inputs.skip_twitter != 'true'
         env:
           TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
           TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
@@ -92,21 +110,10 @@ jobs:
           TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
           TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
         run: |
-          FILENAME=$(basename "${{ steps.find_file.outputs.file_path }}")
-          PUBLISHED_FILE="content/published/${FILENAME}"
+          pip install tweepy pyyaml
 
-          if [ -f "$PUBLISHED_FILE" ]; then
-            echo "Posting to Twitter: $PUBLISHED_FILE"
+          if [ -f published_file.txt ]; then
+            PUBLISHED_FILE=$(cat published_file.txt)
+            echo "Posting to Twitter..."
             python scripts/post_to_twitter.py --file "$PUBLISHED_FILE" || echo "Twitter posting failed, continuing..."
-          else
-            echo "Warning: Published file not found: $PUBLISHED_FILE"
           fi
-
-      - name: Commit changes
-        if: steps.find_file.outputs.found == 'true'
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add content/
-          git diff --staged --quiet || git commit -m "Published: ${{ github.event.inputs.filename }} [manual]"
-          git push
