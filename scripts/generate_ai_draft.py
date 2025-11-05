@@ -11,11 +11,19 @@ import json
 import os
 from datetime import datetime
 from anthropic import Anthropic
+from validate_and_fix import validate_and_fix_content, validate_structure
 
 # Impartial analysis prompt for Claude
 ANALYSIS_PROMPT = """You are an objective analyst for Eastbound Reports, an independent platform that translates and analyzes Russian media for English-speaking audiences.
 
 TODAY'S DATE: {today_date}
+CURRENT MONTH AND YEAR: {month_year}
+
+IMPORTANT - DO NOT HALLUCINATE:
+- The current date is {today_date}. Do NOT reference any other month or year in your headline.
+- ONLY cite sources from the briefing below. Do NOT invent sources.
+- Do NOT make up quotes. Only use information from the briefing.
+- Do NOT reference events not mentioned in the briefing.
 
 CRITICAL PRINCIPLES:
 - Maintain complete objectivity and impartiality
@@ -32,13 +40,15 @@ Your task: Analyze the following Russian media story and create a post following
 STORY BRIEFING:
 {briefing}
 
-REQUIRED STRUCTURE:
-1. Hook (2-3 sentences): What happened and why English-speaking readers should care
-2. Russian Perspective (300-400 words): What Russian media sources are saying, with direct quotes
-3. Context (300-400 words): Historical, cultural, or political background that Western audiences typically miss
-4. Comparison (200-300 words): How Western media is covering this (note: you may need to infer or note if Western coverage is absent)
-5. Implications: What this means for policy, business, and culture
-6. Bottom Line (2-3 sentences): Key takeaway
+REQUIRED STRUCTURE (do NOT add your own title/header - it will be added programmatically):
+1. HOOK (2-3 sentences): What happened and why English-speaking readers should care
+2. RUSSIAN PERSPECTIVE (300-400 words): What Russian media sources are saying, with direct quotes
+3. CONTEXT (300-400 words): Historical, cultural, or political background that Western audiences typically miss
+4. COMPARISON (200-300 words): How Western media is covering this (note: you may need to infer or note if Western coverage is absent)
+5. IMPLICATIONS: What this means for policy, business, and culture
+6. BOTTOM LINE (2-3 sentences): Key takeaway
+
+Start your response with "## HOOK" - do NOT add any title or date above this.
 
 TONE: Professional, analytical, academic. Like a research briefing, not opinion journalism.
 
@@ -82,8 +92,14 @@ def generate_draft_with_claude(story, api_key):
     client = Anthropic(api_key=api_key)
 
     story_text = format_story_for_prompt(story)
-    today = datetime.now().strftime("%B %d, %Y")
-    full_prompt = ANALYSIS_PROMPT.format(briefing=story_text, today_date=today)
+    now = datetime.now()
+    today = now.strftime("%B %d, %Y")
+    month_year = now.strftime("%B %Y")
+    full_prompt = ANALYSIS_PROMPT.format(
+        briefing=story_text,
+        today_date=today,
+        month_year=month_year
+    )
 
     print("📝 Generating draft with Claude API...")
 
@@ -100,6 +116,18 @@ def generate_draft_with_claude(story, api_key):
 
         draft_content = message.content[0].text
         print("✅ Draft generated successfully")
+
+        # Validate and fix common hallucinations
+        print("🔍 Validating content and fixing hallucinations...")
+        source_list = [article['source'] for article in story['articles'][:5]]
+        draft_content = validate_and_fix_content(draft_content, now, source_list)
+
+        # Check structure
+        if validate_structure(draft_content):
+            print("✅ Content structure validated")
+        else:
+            print("⚠️  Warning: Some sections may be missing")
+
         return draft_content
 
     except Exception as e:
@@ -108,7 +136,10 @@ def generate_draft_with_claude(story, api_key):
 
 def create_markdown_file(draft_content, story, output_dir):
     """Create markdown file with frontmatter."""
-    today = datetime.now().strftime('%Y-%m-%d')
+    now = datetime.now()
+    today = now.strftime('%Y-%m-%d')
+    today_long = now.strftime('%B %d, %Y')
+    month_year = now.strftime('%B %Y')
 
     # Generate title from keyword or first article
     if story.get('keyword'):
@@ -122,6 +153,16 @@ def create_markdown_file(draft_content, story, output_dir):
 
     filename = f"{today}-{slug}.md"
     filepath = os.path.join(output_dir, filename)
+
+    # Programmatically add header with LOCKED-IN date (can't be hallucinated)
+    header = f"""# EASTBOUND REPORTS ANALYSIS
+## Russian Media Coverage: {month_year} Digest
+
+*Analysis Date: {today_long}*
+
+---
+
+"""
 
     # Build frontmatter
     frontmatter = f"""---
@@ -144,7 +185,7 @@ ai_generated: true
 
 ---
 
-{draft_content}
+{header}{draft_content}
 
 ---
 
