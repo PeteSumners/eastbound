@@ -10,6 +10,7 @@ layout: default
 <h2>Latest Analysis</h2>
 
 {% assign posts = site.published | sort: 'date' | reverse %}
+<p style="color: red;">DEBUG: Collection size = {{ site.published.size }}, Posts count = {{ posts.size }}</p>
 
 {% if posts.size > 0 %}
 <div class="posts-list">
