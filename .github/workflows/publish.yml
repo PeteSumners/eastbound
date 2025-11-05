@@ -48,10 +48,10 @@ jobs:
           sed -i '/^scheduled_time:/d' "$SOURCE"
 
           # Move to published
-          mkdir -p content/_published
-          mv "$SOURCE" "content/_published/$FILE"
+          mkdir -p _posts
+          mv "$SOURCE" "_posts/$FILE"
 
-          echo "PUBLISHED_FILE=content/_published/$FILE" >> $GITHUB_ENV
+          echo "PUBLISHED_FILE=_posts/$FILE" >> $GITHUB_ENV
 
       - name: Commit
         run: |

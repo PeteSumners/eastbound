@@ -9,18 +9,11 @@ github_username: PeteSumners
 # Build settings
 markdown: kramdown
 
-# Use content/published as the posts directory
-collections_dir: content
-collections:
-  published:
-    output: true
-    permalink: /:year/:month/:day/:title/
-
-# Defaults
+# Defaults for posts
 defaults:
   - scope:
-      path: "content/_published"
-      type: "published"
+      path: "_posts"
+      type: "posts"
     values:
       layout: "post"
       comments: false
@@ -28,8 +21,7 @@ defaults:
 # Exclude from processing
 exclude:
   - scripts/
-  - content/drafts/
-  - content/scheduled/
+  - content/
   - templates/
   - .github/
   - Gemfile
@@ -41,10 +33,7 @@ exclude:
   - PHASE1_GAMEPLAN.md
   - AUTOMATION_SETUP.md
   - QUICK_REFERENCE.md
-
-# Include published content
-include:
-  - content/_published/
+  - LINKEDIN_SETUP.md
 
 # Plugins
 plugins:

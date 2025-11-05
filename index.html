@@ -9,12 +9,9 @@ layout: default
 
 <h2>Latest Analysis</h2>
 
-{% assign posts = site.published | sort: 'date' | reverse %}
-<p style="color: red;">DEBUG: Collection size = {{ site.published.size }}, Posts count = {{ posts.size }}</p>
-
-{% if posts.size > 0 %}
+{% if site.posts.size > 0 %}
 <div class="posts-list">
-    {% for post in posts limit:10 %}
+    {% for post in site.posts limit:10 %}
     <article class="post-preview">
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         {% if post.subtitle %}
