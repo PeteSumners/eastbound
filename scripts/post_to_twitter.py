@@ -81,7 +81,7 @@ def extract_key_sections(content, content_type):
     return {}
 
 
-def create_thread(frontmatter, sections, substack_url):
+def create_thread(frontmatter, sections, post_url):
     """Create a Twitter thread from content sections."""
 
     title = frontmatter.get('title', '')
@@ -91,7 +91,7 @@ def create_thread(frontmatter, sections, substack_url):
 
     if content_type == 'weekly-analysis':
         # Tweet 1: Hook + link
-        tweet1 = f"🧵 {title}\n\n{sections.get('hook', '')[:200]}...\n\n{substack_url}"
+        tweet1 = f"🧵 {title}\n\n{sections.get('hook', '')[:200]}...\n\n{post_url}"
         tweets.append(tweet1)
 
         # Tweet 2: Policy implication
@@ -107,7 +107,7 @@ def create_thread(frontmatter, sections, substack_url):
     elif content_type == 'translation':
         # Tweet 1: Intro + link
         intro_preview = sections.get('intro', '')[:180]
-        tweet1 = f"🧵 New translation: {title}\n\n{intro_preview}...\n\n{substack_url}"
+        tweet1 = f"🧵 New translation: {title}\n\n{intro_preview}...\n\n{post_url}"
         tweets.append(tweet1)
 
         # Tweets 2-3: Key quotes
@@ -125,7 +125,7 @@ def create_thread(frontmatter, sections, substack_url):
             tweets.append(tweet4)
 
     # Add final tweet: Read more + tags
-    tweets.append(f"Read the full analysis:\n{substack_url}\n\n#Russia #MediaAnalysis #Geopolitics")
+    tweets.append(f"Read the full analysis:\n{post_url}\n\n#Russia #MediaAnalysis #Geopolitics")
 
     return tweets
 
@@ -169,7 +169,7 @@ def post_thread(tweets, api_client):
 def main():
     parser = argparse.ArgumentParser(description='Post content to Twitter/X as a thread')
     parser.add_argument('--file', required=True, help='Path to markdown file')
-    parser.add_argument('--substack-url', help='URL to Substack post (if different from auto-generated)')
+    parser.add_argument('--url', help='URL to post (if different from auto-generated)')
     parser.add_argument('--dry-run', action='store_true', help='Preview thread without posting')
 
     args = parser.parse_args()
@@ -192,19 +192,24 @@ def main():
         print("ℹ️  Twitter thread is disabled for this post (twitter_thread: false)")
         return
 
-    # Generate Substack URL
-    substack_url = args.substack_url
-    if not substack_url:
-        # Auto-generate from filename and subdomain
-        slug = file_path.stem.split('-', 3)[-1] if '-' in file_path.stem else file_path.stem
-        substack_url = f"https://eastboundreports.substack.com/p/{slug}"
+    # Generate post URL
+    post_url = args.url
+    if not post_url:
+        # Auto-generate from filename: YYYY-MM-DD-slug.md -> /YYYY/MM/DD/slug/
+        parts = file_path.stem.split('-', 3)
+        if len(parts) >= 4:
+            year, month, day, slug = parts[0], parts[1], parts[2], parts[3]
+            post_url = f"https://petesumners.github.io/eastbound/{year}/{month}/{day}/{slug}/"
+        else:
+            # Fallback to homepage
+            post_url = "https://petesumners.github.io/eastbound"
 
     # Extract key sections
     content_type = frontmatter.get('type', '')
     sections = extract_key_sections(body, content_type)
 
     # Create thread
-    tweets = create_thread(frontmatter, sections, substack_url)
+    tweets = create_thread(frontmatter, sections, post_url)
 
     if args.dry_run:
         print("=== DRY RUN MODE ===")

@@ -105,8 +105,8 @@ def check_scripts():
     script_dir = Path(__file__).parent
     required_scripts = [
         'create_draft.py',
-        'publish_to_substack.py',
-        'post_to_twitter.py'
+        'post_to_twitter.py',
+        'post_to_linkedin.py'
     ]
 
     all_good = True
@@ -146,34 +146,6 @@ def check_workflows():
     return all_good
 
 
-def check_substack_config():
-    """Check Substack configuration."""
-    print("\n📧 Checking Substack configuration...")
-
-    checks = [
-        ('SUBSTACK_EMAIL', True),
-        ('SMTP_SERVER', True),
-        ('SMTP_PORT', True),
-        ('SMTP_USERNAME', True),
-        ('SMTP_PASSWORD', True)
-    ]
-
-    all_good = True
-    for var_name, required in checks:
-        if not check_env_var(var_name, required):
-            all_good = False
-
-    if not all_good:
-        print("\n💡 For Substack publishing, set these environment variables:")
-        print("   - SUBSTACK_EMAIL: eastboundreports@substack.com")
-        print("   - SMTP_SERVER: smtp.gmail.com (or your email provider)")
-        print("   - SMTP_PORT: 587")
-        print("   - SMTP_USERNAME: your email")
-        print("   - SMTP_PASSWORD: your email password or app-specific password")
-
-    return all_good
-
-
 def check_twitter_config():
     """Check Twitter configuration."""
     print("\n🐦 Checking Twitter configuration...")
@@ -198,6 +170,28 @@ def check_twitter_config():
     return all_good
 
 
+def check_linkedin_config():
+    """Check LinkedIn configuration."""
+    print("\n💼 Checking LinkedIn configuration...")
+
+    checks = [
+        'LINKEDIN_ACCESS_TOKEN',
+        'LINKEDIN_USER_URN'
+    ]
+
+    all_good = True
+    for var_name in checks:
+        if not check_env_var(var_name, required=True):
+            all_good = False
+
+    if not all_good:
+        print("\n💡 Get LinkedIn API credentials from:")
+        print("   https://www.linkedin.com/developers/")
+        print("   See LINKEDIN_SETUP.md for detailed instructions")
+
+    return all_good
+
+
 def main():
     """Run all checks."""
     print("=" * 60)
@@ -210,8 +204,8 @@ def main():
         ("Templates", check_templates),
         ("Scripts", check_scripts),
         ("GitHub Actions Workflows", check_workflows),
-        ("Substack Configuration", check_substack_config),
-        ("Twitter Configuration", check_twitter_config)
+        ("Twitter Configuration", check_twitter_config),
+        ("LinkedIn Configuration", check_linkedin_config)
     ]
 
     results = {}

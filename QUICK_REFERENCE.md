@@ -56,7 +56,8 @@ status: scheduled         # Change from 'draft' to 'scheduled'
 1. Go to **Actions** → **Manual Publish Post**
 2. Click **Run workflow**
 3. Enter filename (e.g., `2024-11-05-my-post.md`)
-4. Click **Run workflow**
+4. Choose whether to post to Twitter and LinkedIn
+5. Click **Run workflow**
 
 **Via Changing Schedule:**
 1. Edit the file in `content/scheduled/`
@@ -132,15 +133,15 @@ draft → scheduled → published
 
 **draft**: Work in progress in `content/drafts/`
 **scheduled**: Ready to publish in `content/scheduled/` (auto-publishes at date/time)
-**published**: Published in `content/published/` (archived)
+**published**: Published in `_posts/` (Jekyll standard posts directory)
 
 ## Automation Schedule
 
 - **Hourly check** (at :00): Looks for scheduled posts ready to publish
-- **Auto-publish**: Sends to Substack via email
-- **Wait 3 minutes**: Allows Substack to process
+- **Auto-publish**: Publishes to GitHub Pages (Jekyll website)
 - **Auto-tweet**: Posts thread to Twitter/X
-- **Archive**: Moves to `content/published/`
+- **Auto-post**: Posts to LinkedIn
+- **Archive**: Moves to `_posts/`
 
 ## Twitter Thread Auto-Generation
 
@@ -166,7 +167,7 @@ The system automatically creates threads:
 Navigate to: `content/scheduled/`
 
 ### View Published Archive
-Navigate to: `content/published/`
+Navigate to: `_posts/`
 
 ### Edit a Scheduled Post
 1. Go to `content/scheduled/[file].md`
@@ -192,9 +193,10 @@ Navigate to: `content/published/`
 3. Click latest run to see logs
 
 **Verify a post published:**
-1. Check `content/published/` for the file
-2. Check Substack at https://eastboundreports.substack.com
-3. Check Twitter at https://twitter.com/[your_handle]
+1. Check `_posts/` for the file
+2. Check website at https://petesumners.github.io/eastbound
+3. Check Twitter at https://twitter.com/EastboundReport
+4. Check LinkedIn profile
 
 ## Emergency: Stop a Publishing Workflow
 
@@ -212,14 +214,20 @@ If a workflow is running and you need to stop it:
 - [ ] Time has passed (check UTC)?
 - [ ] GitHub Actions enabled?
 
-**Email to Substack failed:**
-- [ ] Check Actions logs for error
-- [ ] Verify SMTP credentials in Settings → Secrets
+**Website not updating:**
+- [ ] Check Actions logs for Jekyll build errors
+- [ ] Verify post is in `_posts/` directory
+- [ ] Check frontmatter format
 
 **Twitter thread didn't post:**
 - [ ] Check Actions logs for error
 - [ ] Verify Twitter API credentials
 - [ ] Check API rate limits
+
+**LinkedIn post didn't send:**
+- [ ] Check LinkedIn access token not expired
+- [ ] Verify user URN is correct
+- [ ] Check API permissions
 
 ## Pro Tips
 
@@ -249,12 +257,12 @@ If a workflow is running and you need to stop it:
 
 Your posts will be at:
 ```
-https://eastboundreports.substack.com/p/[post-slug]
+https://petesumners.github.io/eastbound/YYYY/MM/DD/[post-slug]/
 ```
 
 Post slug = filename without date prefix
 - File: `2024-11-05-putin-speech-analysis.md`
-- URL: `https://eastboundreports.substack.com/p/putin-speech-analysis`
+- URL: `https://petesumners.github.io/eastbound/2024/11/05/putin-speech-analysis/`
 
 ## Getting Help
 
@@ -262,8 +270,9 @@ Post slug = filename without date prefix
 2. **Read docs:** See `AUTOMATION_SETUP.md` for detailed setup
 3. **Test locally:** Clone repo and run scripts with `--dry-run`
 4. **Check APIs:**
-   - Substack: https://substack.com/settings
    - Twitter: https://developer.twitter.com/en/portal/dashboard
+   - LinkedIn: https://www.linkedin.com/developers/
+5. **View site:** https://petesumners.github.io/eastbound
 
 ---
 

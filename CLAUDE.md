@@ -24,13 +24,13 @@ Eastbound is a Russian media analysis and translation service providing English-
 
 ## Project Phases
 
-**Phase 1 (MVP - Months 1-6):**
-- Substack newsletter platform
-- Twitter/X for audience building
-- Goal: 1,000+ free subscribers
+**Phase 1 (MVP - Current):**
+- GitHub Pages website (Jekyll)
+- Twitter/X and LinkedIn for audience building
+- Goal: 1,000+ website visitors per month
 
-**Phase 2 (Growth - Months 6-12):**
-- Custom website (Next.js or similar)
+**Phase 2 (Growth - Future):**
+- Enhanced website features (Next.js or similar)
 - Stripe payment processing
 - Premium tier: $20-50/month
 - Corporate subscriptions: $500-2000/month
@@ -66,18 +66,20 @@ Eastbound is a Russian media analysis and translation service providing English-
 
 ## Development Notes
 
-This repository currently contains business planning documentation only. Future technical implementation will likely include:
+This repository contains a fully automated publishing system built on:
 
-- Static site generator or Next.js website
-- Substack integration or custom CMS
+- Jekyll static site generator hosted on GitHub Pages
+- Automated content generation using Claude AI (with anti-hallucination system)
+- RSS feed monitoring of Russian media sources
+- GitHub Actions for automated publishing workflows
+- Twitter and LinkedIn API integration for social media posting
 - Translation management tools
 - Content scheduling/publishing workflow
 - Analytics for tracking audience growth and engagement
-- Payment processing integration (Stripe)
 
 When implementing features, prioritize:
 1. Content creation and publishing workflow
 2. Translation accuracy verification
 3. Source citation management
-4. Subscriber management
+4. AI safety and anti-hallucination measures
 5. Analytics and metrics tracking

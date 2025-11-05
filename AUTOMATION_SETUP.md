@@ -7,8 +7,9 @@ This document explains how to set up the fully automated, cloud-based publishing
 The automation system allows you to:
 - ✍️ Create new drafts from templates via GitHub UI
 - 📅 Schedule posts for automatic publishing
-- 📧 Auto-publish to Substack
+- 🌐 Auto-publish to GitHub Pages (Jekyll website)
 - 🐦 Auto-post threads to Twitter/X
+- 💼 Auto-post to LinkedIn
 - ☁️ Run everything in the cloud (no local computer needed)
 
 ## Architecture
@@ -18,8 +19,9 @@ GitHub Repository (Cloud Storage)
     ↓
 GitHub Actions (Cloud Automation)
     ↓
-    ├─→ Substack (via Email API)
-    └─→ Twitter/X (via API)
+    ├─→ GitHub Pages (Jekyll Website)
+    ├─→ Twitter/X (via API)
+    └─→ LinkedIn (via API)
 ```
 
 ## Quick Start
@@ -43,22 +45,6 @@ Go to your GitHub repository → **Settings** → **Secrets and variables** → 
 
 Add these secrets:
 
-#### Substack Publishing (via Email)
-
-Substack accepts posts sent via email to: `your-subdomain@substack.com`
-
-**Required secrets:**
-- `SUBSTACK_EMAIL` = `eastboundreports@substack.com`
-- `SMTP_SERVER` = Your email provider's SMTP server (e.g., `smtp.gmail.com`)
-- `SMTP_PORT` = `587` (for TLS)
-- `SMTP_USERNAME` = Your email address
-- `SMTP_PASSWORD` = Your email password or app-specific password
-
-**For Gmail:**
-1. Enable 2-factor authentication
-2. Generate an app-specific password at https://myaccount.google.com/apppasswords
-3. Use that password as `SMTP_PASSWORD`
-
 #### Twitter/X API
 
 Get API credentials from https://developer.twitter.com/en/portal/dashboard
@@ -75,6 +61,23 @@ Get API credentials from https://developer.twitter.com/en/portal/dashboard
 2. Create a new project and app
 3. Generate access tokens with "Read and Write" permissions
 4. Copy all credentials to GitHub Secrets
+
+#### LinkedIn API
+
+Get API credentials from https://www.linkedin.com/developers/
+
+**Required secrets:**
+- `LINKEDIN_ACCESS_TOKEN` = Your LinkedIn access token
+- `LINKEDIN_USER_URN` = Your LinkedIn user URN
+
+**To get LinkedIn API access:**
+1. Create a LinkedIn app at https://www.linkedin.com/developers/apps
+2. Request "Share on LinkedIn" product access
+3. Generate an access token with `w_member_social` scope
+4. Get your user URN from the LinkedIn API
+5. Copy credentials to GitHub Secrets
+
+See `LINKEDIN_SETUP.md` for detailed setup instructions.
 
 ### 3. Enable GitHub Actions
 
@@ -106,10 +109,10 @@ If prompted, click **"I understand my workflows, go ahead and enable them"**
 **What it does:**
 1. Checks `content/scheduled/` for posts with `status: scheduled`
 2. If the scheduled date/time has passed:
-   - Publishes to Substack via email
-   - Waits 3 minutes for Substack to process
+   - Publishes to GitHub Pages (via Jekyll)
    - Posts Twitter thread
-   - Moves file to `content/published/`
+   - Posts to LinkedIn
+   - Moves file to `_posts/`
    - Commits changes
 
 ### Manual Publish
@@ -118,11 +121,12 @@ If prompted, click **"I understand my workflows, go ahead and enable them"**
 
 **Inputs:**
 - `filename`: Name of the file to publish (e.g., `2024-11-05-my-post.md`)
-- `skip_substack`: Skip Substack publishing
-- `skip_twitter`: Skip Twitter posting
+- `post_to_twitter`: Post to Twitter/X (default: true)
+- `post_to_linkedin`: Post to LinkedIn (default: true)
 
 **What it does:**
-- Immediately publishes the specified post
+- Immediately publishes the specified post to GitHub Pages
+- Posts to social media (Twitter and LinkedIn)
 - Useful for urgent posts or testing
 
 ## Content Workflow
@@ -149,8 +153,8 @@ If prompted, click **"I understand my workflows, go ahead and enable them"**
 
 4. **Automatic Publishing:**
    - GitHub Actions checks hourly
-   - When time arrives, auto-publishes to Substack and Twitter
-   - File moves to `content/published/`
+   - When time arrives, auto-publishes to GitHub Pages, Twitter, and LinkedIn
+   - File moves to `_posts/`
 
 ### Option B: Use GitHub Codespaces (Cloud Development)
 
@@ -191,17 +195,17 @@ git push
 
 ```
 eastbound/
+├── _posts/              # Published posts (Jekyll standard directory)
 ├── content/
 │   ├── drafts/          # Work in progress
-│   ├── scheduled/       # Ready to publish (with date/time)
-│   └── published/       # Already published (archive)
+│   └── scheduled/       # Ready to publish (with date/time)
 ├── templates/
 │   ├── weekly-analysis.md
 │   └── translation.md
 ├── scripts/
 │   ├── create_draft.py
-│   ├── publish_to_substack.py
-│   └── post_to_twitter.py
+│   ├── post_to_twitter.py
+│   └── post_to_linkedin.py
 └── .github/
     └── workflows/       # GitHub Actions automation
 ```
@@ -236,18 +240,18 @@ twitter_thread: true  # Auto-generate Twitter thread
 ### Test Without Publishing
 
 ```bash
-# Test Substack publishing (dry run)
-python scripts/publish_to_substack.py --file content/drafts/your-file.md --dry-run
-
 # Test Twitter thread generation (dry run)
 python scripts/post_to_twitter.py --file content/drafts/your-file.md --dry-run
+
+# Test LinkedIn posting (dry run)
+python scripts/post_to_linkedin.py --file content/drafts/your-file.md --dry-run
 ```
 
 ### Test Manual Publish Workflow
 
 1. Create a test draft
 2. Go to Actions → Manual Publish Post
-3. Use `skip_substack: true` and `skip_twitter: true` to test without publishing
+3. Uncheck social media options to test Jekyll build only
 4. Check the workflow logs to verify everything runs correctly
 
 ## Troubleshooting
@@ -264,16 +268,6 @@ python scripts/post_to_twitter.py --file content/drafts/your-file.md --dry-run
 **View logs:**
 - Go to Actions → Publish Scheduled Posts → Click latest run
 
-### Substack Email Not Sending
-
-**Check:**
-1. `SUBSTACK_EMAIL` is correct (`eastboundreports@substack.com`)
-2. SMTP credentials are correct
-3. For Gmail: using app-specific password, not regular password
-4. SMTP port is 587 for TLS
-
-**Note:** Posts sent via email appear as drafts in Substack. You may need to review and click "Publish" in the Substack web interface.
-
 ### Twitter Thread Not Posting
 
 **Check:**
@@ -281,6 +275,13 @@ python scripts/post_to_twitter.py --file content/drafts/your-file.md --dry-run
 2. App has "Read and Write" permissions
 3. Tweet character limits (280 chars)
 4. API rate limits not exceeded
+
+### LinkedIn Post Not Sending
+
+**Check:**
+1. LinkedIn access token is set and not expired (tokens expire after 60 days)
+2. User URN is correct
+3. App has "Share on LinkedIn" product access with `w_member_social` scope
 
 ## Cost Estimate
 
@@ -290,27 +291,31 @@ python scripts/post_to_twitter.py --file content/drafts/your-file.md --dry-run
 - This automation uses ~5 minutes per post
 - **Cost: FREE** (for typical usage)
 
-**Substack:**
-- **Cost: FREE** (Substack handles hosting)
+**GitHub Pages:**
+- **Cost: FREE** (GitHub handles hosting)
 
 **Twitter API:**
 - Free tier: 1,500 tweets/month
 - **Cost: FREE** (for typical usage)
 
+**LinkedIn API:**
+- **Cost: FREE** (standard API access)
+
 **Total: $0/month** ✨
 
 ## Advanced: AI-Assisted Writing
 
-To integrate Claude API for AI-assisted draft writing:
+The system includes AI-assisted draft generation using Claude API:
 
 1. Add `ANTHROPIC_API_KEY` to GitHub Secrets
-2. Create a new workflow that calls Claude API to help generate drafts
-3. Use prompts like:
-   - "Translate this Russian article: [URL]"
-   - "Analyze Russian media coverage of [topic]"
-   - "Compare Russian and Western framing of [event]"
+2. Run the daily content generation workflow (runs automatically or manually)
+3. The system will:
+   - Fetch RSS feeds from Russian media sources
+   - Generate analysis using Claude API
+   - Create drafts with anti-hallucination validation
+   - Publish automatically or queue for review
 
-(Contact me if you want help setting this up)
+See `ANTI_HALLUCINATION.md` for details on the AI safety system.
 
 ## Security Notes
 
@@ -327,7 +332,8 @@ If you encounter issues:
 1. Check workflow logs in the Actions tab
 2. Verify all GitHub Secrets are set correctly
 3. Test scripts locally with dry-run mode
-4. Check Substack and Twitter API documentation
+4. Check Twitter and LinkedIn API documentation
+5. View published site at: https://petesumners.github.io/eastbound
 
 ## Next Steps
 

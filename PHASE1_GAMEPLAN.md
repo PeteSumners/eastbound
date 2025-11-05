@@ -11,11 +11,11 @@
    - Buy domain ($12-15/year)
    - Don't worry about hosting yet
 
-2. **Create Substack** (45 min)
-   - Go to substack.com
-   - Sign up with professional email
-   - Choose subdomain: eastbound.substack.com or similar
-   - Link custom domain (if Substack supports it, or wait)
+2. **Set up GitHub Pages website** (45 min)
+   - Create GitHub repository
+   - Set up Jekyll static site
+   - Configure GitHub Pages deployment
+   - Choose theme and basic layout
 
 3. **Reserve social media** (30 min)
    - Twitter/X: @eastboundmedia or @eastbound_ru or @eastboundnews
@@ -30,7 +30,7 @@
    - Why: Information gets lost in translation - you provide the missing context
    - For whom: Journalists, researchers, businesses, educated general audience
    - Keep it under 300 words
-   - Post to Substack "About" section
+   - Post to website "About" page
 
 ### Day 2: First Content (4-5 hours)
 **Morning:**
@@ -42,7 +42,7 @@
    - Your principles: public, transparent, independent, journalistic
    - Target: 600-800 words
    - Professional but human tone
-   - Save as draft in Substack
+   - Save as draft markdown file
 
 **Afternoon:**
 2. **Research current topic** (1-2 hours)
@@ -70,7 +70,7 @@
      * Sources: Bulleted list with links to all Russian sources
    - Target: 1000-1200 words
    - Include 2-3 key quotes (translated by you)
-   - Save as draft in Substack
+   - Save as draft markdown file
 
 2. **Edit both posts** (1 hour)
    - Read out loud
@@ -88,19 +88,19 @@
    - Create header image for Twitter (1500x500px)
    - Create Substack header image (if needed)
 
-2. **Finalize Substack appearance** (30 min)
-   - Upload logo/header
-   - Choose color scheme
+2. **Finalize website appearance** (30 min)
+   - Upload logo/header to GitHub Pages
+   - Choose color scheme for Jekyll theme
    - Write short bio for sidebar
-   - Set up subscribe button
+   - Set up RSS feed
 
 3. **Prepare Twitter bio** (30 min)
    - 160 characters max
-   - Example: "Translating Russian media for English audiences. Analysis, context, and what gets lost in translation. Independent journalism. Subscribe: [link]"
+   - Example: "Translating Russian media for English audiences. Analysis, context, and what gets lost in translation. Independent journalism. Read: [website link]"
 
 ### Day 5: LAUNCH (2-3 hours)
 **Morning:**
-1. **Publish to Substack** (30 min)
+1. **Publish to GitHub Pages** (30 min)
    - Publish "Why Eastbound Exists" first
    - Wait 30 minutes
    - Publish first analysis piece
@@ -108,7 +108,7 @@
 
 2. **Launch on Twitter** (1 hour)
    - First tweet: Announce Eastbound
-     * "Launching Eastbound: Translating Russian media for English audiences. What are Russian sources actually saying? What context is missing? Subscribe for weekly analysis: [Substack link]"
+     * "Launching Eastbound: Translating Russian media for English audiences. What are Russian sources actually saying? What context is missing? Read weekly analysis: [website link]"
    - Second tweet (thread): Summary of your first analysis piece
      * 4-6 tweet thread
      * Key findings from your article
@@ -128,7 +128,7 @@
 
 ### Days 6-7: Engage & Plan (3-4 hours total)
 1. **Monitor and engage** (1-2 hours)
-   - Respond to all comments on Substack
+   - Respond to all comments on website (if enabled)
    - Respond to Twitter replies
    - Be professional, grateful, non-defensive
    - Ask questions: "What topics are you interested in?"
@@ -152,8 +152,8 @@
 **Monday-Tuesday:** Research and source gathering
 **Wednesday-Thursday:** Write analysis piece
 **Friday:** Edit and finalize
-**Saturday:** Publish to Substack
-**Sunday:** Promote on Twitter, engage with audience
+**Saturday:** Publish to website
+**Sunday:** Promote on Twitter and LinkedIn, engage with audience
 
 ### Content Calendar (Weeks 2-4)
 **Week 2:** Pick another current topic + start establishing your format
@@ -167,10 +167,11 @@
    - Share interesting Russian sources (with your brief context)
    - Post 2-3 times per week minimum
 
-2. **Substack optimization:**
-   - Add "Subscribe" CTA at end of each post
-   - Write compelling preview text
+2. **Website optimization:**
+   - Add RSS subscribe button
+   - Write compelling meta descriptions
    - Use good headlines (specific, not clickbait)
+   - Optimize for SEO
 
 3. **Network building:**
    - Reach out to 2-3 journalists/researchers per week
@@ -178,9 +179,10 @@
    - Offer to be a source if they need Russian media context
 
 ### Metrics to Track
-- **Substack subscribers** (goal: 100 by end of Month 1)
+- **Website visitors** (goal: 1,000 by end of Month 1)
 - **Twitter followers** (goal: 500 by end of Month 1)
-- **Post engagement** (opens, reads, comments)
+- **LinkedIn connections** (goal: 200 by end of Month 1)
+- **Post engagement** (page views, shares, comments)
 - **Referral sources** (where are people finding you?)
 
 ---
@@ -194,9 +196,10 @@
 - [ ] All posts properly sourced
 
 ### Audience Milestones
-- [ ] 100+ free Substack subscribers
+- [ ] 1,000+ website visitors
 - [ ] 500+ Twitter followers
-- [ ] 10+ engaged commenters/readers
+- [ ] 200+ LinkedIn connections
+- [ ] 10+ engaged readers
 - [ ] 2-3 shares/retweets per post
 
 ### Business Validation
@@ -254,8 +257,10 @@
 ## Resources You'll Need
 
 ### Tools (All Free to Start)
-- Substack account (free tier)
+- GitHub account (free)
+- GitHub Pages hosting (free)
 - Twitter/X account (free)
+- LinkedIn account (free)
 - DeepL for translation checking (free tier)
 - Google Docs for drafting (free)
 - Notion or Obsidian for research notes (free)
@@ -331,12 +336,11 @@
 
 ## Week 1 Shopping List
 
-### Must Buy ($15-30)
-- Domain name: $12-15/year
-- That's it for Week 1
+### Optional Purchase ($15-30)
+- Custom domain name: $12-15/year (optional, GitHub Pages URL works fine)
 
 ### Don't Buy Yet
-- ❌ Website hosting (use Substack)
+- ❌ Website hosting (use GitHub Pages - it's free)
 - ❌ Design services (DIY for now)
 - ❌ Advertising (grow organically first)
 - ❌ Tools/software (free tiers are fine)

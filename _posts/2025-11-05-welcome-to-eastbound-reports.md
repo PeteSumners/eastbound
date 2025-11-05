@@ -50,7 +50,7 @@ We've built a complete publishing system that runs on GitHub Actions:
 
 ### 3. Independent Platform
 
-Unlike Substack or Medium, we host everything ourselves on GitHub Pages. No platform can shut us down, change their terms, or monetize our audience without permission.
+We host everything ourselves on GitHub Pages. No platform can shut us down, change their terms, or monetize our audience without permission. Complete control over our content and distribution.
 
 ## Content Types
 
