@@ -95,6 +95,12 @@ jobs:
             git push
           fi
 
+      - name: Trigger Pages deployment
+        if: success()
+        run: gh workflow run pages.yml
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Post to Twitter
         if: github.event.inputs.auto_publish != 'false' && github.event_name == 'schedule'
         env:
