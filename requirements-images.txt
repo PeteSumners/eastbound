@@ -1,0 +1,15 @@
+# Image Generation Dependencies
+# Install with: pip install -r requirements-images.txt
+
+# For local Stable Diffusion image generation (CPU)
+diffusers>=0.25.0
+transformers>=4.36.0
+accelerate>=0.25.0
+torch>=2.1.0
+pillow>=10.1.0
+
+# Note: This adds ~2GB of downloads on first run
+# Models are cached in ~/.cache/huggingface/
+#
+# GitHub Actions compatible - runs on CPU in ~2-5 minutes per image
+# Completely free, no API keys needed

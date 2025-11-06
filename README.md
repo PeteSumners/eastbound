@@ -62,6 +62,13 @@ Create draft → Edit content → Schedule → Publish
 - Translation template (with context/analysis)
 - Structured frontmatter for metadata
 
+### 📊 Data Visualizations
+- Automated chart generation for every post
+- 6 chart types with extensible framework
+- Internet image fetching (Unsplash, Wikipedia)
+- AI-friendly documentation for adding new charts
+- See: [AI_VISUALIZATION_GUIDE.md](AI_VISUALIZATION_GUIDE.md)
+
 ---
 
 ## Quick Start
@@ -132,14 +139,20 @@ eastbound/
 │   ├── drafts/          # Work in progress
 │   ├── scheduled/       # Ready to publish
 │   └── published/       # Live on website
+├── images/              # Generated visualizations
 ├── templates/
 │   ├── weekly-analysis.md
 │   └── translation.md
 ├── scripts/
 │   ├── create_draft.py
-│   └── post_to_twitter.py
+│   ├── post_to_twitter.py
+│   ├── visualization_framework.py  # Chart library
+│   ├── generate_visuals.py         # Generate all charts
+│   ├── fetch_images.py             # Internet image fetching
+│   └── example_charts.py           # Examples for AI
 ├── _layouts/            # Jekyll templates
 ├── .github/workflows/   # Automation
+├── AI_VISUALIZATION_GUIDE.md  # Guide for future AI
 └── _config.yml         # Site configuration
 ```
 
@@ -231,6 +244,8 @@ Edit files in `_layouts/` and `assets/css/` to customize the look and feel.
 - **Hosting:** GitHub Pages (free)
 - **Automation:** GitHub Actions
 - **Social:** Twitter API v2 via Tweepy
+- **Visualizations:** Matplotlib, Seaborn
+- **Image Sources:** Unsplash API, Wikipedia API
 - **Languages:** Python, Ruby, Liquid templates
 
 ---
@@ -295,11 +310,15 @@ See [LICENSE](LICENSE) for details.
 - [x] Jekyll website on GitHub Pages
 - [x] Twitter automation
 - [x] RSS feed
+- [x] Data visualization framework
+- [x] Automated chart generation
+- [x] Internet image fetching
 - [ ] Email newsletter integration
 - [ ] Search functionality
 - [ ] Archive by topic/date
 - [ ] Analytics integration
 - [ ] Custom domain
+- [ ] Advanced charts (sentiment timeline, heatmaps)
 
 ---
 
