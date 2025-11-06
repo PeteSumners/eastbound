@@ -28,7 +28,7 @@ class KnowledgeBase:
 
     def _load_all_entries(self):
         """Load all knowledge base entries into memory."""
-        print("📚 Loading knowledge base...")
+        print("[KB] Loading knowledge base...")
 
         categories = ['events', 'figures', 'policies', 'narratives', 'context']
 
@@ -46,7 +46,7 @@ class KnowledgeBase:
                 except Exception as e:
                     print(f"Warning: Failed to load {json_file}: {e}")
 
-        print(f"  ✓ Loaded {len(self.cache)} entries")
+        print(f"  [OK] Loaded {len(self.cache)} entries")
 
     def search(self,
                keywords: List[str] = None,
@@ -308,28 +308,28 @@ def main():
 
     # Query based on briefing
     if args.briefing:
-        print(f"🔍 Querying knowledge base for briefing: {args.briefing}")
+        print(f"[SEARCH] Querying knowledge base for briefing: {args.briefing}")
         context = query_for_current_briefing(args.briefing, kb_root, args.limit)
 
         if args.output:
             with open(args.output, 'w', encoding='utf-8') as f:
                 json.dump(context, f, indent=2, ensure_ascii=False)
-            print(f"✅ Results saved to: {args.output}")
+            print(f"[OK] Results saved to: {args.output}")
 
         if args.prompt_output:
             prompt_text = format_for_ai_prompt(context)
             with open(args.prompt_output, 'w', encoding='utf-8') as f:
                 f.write(prompt_text)
-            print(f"✅ AI prompt saved to: {args.prompt_output}")
+            print(f"[OK] AI prompt saved to: {args.prompt_output}")
 
         # Print summary
-        print(f"\n📊 Found {context['total_entries_found']} relevant entries:")
+        print(f"\n[STATS] Found {context['total_entries_found']} relevant entries:")
         for entry in context['relevant_entries']:
             print(f"  - {entry.get('title')} ({entry.get('date')})")
 
     # Query by keywords
     elif args.keywords:
-        print(f"🔍 Searching for keywords: {args.keywords}")
+        print(f"[SEARCH] Searching for keywords: {args.keywords}")
         results = kb.search(
             keywords=args.keywords,
             categories=args.categories,
@@ -337,7 +337,7 @@ def main():
             limit=args.limit
         )
 
-        print(f"\n📊 Found {len(results)} results:")
+        print(f"\n[STATS] Found {len(results)} results:")
         for entry in results:
             print(f"  - {entry.get('title')} ({entry.get('category')}, {entry.get('date')})")
 
@@ -347,10 +347,10 @@ def main():
         if entry:
             print(json.dumps(entry, indent=2, ensure_ascii=False))
         else:
-            print(f"❌ Entry not found: {args.entry_id}")
+            print(f"[ERROR] Entry not found: {args.entry_id}")
 
     else:
-        print("❌ Please specify --briefing, --keywords, or --entry-id")
+        print("[ERROR] Please specify --briefing, --keywords, or --entry-id")
 
 
 if __name__ == '__main__':

@@ -25,11 +25,12 @@ RSS_SOURCES = {
     'Kommersant': 'https://www.kommersant.ru/RSS/main.xml',
     'Kommersant Politics': 'https://www.kommersant.ru/RSS/politics.xml',
     'Kommersant Economics': 'https://www.kommersant.ru/RSS/economics.xml',
-    'TASS English': 'https://tass.com/rss/v2.xml',
     'TASS Politics': 'https://tass.com/politics/rss',
     'TASS Economy': 'https://tass.com/economy/rss',
     'TASS World': 'https://tass.com/world/rss',
 }
+
+# Note: Removed duplicate 'TASS English' which was same URL as 'TASS'
 
 def fetch_feed(url, source_name, max_articles=50):
     """Fetch and parse RSS feed - now fetches MANY more articles."""
@@ -115,7 +116,7 @@ def main():
     all_articles = []
     for source_name, url in RSS_SOURCES.items():
         print(f"  Fetching {source_name}...")
-        articles = fetch_feed(url, source_name)
+        articles = fetch_feed(url, source_name, max_articles=50)
         all_articles.extend(articles)
         print(f"    ✓ Found {len(articles)} articles")
 
