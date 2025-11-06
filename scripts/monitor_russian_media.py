@@ -158,11 +158,17 @@ def create_briefing(trending_stories, all_articles):
     return briefing
 
 def deduplicate_articles(articles):
-    """Remove duplicate articles based on URL and title similarity."""
+    """Remove duplicate articles based on URL and fuzzy title similarity."""
+    from difflib import SequenceMatcher
+
     seen_urls = set()
-    seen_titles = set()
+    seen_titles = []  # Changed to list for fuzzy matching
     unique_articles = []
     duplicates = 0
+
+    def title_similarity(title1, title2):
+        """Calculate similarity ratio between two titles."""
+        return SequenceMatcher(None, title1, title2).ratio()
 
     for article in articles:
         url = article.get('link', '')
@@ -173,33 +179,63 @@ def deduplicate_articles(articles):
             duplicates += 1
             continue
 
-        # Skip if we've seen this exact title
-        if title and title in seen_titles:
-            duplicates += 1
+        # Check for fuzzy title match (85% similarity threshold)
+        is_duplicate = False
+        if title:
+            for seen_title in seen_titles:
+                if title_similarity(title, seen_title) > 0.85:
+                    duplicates += 1
+                    is_duplicate = True
+                    break
+
+        if is_duplicate:
             continue
 
         # Add to unique set
         if url:
             seen_urls.add(url)
         if title:
-            seen_titles.add(title)
+            seen_titles.append(title)
         unique_articles.append(article)
 
     return unique_articles, duplicates
 
 def main():
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+
     parser = argparse.ArgumentParser(description='Monitor Russian media sources')
     parser.add_argument('--output', required=True, help='Output JSON file path')
+    parser.add_argument('--parallel', action='store_true', help='Use parallel fetching (faster)')
     args = parser.parse_args()
 
     print("[RSS] Monitoring Russian media sources...")
 
     all_articles = []
-    for source_name, url in RSS_SOURCES.items():
-        print(f"  Fetching {source_name}...")
-        articles = fetch_feed(url, source_name, max_articles=50)
-        all_articles.extend(articles)
-        print(f"    [OK] Found {len(articles)} articles")
+
+    if args.parallel:
+        # Parallel fetching (much faster!)
+        print("  [PARALLEL] Fetching feeds in parallel...")
+        with ThreadPoolExecutor(max_workers=5) as executor:
+            future_to_source = {
+                executor.submit(fetch_feed, url, source_name, 50): source_name
+                for source_name, url in RSS_SOURCES.items()
+            }
+
+            for future in as_completed(future_to_source):
+                source_name = future_to_source[future]
+                try:
+                    articles = future.result()
+                    all_articles.extend(articles)
+                    print(f"    [OK] {source_name}: {len(articles)} articles")
+                except Exception as e:
+                    print(f"    [ERROR] {source_name}: {e}")
+    else:
+        # Sequential fetching (original)
+        for source_name, url in RSS_SOURCES.items():
+            print(f"  Fetching {source_name}...")
+            articles = fetch_feed(url, source_name, max_articles=50)
+            all_articles.extend(articles)
+            print(f"    [OK] Found {len(articles)} articles")
 
     print(f"\n[STATS] Total articles fetched: {len(all_articles)}")
 

@@ -1,0 +1,123 @@
+{
+  "id": "euromaidan-2014",
+  "title": "Euromaidan Revolution (Ukraine, 2014)",
+  "date": "2013-11-21",
+  "category": "event",
+  "summary": "Mass protests in Ukraine (November 2013 - February 2014) that led to the ousting of pro-Russian President Viktor Yanukovych. Russia portrays this as Western-backed coup; Ukraine sees it as democratic revolution. This event triggered the Russia-Ukraine conflict.",
+
+  "russian_perspective": {
+    "official_narrative": "Euromaidan was a violent, Western-orchestrated coup d'état that illegally overthrew the democratically elected Ukrainian president. The US and EU manipulated Ukrainian nationalists and neo-Nazis to install an anti-Russian puppet government in Kyiv, threatening Russian security and Russian-speaking Ukrainians.",
+    "media_framing": {
+      "terminology": "Consistently called 'coup' (gosudarstvennyi perevorot), never 'revolution' or 'protests'",
+      "core_claims": [
+        "Orchestrated by US State Department and CIA",
+        "Led by neo-Nazi elements (Right Sector, Svoboda party)",
+        "Snipers who killed protesters were hired by opposition, not government",
+        "Yanukovych was legitimate president removed illegally",
+        "Ethnic Russians and Russian speakers endangered by new government"
+      ],
+      "evidence_cited": [
+        "Victoria Nuland's 'F*** the EU' phone call discussing Ukraine's future government",
+        "US spending $5 billion on 'democracy promotion' in Ukraine",
+        "Presence of right-wing nationalist groups in protests",
+        "Opposition politicians meeting with Western officials"
+      ]
+    },
+    "key_quotes": [
+      {
+        "speaker": "Vladimir Putin",
+        "date": "2014-03-04",
+        "quote": "What was the reason for this state coup? The only reason, in my view, was that the current leadership of Ukraine was not satisfied with the former president and the parliament making certain decisions.",
+        "context": "Press conference after Crimea annexation"
+      },
+      {
+        "speaker": "Sergey Lavrov",
+        "date": "2014-02-23",
+        "quote": "They have seized power through illegal means, through an armed mutiny, and we cannot recognize this government.",
+        "context": "Statement on new Ukrainian government"
+      }
+    ],
+    "evolution": "Initially (2013) portrayed as minority of radicals. After Yanukovych fled (Feb 2014), narrative shifted to full 'coup' framing. By 2022 invasion, Euromaidan became foundational justification for 'denazification' narrative."
+  },
+
+  "western_perspective": {
+    "official_narrative": "Euromaidan was a genuine popular uprising demanding closer ties with Europe, fighting corruption, and rejecting authoritarianism. Yanukovych's violent crackdown on peaceful protesters and subsequent flight from Ukraine delegitimized his presidency.",
+    "media_framing": {
+      "terminology": "Revolution, uprising, democratic movement",
+      "focus_areas": [
+        "Yanukovych's last-minute rejection of EU Association Agreement sparked protests",
+        "Police brutality against peaceful protesters (Berkut special forces)",
+        "Sniper massacre of protesters by government forces (Feb 18-20, 2014)",
+        "Yanukovych's flight to Russia showed his illegitimacy",
+        "Parliament voted to remove Yanukovych constitutionally"
+      ]
+    },
+    "counter_arguments": [
+      "No evidence of Western orchestration of protests",
+      "Protests started organically after EU deal rejection",
+      "While some far-right participated, they were minority",
+      "Parliament legally voted to remove Yanukovych after he fled",
+      "Russian invasion of Crimea violated international law"
+    ]
+  },
+
+  "facts": {
+    "verified_claims": [
+      "Protests began Nov 21, 2013 after Yanukovych suspended EU Association Agreement",
+      "Peaked at 500,000+ protesters in Kyiv's Maidan square",
+      "Over 100 protesters killed, mostly Feb 18-20, 2014 (Heavenly Hundred)",
+      "Yanukovych fled Kyiv on Feb 21-22, 2014, ending up in Russia",
+      "Ukrainian Parliament (Rada) voted 328-0 to remove Yanukovych on Feb 22",
+      "New government formed with Oleksandr Turchynov as acting president",
+      "Russia annexed Crimea immediately after (Feb 27 - March 18, 2014)"
+    ],
+    "disputed_claims": [
+      "Russian claim: US orchestrated the coup (no direct evidence)",
+      "Russian claim: Snipers were hired by opposition (investigations point to government forces)",
+      "Western claim: Parliamentary vote was fully constitutional (some legal ambiguity)",
+      "Degree of far-right influence in protests (present but extent debated)"
+    ],
+    "data_points": {
+      "protest_duration": "94 days (Nov 21, 2013 - Feb 22, 2014)",
+      "casualties": "Over 100 protesters killed, 13 police killed",
+      "parliamentary_vote": "328-0 to remove Yanukovych (328 of 450 MPs)",
+      "us_spending_ukraine": "$5 billion on democracy programs since 1991 (Nuland statement)",
+      "peak_attendance": "500,000+ (Dec 2013)"
+    }
+  },
+
+  "propaganda_techniques_observed": [
+    "Conspiracy theory (CIA/State Dept orchestration without evidence)",
+    "Overgeneralization (minority far-right presence → entire movement is Nazi)",
+    "Selective evidence (focusing on Nuland call, ignoring broader context)",
+    "False flag claims (opposition hired snipers to kill own protesters)",
+    "Historical analogy (comparing to color revolutions, Arab Spring)",
+    "Dehumanization (protesters as extremists, fascists, pawns)"
+  ],
+
+  "related_entries": [
+    "2022-ukraine-invasion",
+    "crimea-annexation-2014",
+    "donbas-conflict",
+    "nato-expansion",
+    "putin-worldview"
+  ],
+
+  "sources": [
+    {
+      "type": "analysis",
+      "description": "Wilson Center: The Euromaidan and Ukraine's European Choice",
+      "url": "https://www.wilsoncenter.org/"
+    },
+    {
+      "type": "investigation",
+      "description": "BBC Investigation: Maidan Snipers",
+      "url": "https://www.bbc.com/news/magazine-31359021"
+    },
+    {
+      "type": "primary",
+      "description": "Rada Vote to Remove Yanukovych",
+      "url": "https://www.pravda.com.ua/"
+    }
+  ]
+}

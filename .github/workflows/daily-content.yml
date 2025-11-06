@@ -30,7 +30,8 @@ jobs:
       - name: Monitor Russian media
         run: |
           python scripts/monitor_russian_media.py \
-            --output "research/$(date -u +%Y-%m-%d)-briefing.json"
+            --output "research/$(date -u +%Y-%m-%d)-briefing.json" \
+            --parallel
 
       - name: Generate AI content
         env:
