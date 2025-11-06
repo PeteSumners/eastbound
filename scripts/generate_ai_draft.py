@@ -494,8 +494,7 @@ def create_markdown_file(draft_content, story, briefing, output_dir):
     frontmatter = f"""---
 title: "{title_base}"
 subtitle: "AI-generated analysis of Russian media coverage"
-date: "{today}"
-publish_time: "12:00"
+date: {today} 12:00:00 +0000
 status: draft
 type: weekly-analysis
 tags:
