@@ -13,29 +13,38 @@ from datetime import datetime
 from collections import defaultdict
 import re
 
-# Russian media RSS feeds
+# Russian media RSS feeds (EXPANDED)
 RSS_SOURCES = {
     'TASS': 'https://tass.com/rss/v2.xml',
     'RIA Novosti': 'https://ria.ru/export/rss2/archive/index.xml',
     'Interfax': 'https://www.interfax.ru/rss.asp',
     'RT': 'https://www.rt.com/rss/',
+    'RT News': 'https://www.rt.com/rss/news/',
+    'RT Russia': 'https://www.rt.com/rss/russia/',
+    'RT Business': 'https://www.rt.com/rss/business/',
     'Kommersant': 'https://www.kommersant.ru/RSS/main.xml',
+    'Kommersant Politics': 'https://www.kommersant.ru/RSS/politics.xml',
+    'Kommersant Economics': 'https://www.kommersant.ru/RSS/economics.xml',
     'TASS English': 'https://tass.com/rss/v2.xml',
+    'TASS Politics': 'https://tass.com/politics/rss',
+    'TASS Economy': 'https://tass.com/economy/rss',
+    'TASS World': 'https://tass.com/world/rss',
 }
 
-def fetch_feed(url, source_name):
-    """Fetch and parse RSS feed."""
+def fetch_feed(url, source_name, max_articles=50):
+    """Fetch and parse RSS feed - now fetches MANY more articles."""
     try:
         feed = feedparser.parse(url)
         articles = []
 
-        for entry in feed.entries[:10]:  # Top 10 from each source
+        # Fetch up to max_articles (default 50, way more than before!)
+        for entry in feed.entries[:max_articles]:
             articles.append({
                 'source': source_name,
                 'title': entry.get('title', ''),
                 'link': entry.get('link', ''),
                 'published': entry.get('published', ''),
-                'summary': entry.get('summary', '')[:500],  # First 500 chars
+                'summary': entry.get('summary', '')[:1000],  # Increased to 1000 chars for more context
             })
 
         return articles
@@ -73,16 +82,16 @@ def identify_trending_stories(all_articles):
                 trending[keyword] = {
                     'keyword': keyword,
                     'source_count': len(sources),
-                    'articles': articles[:5]  # Top 5 articles
+                    'articles': articles[:10]  # Top 10 articles per trending topic (increased from 5)
                 }
 
     # Sort by source count (most covered)
     sorted_trending = sorted(trending.values(), key=lambda x: x['source_count'], reverse=True)
 
-    return sorted_trending[:5]  # Top 5 trending topics
+    return sorted_trending[:10]  # Top 10 trending topics (increased from 5)
 
 def create_briefing(trending_stories, all_articles):
-    """Create a briefing document."""
+    """Create a briefing document with EXPANDED coverage."""
     today = datetime.now().strftime('%Y-%m-%d')
 
     briefing = {
@@ -90,7 +99,8 @@ def create_briefing(trending_stories, all_articles):
         'generated_at': datetime.now().isoformat(),
         'total_articles_scanned': len(all_articles),
         'trending_stories': trending_stories,
-        'top_headlines': all_articles[:15]  # Top 15 overall
+        'top_headlines': all_articles[:50],  # Top 50 overall (increased from 15)
+        'all_articles': all_articles  # Include EVERYTHING for AI to analyze
     }
 
     return briefing

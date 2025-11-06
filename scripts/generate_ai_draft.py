@@ -9,7 +9,8 @@ Usage:
 import argparse
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
+from pathlib import Path
 from anthropic import Anthropic
 from validate_and_fix import validate_and_fix_content, validate_structure
 
@@ -35,18 +36,28 @@ CRITICAL PRINCIPLES:
 - Cite sources accurately
 - Focus on WHAT Russian media is saying, not whether it's true
 
+PREVIOUS DIGESTS (for narrative continuity):
+{previous_digests}
+
+IMPORTANT: Use previous digests to:
+- Track how narratives are evolving
+- Note any shifts in messaging
+- Reference previous coverage if relevant
+- Maintain analytical consistency
+
 Your task: Analyze the following Russian media story and create a post following the Eastbound Reports template.
 
-STORY BRIEFING:
+STORY BRIEFING (EXPANDED with {total_articles} articles):
 {briefing}
 
 REQUIRED STRUCTURE (do NOT add your own title/header - it will be added programmatically):
 1. HOOK (2-3 sentences): What happened and why English-speaking readers should care
-2. RUSSIAN PERSPECTIVE (300-400 words): What Russian media sources are saying, with direct quotes
-3. CONTEXT (300-400 words): Historical, cultural, or political background that Western audiences typically miss
-4. COMPARISON (200-300 words): How Western media is covering this (note: you may need to infer or note if Western coverage is absent)
-5. IMPLICATIONS: What this means for policy, business, and culture
-6. BOTTOM LINE (2-3 sentences): Key takeaway
+2. RUSSIAN PERSPECTIVE (400-500 words): What Russian media sources are saying, with direct quotes from multiple sources
+3. CONTEXT (400-500 words): Historical, cultural, or political background that Western audiences typically miss
+4. COMPARISON (300-400 words): How Western media is covering this (note: you may need to infer or note if Western coverage is absent)
+5. NARRATIVE EVOLUTION (200-300 words): How has Russian media's framing of this topic changed over time? Reference previous digests if relevant.
+6. IMPLICATIONS: What this means for policy, business, and culture
+7. BOTTOM LINE (2-3 sentences): Key takeaway
 
 Start your response with "## HOOK" - do NOT add any title or date above this.
 
@@ -54,7 +65,7 @@ TONE: Professional, analytical, academic. Like a research briefing, not opinion 
 
 SOURCES: Cite each Russian source mentioned. Use format: "According to [Source], '[quote]'"
 
-Generate a complete 1000-1500 word analysis following this structure exactly."""
+Generate a complete 1500-2000 word analysis following this structure exactly. Use the expanded article coverage to provide deeper insights."""
 
 def load_briefing(filepath):
     """Load the media briefing JSON."""
@@ -72,12 +83,58 @@ def select_top_story(briefing):
     else:
         return None
 
-def format_story_for_prompt(story):
-    """Format story data for Claude prompt."""
-    text = f"Topic: {story.get('keyword', 'Russian media coverage')}\n\n"
-    text += "Coverage from Russian sources:\n\n"
+def load_previous_digests(days=7):
+    """Load previous N days of published digests for context."""
+    script_dir = Path(__file__).parent
+    project_root = script_dir.parent
+    posts_dir = project_root / '_posts'
 
-    for article in story['articles'][:5]:
+    if not posts_dir.exists():
+        return []
+
+    previous_digests = []
+    cutoff_date = datetime.now() - timedelta(days=days)
+
+    # Find recent posts
+    for post_file in sorted(posts_dir.glob('*.md'), reverse=True):
+        try:
+            # Extract date from filename (YYYY-MM-DD-slug.md)
+            date_str = '-'.join(post_file.stem.split('-')[:3])
+            post_date = datetime.strptime(date_str, '%Y-%m-%d')
+
+            if post_date >= cutoff_date:
+                with open(post_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    # Extract title and key sections
+                    previous_digests.append({
+                        'date': date_str,
+                        'filename': post_file.name,
+                        'content': content[:2000]  # First 2000 chars
+                    })
+        except Exception as e:
+            continue
+
+    return previous_digests[:5]  # Last 5 digests max
+
+def format_previous_digests(digests):
+    """Format previous digests for prompt."""
+    if not digests:
+        return "No previous digests available."
+
+    text = "PREVIOUS DIGESTS (for narrative continuity):\n\n"
+    for digest in digests:
+        text += f"Date: {digest['date']}\n"
+        text += f"Preview: {digest['content'][:500]}...\n\n"
+
+    return text
+
+def format_story_for_prompt(story, briefing):
+    """Format story data for Claude prompt with EXPANDED article coverage."""
+    text = f"Topic: {story.get('keyword', 'Russian media coverage')}\n\n"
+    text += "=== PRIMARY TRENDING COVERAGE ===\n\n"
+
+    # Include more articles from the trending topic
+    for article in story['articles'][:10]:  # Increased from 5 to 10
         text += f"SOURCE: {article['source']}\n"
         text += f"HEADLINE: {article['title']}\n"
         text += f"LINK: {article['link']}\n"
@@ -85,23 +142,47 @@ def format_story_for_prompt(story):
             text += f"SUMMARY: {article['summary']}\n"
         text += "\n"
 
+    # Add broader context from all articles
+    text += "\n=== ADDITIONAL CONTEXT FROM ALL SOURCES ===\n"
+    text += f"Total articles scanned: {briefing.get('total_articles_scanned', 0)}\n\n"
+
+    # Include headlines from all articles for broader context
+    if 'all_articles' in briefing:
+        text += "All headlines (for context):\n"
+        for i, article in enumerate(briefing['all_articles'][:100], 1):  # First 100 articles
+            text += f"{i}. [{article['source']}] {article['title']}\n"
+
     return text
 
-def generate_draft_with_claude(story, api_key):
-    """Use Claude API to generate analysis."""
+def generate_draft_with_claude(story, briefing, api_key):
+    """Use Claude API to generate analysis with expanded context."""
     client = Anthropic(api_key=api_key)
 
-    story_text = format_story_for_prompt(story)
+    # Load previous digests for context
+    print("📚 Loading previous digests for narrative context...")
+    previous_digests = load_previous_digests(days=7)
+    digests_text = format_previous_digests(previous_digests)
+    print(f"  ✓ Found {len(previous_digests)} previous digests")
+
+    # Format story with expanded article coverage
+    story_text = format_story_for_prompt(story, briefing)
     now = datetime.now()
     today = now.strftime("%B %d, %Y")
     month_year = now.strftime("%B %Y")
+
+    total_articles = briefing.get('total_articles_scanned', 0)
+
     full_prompt = ANALYSIS_PROMPT.format(
         briefing=story_text,
         today_date=today,
-        month_year=month_year
+        month_year=month_year,
+        previous_digests=digests_text,
+        total_articles=total_articles
     )
 
-    print("📝 Generating draft with Claude API...")
+    print(f"📝 Generating draft with Claude API...")
+    print(f"  - Using {total_articles} articles from briefing")
+    print(f"  - Including {len(previous_digests)} previous digests for context")
 
     try:
         message = client.messages.create(
@@ -243,8 +324,8 @@ def main():
     print(f"📰 Selected story: {story.get('keyword', 'Top headline')}")
     print(f"   Covered by {story.get('source_count', 1)} sources")
 
-    # Generate draft
-    draft_content = generate_draft_with_claude(story, api_key)
+    # Generate draft with expanded briefing context
+    draft_content = generate_draft_with_claude(story, briefing, api_key)
 
     if not draft_content:
         print("❌ Failed to generate draft")
