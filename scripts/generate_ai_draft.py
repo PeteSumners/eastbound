@@ -385,7 +385,33 @@ def generate_draft_with_claude(story, briefing, api_key):
         print(f"[ERROR] Error calling Claude API: {e}")
         return None
 
-def create_markdown_file(draft_content, story, output_dir):
+def extract_cited_sources(draft_content, briefing):
+    """Extract sources actually cited in the draft from the briefing."""
+    import re
+
+    # Find all "According to [SOURCE]" patterns
+    citation_pattern = r'According to ([A-Z][A-Za-z\s]+?)(?:,|\s+reporting|\.)'
+    cited_sources = re.findall(citation_pattern, draft_content)
+
+    # Clean up source names
+    cited_sources = [s.strip() for s in cited_sources]
+
+    # Match to actual articles in briefing
+    cited_articles = []
+    seen_urls = set()
+
+    for source_name in set(cited_sources):  # Unique sources
+        # Find articles from this source
+        for article in briefing.get('all_articles', []):
+            if article['source'].lower() in source_name.lower() or source_name.lower() in article['source'].lower():
+                if article['link'] not in seen_urls:
+                    cited_articles.append(article)
+                    seen_urls.add(article['link'])
+                    break  # One article per source
+
+    return cited_articles if cited_articles else None
+
+def create_markdown_file(draft_content, story, briefing, output_dir):
     """Create markdown file with frontmatter."""
     now = datetime.now()
     today = now.strftime('%Y-%m-%d')
@@ -456,9 +482,17 @@ Human review and editing may improve accuracy and nuance. Treat AI-generated ana
 
 """
 
-    # Add source links
-    for article in story['articles'][:5]:
-        frontmatter += f"- [{article['source']}]({article['link']}): {article['title']}\n"
+    # Extract and add actually cited sources
+    cited_articles = extract_cited_sources(draft_content, briefing)
+
+    if cited_articles:
+        # List sources that were actually cited
+        for article in cited_articles[:10]:  # Max 10 sources
+            frontmatter += f"- [{article['source']}]({article['link']}): {article['title']}\n"
+    else:
+        # Fallback to trending topic articles if extraction fails
+        for article in story['articles'][:5]:
+            frontmatter += f"- [{article['source']}]({article['link']}): {article['title']}\n"
 
     # Write file
     os.makedirs(output_dir, exist_ok=True)
@@ -502,7 +536,7 @@ def main():
         return
 
     # Save as markdown
-    filepath = create_markdown_file(draft_content, story, args.output)
+    filepath = create_markdown_file(draft_content, story, briefing, args.output)
 
     print(f"\n[DONE] Draft ready for review!")
     print(f"   File: {filepath}")

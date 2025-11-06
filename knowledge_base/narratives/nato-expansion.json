@@ -1,0 +1,100 @@
+{
+  "id": "nato-expansion",
+  "title": "NATO Expansion and Russian Security Concerns",
+  "date": "ongoing",
+  "category": "narrative",
+  "summary": "Russian government consistently portrays NATO expansion eastward as the primary threat to Russian security and the root cause of tensions with the West. This narrative frames Russia's actions as defensive responses to Western encirclement.",
+
+  "russian_perspective": {
+    "official_narrative": "After the Cold War, the West promised NATO would not expand eastward, but betrayed this agreement by admitting former Soviet states and allies. NATO expansion represents Western attempt to encircle and weaken Russia, threatening its security and sphere of influence.",
+    "media_framing": {
+      "core_claims": [
+        "NATO promised not to expand 'one inch eastward' after German reunification",
+        "NATO expansion threatens Russian security directly",
+        "Eastern European NATO members are hostile to Russia and influence alliance policy",
+        "NATO infrastructure near Russian borders enables first-strike capability",
+        "Ukraine joining NATO would be 'red line' for Russia"
+      ],
+      "visual_framing": "Maps showing NATO expansion in waves (1999, 2004, 2009, 2017, 2023-2024) moving toward Russian borders"
+    },
+    "key_quotes": [
+      {
+        "speaker": "Vladimir Putin",
+        "date": "2007-02-10",
+        "quote": "NATO has put its frontline forces on our borders. I think it is obvious that NATO expansion does not have any relation with the modernization of the Alliance itself or with ensuring security in Europe. On the contrary, it represents a serious provocation that reduces the level of mutual trust.",
+        "context": "Munich Security Conference"
+      },
+      {
+        "speaker": "Sergey Lavrov",
+        "date": "2021-12-15",
+        "quote": "The key to everything is the guarantee that NATO will not expand eastward.",
+        "context": "Pre-invasion diplomatic demands"
+      }
+    ],
+    "evolution": "Initially (1990s-2000s) framed as diplomatic concern. Escalated to security threat (2007 Munich speech). By 2014-2022, characterized as existential threat justifying military action."
+  },
+
+  "western_perspective": {
+    "official_narrative": "NATO expansion occurred because former Soviet states freely chose to join for protection against Russian aggression. No formal promise was made about NATO expansion. Each sovereign nation has right to choose its alliances.",
+    "counter_arguments": [
+      "No written agreement exists preventing NATO expansion",
+      "Verbal discussions about Germany only, not all of Eastern Europe",
+      "Eastern European countries sought NATO membership due to fear of Russia",
+      "NATO is defensive alliance that has never attacked Russia",
+      "Russian aggression (Georgia 2008, Ukraine 2014, 2022) justifies NATO's relevance"
+    ]
+  },
+
+  "facts": {
+    "verified_claims": [
+      "NATO expanded in 1999 (Poland, Czech Republic, Hungary)",
+      "NATO expanded in 2004 (7 countries including Baltic states)",
+      "NATO expanded in 2009 (Albania, Croatia)",
+      "NATO expanded in 2017 (Montenegro)",
+      "NATO expanded in 2023-2024 (Finland, Sweden after Ukraine invasion)",
+      "Some Western officials made verbal statements about not expanding NATO in 1990-1991",
+      "No formal written treaty prohibits NATO expansion"
+    ],
+    "disputed_claims": [
+      "Whether verbal assurances constituted binding promise",
+      "Whether discussions about Germany applied to all Eastern Europe",
+      "Whether NATO expansion is defensive or offensive in nature",
+      "Whether Russian security concerns are legitimate or pretextual"
+    ],
+    "data_points": {
+      "nato_members_1991": 16,
+      "nato_members_2024": 32,
+      "former_soviet_states_in_nato": "Estonia, Latvia, Lithuania",
+      "former_warsaw_pact_in_nato": "Poland, Czech Republic, Hungary, Bulgaria, Romania, Slovakia, Albania",
+      "distance_nato_to_moscow": "Reduced from ~1,000km to ~600km (Estonia border)"
+    }
+  },
+
+  "propaganda_techniques_observed": [
+    "Historical grievance (betrayal narrative)",
+    "Threat inflation (exaggerating NATO's offensive capabilities)",
+    "False dichotomy (either NATO stops expanding or war)",
+    "Selective history (emphasizing verbal statements, ignoring written agreements)",
+    "Reversal of causality (NATO expansion caused by Russian aggression vs. causes Russian aggression)"
+  ],
+
+  "related_entries": [
+    "2022-ukraine-invasion",
+    "euromaidan-2014",
+    "georgia-war-2008",
+    "putin-historical-worldview"
+  ],
+
+  "sources": [
+    {
+      "type": "analysis",
+      "description": "National Security Archive: NATO Expansion Debate",
+      "url": "https://nsarchive.gwu.edu/briefing-book/russia-programs/2017-12-12/nato-expansion-what-gorbachev-heard-western-leaders-early"
+    },
+    {
+      "type": "speech",
+      "description": "Putin's 2007 Munich Speech",
+      "url": "http://en.kremlin.ru/events/president/transcripts/24034"
+    }
+  ]
+}

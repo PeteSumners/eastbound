@@ -1,0 +1,108 @@
+{
+  "id": "western-sanctions-russia",
+  "title": "Western Economic Sanctions on Russia",
+  "date": "2014-present",
+  "category": "policy",
+  "summary": "Western countries have imposed extensive economic sanctions on Russia following the 2014 Crimea annexation and 2022 Ukraine invasion. These represent the most comprehensive sanctions regime against a major economy in modern history.",
+
+  "russian_perspective": {
+    "official_narrative": "Western sanctions are illegal economic warfare designed to destroy Russian economy and provoke regime change. Russia portrays sanctions as proof of Western hostility and uses them to rally domestic support and justify economic hardships.",
+    "media_framing": {
+      "terminology": "Often called 'economic terrorism' or 'economic aggression'",
+      "response_narrative": [
+        "Sanctions strengthen Russia by forcing import substitution and self-reliance",
+        "Sanctions harm Europe more than Russia (energy dependence)",
+        "Russian economy is resilient and adapting",
+        "Sanctions reveal Western hypocrisy and double standards",
+        "Sanctions accelerate global de-dollarization and multipolarity"
+      ]
+    },
+    "key_quotes": [
+      {
+        "speaker": "Vladimir Putin",
+        "date": "2022-03-16",
+        "quote": "The sanctions pressure on Russia is a big strategic mistake by the West... The economic blitzkrieg against Russia did not work. The policy of economic oppression failed to produce the desired results.",
+        "context": "Response to 2022 sanctions wave"
+      },
+      {
+        "speaker": "Dmitry Medvedev",
+        "date": "2022-09-12",
+        "quote": "Hellish sanctions have not worked and will not work. We have everything we need: natural resources, territory, brains.",
+        "context": "Telegram post"
+      }
+    ],
+    "evolution": "Initial portrayal (2014) as Western attack on Russian development. By 2022, framed as total economic war. Narrative shifted from 'sanctions don't hurt' to 'sanctions make us stronger' as economic pain became undeniable."
+  },
+
+  "western_perspective": {
+    "official_narrative": "Sanctions are necessary response to Russian aggression, designed to impose costs, limit Russia's military capabilities, and signal international disapproval. Goal is to change Russian behavior, not destroy economy.",
+    "objectives": [
+      "Increase economic cost of war for Russia",
+      "Limit Russia's ability to finance military operations",
+      "Restrict access to advanced technology",
+      "Signal international unity against aggression",
+      "Pressure elite supporters of Putin"
+    ]
+  },
+
+  "facts": {
+    "verified_claims": [
+      "Sanctions imposed in waves: 2014 (Crimea), 2022+ (Ukraine invasion)",
+      "Over 11,000 individuals and entities sanctioned by various Western countries",
+      "SWIFT restrictions imposed on major Russian banks (2022)",
+      "$300+ billion in Russian Central Bank reserves frozen",
+      "EU banned Russian oil imports (with phase-out period)",
+      "G7 imposed oil price cap mechanism ($60/barrel)",
+      "Restrictions on semiconductors and advanced technology exports",
+      "Asset freezes on Russian oligarchs totaling tens of billions"
+    ],
+    "economic_impact": [
+      "Russian GDP contracted 2.1% in 2022 (IMF estimate)",
+      "Ruble initially crashed but recovered due to capital controls",
+      "Russian oil exports redirected from Europe to China/India (at discount)",
+      "Some Western companies exited Russia (McDonald's, Starbucks, etc.)",
+      "Russian Central Bank restricted to using non-Western currencies",
+      "Import of Western goods significantly reduced"
+    ],
+    "data_points": {
+      "frozen_reserves": "$300+ billion",
+      "countries_imposing_sanctions": "US, EU, UK, Canada, Australia, Japan, South Korea, others",
+      "russian_gdp_decline_2022": "-2.1%",
+      "oil_price_cap": "$60 per barrel",
+      "sanctioned_individuals": "11,000+",
+      "western_companies_exited": "1,000+"
+    }
+  },
+
+  "propaganda_techniques_observed": [
+    "Downplaying (claiming sanctions ineffective despite evidence)",
+    "Deflection (focusing on European energy crisis instead of Russian economy)",
+    "False equivalence (comparing sanctions to Nazi blockade of Leningrad)",
+    "Rally-around-the-flag (using sanctions to boost nationalism)",
+    "Whataboutism (citing Western sanctions on other countries)"
+  },
+
+  "related_entries": [
+    "2022-ukraine-invasion",
+    "russian-energy-policy",
+    "russia-china-alignment"
+  ],
+
+  "sources": [
+    {
+      "type": "database",
+      "description": "EU Sanctions Explorer",
+      "url": "https://www.sanctionsmap.eu/"
+    },
+    {
+      "type": "analysis",
+      "description": "IMF: Economic Impact of Sanctions on Russia",
+      "url": "https://www.imf.org/"
+    },
+    {
+      "type": "data",
+      "description": "Yale CELI: Russian Business Tracker",
+      "url": "https://www.yalerussianbusinessretreat.com/"
+    }
+  ]
+}

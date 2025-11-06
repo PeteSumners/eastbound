@@ -1,0 +1,114 @@
+{
+  "id": "2022-ukraine-invasion",
+  "title": "2022 Russian Invasion of Ukraine",
+  "date": "2022-02-24",
+  "category": "event",
+  "summary": "Russia launched a full-scale military invasion of Ukraine on February 24, 2022, following months of military buildup along Ukraine's borders. The invasion marked the largest military conflict in Europe since World War II.",
+
+  "russian_perspective": {
+    "official_narrative": "Russia characterizes the invasion as a 'special military operation' necessary to demilitarize and denazify Ukraine, protect Russian-speaking populations in Donbas, and prevent NATO expansion eastward. Moscow claims it acted defensively in response to Western aggression and Ukrainian persecution of ethnic Russians.",
+    "media_framing": {
+      "terminology": "Never called a 'war' or 'invasion' - consistently termed 'special military operation' (spetsoperatsiya)",
+      "justifications": [
+        "NATO expansion threatening Russian security",
+        "Protection of Donbas civilians from 'Ukrainian genocide'",
+        "Preventing Ukraine from developing nuclear weapons",
+        "Eliminating neo-Nazi elements in Ukrainian government"
+      ],
+      "prohibited_narratives": "Russian law criminalizes calling it a 'war' or spreading 'false information' about Russian military actions"
+    },
+    "key_quotes": [
+      {
+        "speaker": "Vladimir Putin",
+        "date": "2022-02-24",
+        "quote": "I have made the decision of a military operation... Its purpose is to protect people who have been subjected to bullying and genocide... for which we will strive for the demilitarization and denazification of Ukraine.",
+        "context": "Announcement of invasion"
+      },
+      {
+        "speaker": "Sergey Lavrov (Foreign Minister)",
+        "date": "2022-03-01",
+        "quote": "We did not invade Ukraine. We declared a special military operation because we had absolutely no other way of explaining to the West that dragging Ukraine into NATO was a criminal act.",
+        "context": "Justification to international media"
+      }
+    ],
+    "evolution": "Initial narrative focused on quick 'denazification.' After military setbacks, shifted to protecting Donbas, preventing NATO expansion, and resisting Western imperialism. By 2023-2024, framed as existential conflict between Russia and collective West."
+  },
+
+  "western_perspective": {
+    "official_narrative": "Unprovoked act of aggression violating international law and Ukraine's sovereignty. Represents Russian imperial ambitions and attempt to restore Soviet sphere of influence.",
+    "media_framing": {
+      "terminology": "Invasion, war, aggression",
+      "focus_areas": [
+        "Ukrainian sovereignty and self-determination",
+        "Russian war crimes and civilian casualties",
+        "Ukrainian resistance and resilience",
+        "NATO unity in supporting Ukraine"
+      ]
+    },
+    "key_responses": [
+      "Extensive economic sanctions on Russia",
+      "Military aid to Ukraine ($100+ billion from US alone)",
+      "NATO expansion (Finland, Sweden joining)",
+      "International Criminal Court arrest warrant for Putin"
+    ]
+  },
+
+  "facts": {
+    "verified_claims": [
+      "Russia invaded Ukraine on February 24, 2022",
+      "UN General Assembly voted 141-5 condemning the invasion (March 2022)",
+      "Hundreds of thousands of casualties on both sides (exact numbers disputed)",
+      "Millions of Ukrainian refugees fled to Europe",
+      "Russian forces initially attempted to capture Kyiv but withdrew in April 2022",
+      "Russia annexed four Ukrainian regions (Donetsk, Luhansk, Zaporizhzhia, Kherson) in September 2022 - not internationally recognized"
+    ],
+    "disputed_claims": [
+      "Russian claim: Ukrainian government controlled by neo-Nazis (Ukrainian President Zelensky is Jewish)",
+      "Russian claim: NATO/US planned to use Ukraine to attack Russia",
+      "Ukrainian/Western claim: Russian forces deliberately target civilians",
+      "Casualty figures - both sides provide conflicting numbers"
+    ],
+    "data_points": {
+      "un_condemnation_vote": "141 yes, 5 no, 35 abstentions (March 2, 2022)",
+      "refugees": "~8 million Ukrainians fled abroad (UNHCR)",
+      "territory": "Russia controls ~18% of Ukrainian territory (as of 2024)",
+      "economic_cost": "World Bank estimates $411 billion in damages to Ukraine (as of 2023)"
+    }
+  },
+
+  "propaganda_techniques_observed": [
+    "Euphemism ('special military operation' instead of 'war')",
+    "Historical grievance (NATO expansion betrayal narrative)",
+    "Dehumanization (Nazi labeling of Ukrainian government)",
+    "Victimhood narrative (Russia defending itself)",
+    "Information control (criminalizing dissent)",
+    "Whataboutism (citing US/NATO interventions in Kosovo, Iraq, etc.)",
+    "False equivalence (comparing Ukrainian nationalism to Nazism)"
+  ],
+
+  "related_entries": [
+    "nato-expansion-history",
+    "euromaidan-2014",
+    "crimea-annexation-2014",
+    "donbas-conflict",
+    "putin-historical-worldview"
+  ],
+
+  "sources": [
+    {
+      "type": "primary",
+      "description": "Putin's February 24, 2022 address",
+      "url": "http://en.kremlin.ru/events/president/news/67843"
+    },
+    {
+      "type": "un_document",
+      "description": "UN General Assembly Resolution ES-11/1",
+      "url": "https://digitallibrary.un.org/record/3965290"
+    },
+    {
+      "type": "analysis",
+      "description": "Carnegie Endowment: Russia's Narratives on Ukraine",
+      "url": "https://carnegieendowment.org/"
+    }
+  ]
+}

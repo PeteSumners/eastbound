@@ -54,7 +54,7 @@ def fetch_feed(url, source_name, max_articles=50):
         return []
 
 def extract_keywords(text):
-    """Extract key terms from text with improved filtering."""
+    """Extract key terms (unigrams) and important phrases (bigrams) from text."""
     text = text.lower()
     words = re.findall(r'\b\w{4,}\b', text)
 
@@ -77,7 +77,7 @@ def extract_keywords(text):
         'foreign', 'domestic', 'federal', 'regional', 'local', 'global'
     }
 
-    # Filter keywords
+    # Filter unigrams (single words)
     keywords = []
     for word in words:
         # Skip stopwords
@@ -94,7 +94,27 @@ def extract_keywords(text):
 
         keywords.append(word)
 
-    return keywords
+    # Extract bigrams (2-word phrases) - captures names, places, compound terms
+    bigrams = []
+    for i in range(len(words) - 1):
+        word1, word2 = words[i], words[i+1]
+
+        # Skip if either word is a stopword
+        if word1 in stopwords or word2 in stopwords:
+            continue
+
+        # Skip if either is a year or number
+        if re.match(r'^(19|20)\d{2}$', word1) or re.match(r'^(19|20)\d{2}$', word2):
+            continue
+        if word1.isdigit() or word2.isdigit():
+            continue
+
+        # Create bigram
+        bigram = f"{word1} {word2}"
+        bigrams.append(bigram)
+
+    # Combine unigrams and bigrams, prioritizing bigrams
+    return bigrams + keywords
 
 def identify_trending_stories(all_articles):
     """Identify stories covered by multiple sources."""
