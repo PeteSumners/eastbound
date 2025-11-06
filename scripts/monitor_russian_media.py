@@ -41,15 +41,14 @@ RSS_SOURCES = {
 
 # Note: Removed duplicate 'TASS English' which was same URL as 'TASS'
 
-def fetch_feed(url, source_name, max_articles=50, timeout=30, retries=2):
+def fetch_feed(url, source_name, max_articles=50, retries=2):
     """
-    Fetch and parse RSS feed with retries and timeout.
+    Fetch and parse RSS feed with retries.
 
     Args:
         url: RSS feed URL
         source_name: Name of source
         max_articles: Maximum articles to fetch
-        timeout: Request timeout in seconds
         retries: Number of retry attempts
 
     Returns:
@@ -62,7 +61,9 @@ def fetch_feed(url, source_name, max_articles=50, timeout=30, retries=2):
             # Set user agent to avoid blocks
             feedparser.USER_AGENT = "Eastbound Reports RSS Monitor/1.0"
 
-            feed = feedparser.parse(url, timeout=timeout)
+            # Note: feedparser.parse() doesn't accept timeout parameter in all versions
+            # It uses urllib internally which has default timeout handling
+            feed = feedparser.parse(url)
 
             # Check if feed parsed successfully
             if hasattr(feed, 'bozo_exception') and feed.bozo:
