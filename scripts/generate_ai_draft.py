@@ -22,6 +22,14 @@ except ImportError:
     KNOWLEDGE_BASE_AVAILABLE = False
     print("[WARN] Knowledge base module not available")
 
+# Import stakeholder persona generator
+try:
+    from generate_stakeholder_personas import generate_persona, format_persona
+    PERSONAS_AVAILABLE = True
+except ImportError:
+    PERSONAS_AVAILABLE = False
+    print("[WARN] Stakeholder personas module not available")
+
 # Impartial analysis prompt for Claude
 ANALYSIS_PROMPT = """You are an objective analyst for Eastbound Reports, an independent platform that translates and analyzes Russian media for English-speaking audiences.
 
@@ -75,14 +83,18 @@ Your task: Analyze the following Russian media story and create a post following
 STORY BRIEFING (EXPANDED with {total_articles} articles):
 {briefing}
 
+STAKEHOLDER PERSPECTIVES:
+{stakeholder_personas}
+
 REQUIRED STRUCTURE (do NOT add your own title/header - it will be added programmatically):
 1. HOOK (2-3 sentences): What happened and why English-speaking readers should care
 2. RUSSIAN PERSPECTIVE (400-500 words): What Russian media sources are saying, with direct quotes from multiple sources
 3. CONTEXT (400-500 words): Historical, cultural, or political background that Western audiences typically miss
 4. COMPARISON (300-400 words): How Western media is covering this (note: you may need to infer or note if Western coverage is absent)
 5. NARRATIVE EVOLUTION (200-300 words): How has Russian media's framing of this topic changed over time? Reference previous digests if relevant.
-6. IMPLICATIONS: What this means for policy, business, and culture
-7. BOTTOM LINE (2-3 sentences): Key takeaway
+6. HUMAN IMPACT (300-400 words): Reference the stakeholder personas above. How does this narrative affect them? What are their concerns? Write in narrative style about how 2-3 of these real people experience this situation differently.
+7. IMPLICATIONS: What this means for policy, business, and culture
+8. BOTTOM LINE (2-3 sentences): Key takeaway
 
 Start your response with "## HOOK" - do NOT add any title or date above this.
 
@@ -264,6 +276,32 @@ def format_story_for_prompt(story, briefing):
 
     return text
 
+def generate_stakeholder_personas(briefing, count=3):
+    """Generate random stakeholder personas for human impact analysis."""
+    if not PERSONAS_AVAILABLE:
+        return "Stakeholder personas not available."
+
+    try:
+        # Get topic from briefing
+        topic = None
+        if briefing.get('trending_stories'):
+            topic = briefing['trending_stories'][0]['keyword']
+
+        # Generate diverse personas
+        personas = [generate_persona(topic) for _ in range(count)]
+
+        # Format for prompt
+        text = f"Below are {count} random people from around the world who have varying stakes in this narrative:\n\n"
+        for i, persona in enumerate(personas, 1):
+            text += format_persona(persona, i)
+
+        return text
+
+    except Exception as e:
+        print(f"[WARN] Could not generate personas: {e}")
+        return "Persona generation failed."
+
+
 def load_knowledge_base_context(briefing):
     """Load relevant knowledge base entries for current briefing."""
     if not KNOWLEDGE_BASE_AVAILABLE:
@@ -327,6 +365,14 @@ def generate_draft_with_claude(story, briefing, api_key):
     else:
         print(f"  [WARN] {knowledge_base_text}")
 
+    # Generate stakeholder personas (HUMAN IMPACT)
+    print("[PERSONAS] Generating random stakeholder personas...")
+    personas_text = generate_stakeholder_personas(briefing, count=3)
+    if "Stakeholder 1" in personas_text:
+        print(f"  [OK] Generated 3 diverse stakeholder personas")
+    else:
+        print(f"  [WARN] {personas_text}")
+
     # Combine ALL context with emphasis on temporal weighting
     combined_context = f"{digests_text}\n\n{historical_text}\n\n{knowledge_base_text}"
 
@@ -343,6 +389,7 @@ def generate_draft_with_claude(story, briefing, api_key):
         today_date=today,
         month_year=month_year,
         previous_digests=combined_context,
+        stakeholder_personas=personas_text,
         total_articles=total_articles
     )
 
