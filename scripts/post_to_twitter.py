@@ -195,11 +195,11 @@ def main():
     # Generate post URL
     post_url = args.url
     if not post_url:
-        # Auto-generate from filename: YYYY-MM-DD-slug.md -> /YYYY/MM/DD/slug/
+        # Auto-generate from filename: YYYY-MM-DD-slug.md -> /YYYY/MM/DD/slug.html
         parts = file_path.stem.split('-', 3)
         if len(parts) >= 4:
             year, month, day, slug = parts[0], parts[1], parts[2], parts[3]
-            post_url = f"https://petesumners.github.io/eastbound/{year}/{month}/{day}/{slug}/"
+            post_url = f"https://petesumners.github.io/eastbound/{year}/{month}/{day}/{slug}.html"
         else:
             # Fallback to homepage
             post_url = "https://petesumners.github.io/eastbound"

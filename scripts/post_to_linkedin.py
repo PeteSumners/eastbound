@@ -100,12 +100,12 @@ def main():
 
     # Build post URL
     filename = os.path.basename(args.file).replace('.md', '')
-    # Extract date parts from filename (YYYY-MM-DD-slug.md)
+    # Extract date parts from filename (YYYY-MM-DD-slug.md -> /YYYY/MM/DD/slug.html)
     parts = filename.split('-')
     if len(parts) >= 4:
         year, month, day = parts[0], parts[1], parts[2]
         slug = '-'.join(parts[3:])
-        post_url = f"https://petesumners.github.io/eastbound/{year}/{month}/{day}/{slug}/"
+        post_url = f"https://petesumners.github.io/eastbound/{year}/{month}/{day}/{slug}.html"
     else:
         post_url = "https://petesumners.github.io/eastbound"
 
