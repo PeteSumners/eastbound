@@ -33,6 +33,13 @@ jobs:
             --output "research/$(date -u +%Y-%m-%d)-briefing.json" \
             --parallel
 
+      - name: Generate visualizations
+        run: |
+          mkdir -p images
+          python scripts/generate_visuals.py \
+            --briefing "research/$(date -u +%Y-%m-%d)-briefing.json" \
+            --output "images/"
+
       - name: Generate AI content
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -62,7 +69,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add content/ research/
+          git add content/ research/ images/ _posts/
 
           if ! git diff --staged --quiet; then
             git commit -m "AI content: $(date -u +%Y-%m-%d) [automated]"

@@ -441,7 +441,9 @@ def create_markdown_file(draft_content, story, briefing, output_dir):
 
 """
 
-    # Build frontmatter
+    # Build frontmatter with featured image
+    featured_image = f"/images/{today}-featured.png"
+
     frontmatter = f"""---
 title: "{title_base}"
 subtitle: "AI-generated analysis of Russian media coverage"
@@ -456,6 +458,7 @@ tags:
 author: "Eastbound Reports (AI-Generated)"
 twitter_thread: true
 ai_generated: true
+image: {featured_image}
 ---
 
 **⚠️ AI-GENERATED CONTENT:** This post was automatically generated using Claude AI based on Russian media monitoring. While we strive for accuracy and objectivity, this content should be reviewed critically. All source citations link to original Russian media.
@@ -463,6 +466,19 @@ ai_generated: true
 ---
 
 {header}{draft_content}
+
+---
+
+## Data Visualizations
+
+### Trending Topics
+![Keyword Trends](/images/{today}-keywords.png)
+
+### Source Distribution
+![Source Distribution](/images/{today}-sources.png)
+
+### By The Numbers
+![Statistics](/images/{today}-stats.png)
 
 ---
 
