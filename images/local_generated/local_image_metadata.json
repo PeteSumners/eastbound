@@ -8,5 +8,15 @@
     "steps": 20,
     "license": "CreativeML Open RAIL-M - you own generated images",
     "cost": "FREE (local generation)"
+  },
+  "9b68a6ddc11cca3e7e8941af1e7a7105": {
+    "source": "local-stable-diffusion",
+    "prompt": "Ukrainian flag waving in front of historic European architecture, golden hour lighting, professional editorial photograph, detailed, photorealistic",
+    "path": "images/2025-11-06-generated.png",
+    "generated_at": "2025-11-06T08:43:35.969994",
+    "model": "stabilityai/stable-diffusion-2-1-base",
+    "steps": 20,
+    "license": "CreativeML Open RAIL-M - you own generated images",
+    "cost": "FREE (local generation)"
   }
 }
