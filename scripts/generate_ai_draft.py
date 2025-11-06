@@ -13,6 +13,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from anthropic import Anthropic
 from validate_and_fix import validate_and_fix_content, validate_structure
+from config import generate_image_path, SITE_BASEURL
 
 # Import knowledge base query system
 try:
@@ -489,7 +490,7 @@ def create_markdown_file(draft_content, story, briefing, output_dir):
 """
 
     # Build frontmatter with featured image (include baseurl for GitHub Pages)
-    featured_image = f"/eastbound/images/{today}-featured.png"
+    featured_image = generate_image_path(today, 'featured')
 
     frontmatter = f"""---
 title: "{title_base}"
@@ -518,13 +519,13 @@ image: {featured_image}
 ## Data Visualizations
 
 ### Trending Topics
-![Keyword Trends](/eastbound/images/{today}-keywords.png)
+![Keyword Trends]({generate_image_path(today, 'keywords')})
 
 ### Source Distribution
-![Source Distribution](/eastbound/images/{today}-sources.png)
+![Source Distribution]({generate_image_path(today, 'sources')})
 
 ### By The Numbers
-![Statistics](/eastbound/images/{today}-stats.png)
+![Statistics]({generate_image_path(today, 'stats')})
 
 ---
 

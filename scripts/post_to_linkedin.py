@@ -7,6 +7,7 @@ import json
 import argparse
 import requests
 import yaml
+from config import generate_post_url, LINKEDIN_HASHTAGS
 
 def extract_post_content(file_path):
     """Extract title, content, and URL from markdown post."""
@@ -99,15 +100,7 @@ def main():
         sys.exit(1)
 
     # Build post URL
-    filename = os.path.basename(args.file).replace('.md', '')
-    # Extract date parts from filename (YYYY-MM-DD-slug.md -> /YYYY/MM/DD/slug.html)
-    parts = filename.split('-')
-    if len(parts) >= 4:
-        year, month, day = parts[0], parts[1], parts[2]
-        slug = '-'.join(parts[3:])
-        post_url = f"https://petesumners.github.io/eastbound/{year}/{month}/{day}/{slug}.html"
-    else:
-        post_url = "https://petesumners.github.io/eastbound"
+    post_url = generate_post_url(args.file)
 
     # Create LinkedIn post text
     post_text = f"{title}\n\n"
@@ -115,7 +108,7 @@ def main():
         post_text += f"{subtitle}\n\n"
     post_text += f"{preview}...\n\n"
     post_text += f"Read more: {post_url}\n\n"
-    post_text += "#RussianMedia #MediaAnalysis #Geopolitics #EastboundReports"
+    post_text += LINKEDIN_HASHTAGS
 
     print(f"Posting to LinkedIn...")
     print(f"Title: {title}")

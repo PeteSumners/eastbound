@@ -13,6 +13,7 @@ import re
 from pathlib import Path
 import yaml
 import tweepy
+from config import generate_post_url, TWITTER_HASHTAGS
 
 
 def parse_frontmatter(content):
@@ -125,7 +126,7 @@ def create_thread(frontmatter, sections, post_url):
             tweets.append(tweet4)
 
     # Add final tweet: Read more + tags
-    tweets.append(f"Read the full analysis:\n{post_url}\n\n#Russia #MediaAnalysis #Geopolitics")
+    tweets.append(f"Read the full analysis:\n{post_url}\n\n{TWITTER_HASHTAGS}")
 
     return tweets
 
@@ -193,16 +194,7 @@ def main():
         return
 
     # Generate post URL
-    post_url = args.url
-    if not post_url:
-        # Auto-generate from filename: YYYY-MM-DD-slug.md -> /YYYY/MM/DD/slug.html
-        parts = file_path.stem.split('-', 3)
-        if len(parts) >= 4:
-            year, month, day, slug = parts[0], parts[1], parts[2], parts[3]
-            post_url = f"https://petesumners.github.io/eastbound/{year}/{month}/{day}/{slug}.html"
-        else:
-            # Fallback to homepage
-            post_url = "https://petesumners.github.io/eastbound"
+    post_url = args.url if args.url else generate_post_url(file_path)
 
     # Extract key sections
     content_type = frontmatter.get('type', '')
