@@ -1,0 +1,207 @@
+{
+  "id": "2022-ukraine-invasion",
+  "title": "2022 Russian Invasion of Ukraine",
+  "date": "2022-02-24",
+  "date_range": {
+    "start": "2022-02-24",
+    "end": "ongoing"
+  },
+  "category": "event",
+  "summary": "Russia launched a full-scale military invasion of Ukraine on February 24, 2022, marking the largest conventional military attack in Europe since World War II.",
+
+  "russian_perspective": {
+    "official_narrative": "Russia refers to the invasion as a 'Special Military Operation' aimed at 'denazification' and 'demilitarization' of Ukraine, framed as defensive action against NATO expansion and protection of Russian-speaking populations in Donbas.",
+
+    "media_framing": {
+      "initial": "Russian state media framed the operation as limited, necessary, and protective. Heavy emphasis on NATO threat, Ukrainian 'Nazis', and historical grievances.",
+      "evolution": "Over time, framing shifted to 'existential conflict with collective West', 'defense of Russian civilization', and increasingly apocalyptic rhetoric about Western intent to destroy Russia.",
+      "current": "Now framed as prolonged conflict of civilizations, war on 'Russophobia', and defense against Western hegemony."
+    },
+
+    "key_quotes": [
+      {
+        "speaker": "Vladimir Putin",
+        "date": "2022-02-24",
+        "quote": "The purpose of this operation is to protect people who, for eight years now, have been facing humiliation and genocide perpetrated by the Kyiv regime.",
+        "source": "Address to the Nation, February 24, 2022"
+      },
+      {
+        "speaker": "Vladimir Putin",
+        "date": "2022-09-21",
+        "quote": "Those who are using nuclear blackmail against us should know that the wind can turn around.",
+        "source": "Address on Partial Mobilization"
+      }
+    ],
+
+    "narrative_themes": [
+      "NATO expansion as existential threat",
+      "Protection of Russian-speakers",
+      "Denazification of Ukraine",
+      "Ukrainian government as illegitimate",
+      "West seeks to destroy Russia",
+      "Russia defending traditional values",
+      "Sanctions as economic war",
+      "Western weapons = NATO participation"
+    ]
+  },
+
+  "western_perspective": {
+    "official_position": "Western governments universally condemned the invasion as illegal, unprovoked aggression and violation of Ukrainian sovereignty and international law.",
+
+    "media_framing": "Western media framed as brutal invasion, war crimes, humanitarian catastrophe. Heavy focus on Ukrainian resistance, Russian military failures, civilian casualties.",
+
+    "key_differences": [
+      "Russia: Special operation vs. West: Full-scale invasion",
+      "Russia: Defensive vs. West: Aggressive expansion",
+      "Russia: Protecting civilians vs. West: Targeting civilians",
+      "Russia: Fighting Nazis vs. West: Democratic government",
+      "Russia: NATO threat vs. West: Sovereign nation's choice"
+    ]
+  },
+
+  "facts": {
+    "verified_claims": [
+      "Russia launched coordinated military attacks across Ukraine on February 24, 2022",
+      "Conflict has resulted in tens of thousands of casualties on both sides",
+      "Millions of Ukrainians displaced internally and as refugees",
+      "Western countries imposed unprecedented economic sanctions on Russia",
+      "NATO expanded with Finland and Sweden membership applications"
+    ],
+
+    "disputed_claims": [
+      {
+        "russian_claim": "Ukraine governed by Nazis",
+        "western_counter": "Ukraine has democratically-elected Jewish president, far-right parties receive minimal votes",
+        "evidence": "Volodymyr Zelenskyy Jewish, 2019 election results show nationalist parties <5%"
+      },
+      {
+        "russian_claim": "NATO expansion forced Russia's hand",
+        "western_counter": "Sovereign nations have right to choose alliances, NATO defensive alliance",
+        "evidence": "Ukraine not NATO member, no formal invitation extended before invasion"
+      }
+    ],
+
+    "data_points": {
+      "economic": {
+        "oil_price_feb_2022": "$95/barrel (Brent)",
+        "ruble_crash": "Fell from ~75 to 120 per USD in March 2022",
+        "gdp_impact_russia": "Estimated -2.1% in 2022",
+        "sanctions_countries": "40+ countries imposed sanctions"
+      },
+      "military": {
+        "russian_forces_committed": "Estimated 190,000+ initially",
+        "ukrainian_forces": "200,000+ active military + reserves",
+        "casualties": "Disputed, both sides claim inflated enemy losses"
+      },
+      "humanitarian": {
+        "refugees": "8+ million fled Ukraine",
+        "internally_displaced": "5+ million within Ukraine",
+        "cities_damaged": "100+ significant damage reported"
+      }
+    }
+  },
+
+  "propaganda_techniques_observed": [
+    {
+      "technique": "Historical grievance",
+      "example": "Constant references to WWII, Great Patriotic War, Nazi Germany"
+    },
+    {
+      "technique": "Threat inflation",
+      "example": "NATO portrayed as existential military threat despite defensive posture"
+    },
+    {
+      "technique": "Dehumanization",
+      "example": "Ukrainian government called 'Nazi junta', 'drug addicts'"
+    },
+    {
+      "technique": "Victimhood narrative",
+      "example": "Russia as victim of Western aggression and 'Russophobia'"
+    },
+    {
+      "technique": "Information control",
+      "example": "Domestic censorship, banned words like 'war' and 'invasion'"
+    }
+  ],
+
+  "related_entries": [
+    "2014-crimea-annexation",
+    "2008-georgia-war",
+    "nato-expansion-narrative",
+    "putin-vladimir",
+    "sanctions-timeline",
+    "russian-energy-policy"
+  ],
+
+  "sources": [
+    {
+      "title": "Putin's Speech on Ukraine Invasion",
+      "url": "http://en.kremlin.ru/events/president/news/67843",
+      "date": "2022-02-24",
+      "type": "primary_russian"
+    },
+    {
+      "title": "UN General Assembly Resolution condemning invasion",
+      "url": "https://digitallibrary.un.org/record/3965290",
+      "date": "2022-03-02",
+      "type": "official_international"
+    },
+    {
+      "title": "Reuters Timeline of Invasion",
+      "url": "https://www.reuters.com/world/europe/russia-ukraine-crisis-timeline-2022-02-25/",
+      "date": "2022-02-25",
+      "type": "western_media"
+    }
+  ],
+
+  "timeline": [
+    {
+      "date": "2022-02-21",
+      "event": "Putin recognizes Donetsk and Luhansk 'independence'",
+      "significance": "Legal pretext for military action"
+    },
+    {
+      "date": "2022-02-24",
+      "event": "Full-scale invasion begins",
+      "significance": "Largest European war since WWII"
+    },
+    {
+      "date": "2022-02-25",
+      "event": "Assault on Kyiv begins",
+      "significance": "Attempt to decapitate Ukrainian government"
+    },
+    {
+      "date": "2022-03-01",
+      "event": "Russian economy faces sanctions shock",
+      "significance": "Unprecedented Western economic response"
+    },
+    {
+      "date": "2022-04-02",
+      "event": "Bucha massacre revealed",
+      "significance": "Evidence of potential war crimes"
+    },
+    {
+      "date": "2022-09-21",
+      "event": "Partial mobilization announced",
+      "significance": "Escalation, domestic impact in Russia"
+    }
+  ],
+
+  "analysis_notes": {
+    "narrative_evolution": "Russian narrative shifted from 'quick special operation' to 'existential war with West' as military objectives failed to materialize quickly.",
+
+    "domestic_messaging": "Heavy censorship in Russia, opposition voices suppressed, patriotic fervor promoted through state media.",
+
+    "international_impact": "Accelerated Western unity, NATO expansion, energy crisis in Europe, global food security concerns.",
+
+    "key_inflection_points": [
+      "Failure to capture Kyiv (shift to Donbas focus)",
+      "Bucha revelations (hardened Western support)",
+      "Mobilization (Russian domestic discontent)",
+      "Ukraine counteroffensive (Russian narrative of strong resistance)"
+    ]
+  },
+
+  "last_updated": "2025-11-05",
+  "version": "1.0"
+}

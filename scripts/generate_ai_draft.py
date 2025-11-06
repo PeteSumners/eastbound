@@ -14,6 +14,14 @@ from pathlib import Path
 from anthropic import Anthropic
 from validate_and_fix import validate_and_fix_content, validate_structure
 
+# Import knowledge base query system
+try:
+    from query_knowledge_base import KnowledgeBase, extract_keywords_from_briefing, format_for_ai_prompt as format_kb_for_prompt
+    KNOWLEDGE_BASE_AVAILABLE = True
+except ImportError:
+    KNOWLEDGE_BASE_AVAILABLE = False
+    print("⚠️  Knowledge base module not available")
+
 # Impartial analysis prompt for Claude
 ANALYSIS_PROMPT = """You are an objective analyst for Eastbound Reports, an independent platform that translates and analyzes Russian media for English-speaking audiences.
 
@@ -36,14 +44,31 @@ CRITICAL PRINCIPLES:
 - Cite sources accurately
 - Focus on WHAT Russian media is saying, not whether it's true
 
-PREVIOUS DIGESTS (for narrative continuity):
+PREVIOUS DIGESTS, HISTORICAL CONTEXT & KNOWLEDGE BASE (MULTI-LAYERED):
 {previous_digests}
 
-IMPORTANT: Use previous digests to:
-- Track how narratives are evolving
-- Note any shifts in messaging
-- Reference previous coverage if relevant
-- Maintain analytical consistency
+CONTEXTUAL LAYERS:
+1. KNOWLEDGE BASE: Historical events, verified facts, past narrative patterns
+2. RECENT DIGESTS (last 7 days): 100% weight - Most important recent analysis
+3. HISTORICAL ARTICLES (last 90 days): Logarithmically weighted - Trend context
+4. CURRENT BRIEFING: Today's coverage - PRIMARY analysis target
+
+TEMPORAL WEIGHTING SYSTEM:
+- Today's articles: PRIMARY - What we're analyzing NOW
+- Last 7 days: 100% weight - Immediate narrative evolution
+- Last 30 days: 50% weight - Important trend context
+- Last 90 days: 25% weight - Background patterns
+- Knowledge Base: Timeless - Verified facts and historical precedents
+
+IMPORTANT: Use multi-layered context appropriately:
+1. GROUND analysis in Knowledge Base facts (verified claims, historical events)
+2. PRIORITIZE recent articles and digests (higher temporal weight)
+3. TRACK narrative evolution using historical articles
+4. COMPARE current framing to Knowledge Base precedents
+5. IDENTIFY if current narrative is new or recurring from history
+6. FACT-CHECK claims against Knowledge Base verified data
+7. NOTE propaganda techniques compared to historical examples
+8. MAINTAIN analytical consistency across all time periods
 
 Your task: Analyze the following Russian media story and create a post following the Eastbound Reports template.
 
@@ -84,7 +109,7 @@ def select_top_story(briefing):
         return None
 
 def load_previous_digests(days=7):
-    """Load previous N days of published digests for context."""
+    """Load previous N days of published digests for context (LINEAR - for recent focus)."""
     script_dir = Path(__file__).parent
     project_root = script_dir.parent
     posts_dir = project_root / '_posts'
@@ -109,22 +134,107 @@ def load_previous_digests(days=7):
                     previous_digests.append({
                         'date': date_str,
                         'filename': post_file.name,
-                        'content': content[:2000]  # First 2000 chars
+                        'content': content[:2000],  # First 2000 chars
+                        'weight': 1.0  # Full weight for recent
                     })
         except Exception as e:
             continue
 
     return previous_digests[:5]  # Last 5 digests max
 
+def load_historical_context_weighted():
+    """Load historical briefings with LOGARITHMIC temporal decay."""
+    script_dir = Path(__file__).parent
+    project_root = script_dir.parent
+    research_dir = project_root / 'research'
+
+    # Define temporal buckets with decreasing weights
+    now = datetime.now()
+    buckets = [
+        {'days': 7, 'weight': 1.0, 'max_articles': 100},  # Last week: everything
+        {'days': 30, 'weight': 0.5, 'max_articles': 50},   # Last month: 50%
+        {'days': 90, 'weight': 0.25, 'max_articles': 25},  # Last quarter: 25%
+    ]
+
+    weighted_articles = []
+
+    for bucket in buckets:
+        start_date = now - timedelta(days=bucket['days'])
+        articles_in_bucket = []
+
+        # Scan briefing files
+        for briefing_file in sorted(research_dir.glob('*-briefing.json')):
+            try:
+                date_str = '-'.join(briefing_file.stem.split('-')[:3])
+                briefing_date = datetime.strptime(date_str, '%Y-%m-%d')
+
+                if briefing_date >= start_date:
+                    with open(briefing_file, 'r', encoding='utf-8') as f:
+                        briefing = json.load(f)
+                        articles = briefing.get('all_articles', briefing.get('top_headlines', []))
+
+                        # Sample articles based on weight
+                        sample_count = int(len(articles) * bucket['weight'])
+                        sample_count = min(sample_count, bucket['max_articles'])
+
+                        if sample_count > 0:
+                            step = max(1, len(articles) // sample_count)
+                            sampled = articles[::step][:sample_count]
+
+                            for article in sampled:
+                                articles_in_bucket.append({
+                                    'date': date_str,
+                                    'article': article,
+                                    'weight': bucket['weight']
+                                })
+            except Exception:
+                continue
+
+        weighted_articles.extend(articles_in_bucket)
+
+    return weighted_articles
+
 def format_previous_digests(digests):
-    """Format previous digests for prompt."""
+    """Format previous digests for prompt with TEMPORAL WEIGHTING."""
     if not digests:
         return "No previous digests available."
 
-    text = "PREVIOUS DIGESTS (for narrative continuity):\n\n"
-    for digest in digests:
-        text += f"Date: {digest['date']}\n"
-        text += f"Preview: {digest['content'][:500]}...\n\n"
+    text = "PREVIOUS DIGESTS (Temporally Weighted - Recent = Higher Priority):\n\n"
+    for i, digest in enumerate(digests):
+        # Calculate recency weight (most recent = 1.0, older = lower)
+        recency_weight = 1.0 - (i * 0.15)
+        recency_weight = max(recency_weight, 0.25)
+
+        text += f"📅 {digest['date']} [Weight: {recency_weight:.0%}]\n"
+        # More content for recent digests
+        preview_length = int(500 * recency_weight)
+        text += f"{digest['content'][:preview_length]}...\n\n"
+
+    return text
+
+def format_historical_context(weighted_articles):
+    """Format historical articles with temporal weighting."""
+    if not weighted_articles:
+        return "No historical context available."
+
+    text = "HISTORICAL ARTICLE CONTEXT (Logarithmically Sampled):\n\n"
+
+    # Group by weight bucket
+    by_weight = {}
+    for item in weighted_articles:
+        weight = item['weight']
+        if weight not in by_weight:
+            by_weight[weight] = []
+        by_weight[weight].append(item)
+
+    # Format each weight bucket
+    for weight in sorted(by_weight.keys(), reverse=True):
+        articles = by_weight[weight]
+        text += f"\n[Weight {weight:.0%}] - {len(articles)} articles\n"
+
+        for item in articles[:10]:  # Show first 10 from each bucket
+            article = item['article']
+            text += f"  {item['date']}: [{article['source']}] {article['title']}\n"
 
     return text
 
@@ -154,15 +264,71 @@ def format_story_for_prompt(story, briefing):
 
     return text
 
+def load_knowledge_base_context(briefing):
+    """Load relevant knowledge base entries for current briefing."""
+    if not KNOWLEDGE_BASE_AVAILABLE:
+        return "Knowledge base not available."
+
+    try:
+        script_dir = Path(__file__).parent
+        project_root = script_dir.parent
+        kb_root = project_root / 'knowledge_base'
+
+        if not kb_root.exists():
+            return "Knowledge base directory not found."
+
+        # Extract keywords from briefing
+        keywords = extract_keywords_from_briefing(briefing)
+
+        # Initialize knowledge base
+        kb = KnowledgeBase(kb_root)
+
+        # Search for relevant entries
+        results = kb.search(keywords=keywords[:15], limit=5)
+
+        if not results:
+            return "No relevant knowledge base entries found."
+
+        # Format for AI
+        context_data = {
+            'keywords_searched': keywords[:15],
+            'total_entries_found': len(results),
+            'relevant_entries': results
+        }
+
+        return format_kb_for_prompt(context_data)
+
+    except Exception as e:
+        print(f"Warning: Failed to load knowledge base: {e}")
+        return "Knowledge base error."
+
 def generate_draft_with_claude(story, briefing, api_key):
-    """Use Claude API to generate analysis with expanded context."""
+    """Use Claude API to generate analysis with TEMPORALLY WEIGHTED + KNOWLEDGE BASE context."""
     client = Anthropic(api_key=api_key)
 
-    # Load previous digests for context
-    print("📚 Loading previous digests for narrative context...")
+    # Load recent digests (last 7 days - LINEAR)
+    print("📚 Loading recent digests (last 7 days, linear)...")
     previous_digests = load_previous_digests(days=7)
     digests_text = format_previous_digests(previous_digests)
-    print(f"  ✓ Found {len(previous_digests)} previous digests")
+    print(f"  ✓ Found {len(previous_digests)} recent digests")
+
+    # Load historical context (LOGARITHMIC decay)
+    print("🕰️  Loading historical context (logarithmic sampling)...")
+    historical_articles = load_historical_context_weighted()
+    historical_text = format_historical_context(historical_articles)
+    print(f"  ✓ Loaded {len(historical_articles)} historical articles across time")
+
+    # Load knowledge base context (WORLD HISTORY & ANALYSIS)
+    print("🌍 Querying knowledge base for relevant historical context...")
+    knowledge_base_text = load_knowledge_base_context(briefing)
+    if "Knowledge base" not in knowledge_base_text or "error" not in knowledge_base_text.lower():
+        kb_count = knowledge_base_text.count('## Knowledge Entry')
+        print(f"  ✓ Found {kb_count} relevant knowledge base entries")
+    else:
+        print(f"  ⚠️  {knowledge_base_text}")
+
+    # Combine ALL context with emphasis on temporal weighting
+    combined_context = f"{digests_text}\n\n{historical_text}\n\n{knowledge_base_text}"
 
     # Format story with expanded article coverage
     story_text = format_story_for_prompt(story, briefing)
@@ -176,13 +342,17 @@ def generate_draft_with_claude(story, briefing, api_key):
         briefing=story_text,
         today_date=today,
         month_year=month_year,
-        previous_digests=digests_text,
+        previous_digests=combined_context,
         total_articles=total_articles
     )
 
     print(f"📝 Generating draft with Claude API...")
-    print(f"  - Using {total_articles} articles from briefing")
-    print(f"  - Including {len(previous_digests)} previous digests for context")
+    print(f"  - Using {total_articles} current articles")
+    print(f"  - Including {len(previous_digests)} recent digests (100% weight)")
+    print(f"  - Including {len(historical_articles)} historical articles (logarithmically weighted)")
+    kb_entries = knowledge_base_text.count('## Knowledge Entry')
+    if kb_entries > 0:
+        print(f"  - Including {kb_entries} knowledge base entries (world history context)")
 
     try:
         message = client.messages.create(
