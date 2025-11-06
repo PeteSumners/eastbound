@@ -9,6 +9,7 @@ Usage:
 import argparse
 import feedparser
 import json
+import sys
 from datetime import datetime
 from collections import defaultdict
 import re
@@ -32,26 +33,64 @@ RSS_SOURCES = {
 
 # Note: Removed duplicate 'TASS English' which was same URL as 'TASS'
 
-def fetch_feed(url, source_name, max_articles=50):
-    """Fetch and parse RSS feed - now fetches MANY more articles."""
-    try:
-        feed = feedparser.parse(url)
-        articles = []
+def fetch_feed(url, source_name, max_articles=50, timeout=30, retries=2):
+    """
+    Fetch and parse RSS feed with retries and timeout.
 
-        # Fetch up to max_articles (default 50, way more than before!)
-        for entry in feed.entries[:max_articles]:
-            articles.append({
-                'source': source_name,
-                'title': entry.get('title', ''),
-                'link': entry.get('link', ''),
-                'published': entry.get('published', ''),
-                'summary': entry.get('summary', '')[:1000],  # Increased to 1000 chars for more context
-            })
+    Args:
+        url: RSS feed URL
+        source_name: Name of source
+        max_articles: Maximum articles to fetch
+        timeout: Request timeout in seconds
+        retries: Number of retry attempts
 
-        return articles
-    except Exception as e:
-        print(f"Error fetching {source_name}: {e}")
-        return []
+    Returns:
+        List of article dicts, or empty list on failure
+    """
+    import time
+
+    for attempt in range(retries + 1):
+        try:
+            # Set user agent to avoid blocks
+            feedparser.USER_AGENT = "Eastbound Reports RSS Monitor/1.0"
+
+            feed = feedparser.parse(url, timeout=timeout)
+
+            # Check if feed parsed successfully
+            if hasattr(feed, 'bozo_exception') and feed.bozo:
+                raise Exception(f"Feed parsing error: {feed.bozo_exception}")
+
+            articles = []
+
+            # Fetch up to max_articles
+            for entry in feed.entries[:max_articles]:
+                # Validate entry has minimum required fields
+                if not entry.get('title') or not entry.get('link'):
+                    continue
+
+                articles.append({
+                    'source': source_name,
+                    'title': entry.get('title', '').strip(),
+                    'link': entry.get('link', '').strip(),
+                    'published': entry.get('published', ''),
+                    'summary': entry.get('summary', '')[:1000],
+                })
+
+            if len(articles) == 0 and len(feed.entries) == 0:
+                raise Exception(f"No articles found in feed")
+
+            return articles
+
+        except Exception as e:
+            if attempt < retries:
+                wait_time = 2 ** attempt  # Exponential backoff
+                print(f"    [RETRY] {source_name} failed (attempt {attempt + 1}/{retries + 1}), waiting {wait_time}s: {e}")
+                time.sleep(wait_time)
+            else:
+                print(f"    [ERROR] {source_name}: {e}")
+                return []
+
+    return []
 
 def extract_keywords(text):
     """Extract key terms (unigrams) and important phrases (bigrams) from text."""
@@ -244,6 +283,14 @@ def main():
     all_articles, dup_count = deduplicate_articles(all_articles)
     print(f"  [OK] Removed {dup_count} duplicates")
     print(f"  [OK] {len(all_articles)} unique articles remaining")
+
+    # Ensure minimum viable article count
+    MIN_ARTICLES = 50
+    if len(all_articles) < MIN_ARTICLES:
+        print(f"\n[ERROR] Insufficient articles ({len(all_articles)} < {MIN_ARTICLES} minimum)")
+        print(f"[ERROR] System requires at least {MIN_ARTICLES} articles for quality analysis")
+        print(f"[ERROR] This may indicate RSS feed failures or network issues")
+        sys.exit(1)
 
     print("\n[SEARCH] Identifying trending stories...")
     trending = identify_trending_stories(all_articles)

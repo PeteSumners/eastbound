@@ -1,0 +1,100 @@
+{
+  "id": "russian-energy-gas-policy",
+  "title": "Russian Energy & Gas Policy as Political Weapon",
+  "date": "ongoing",
+  "category": "policy",
+  "summary": "Russia uses its energy exports (natural gas, oil) as geopolitical leverage, particularly over Europe. Gazprom (state-controlled) can cut supplies to pressure countries politically. This leverage diminished after 2022 invasion as Europe diversified energy sources.",
+
+  "russian_perspective": {
+    "official_narrative": "Russia is a reliable energy supplier fulfilling contractual obligations. Any supply disruptions are due to technical issues, Western sanctions interfering with maintenance, or buyers refusing to pay in rubles. Europe's energy crisis is self-inflicted due to anti-Russian sanctions.",
+    "media_framing": {
+      "core_claims": [
+        "Russia has been reliable energy partner for decades",
+        "Europe depends on Russian gas by choice (market economics)",
+        "Supply cuts are technical, not political",
+        "Western sanctions prevent turbine maintenance (Nord Stream excuse)",
+        "Europe's energy crisis caused by their own policies",
+        "Alternative suppliers (US LNG) more expensive and unreliable"
+      ]
+    },
+    "key_quotes": [
+      {
+        "speaker": "Vladimir Putin",
+        "date": "2022-06-17",
+        "quote": "We are fulfilling all our contractual obligations. We have never refused, no matter what anyone says, we have not refused to supply the necessary energy resources to the European market.",
+        "context": "Denying using energy as weapon"
+      },
+      {
+        "speaker": "Gazprom",
+        "date": "2022-08-31",
+        "quote": "Nord Stream gas pipeline will be fully stopped until the causes of the oil leak are eliminated.",
+        "context": "Indefinite shutdown announcement"
+      }
+    ]
+  },
+
+  "western_perspective": {
+    "official_narrative": "Russia has repeatedly weaponized energy supplies to coerce and punish European countries. Pattern of cutting supplies during winter, political disputes, or negotiations. Ukraine has faced cuts multiple times. After 2022 invasion, Russia deliberately reduced EU gas to pressure sanctions removal.",
+    "evidence_cited": [
+      "2006 & 2009 gas cutoffs to Ukraine (January, coldest month)",
+      "2007 cutoff to Belarus",
+      "Reduction of Nord Stream flows in 2022 (before any technical issues)",
+      "Gazprom's state ownership gives Kremlin direct control",
+      "Correlation between gas cuts and political disputes"
+    ]
+  },
+
+  "facts": {
+    "verified_claims": [
+      "Russia supplied ~40% of EU gas imports before 2022 invasion",
+      "Germany was most dependent (~55% of gas from Russia)",
+      "Gazprom is 50%+ state-owned",
+      "Russia cut gas to Ukraine in 2006 and 2009 (January)",
+      "Nord Stream 1 flows reduced to 20% capacity in July 2022",
+      "Nord Stream 1 shut down completely August 31, 2022",
+      "Nord Stream pipelines sabotaged September 26, 2022 (perpetrator disputed)",
+      "EU reduced Russian gas imports by 75% by late 2023",
+      "Europe found alternative suppliers (Norway, LNG from US/Qatar)"
+    ],
+    "disputed_claims": [
+      "Whether cuts were technical or political (pattern suggests political)",
+      "Who sabotaged Nord Stream pipelines (theories: Russia, US, Ukraine)",
+      "Whether sanctions prevented turbine maintenance (dubious - sanctions had exemptions)"
+    ],
+    "data_points": {
+      "eu_gas_from_russia_2021": "~40%",
+      "eu_gas_from_russia_2023": "~8%",
+      "germany_dependence_2021": "~55%",
+      "nordstream_capacity": "110 billion cubic meters/year (both pipelines)",
+      "gazprom_state_ownership": "~50%",
+      "european_gas_storage_2022": "Filled to 80%+ before winter (emergency measures)"
+    }
+  },
+
+  "propaganda_techniques_observed": [
+    "Denial (energy cuts are technical, not political)",
+    "Blame shifting (Europe's crisis is their own fault)",
+    "False victimhood (sanctions prevent Russia from helping)",
+    "Economic coercion disguised as market forces",
+    "Selective evidence (citing contracts while violating spirit)"
+  ],
+
+  "related_entries": [
+    "western-sanctions-russia",
+    "2022-ukraine-invasion",
+    "nord-stream-sabotage"
+  ],
+
+  "sources": [
+    {
+      "type": "data",
+      "description": "Eurostat Energy Statistics",
+      "url": "https://ec.europa.eu/eurostat"
+    },
+    {
+      "type": "analysis",
+      "description": "IEA: Russia's Gas Cuts to Europe",
+      "url": "https://www.iea.org/"
+    }
+  ]
+}
