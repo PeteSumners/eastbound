@@ -20,7 +20,7 @@ try:
     KNOWLEDGE_BASE_AVAILABLE = True
 except ImportError:
     KNOWLEDGE_BASE_AVAILABLE = False
-    print("⚠️  Knowledge base module not available")
+    print("[WARN] Knowledge base module not available")
 
 # Impartial analysis prompt for Claude
 ANALYSIS_PROMPT = """You are an objective analyst for Eastbound Reports, an independent platform that translates and analyzes Russian media for English-speaking audiences.
@@ -205,7 +205,7 @@ def format_previous_digests(digests):
         recency_weight = 1.0 - (i * 0.15)
         recency_weight = max(recency_weight, 0.25)
 
-        text += f"📅 {digest['date']} [Weight: {recency_weight:.0%}]\n"
+        text += f"[DATE] {digest['date']} [Weight: {recency_weight:.0%}]\n"
         # More content for recent digests
         preview_length = int(500 * recency_weight)
         text += f"{digest['content'][:preview_length]}...\n\n"
@@ -307,25 +307,25 @@ def generate_draft_with_claude(story, briefing, api_key):
     client = Anthropic(api_key=api_key)
 
     # Load recent digests (last 7 days - LINEAR)
-    print("📚 Loading recent digests (last 7 days, linear)...")
+    print("[CONTEXT] Loading recent digests (last 7 days, linear)...")
     previous_digests = load_previous_digests(days=7)
     digests_text = format_previous_digests(previous_digests)
-    print(f"  ✓ Found {len(previous_digests)} recent digests")
+    print(f"  [OK] Found {len(previous_digests)} recent digests")
 
     # Load historical context (LOGARITHMIC decay)
-    print("🕰️  Loading historical context (logarithmic sampling)...")
+    print("[HISTORY] Loading historical context (logarithmic sampling)...")
     historical_articles = load_historical_context_weighted()
     historical_text = format_historical_context(historical_articles)
-    print(f"  ✓ Loaded {len(historical_articles)} historical articles across time")
+    print(f"  [OK] Loaded {len(historical_articles)} historical articles across time")
 
     # Load knowledge base context (WORLD HISTORY & ANALYSIS)
-    print("🌍 Querying knowledge base for relevant historical context...")
+    print("[KB] Querying knowledge base for relevant historical context...")
     knowledge_base_text = load_knowledge_base_context(briefing)
     if "Knowledge base" not in knowledge_base_text or "error" not in knowledge_base_text.lower():
         kb_count = knowledge_base_text.count('## Knowledge Entry')
-        print(f"  ✓ Found {kb_count} relevant knowledge base entries")
+        print(f"  [OK] Found {kb_count} relevant knowledge base entries")
     else:
-        print(f"  ⚠️  {knowledge_base_text}")
+        print(f"  [WARN] {knowledge_base_text}")
 
     # Combine ALL context with emphasis on temporal weighting
     combined_context = f"{digests_text}\n\n{historical_text}\n\n{knowledge_base_text}"
@@ -346,7 +346,7 @@ def generate_draft_with_claude(story, briefing, api_key):
         total_articles=total_articles
     )
 
-    print(f"📝 Generating draft with Claude API...")
+    print(f"[DRAFT] Generating draft with Claude API...")
     print(f"  - Using {total_articles} current articles")
     print(f"  - Including {len(previous_digests)} recent digests (100% weight)")
     print(f"  - Including {len(historical_articles)} historical articles (logarithmically weighted)")
@@ -366,23 +366,23 @@ def generate_draft_with_claude(story, briefing, api_key):
         )
 
         draft_content = message.content[0].text
-        print("✅ Draft generated successfully")
+        print("[OK] Draft generated successfully")
 
         # Validate and fix common hallucinations
-        print("🔍 Validating content and fixing hallucinations...")
+        print("[VALIDATE] Validating content and fixing hallucinations...")
         source_list = [article['source'] for article in story['articles'][:5]]
         draft_content = validate_and_fix_content(draft_content, now, source_list)
 
         # Check structure
         if validate_structure(draft_content):
-            print("✅ Content structure validated")
+            print("[OK] Content structure validated")
         else:
-            print("⚠️  Warning: Some sections may be missing")
+            print("[WARN] Warning: Some sections may be missing")
 
         return draft_content
 
     except Exception as e:
-        print(f"❌ Error calling Claude API: {e}")
+        print(f"[ERROR] Error calling Claude API: {e}")
         return None
 
 def create_markdown_file(draft_content, story, output_dir):
@@ -466,7 +466,7 @@ Human review and editing may improve accuracy and nuance. Treat AI-generated ana
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(frontmatter)
 
-    print(f"✅ Draft saved to: {filepath}")
+    print(f"[OK] Draft saved to: {filepath}")
     return filepath
 
 def main():
@@ -478,33 +478,33 @@ def main():
     # Get API key from environment
     api_key = os.getenv('ANTHROPIC_API_KEY')
     if not api_key:
-        print("❌ Error: ANTHROPIC_API_KEY environment variable not set")
+        print("[ERROR] Error: ANTHROPIC_API_KEY environment variable not set")
         return
 
     # Load briefing
-    print(f"📖 Loading briefing from {args.briefing}")
+    print(f"[LOAD] Loading briefing from {args.briefing}")
     briefing = load_briefing(args.briefing)
 
     # Select top story
     story = select_top_story(briefing)
     if not story:
-        print("❌ No suitable stories found in briefing")
+        print("[ERROR] No suitable stories found in briefing")
         return
 
-    print(f"📰 Selected story: {story.get('keyword', 'Top headline')}")
+    print(f"[STORY] Selected story: {story.get('keyword', 'Top headline')}")
     print(f"   Covered by {story.get('source_count', 1)} sources")
 
     # Generate draft with expanded briefing context
     draft_content = generate_draft_with_claude(story, briefing, api_key)
 
     if not draft_content:
-        print("❌ Failed to generate draft")
+        print("[ERROR] Failed to generate draft")
         return
 
     # Save as markdown
     filepath = create_markdown_file(draft_content, story, args.output)
 
-    print(f"\n🎉 Draft ready for review!")
+    print(f"\n[DONE] Draft ready for review!")
     print(f"   File: {filepath}")
     print(f"   Status: draft (requires approval to publish)")
 

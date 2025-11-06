@@ -54,14 +54,45 @@ def fetch_feed(url, source_name, max_articles=50):
         return []
 
 def extract_keywords(text):
-    """Extract key terms from text (simple implementation)."""
-    # Remove common words and extract meaningful terms
+    """Extract key terms from text with improved filtering."""
     text = text.lower()
     words = re.findall(r'\b\w{4,}\b', text)
 
-    # Filter out very common words
-    stopwords = {'this', 'that', 'with', 'from', 'have', 'been', 'will', 'said', 'says', 'more', 'about', 'after'}
-    keywords = [w for w in words if w not in stopwords]
+    # Comprehensive stopword list
+    stopwords = {
+        # Common English words
+        'this', 'that', 'with', 'from', 'have', 'been', 'will', 'said', 'says',
+        'more', 'about', 'after', 'their', 'which', 'when', 'where', 'there',
+        'what', 'some', 'than', 'into', 'very', 'just', 'over', 'also', 'only',
+        'many', 'most', 'such', 'other', 'would', 'could', 'should', 'these',
+        'those', 'them', 'then', 'both', 'each', 'does', 'were', 'make', 'made',
+
+        # Generic Russian media words
+        'russia', 'russian', 'moscow', 'kremlin', 'media', 'tass', 'reported',
+        'reports', 'according', 'statement', 'official', 'officials', 'news',
+        'world', 'national', 'international', 'chief', 'head', 'minister',
+        'president', 'government', 'country', 'state', 'says', 'told', 'plan',
+        'plans', 'year', 'years', 'talks', 'meeting', 'held', 'announced',
+        'military', 'report', 'full', 'political', 'economic', 'social',
+        'foreign', 'domestic', 'federal', 'regional', 'local', 'global'
+    }
+
+    # Filter keywords
+    keywords = []
+    for word in words:
+        # Skip stopwords
+        if word in stopwords:
+            continue
+
+        # Skip years (1900-2099)
+        if re.match(r'^(19|20)\d{2}$', word):
+            continue
+
+        # Skip pure numbers
+        if word.isdigit():
+            continue
+
+        keywords.append(word)
 
     return keywords
 
@@ -78,7 +109,7 @@ def identify_trending_stories(all_articles):
     trending = {}
     for keyword, articles in keyword_counts.items():
         sources = set(a['source'] for a in articles)
-        if len(sources) >= 2:  # Covered by 2+ sources
+        if len(sources) >= 3:  # Covered by 3+ sources (more significant)
             if keyword not in trending or len(sources) > len(set(a['source'] for a in trending[keyword]['articles'])):
                 trending[keyword] = {
                     'keyword': keyword,
@@ -106,25 +137,61 @@ def create_briefing(trending_stories, all_articles):
 
     return briefing
 
+def deduplicate_articles(articles):
+    """Remove duplicate articles based on URL and title similarity."""
+    seen_urls = set()
+    seen_titles = set()
+    unique_articles = []
+    duplicates = 0
+
+    for article in articles:
+        url = article.get('link', '')
+        title = article.get('title', '').lower().strip()
+
+        # Skip if we've seen this exact URL
+        if url and url in seen_urls:
+            duplicates += 1
+            continue
+
+        # Skip if we've seen this exact title
+        if title and title in seen_titles:
+            duplicates += 1
+            continue
+
+        # Add to unique set
+        if url:
+            seen_urls.add(url)
+        if title:
+            seen_titles.add(title)
+        unique_articles.append(article)
+
+    return unique_articles, duplicates
+
 def main():
     parser = argparse.ArgumentParser(description='Monitor Russian media sources')
     parser.add_argument('--output', required=True, help='Output JSON file path')
     args = parser.parse_args()
 
-    print("📡 Monitoring Russian media sources...")
+    print("[RSS] Monitoring Russian media sources...")
 
     all_articles = []
     for source_name, url in RSS_SOURCES.items():
         print(f"  Fetching {source_name}...")
         articles = fetch_feed(url, source_name, max_articles=50)
         all_articles.extend(articles)
-        print(f"    ✓ Found {len(articles)} articles")
+        print(f"    [OK] Found {len(articles)} articles")
 
-    print(f"\n📊 Total articles: {len(all_articles)}")
+    print(f"\n[STATS] Total articles fetched: {len(all_articles)}")
 
-    print("\n🔍 Identifying trending stories...")
+    # Deduplicate within this digest
+    print("[DEDUP] Removing duplicates within digest...")
+    all_articles, dup_count = deduplicate_articles(all_articles)
+    print(f"  [OK] Removed {dup_count} duplicates")
+    print(f"  [OK] {len(all_articles)} unique articles remaining")
+
+    print("\n[SEARCH] Identifying trending stories...")
     trending = identify_trending_stories(all_articles)
-    print(f"  ✓ Found {len(trending)} trending topics")
+    print(f"  [OK] Found {len(trending)} trending topics")
 
     briefing = create_briefing(trending, all_articles)
 
@@ -132,10 +199,10 @@ def main():
     with open(args.output, 'w', encoding='utf-8') as f:
         json.dump(briefing, f, indent=2, ensure_ascii=False)
 
-    print(f"\n✅ Briefing saved to: {args.output}")
+    print(f"\n[OK] Briefing saved to: {args.output}")
 
     # Print summary
-    print("\n📋 Top trending stories:")
+    print("\n[SUMMARY] Top trending stories:")
     for i, story in enumerate(trending[:3], 1):
         print(f"\n{i}. Keyword: {story['keyword']}")
         print(f"   Sources: {story['source_count']}")
