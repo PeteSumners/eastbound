@@ -488,8 +488,8 @@ def create_markdown_file(draft_content, story, briefing, output_dir):
 
 """
 
-    # Build frontmatter with featured image
-    featured_image = f"/images/{today}-featured.png"
+    # Build frontmatter with featured image (include baseurl for GitHub Pages)
+    featured_image = f"/eastbound/images/{today}-featured.png"
 
     frontmatter = f"""---
 title: "{title_base}"
@@ -518,13 +518,13 @@ image: {featured_image}
 ## Data Visualizations
 
 ### Trending Topics
-![Keyword Trends](/images/{today}-keywords.png)
+![Keyword Trends](/eastbound/images/{today}-keywords.png)
 
 ### Source Distribution
-![Source Distribution](/images/{today}-sources.png)
+![Source Distribution](/eastbound/images/{today}-sources.png)
 
 ### By The Numbers
-![Statistics](/images/{today}-stats.png)
+![Statistics](/eastbound/images/{today}-stats.png)
 
 ---
 
