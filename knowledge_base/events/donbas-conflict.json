@@ -1,0 +1,133 @@
+{
+  "id": "donbas-conflict",
+  "title": "Donbas Conflict (2014-present)",
+  "date": "2014-04-06",
+  "category": "event",
+  "summary": "Armed conflict in eastern Ukraine's Donetsk and Luhansk regions (collectively known as Donbas) began in April 2014, shortly after Crimea annexation. Russia-backed separatists seized control of major cities. Russia denied direct military involvement for years despite evidence. Conflict killed 14,000+ before 2022 invasion. Minsk Agreements (2014, 2015) failed to resolve conflict.",
+
+  "russian_perspective": {
+    "official_narrative": "Donbas conflict is an internal Ukrainian civil war between Kyiv government and ethnic Russian population resisting persecution and discrimination. Russia is not a party to the conflict but supports the people of Donbas politically. Kyiv's 'punitive operation' against civilian population forced Donbas to seek independence. Ukrainian government controlled by nationalists committed genocide against Russian speakers.",
+    "media_framing": {
+      "terminology": "Civil war, not Russian intervention. 'People's Republics' not 'separatists'. Kyiv's 'punitive operation' not 'anti-terrorist operation'",
+      "justifications": [
+        "Defending ethnic Russians from Ukrainian nationalism",
+        "Kyiv government illegitimate after Euromaidan 'coup'",
+        "Ukrainian military shelling civilians in Donbas",
+        "Preventing cultural and linguistic genocide",
+        "Supporting right to self-determination"
+      ],
+      "visual_framing": "Civilian casualties from shelling, destroyed homes, refugees, volunteer fighters",
+      "prohibited_narratives": "Cannot acknowledge regular Russian military involvement or that Russia is party to conflict"
+    },
+    "key_quotes": [
+      {
+        "speaker": "Vladimir Putin",
+        "date": "2014-04-17",
+        "quote": "There are no Russian units in eastern Ukraine - no special services, no tactical advisors. All this is being done by the local residents.",
+        "context": "Direct Line Q&A, denying involvement"
+      },
+      {
+        "speaker": "Putin",
+        "date": "2014-08-29",
+        "quote": "Russia is not and never has been a party to the conflict in Donbas. The so-called pro-Russian separatists are in fact local residents.",
+        "context": "Continued denial despite evidence"
+      },
+      {
+        "speaker": "Putin",
+        "date": "2022-02-21",
+        "quote": "Over these long years, the residents of Donbas have been subjected to genocide, shelling, and a blockade. Kyiv continued the war.",
+        "context": "Recognizing Donetsk and Luhansk as independent, days before 2022 invasion"
+      }
+    ],
+    "evolution": "Initially framed as spontaneous local uprising (2014). Maintained denial of military involvement despite overwhelming evidence. By 2022, shifted to genocide narrative justifying recognition of republics and full-scale invasion. Now frames entire Ukraine conflict as continuation of Donbas defense."
+  },
+
+  "western_perspective": {
+    "official_narrative": "Russia covertly invaded eastern Ukraine using proxies, mercenaries, and unmarked regular military forces. Separatists armed and directed by Russian intelligence services. Russia provided weapons, training, command, and eventually regular army units. MH17 shot down by Russian BUK missile. This was Russian hybrid warfare testing Western response.",
+    "media_framing": {
+      "terminology": "Russian-backed separatists, Russian invasion, proxy war, hybrid warfare",
+      "evidence_cited": [
+        "Russian military equipment and weapons in Donbas",
+        "Captured Russian soldiers and intelligence officers",
+        "Social media posts from Russian soldiers in Ukraine",
+        "Satellite imagery of artillery fire from Russia into Ukraine",
+        "MH17 investigation traced BUK missile to Russian military unit",
+        "Russian 'volunteers' numbering thousands"
+      ]
+    },
+    "counter_arguments": [
+      "Conflict began days after Russian agents arrived in Donetsk",
+      "Separatist leaders mostly Russian citizens, many former FSB/GRU",
+      "Sophisticated weapons systems require trained crews",
+      "Russian soldiers captured with military IDs and orders",
+      "'Local uprising' narrative implausible given coordination",
+      "Minsk Agreements undermined by Russia to freeze conflict"
+    ]
+  },
+
+  "facts": {
+    "verified_claims": [
+      "Armed conflict began April 6, 2014 when separatists seized government buildings",
+      "Donetsk and Luhansk People's Republics declared independence (April-May 2014)",
+      "Malaysia Airlines Flight MH17 shot down July 17, 2014 - 298 killed",
+      "International investigation concluded MH17 hit by Russian BUK missile from 53rd Brigade",
+      "Multiple Russian soldiers captured in Ukraine (2014-2015)",
+      "Minsk Protocol signed Sept 5, 2014 - ceasefire quickly violated",
+      "Minsk II signed Feb 12, 2015 - never fully implemented",
+      "Estimated 14,000+ killed in conflict before 2022 (UN)",
+      "Russia formally recognized DPR/LPR independence Feb 21, 2022",
+      "Russia claimed to annex Donetsk and Luhansk oblasts Sept 30, 2022 (not internationally recognized)"
+    ],
+    "disputed_claims": [
+      "Russian claim: No regular Russian military in Donbas (contradicted by evidence)",
+      "Russian claim: Ukrainian genocide against Russians (no credible evidence)",
+      "Russian claim: Spontaneous local uprising (evidence shows coordination from Russia)",
+      "Ukrainian claim: Russia directly commanding all operations (degree of control disputed)",
+      "Casualty figures - both sides provide different numbers"
+    ],
+    "data_points": {
+      "deaths_2014_2022": "~14,000 (UN estimate)",
+      "civilians_killed": "~3,400 (UN)",
+      "displaced_persons": "~1.5 million from Donbas",
+      "territory_controlled": "~1/3 of Donetsk and Luhansk oblasts before 2022",
+      "mh17_casualties": "298 (all passengers and crew)",
+      "minsk_signatories": "Ukraine, Russia, OSCE, DPR, LPR representatives"
+    }
+  },
+
+  "propaganda_techniques_observed": [
+    "Plausible deniability (denying military involvement despite evidence)",
+    "Protection narrative (defending Russians from genocide)",
+    "Victim inversion (Russia as defender, not aggressor)",
+    "False equivalence (framing as civil war, not invasion)",
+    "Frozen conflict (Minsk used to prevent resolution, maintain leverage)",
+    "Atrocity propaganda (genocide claims without evidence)",
+    "Historical grievance (anti-Russian discrimination claims)"
+  ],
+
+  "related_entries": [
+    "crimea-annexation-2014",
+    "2022-ukraine-invasion",
+    "euromaidan-2014",
+    "putin-worldview",
+    "western-sanctions-russia"
+  ],
+
+  "sources": [
+    {
+      "type": "investigation",
+      "description": "Joint Investigation Team MH17 findings",
+      "url": "https://www.prosecutionservice.nl/topics/mh17-plane-crash"
+    },
+    {
+      "type": "un_document",
+      "description": "OHCHR reports on Donbas",
+      "url": "https://www.ohchr.org/en/countries/ukraine"
+    },
+    {
+      "type": "agreement",
+      "description": "Minsk Agreements",
+      "url": "https://peacemaker.un.org/ukraineminsk2"
+    }
+  ]
+}

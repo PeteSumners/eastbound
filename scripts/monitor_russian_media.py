@@ -14,6 +14,14 @@ from datetime import datetime
 from collections import defaultdict
 import re
 
+# Import advanced TF-IDF keyword extraction
+try:
+    from advanced_keywords import extract_tfidf_keywords, extract_bigram_tfidf
+    TFIDF_AVAILABLE = True
+except ImportError:
+    TFIDF_AVAILABLE = False
+    print("[WARNING] advanced_keywords module not found, using basic keyword extraction")
+
 # Russian media RSS feeds (EXPANDED)
 RSS_SOURCES = {
     'TASS': 'https://tass.com/rss/v2.xml',
@@ -155,29 +163,92 @@ def extract_keywords(text):
     # Combine unigrams and bigrams, prioritizing bigrams
     return bigrams + keywords
 
-def identify_trending_stories(all_articles):
-    """Identify stories covered by multiple sources."""
-    keyword_counts = defaultdict(list)
+def identify_trending_stories(all_articles, use_tfidf=True):
+    """
+    Identify stories covered by multiple sources.
 
-    for article in all_articles:
-        keywords = extract_keywords(article['title'] + ' ' + article['summary'])
-        for keyword in set(keywords):  # Unique keywords per article
-            keyword_counts[keyword].append(article)
+    Args:
+        all_articles: List of article dicts
+        use_tfidf: Whether to use TF-IDF scoring (more sophisticated)
 
-    # Find keywords mentioned by multiple sources
-    trending = {}
-    for keyword, articles in keyword_counts.items():
-        sources = set(a['source'] for a in articles)
-        if len(sources) >= 3:  # Covered by 3+ sources (more significant)
-            if keyword not in trending or len(sources) > len(set(a['source'] for a in trending[keyword]['articles'])):
+    Returns:
+        List of trending story dicts with keywords, source counts, and articles
+    """
+    if use_tfidf and TFIDF_AVAILABLE:
+        # Enhanced TF-IDF approach
+        print("  [TFIDF] Using TF-IDF keyword extraction...")
+
+        # Get TF-IDF keywords and bigrams
+        tfidf_keywords = extract_tfidf_keywords(all_articles, top_n=50, min_df=2)
+        tfidf_bigrams = extract_bigram_tfidf(all_articles, top_n=30, min_df=2)
+
+        # Combine and normalize scores
+        tfidf_terms = {}
+        max_score = max([score for _, score in tfidf_keywords + tfidf_bigrams]) if (tfidf_keywords + tfidf_bigrams) else 1
+
+        for term, score in tfidf_keywords + tfidf_bigrams:
+            tfidf_terms[term] = score / max_score  # Normalize to 0-1
+
+        print(f"  [TFIDF] Extracted {len(tfidf_terms)} significant terms")
+
+        # Map terms back to articles
+        keyword_counts = defaultdict(list)
+
+        for article in all_articles:
+            text = (article['title'] + ' ' + article['summary']).lower()
+
+            # Check which TF-IDF terms appear in this article
+            for term in tfidf_terms.keys():
+                if term in text:
+                    keyword_counts[term].append(article)
+
+        # Build trending stories with combined scoring
+        trending = {}
+        for keyword, articles in keyword_counts.items():
+            sources = set(a['source'] for a in articles)
+
+            # Require at least 3 sources (multi-source verification)
+            if len(sources) >= 3:
+                # Combined score: TF-IDF score * source count
+                tfidf_score = tfidf_terms[keyword]
+                combined_score = tfidf_score * len(sources)
+
                 trending[keyword] = {
                     'keyword': keyword,
                     'source_count': len(sources),
-                    'articles': articles[:10]  # Top 10 articles per trending topic (increased from 5)
+                    'tfidf_score': round(tfidf_score, 4),
+                    'combined_score': round(combined_score, 4),
+                    'articles': articles[:10]
                 }
 
-    # Sort by source count (most covered)
-    sorted_trending = sorted(trending.values(), key=lambda x: x['source_count'], reverse=True)
+        # Sort by combined score (TF-IDF importance * source coverage)
+        sorted_trending = sorted(trending.values(), key=lambda x: x['combined_score'], reverse=True)
+
+    else:
+        # Fallback: Basic keyword extraction
+        print("  [BASIC] Using basic keyword extraction...")
+
+        keyword_counts = defaultdict(list)
+
+        for article in all_articles:
+            keywords = extract_keywords(article['title'] + ' ' + article['summary'])
+            for keyword in set(keywords):  # Unique keywords per article
+                keyword_counts[keyword].append(article)
+
+        # Find keywords mentioned by multiple sources
+        trending = {}
+        for keyword, articles in keyword_counts.items():
+            sources = set(a['source'] for a in articles)
+            if len(sources) >= 3:  # Covered by 3+ sources (more significant)
+                if keyword not in trending or len(sources) > len(set(a['source'] for a in trending[keyword]['articles'])):
+                    trending[keyword] = {
+                        'keyword': keyword,
+                        'source_count': len(sources),
+                        'articles': articles[:10]  # Top 10 articles per trending topic (increased from 5)
+                    }
+
+        # Sort by source count (most covered)
+        sorted_trending = sorted(trending.values(), key=lambda x: x['source_count'], reverse=True)
 
     return sorted_trending[:10]  # Top 10 trending topics (increased from 5)
 

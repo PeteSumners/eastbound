@@ -45,7 +45,7 @@ def main():
     parser.add_argument('--fetch-images', action='store_true',
                        help='Fetch relevant images from internet sources')
     parser.add_argument('--charts', default='keyword_trend,source_distribution,social_card,stats_card',
-                       help='Comma-separated list of chart types to generate')
+                       help='Comma-separated list of chart types to generate (add timeline,word_cloud for more)')
     args = parser.parse_args()
 
     # Load briefing
@@ -115,6 +115,68 @@ def main():
                 chart.generate(data, output_path)
                 print(f"  [OK] Stats card: {output_path.name}")
                 generated.append(output_path)
+
+            elif chart_type == 'timeline' and briefing.get('trending_stories'):
+                # Generate timeline from trending stories
+                chart = create_chart('timeline')
+                output_path = output_dir / f"{date}-timeline.png"
+
+                # Build timeline data from trending stories with publication dates
+                from dateutil import parser as date_parser
+                timeline_data = []
+
+                for story in briefing['trending_stories'][:10]:  # Top 10 stories
+                    keyword = story['keyword']
+                    importance = story.get('source_count', 5)  # Use source count as importance
+
+                    # Get first article's date if available
+                    articles = story.get('articles', [])
+                    if articles and articles[0].get('published'):
+                        try:
+                            # Parse published date
+                            pub_date = date_parser.parse(articles[0]['published'])
+                            date_str = pub_date.strftime('%Y-%m-%d')
+
+                            timeline_data.append({
+                                'date': date_str,
+                                'event': keyword[:30],  # Truncate for readability
+                                'importance': min(importance, 10)  # Cap at 10
+                            })
+                        except:
+                            # If date parsing fails, use today's date
+                            timeline_data.append({
+                                'date': date,
+                                'event': keyword[:30],
+                                'importance': min(importance, 10)
+                            })
+
+                if timeline_data:
+                    # Sort by date
+                    timeline_data.sort(key=lambda x: x['date'])
+                    chart.generate(timeline_data, output_path)
+                    print(f"  [OK] Timeline chart: {output_path.name}")
+                    generated.append(output_path)
+                else:
+                    print(f"  [SKIP] Timeline: No dated events found")
+
+            elif chart_type == 'word_cloud' and briefing.get('trending_stories'):
+                # Generate word cloud from keywords
+                chart = create_chart('word_cloud')
+                output_path = output_dir / f"{date}-wordcloud.png"
+
+                # Build word frequency dict from trending stories
+                word_freq = {}
+                for story in briefing['trending_stories']:
+                    keyword = story['keyword']
+                    count = story.get('source_count', 1)
+                    word_freq[keyword] = count
+
+                if word_freq:
+                    chart.generate(word_freq, output_path)
+                    print(f"  [OK] Word cloud: {output_path.name}")
+                    generated.append(output_path)
+                else:
+                    print(f"  [SKIP] Word cloud: No keywords found")
 
             elif chart_type in CHART_REGISTRY:
                 # Generic handler for other chart types

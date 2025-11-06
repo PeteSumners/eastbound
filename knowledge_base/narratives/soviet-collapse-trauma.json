@@ -1,0 +1,139 @@
+{
+  "id": "soviet-collapse-trauma",
+  "title": "Soviet Collapse as National Trauma",
+  "date": "ongoing",
+  "category": "narrative",
+  "summary": "Russian government frames the 1991 Soviet Union collapse as 'greatest geopolitical catastrophe' and source of ongoing national humiliation. This narrative portrays 1990s as decade of chaos, poverty, and Western exploitation. It positions Putin's rule as restoration of Russian greatness and reversal of post-Soviet decline. Ukraine conflict framed as preventing second dismemberment of Russian world.",
+
+  "russian_perspective": {
+    "official_narrative": "Soviet collapse was not liberation but tragedy - sudden loss of superpower status, millions of Russians stranded abroad, economic chaos, national humiliation, and Western exploitation of Russian weakness. The 1990s were catastrophic decade when West took advantage of Russia, expanded NATO, and tried to keep Russia weak. Putin has restored Russian strength, dignity, and sovereignty. Current Western pressure is attempt to repeat 1991 collapse and divide Russia. Ukraine is artificial state created by Soviet-era mistakes; preventing its Western integration is existential necessity.",
+    "media_framing": {
+      "core_claims": [
+        "Soviet collapse was geopolitical catastrophe, not progress",
+        "1990s were chaotic disaster caused by Western 'shock therapy'",
+        "West exploited Russian weakness and tried to keep Russia down",
+        "25 million ethnic Russians left in 'near abroad' need protection",
+        "Russian culture and Orthodox civilization face Western cultural invasion",
+        "Current events are Western attempt to dismember Russia again",
+        "Putin saved Russia from becoming Western colony"
+      ],
+      "terminology": "Catastrophe, tragedy, humiliation, chaos, dismemberment, near abroad, Russian world (Russkiy Mir)",
+      "visual_framing": "Images of 1990s poverty, empty store shelves, nostalgia for Soviet achievements (space program, victory over Nazism), maps showing 'lost' territories",
+      "emotional_appeals": "Nostalgia for Soviet stability and superpower status, humiliation from loss of empire, fear of national dissolution"
+    },
+    "key_quotes": [
+      {
+        "speaker": "Vladimir Putin",
+        "date": "2005-04-25",
+        "quote": "The collapse of the Soviet Union was the greatest geopolitical catastrophe of the century. For the Russian people, it became a genuine tragedy. Tens of millions of our fellow citizens and countrymen found themselves beyond the borders of Russian territory.",
+        "context": "Annual address to Federal Assembly"
+      },
+      {
+        "speaker": "Putin",
+        "date": "2014-03-18",
+        "quote": "After the collapse of the USSR, Russia was in such a state that it could have lost part of its territory. We were close to this in Chechnya. And there were also separatist sentiments in the North Caucasus.",
+        "context": "Crimea annexation speech"
+      },
+      {
+        "speaker": "Putin",
+        "date": "2021-07-12",
+        "quote": "Russians and Ukrainians are one people. The partition of the Russian lands was an artificial act. The modern Ukrainian state is the legacy of the communist regime, it is completely created by Soviet Russia.",
+        "context": "Article on historical unity of Russians and Ukrainians"
+      },
+      {
+        "speaker": "Patriarch Kirill",
+        "date": "2022-03-06",
+        "quote": "We are talking about something different and much more important than politics. We are talking about human salvation, about the preservation of the Russian World.",
+        "context": "Sermon justifying Ukraine invasion"
+      }
+    ],
+    "evolution": "1990s: Emphasis on building new Russia, mixed feelings about Soviet past. 2000s: Growing nostalgia for Soviet achievements and stability. 2007+: Explicit framing of collapse as catastrophe and humiliation. 2014+: Soviet collapse used to justify preventing 'loss' of Ukraine. 2022+: Full mobilization of collapse trauma to justify invasion as preventing national dismemberment."
+  },
+
+  "western_perspective": {
+    "official_narrative": "Soviet collapse was liberation of captive nations from totalitarian empire. Russia's 1990s problems were transition pains from communism and result of internal corruption, not Western exploitation. Putin exploits trauma narrative to justify authoritarianism and imperial ambitions. Russia has legitimate security concerns but uses Soviet collapse as excuse for aggression against neighbors. Former Soviet states have right to independence and choose their own path.",
+    "counter_arguments": [
+      "Soviet Union was empire that collapsed because system failed, not external plot",
+      "Independent states that emerged have right to sovereignty",
+      "Russia's 1990s chaos was internal, not imposed by West",
+      "Western aid to Russia was substantial in 1990s",
+      "Putin's nostalgia is for power, not welfare of Russian people",
+      "Painting Soviet Union positively whitewashes totalitarian crimes",
+      "Ukraine is legitimate state with its own identity and history"
+    ],
+    "concerns": [
+      "Trauma narrative used to justify revanchism and imperialism",
+      "Rehabilitation of Soviet past minimizes Stalin's crimes",
+      "Threatens independence of all former Soviet states",
+      "Creates grievance-based foreign policy seeking to undo 1991",
+      "Suggests Russia views post-Soviet borders as temporary"
+    ]
+  },
+
+  "facts": {
+    "verified_claims": [
+      "Soviet Union dissolved December 26, 1991",
+      "15 independent states emerged from USSR",
+      "Russian GDP fell ~40% during 1990s",
+      "Hyperinflation in early 1990s (2,500%+ in 1992)",
+      "Life expectancy dropped sharply in Russia during 1990s",
+      "~25 million ethnic Russians living outside Russia in former Soviet states",
+      "NATO expanded into former Soviet sphere starting 1999",
+      "Oligarchs emerged controlling major industries through privatization",
+      "Chechnya fought two wars for independence (1994-1996, 1999-2009)",
+      "Soviet achievements (WWII victory, space program) remain source of pride"
+    ],
+    "disputed_claims": [
+      "Degree of Western responsibility for 1990s chaos (mostly internal factors)",
+      "Whether Soviet collapse was avoidable (most historians: no)",
+      "Whether collapse was catastrophe or liberation (depends on perspective)",
+      "Putin's role in 1990s recovery vs. oil prices' role",
+      "Extent to which Russians genuinely miss Soviet Union vs. nostalgia for youth"
+    ],
+    "data_points": {
+      "russian_gdp_decline": "~40% (1991-1998)",
+      "inflation_1992": "~2,500%",
+      "life_expectancy_drop": "Males: 64 years (1990) to 57 years (1994)",
+      "poverty_rate_1990s": "~30-40% below poverty line",
+      "ussr_population": "~293 million (1991)",
+      "russian_federation_population": "~148 million (1991)",
+      "soviet_nostalgia_polls": "60-75% Russians say Soviet collapse was bad (varies by year)"
+    }
+  },
+
+  "propaganda_techniques_observed": [
+    "Nostalgia manipulation (selective memory of Soviet era)",
+    "Historical grievance (1990s as humiliation)",
+    "Blame deflection (West caused Russia's problems)",
+    "Victimhood narrative (Russia as victim of geopolitical plot)",
+    "Fear mongering (West wants to dismember Russia)",
+    "Greatness restoration (Putin as savior who reversed decline)",
+    "Unity rhetoric (Russians and Ukrainians are one people)",
+    "Enemy creation (West as perpetual threat)"
+  ],
+
+  "related_entries": [
+    "putin-worldview",
+    "2022-ukraine-invasion",
+    "nato-expansion",
+    "domestic-opposition"
+  ],
+
+  "sources": [
+    {
+      "type": "speech",
+      "description": "Putin 2005 Federal Assembly address",
+      "url": "http://en.kremlin.ru/events/president/transcripts/22931"
+    },
+    {
+      "type": "article",
+      "description": "Putin's historical article on Ukraine (July 2021)",
+      "url": "http://en.kremlin.ru/events/president/news/66181"
+    },
+    {
+      "type": "polling",
+      "description": "Levada Center polls on Soviet nostalgia",
+      "url": "https://www.levada.ru/"
+    }
+  ]
+}

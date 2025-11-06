@@ -53,6 +53,103 @@
     ]
   },
 
+  "us_perspective": {
+    "official_position": "Clearest violation of international law since WWII. US leads coalition supporting Ukraine with weapons, intelligence, and financial aid while avoiding direct military confrontation with Russia. Framed as defense of rules-based international order and democracy against authoritarianism.",
+    "key_actions": [
+      "$75+ billion in military, humanitarian, and financial aid (as of 2024)",
+      "HIMARS, Patriot missiles, Abrams tanks, F-16 training",
+      "Intelligence sharing and satellite support",
+      "Leading international sanctions coordination",
+      "Diplomatic isolation of Russia"
+    ],
+    "political_divisions": "Broad bipartisan support initially, but growing Republican skepticism about aid levels. Progressive left questions escalation risks. Debate over red lines and ATACMS restrictions.",
+    "concerns": [
+      "Nuclear escalation risk",
+      "Avoiding direct NATO-Russia conflict",
+      "Cost and duration of support",
+      "Impact on US-China competition",
+      "Ammunition stockpile depletion"
+    ]
+  },
+
+  "eu_perspective": {
+    "official_position": "Existential threat to European security order. EU unity on sanctions and support for Ukraine, though energy dependence on Russia complicated response. Represents test of European ability to act independently on security.",
+    "key_actions": [
+      "€50+ billion in aid packages",
+      "13 rounds of sanctions",
+      "Hosting ~5 million Ukrainian refugees",
+      "Military equipment donations",
+      "Candidate status for Ukraine EU membership"
+    ],
+    "internal_divisions": "Hungary (Orbán) opposes some sanctions and aid. Poland and Baltics most hawkish. Germany initially hesitant (Scholz's 'Zeitenwende' speech marked shift). France seeks diplomatic off-ramps while supporting Ukraine.",
+    "concerns": [
+      "Energy crisis from Russian gas cutoff",
+      "Economic impact of sanctions",
+      "Defense industry capacity",
+      "War fatigue and public opinion",
+      "Agricultural imports from Ukraine"
+    ]
+  },
+
+  "chinese_perspective": {
+    "official_position": "Neutral but tilts toward Russia. Opposes NATO expansion and Western hegemony, but officially respects Ukrainian sovereignty. Refuses to condemn Russia or call it invasion. Promotes diplomatic solution while deepening Russia economic ties.",
+    "key_statements": [
+      "Xi Jinping: 'No limits' partnership with Russia (Feb 2022)",
+      "12-point peace proposal (Feb 2023) - criticized as pro-Russian",
+      "Abstained on UN votes condemning Russia",
+      "Blamed US/NATO expansion for crisis"
+    ],
+    "actions": [
+      "Increased trade with Russia ($200+ billion in 2023)",
+      "Purchasing Russian oil/gas at discount",
+      "No military aid to Russia (under US pressure)",
+      "Diplomatic engagement with both sides",
+      "Peace envoy Li Hui missions"
+    ],
+    "motivations": [
+      "Strategic partnership with Russia against US",
+      "Taiwan parallels - opposes external intervention",
+      "Economic opportunity with Russian energy",
+      "Testing Western resolve and unity",
+      "Alternative to US-led order"
+    ]
+  },
+
+  "indian_perspective": {
+    "official_position": "Strategic autonomy - refuses to pick sides. Maintains historical ties with Russia (defense equipment, energy) while deepening US partnership. Abstained on UN votes. Focuses on national interest over ideology.",
+    "key_actions": [
+      "Abstained on all UN votes condemning Russia",
+      "Massively increased Russian oil imports (became top buyer)",
+      "Maintains defense relationship with Russia",
+      "Expanded Quad cooperation with US, Japan, Australia",
+      "Hosted peace talks, Modi urged Putin 'not era of war'"
+    ],
+    "rationale": [
+      "70% of Indian military equipment is Russian",
+      "Cheap Russian energy benefits Indian economy",
+      "Historical non-alignment policy",
+      "China threat makes Russia relationship valuable",
+      "Resents Western 'lectures' on sovereignty"
+    ],
+    "internal_debate": "Government position widely supported. Some progressives advocate stronger stand on principle. Business community supports pragmatic approach."
+  },
+
+  "global_south_perspective": {
+    "positions_vary": "Significant portion abstained on UN votes. Many resent being pressured to pick sides. Focus on impact of conflict on food/energy prices rather than geopolitics.",
+    "major_views": {
+      "africa": "Many abstained. Some remember Russian support during decolonization. Concerned about food security (Ukraine/Russia are major grain exporters). Wagner presence complicates relations.",
+      "middle_east": "Divided - Gulf states try to maintain ties with both. Turkey plays mediator role. Iran supports Russia. Most focus on energy markets and avoiding taking sides.",
+      "latin_america": "Mostly condemned invasion but oppose sanctions. Left-leaning governments (Brazil, Mexico) criticize both Russia and NATO expansion. Right-leaning (Argentina) more aligned with West."
+    },
+    "common_themes": [
+      "Hypocrisy arguments - West ignored other conflicts",
+      "Economic hardship from sanctions and disrupted trade",
+      "Resentment at being forced to choose sides",
+      "Focus on negotiated settlement over military victory",
+      "Grain deal and food security as priority"
+    ]
+  },
+
   "facts": {
     "verified_claims": [
       "Russia invaded Ukraine on February 24, 2022",

@@ -20,35 +20,45 @@ When analyzing current Russian media, the AI can:
 4. **Fact-check claims** against known data
 5. **Identify propaganda techniques** from historical examples
 
+## Current Entries (15 Total)
+
+### Events (6)
+- `2022-ukraine-invasion.json` - Full-scale invasion of Ukraine
+- `crimea-annexation-2014.json` - Annexation of Crimea
+- `euromaidan-2014.json` - Ukrainian revolution
+- `georgia-war-2008.json` - Russia-Georgia war
+- `donbas-conflict.json` - Donbas war 2014-present
+- `prigozhin-mutiny-2023.json` - Wagner rebellion
+
+### Figures (2)
+- `putin-worldview.json` - Vladimir Putin's ideology and statements
+- `wagner-prigozhin.json` - Wagner Group and Yevgeny Prigozhin
+
+### Policies (2)
+- `western-sanctions-russia.json` - Sanctions timeline and impact
+- `russian-energy-gas-policy.json` - Energy as geopolitical tool
+
+### Narratives (5)
+- `nato-expansion.json` - NATO expansion narrative
+- `russian-nuclear-rhetoric.json` - Nuclear threat rhetoric
+- `domestic-opposition.json` - Suppression of dissent narrative
+- `soviet-collapse-trauma.json` - USSR collapse as trauma
+- `multipolar-world.json` - Multipolar world order vision
+
 ## Structure
 
 ```
 knowledge_base/
-├── events/
-│   ├── 2022-ukraine-invasion.json
-│   ├── 2014-crimea-annexation.json
-│   └── [other major events]
-├── figures/
-│   ├── putin-vladimir.json
-│   ├── lavrov-sergei.json
-│   └── [key political figures]
-├── policies/
-│   ├── sanctions-timeline.json
-│   ├── energy-policy.json
-│   └── [policy areas]
-├── narratives/
-│   ├── nato-expansion.json
-│   ├── western-decline.json
-│   └── [recurring themes]
-└── context/
-    ├── russian-history.json
-    ├── cultural-context.json
-    └── [background info]
+├── events/          # 6 major historical events
+├── figures/         # 2 key figures and organizations
+├── policies/        # 2 policy areas
+├── narratives/      # 5 recurring themes
+└── examples/        # Reference examples
 ```
 
 ## Entry Format
 
-Each knowledge base entry is a JSON file with:
+Each knowledge base entry is a JSON file with multiple perspectives:
 
 ```json
 {
@@ -57,33 +67,72 @@ Each knowledge base entry is a JSON file with:
   "date": "YYYY-MM-DD or date range",
   "category": "event|figure|policy|narrative|context",
   "summary": "Brief description",
+
   "russian_perspective": {
     "official_narrative": "What Russian gov says",
     "media_framing": "How Russian media covers it",
     "key_quotes": ["quote 1", "quote 2"],
     "evolution": "How narrative changed over time"
   },
+
   "western_perspective": {
-    "official_position": "What Western govs say",
+    "official_position": "What Western govs say (general)",
     "media_framing": "How Western media covers it",
     "key_differences": "Main divergences from Russian view"
   },
+
+  "us_perspective": {
+    "official_position": "US government position",
+    "key_actions": ["action 1", "action 2"],
+    "political_divisions": "Internal debates",
+    "concerns": ["concern 1", "concern 2"]
+  },
+
+  "eu_perspective": {
+    "official_position": "European Union position",
+    "key_actions": ["action 1", "action 2"],
+    "internal_divisions": "Member state disagreements",
+    "concerns": ["concern 1", "concern 2"]
+  },
+
+  "chinese_perspective": {
+    "official_position": "Chinese government position",
+    "key_statements": ["statement 1", "statement 2"],
+    "actions": ["action 1", "action 2"],
+    "motivations": ["motivation 1", "motivation 2"]
+  },
+
+  "indian_perspective": {
+    "official_position": "Indian government position",
+    "key_actions": ["action 1", "action 2"],
+    "rationale": ["reason 1", "reason 2"],
+    "internal_debate": "Domestic perspectives"
+  },
+
+  "global_south_perspective": {
+    "positions_vary": "Overview of diversity",
+    "major_views": {
+      "africa": "African perspective",
+      "middle_east": "Middle Eastern perspective",
+      "latin_america": "Latin American perspective"
+    },
+    "common_themes": ["theme 1", "theme 2"]
+  },
+
   "facts": {
     "verified_claims": ["claim 1", "claim 2"],
     "disputed_claims": ["claim 1", "claim 2"],
-    "data_points": {
-      "economic": {},
-      "political": {},
-      "military": {}
-    }
+    "data_points": {}
   },
+
   "related_entries": ["id1", "id2"],
   "sources": [
     {"title": "Source 1", "url": "https://...", "date": "YYYY-MM-DD"}
-  ],
-  "last_updated": "YYYY-MM-DD"
+  ]
 }
 ```
+
+**Note:** Not all entries need all perspectives. Add perspectives that are relevant to the specific event/topic. Russian and Western perspectives are standard; add others as appropriate (US, EU, China, India, Global South, Japan, Turkey, etc.).
 
 ## Usage in AI Analysis
 

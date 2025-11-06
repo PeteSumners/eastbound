@@ -38,36 +38,51 @@ Create draft → Edit content → Schedule → Publish
 
 ## Features
 
-### 🤖 Fully Automated
+### 🤖 AI-Powered Content Generation
+- Monitors 13 Russian media sources via RSS (parallel fetching, 8-10 seconds)
+- Claude AI generates 1500-2000 word analysis daily ($0.02/post)
+- **15-entry Knowledge Base** grounds analysis in verified facts
+- Multi-layered temporal context (7-day recent + 90-day historical)
+- TF-IDF keyword extraction for sophisticated trend detection
+- Anti-hallucination validation system
+- Stakeholder persona generation for human impact
+- See: [AI_AUTOMATION.md](AI_AUTOMATION.md)
+
+### 📚 Knowledge Base System
+- **15 comprehensive entries** across events, figures, policies, narratives
+- Russian and Western perspectives documented
+- Prevents AI hallucinations through factual grounding
+- Tracks narrative evolution over time
+- See: [knowledge_base/README.md](knowledge_base/README.md)
+
+### 📊 Advanced Visualizations
+- **6 chart types**: keyword trends, source distribution, social cards, stats, timeline, word cloud
+- Automated generation for every post
+- Free local AI image generation (Stable Diffusion)
+- Internet image fetching (Unsplash, Wikipedia)
+- Extensible framework for new chart types
+- See: [AI_VISUALIZATION_GUIDE.md](AI_VISUALIZATION_GUIDE.md)
+
+### 🚀 Fully Automated Pipeline
+- Daily workflow runs at 8:00 AM UTC
 - Create drafts via GitHub Actions or locally
-- Schedule posts with date/time
-- Automatic publishing when scheduled time arrives
-- Auto-generates Twitter threads from content
+- Automatic publishing when scheduled
+- Auto-generates Twitter threads and LinkedIn posts
 - Website rebuilds automatically on publish
+- Health monitoring for all components
 
 ### 🌐 Self-Hosted Website
 - Clean, fast Jekyll site on GitHub Pages
-- Responsive design
+- Responsive design with SEO optimization
 - RSS feed built-in
-- SEO optimized
 - Custom domain support
+- **Cost: <$1/month operational**
 
-### 📱 Social Integration
+### 📱 Social Media Integration
 - Auto-posts Twitter threads with key quotes
-- Configurable thread generation
+- LinkedIn content generation
+- Configurable posting options
 - Links back to website
-
-### 📝 Content Templates
-- Weekly analysis template (1000-1500 words)
-- Translation template (with context/analysis)
-- Structured frontmatter for metadata
-
-### 📊 Data Visualizations
-- Automated chart generation for every post
-- 6 chart types with extensible framework
-- Internet image fetching (Unsplash, Wikipedia)
-- AI-friendly documentation for adding new charts
-- See: [AI_VISUALIZATION_GUIDE.md](AI_VISUALIZATION_GUIDE.md)
 
 ---
 
