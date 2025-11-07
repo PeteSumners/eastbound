@@ -55,22 +55,24 @@ def _get_cache_key(prompt: str) -> str:
 
 
 def generate_image_cpu(prompt: str, output_path: Path,
-                       num_steps: int = 20,
-                       use_fast_model: bool = True) -> Optional[Path]:
+                       num_steps: int = 4,
+                       use_fast_model: bool = True,
+                       negative_prompt: str = None) -> Optional[Path]:
     """
-    Generate image using Stable Diffusion on CPU.
+    Generate image using SDXL Turbo on CPU.
 
     Optimized for GitHub Actions:
-    - Uses smaller, faster model
-    - Reduced inference steps for speed
+    - Uses SDXL Turbo (best quality at 1-4 steps)
+    - Much faster than traditional SD models
     - CPU-only (no GPU required)
-    - ~2-5 minutes per image on GitHub runners
+    - ~2-3 minutes per image on GitHub runners
 
     Args:
         prompt: Description of image
         output_path: Where to save
-        num_steps: Inference steps (lower = faster, 20-30 recommended)
-        use_fast_model: Use faster model optimized for CPU
+        num_steps: Inference steps (1-4 optimal for SDXL Turbo)
+        use_fast_model: Use SDXL Turbo (recommended)
+        negative_prompt: What to avoid in generation
 
     Returns:
         Path to generated image or None if failed
@@ -78,10 +80,12 @@ def generate_image_cpu(prompt: str, output_path: Path,
     try:
         print(f"[LOCAL-GEN] Generating image on CPU...")
         print(f"[LOCAL-GEN] Prompt: {prompt}")
-        print(f"[LOCAL-GEN] Steps: {num_steps} (lower = faster)")
+        print(f"[LOCAL-GEN] Steps: {num_steps}")
+        if negative_prompt:
+            print(f"[LOCAL-GEN] Negative: {negative_prompt}")
 
         # Import here to avoid slow startup if not needed
-        from diffusers import StableDiffusionPipeline
+        from diffusers import AutoPipelineForText2Image
         import torch
 
         # Force CPU mode
@@ -90,44 +94,62 @@ def generate_image_cpu(prompt: str, output_path: Path,
 
         # Choose model
         if use_fast_model:
-            # Smaller, faster model - optimized for CPU
-            # ~1.7GB download, ~2-3 min generation on GitHub Actions
-            model_id = "stabilityai/stable-diffusion-2-1-base"
-            print(f"[LOCAL-GEN] Using fast model: {model_id}")
+            # SDXL Turbo: SDXL quality at 1-4 steps (much faster!)
+            # ~6.5GB download, ~2-3 min generation on GitHub Actions
+            # Produces significantly better quality than SD 2.1
+            model_id = "stabilityai/sdxl-turbo"
+            print(f"[LOCAL-GEN] Using SDXL Turbo: {model_id}")
+            print(f"[LOCAL-GEN] (SDXL quality optimized for 1-4 steps)")
         else:
-            # Higher quality but slower
-            # ~3.5GB download, ~5-7 min generation
-            model_id = "runwayml/stable-diffusion-v1-5"
-            print(f"[LOCAL-GEN] Using standard model: {model_id}")
+            # Fallback to SD 2.1 base
+            # ~1.7GB download, ~4-5 min at 20+ steps
+            model_id = "stabilityai/stable-diffusion-2-1-base"
+            print(f"[LOCAL-GEN] Using SD 2.1 base: {model_id}")
 
-        print(f"[LOCAL-GEN] Loading model... (first run downloads ~1.7GB)")
+        print(f"[LOCAL-GEN] Loading model... (first run downloads ~6.5GB)")
 
         # Load pipeline with CPU optimizations
-        pipe = StableDiffusionPipeline.from_pretrained(
+        pipe = AutoPipelineForText2Image.from_pretrained(
             model_id,
             torch_dtype=torch_dtype,
-            low_cpu_mem_usage=True,
-            use_safetensors=True
+            variant="fp16" if model_id == "stabilityai/sdxl-turbo" else None,
         )
 
         pipe = pipe.to(device)
 
         # Enable CPU optimizations
-        # These reduce memory usage for GitHub Actions
         pipe.enable_attention_slicing()
 
         print(f"[LOCAL-GEN] Model loaded, starting generation...")
-        print(f"[LOCAL-GEN] This will take 2-5 minutes on CPU...")
+        print(f"[LOCAL-GEN] This will take 2-4 minutes on CPU...")
+
+        # Default negative prompt if none provided
+        if negative_prompt is None:
+            negative_prompt = "blurry, low quality, distorted, deformed, ugly, bad anatomy, watermark, text, logo"
 
         # Generate image
-        with torch.no_grad():  # Reduce memory usage
-            image = pipe(
-                prompt,
-                num_inference_steps=num_steps,
-                guidance_scale=7.5,
-                height=512,  # Smaller = faster (GitHub Actions has limited time)
-                width=512
-            ).images[0]
+        # SDXL Turbo works best with guidance_scale=0.0 and 1-4 steps
+        with torch.no_grad():
+            if model_id == "stabilityai/sdxl-turbo":
+                # SDXL Turbo optimal settings
+                image = pipe(
+                    prompt=prompt,
+                    negative_prompt=negative_prompt,
+                    num_inference_steps=num_steps,
+                    guidance_scale=0.0,  # SDXL Turbo requires guidance_scale=0.0
+                    height=512,
+                    width=512
+                ).images[0]
+            else:
+                # Standard SD settings
+                image = pipe(
+                    prompt=prompt,
+                    negative_prompt=negative_prompt,
+                    num_inference_steps=num_steps,
+                    guidance_scale=7.5,
+                    height=512,
+                    width=512
+                ).images[0]
 
         # Save image
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -167,37 +189,83 @@ def generate_image_cpu(prompt: str, output_path: Path,
 
 
 def create_prompt_from_briefing(briefing: Dict) -> str:
-    """Create optimized prompt from briefing."""
+    """Create optimized prompt from briefing with better edge case handling."""
     trending = briefing.get('trending_stories', [])
     if not trending:
-        return "Russian government building, editorial photography style"
+        return "Russian government building with national symbols, professional news photography, golden hour lighting, detailed architecture"
 
     top_keyword = trending[0]['keyword']
+    keyword_lower = top_keyword.lower()
 
-    # Optimized prompts for Stable Diffusion
-    # More detailed = better results
+    # Expanded prompts optimized for SDXL
+    # More detailed and specific for better results
     prompt_templates = {
-        'ukraine': "Ukrainian flag waving in front of historic European architecture, golden hour lighting, professional editorial photograph, detailed, photorealistic",
-        'kremlin': "Moscow Kremlin with red walls and golden domes at sunset, dramatic clouds, professional news photography, detailed architecture, photorealistic",
-        'putin': "Russian government building with national flag, official architecture, editorial photography, dramatic lighting, professional quality",
-        'military': "Modern military equipment in strategic location, editorial photography, dramatic composition, professional photojournalism style",
-        'nato': "NATO headquarters building in Brussels, modern architecture, official diplomatic photography, clear sky, professional quality",
-        'diplomacy': "International conference room with flags, diplomatic meeting setting, professional photography, detailed interior, photorealistic",
-        'sanctions': "European Union building with flags, modern government architecture, editorial photography, professional quality",
-        'energy': "Industrial oil pipeline infrastructure across landscape, dramatic sky, editorial photography, photojournalistic style, detailed",
+        # Geopolitical
+        'ukraine': "Ukrainian flag waving in front of historic Kiev architecture, golden hour lighting, professional editorial photograph, detailed stonework, photorealistic, 8k quality",
+        'russia': "Moscow skyline with Kremlin towers and Saint Basil's Cathedral, dramatic sunset clouds, professional news photography, architectural details, photorealistic",
+        'kremlin': "Moscow Kremlin with red brick walls and golden domes at sunset, dramatic clouds reflecting off Moscow River, professional news photography, detailed architecture, photorealistic",
+        'putin': "Russian government building with large Russian flag, imposing neoclassical architecture, editorial photography, dramatic lighting, professional quality, detailed facade",
+
+        # Military & Security
+        'military': "Modern military convoy on strategic highway, editorial photography, dramatic composition, professional photojournalism style, high detail",
+        'nato': "NATO headquarters building in Brussels with member flags, modern architecture, official diplomatic photography, clear sky, professional quality, detailed",
+        'defense': "Military command center exterior, modern architecture, professional news photography, dramatic lighting, detailed",
+
+        # Diplomacy & International
+        'diplomacy': "International conference room with world flags arranged in rows, diplomatic meeting setting, professional photography, detailed interior, warm lighting, photorealistic",
+        'summit': "Large diplomatic summit venue with flags of nations, grand architecture, professional event photography, detailed, photorealistic",
+        'un': "United Nations headquarters building in New York, modern international architecture, editorial photography, blue sky, professional quality",
+
+        # Economics
+        'sanctions': "European Union building with member state flags, modern government architecture in Brussels, editorial photography, professional quality, detailed facade",
+        'energy': "Industrial oil and gas pipeline infrastructure across rolling landscape, dramatic stormy sky, editorial photography, photojournalistic style, high detail, 8k",
+        'economy': "Stock exchange trading floor with digital screens showing data, professional business photography, dynamic composition, detailed",
+        'oil': "Oil refinery industrial complex at golden hour, pipes and towers silhouetted against orange sky, editorial photography, detailed, cinematic",
+        'gas': "Natural gas processing facility with industrial infrastructure, professional industrial photography, dramatic lighting, detailed machinery",
+
+        # Media & Information
+        'propaganda': "Television broadcast studio with news desk and screens, professional broadcast photography, detailed equipment, dramatic lighting",
+        'media': "News broadcasting tower with satellite dishes against dramatic sky, professional photography, architectural detail, photorealistic",
+        'information': "Modern data center with server racks and blue lighting, professional technology photography, detailed, high quality",
+
+        # Technology
+        'cyber': "Futuristic cybersecurity operations center with multiple screens, professional technology photography, blue and green lighting, detailed",
+        'technology': "Modern tech campus with glass architecture, professional architectural photography, clear sky, detailed reflections",
+
+        # Geographies
+        'europe': "Historic European city square with classical architecture, golden hour lighting, professional photography, detailed stonework, photorealistic",
+        'asia': "Modern Asian cityscape with mix of traditional and contemporary architecture, professional photography, dramatic sky, detailed",
+        'china': "Beijing architecture with traditional Chinese elements and modern buildings, professional photography, detailed, photorealistic",
+
+        # Fallback categories for weird keywords
+        'http': "Modern newsroom with journalists at computers and screens, professional news photography, dynamic composition, detailed",
+        'www': "Global communications network visualization, professional abstract photography, detailed, high quality",
     }
 
-    keyword_lower = top_keyword.lower()
+    # Try to match keyword to template
     for key, template in prompt_templates.items():
         if key in keyword_lower:
             return template
 
-    # Generic fallback
-    return f"Editorial photograph related to {top_keyword}, professional news photography, detailed, photorealistic, dramatic lighting"
+    # Better generic fallback with filtering
+    # Remove technical keywords that don't make visual sense
+    skip_keywords = ['http', 'https', 'www', 'com', 'org', 'net', 'html', 'php']
+    if any(skip in keyword_lower for skip in skip_keywords):
+        # Use second trending topic if available
+        if len(trending) > 1:
+            secondary_keyword = trending[1]['keyword']
+            for key, template in prompt_templates.items():
+                if key in secondary_keyword.lower():
+                    return template
+        # Ultimate fallback for technical keywords
+        return "Russian government building with national flag, imposing neoclassical architecture, professional news photography, golden hour lighting, detailed facade, photorealistic"
+
+    # Generic fallback for normal keywords
+    return f"Professional editorial photograph depicting {top_keyword}, dramatic lighting, photojournalistic style, detailed composition, high quality, photorealistic"
 
 
 def generate_for_briefing(briefing_path: Path, output_dir: Path,
-                         num_steps: int = 20) -> Optional[Path]:
+                         num_steps: int = 4) -> Optional[Path]:
     """
     Auto-generate image from briefing.
 
@@ -239,8 +307,8 @@ def main():
     parser.add_argument('--prompt', help='Custom prompt')
     parser.add_argument('--briefing', help='Briefing JSON for auto-generation')
     parser.add_argument('--output', default='images/', help='Output directory')
-    parser.add_argument('--steps', type=int, default=20,
-                       help='Inference steps (20-25 for speed, 30-50 for quality)')
+    parser.add_argument('--steps', type=int, default=4,
+                       help='Inference steps (1-4 optimal for SDXL Turbo)')
     parser.add_argument('--auto', action='store_true',
                        help='Auto-generate from briefing')
     parser.add_argument('--fast', action='store_true', default=True,

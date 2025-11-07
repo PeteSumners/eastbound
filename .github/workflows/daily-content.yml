@@ -43,7 +43,7 @@ jobs:
             --output "research/$(date -u +%Y-%m-%d)-briefing.json" \
             --parallel
 
-      - name: Generate AI image (free, local Stable Diffusion)
+      - name: Generate AI image (free, SDXL Turbo)
         timeout-minutes: 10
         continue-on-error: true
         run: |
@@ -51,7 +51,7 @@ jobs:
             --briefing "research/$(date -u +%Y-%m-%d)-briefing.json" \
             --output "images/" \
             --auto \
-            --steps 20 || echo "Image generation skipped or failed"
+            --steps 4 || echo "Image generation skipped or failed"
 
       - name: Generate data visualizations
         run: |
