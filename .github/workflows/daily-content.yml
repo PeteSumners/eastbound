@@ -43,6 +43,27 @@ jobs:
             --output "research/$(date -u +%Y-%m-%d)-briefing.json" \
             --parallel
 
+      - name: Free up disk space for SDXL
+        run: |
+          echo "Disk space before cleanup:"
+          df -h
+
+          # Remove Android SDK (~10GB)
+          sudo rm -rf /usr/local/lib/android
+
+          # Remove .NET (~3GB)
+          sudo rm -rf /usr/share/dotnet
+
+          # Remove large tool caches
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /usr/local/share/boost
+
+          # Remove Docker images
+          docker rmi $(docker images -q) || true
+
+          echo "Disk space after cleanup:"
+          df -h
+
       - name: Generate AI image (free, SDXL)
         timeout-minutes: 15
         continue-on-error: true
