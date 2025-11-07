@@ -9,6 +9,10 @@ github_username: PeteSumners
 # Build settings
 markdown: kramdown
 
+# Include static assets
+include:
+  - images
+
 # Defaults for posts
 defaults:
   - scope:
