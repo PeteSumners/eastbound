@@ -512,6 +512,11 @@ image: {featured_image}
 
 ---
 
+![AI-Generated Featured Image]({generate_image_path(today, 'generated')})
+*AI-generated image created using Stable Diffusion based on today's coverage*
+
+---
+
 {header}{draft_content}
 
 ---
