@@ -55,23 +55,22 @@ def _get_cache_key(prompt: str) -> str:
 
 
 def generate_image_cpu(prompt: str, output_path: Path,
-                       num_steps: int = 4,
-                       use_fast_model: bool = True,
+                       num_steps: int = 50,
+                       use_fast_model: bool = False,
                        negative_prompt: str = None) -> Optional[Path]:
     """
-    Generate image using SDXL Turbo on CPU.
+    Generate image using SDXL on CPU.
 
     Optimized for GitHub Actions:
-    - Uses SDXL Turbo (best quality at 1-4 steps)
-    - Much faster than traditional SD models
+    - Uses full SDXL base (best quality at 25-50 steps)
     - CPU-only (no GPU required)
-    - ~2-3 minutes per image on GitHub runners
+    - ~8-10 minutes per image on GitHub runners
 
     Args:
         prompt: Description of image
         output_path: Where to save
-        num_steps: Inference steps (1-4 optimal for SDXL Turbo)
-        use_fast_model: Use SDXL Turbo (recommended)
+        num_steps: Inference steps (25-50 optimal for SDXL)
+        use_fast_model: Use SDXL Turbo (faster but lower quality)
         negative_prompt: What to avoid in generation
 
     Returns:
@@ -96,17 +95,17 @@ def generate_image_cpu(prompt: str, output_path: Path,
         if use_fast_model:
             # SDXL Turbo: SDXL quality at 1-4 steps (much faster!)
             # ~6.5GB download, ~2-3 min generation on GitHub Actions
-            # Produces significantly better quality than SD 2.1
             model_id = "stabilityai/sdxl-turbo"
             print(f"[LOCAL-GEN] Using SDXL Turbo: {model_id}")
             print(f"[LOCAL-GEN] (SDXL quality optimized for 1-4 steps)")
         else:
-            # Fallback to SD 2.1 base
-            # ~1.7GB download, ~4-5 min at 20+ steps
-            model_id = "stabilityai/stable-diffusion-2-1-base"
-            print(f"[LOCAL-GEN] Using SD 2.1 base: {model_id}")
+            # Full SDXL: Best quality at 25-50 steps
+            # ~6.9GB download, ~8-10 min at 50 steps on GitHub Actions
+            model_id = "stabilityai/stable-diffusion-xl-base-1.0"
+            print(f"[LOCAL-GEN] Using full SDXL: {model_id}")
+            print(f"[LOCAL-GEN] (Best quality at 25-50 steps)")
 
-        print(f"[LOCAL-GEN] Loading model... (first run downloads ~6.5GB)")
+        print(f"[LOCAL-GEN] Loading model... (first run downloads ~6.9GB)")
 
         # Load pipeline with CPU optimizations
         pipe = AutoPipelineForText2Image.from_pretrained(
@@ -121,17 +120,19 @@ def generate_image_cpu(prompt: str, output_path: Path,
         pipe.enable_attention_slicing()
 
         print(f"[LOCAL-GEN] Model loaded, starting generation...")
-        print(f"[LOCAL-GEN] This will take 2-4 minutes on CPU...")
+        if model_id == "stabilityai/sdxl-turbo":
+            print(f"[LOCAL-GEN] This will take 2-3 minutes on CPU...")
+        else:
+            print(f"[LOCAL-GEN] This will take 8-10 minutes on CPU...")
 
         # Default negative prompt if none provided
         if negative_prompt is None:
             negative_prompt = "blurry, low quality, distorted, deformed, ugly, bad anatomy, watermark, text, logo"
 
         # Generate image
-        # SDXL Turbo works best with guidance_scale=0.0 and 1-4 steps
         with torch.no_grad():
             if model_id == "stabilityai/sdxl-turbo":
-                # SDXL Turbo optimal settings
+                # SDXL Turbo optimal settings: guidance_scale=0.0, 1-4 steps
                 image = pipe(
                     prompt=prompt,
                     negative_prompt=negative_prompt,
@@ -141,7 +142,7 @@ def generate_image_cpu(prompt: str, output_path: Path,
                     width=512
                 ).images[0]
             else:
-                # Standard SD settings
+                # Full SDXL settings: guidance_scale=7.5, 25-50 steps
                 image = pipe(
                     prompt=prompt,
                     negative_prompt=negative_prompt,
@@ -265,14 +266,14 @@ def create_prompt_from_briefing(briefing: Dict) -> str:
 
 
 def generate_for_briefing(briefing_path: Path, output_dir: Path,
-                         num_steps: int = 4) -> Optional[Path]:
+                         num_steps: int = 50) -> Optional[Path]:
     """
     Auto-generate image from briefing.
 
     Args:
         briefing_path: Path to briefing JSON
         output_dir: Output directory
-        num_steps: Inference steps (20-25 for GitHub Actions)
+        num_steps: Inference steps (25-50 optimal for SDXL)
 
     Returns:
         Path to generated image
@@ -307,12 +308,12 @@ def main():
     parser.add_argument('--prompt', help='Custom prompt')
     parser.add_argument('--briefing', help='Briefing JSON for auto-generation')
     parser.add_argument('--output', default='images/', help='Output directory')
-    parser.add_argument('--steps', type=int, default=4,
-                       help='Inference steps (1-4 optimal for SDXL Turbo)')
+    parser.add_argument('--steps', type=int, default=50,
+                       help='Inference steps (25-50 optimal for SDXL)')
     parser.add_argument('--auto', action='store_true',
                        help='Auto-generate from briefing')
-    parser.add_argument('--fast', action='store_true', default=True,
-                       help='Use faster model (default)')
+    parser.add_argument('--fast', action='store_true', default=False,
+                       help='Use SDXL Turbo (faster, lower quality)')
 
     args = parser.parse_args()
 

@@ -43,15 +43,15 @@ jobs:
             --output "research/$(date -u +%Y-%m-%d)-briefing.json" \
             --parallel
 
-      - name: Generate AI image (free, SDXL Turbo)
-        timeout-minutes: 10
+      - name: Generate AI image (free, SDXL)
+        timeout-minutes: 15
         continue-on-error: true
         run: |
           python scripts/generate_images_local.py \
             --briefing "research/$(date -u +%Y-%m-%d)-briefing.json" \
             --output "images/" \
             --auto \
-            --steps 4 || echo "Image generation skipped or failed"
+            --steps 50 || echo "Image generation skipped or failed"
 
       - name: Generate data visualizations
         run: |
