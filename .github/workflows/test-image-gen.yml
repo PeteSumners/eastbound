@@ -25,21 +25,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Cache Stable Diffusion models
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/huggingface
-          key: huggingface-sd-models-v1
-          restore-keys: |
-            huggingface-sd-models-
-
-      - name: Install image generation dependencies
-        run: pip install -r requirements-images.txt
-
-      - name: Create output directory
-        run: mkdir -p images/
-
-      - name: Free up disk space for SDXL
+      - name: Free up disk space for SDXL (BEFORE installing dependencies)
         run: |
           echo "Disk space before cleanup:"
           df -h
@@ -57,8 +43,25 @@ jobs:
           # Remove Docker images
           docker rmi $(docker images -q) || true
 
+          # Clean apt cache
+          sudo apt-get clean
+
           echo "Disk space after cleanup:"
           df -h
+
+      - name: Cache Stable Diffusion models
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/huggingface
+          key: huggingface-sd-models-v1
+          restore-keys: |
+            huggingface-sd-models-
+
+      - name: Install image generation dependencies
+        run: pip install -r requirements-images.txt
+
+      - name: Create output directory
+        run: mkdir -p images/
 
       - name: Generate AI image with custom prompt (SDXL, no image cache)
         timeout-minutes: 20
