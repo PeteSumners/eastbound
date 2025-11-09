@@ -1,0 +1,32 @@
+{
+  "85594b6cf95de7f0dcb728149a33f39c": {
+    "source": "local-stable-diffusion",
+    "prompt": "Modern newsroom with journalists at computers and screens, professional news photography, dynamic composition, detailed",
+    "path": "images\\2025-11-07-generated.png",
+    "generated_at": "2025-11-07T21:02:14.036553",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
+    "steps": 50,
+    "license": "CreativeML Open RAIL-M - you own generated images",
+    "cost": "FREE (local generation)"
+  },
+  "8eebb499e05fb7624643d1ab13280c46": {
+    "source": "local-stable-diffusion",
+    "prompt": "Red Square Moscow at golden hour with Saint Basil's Cathedral, dramatic clouds, professional news photography, architectural details, photorealistic",
+    "path": "images\\custom-20251108-191310.png",
+    "generated_at": "2025-11-08T19:30:56.435636",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
+    "steps": 50,
+    "license": "CreativeML Open RAIL-M - you own generated images",
+    "cost": "FREE (local generation)"
+  },
+  "a559b7dd388f5755cab7b12e641c3d12": {
+    "source": "local-stable-diffusion",
+    "prompt": "NATO headquarters building in Brussels with member nation flags, modern international architecture, dramatic cloudy sky, professional diplomatic photography, detailed facade, photorealistic",
+    "path": "images\\custom-20251108-195418.png",
+    "generated_at": "2025-11-08T20:14:10.490523",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
+    "steps": 50,
+    "license": "CreativeML Open RAIL-M - you own generated images",
+    "cost": "FREE (local generation)"
+  }
+}

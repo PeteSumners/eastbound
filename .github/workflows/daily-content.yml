@@ -11,7 +11,68 @@ on:
         default: true
 
 jobs:
-  generate:
+  # Step 1: Monitor Russian media sources
+  monitor-media:
+    runs-on: ubuntu-latest
+    outputs:
+      briefing-date: ${{ steps.set-date.outputs.date }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create directories
+        run: mkdir -p research
+
+      - name: Set date output
+        id: set-date
+        run: echo "date=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
+
+      - name: Monitor Russian media
+        run: |
+          python scripts/monitor_russian_media.py \
+            --output "research/$(date -u +%Y-%m-%d)-briefing.json" \
+            --parallel
+
+      - name: Commit briefing
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add research/
+
+          if ! git diff --staged --quiet; then
+            git commit -m "Research briefing: $(date -u +%Y-%m-%d) [automated]"
+            git push
+          fi
+
+      - name: Upload briefing artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing
+          path: research/*.json
+          retention-days: 7
+
+  # Step 2: Generate AI image using reusable workflow
+  generate-image:
+    needs: monitor-media
+    uses: ./.github/workflows/generate-image.yml
+    with:
+      briefing_path: "research/${{ needs.monitor-media.outputs.briefing-date }}-briefing.json"
+      output_dir: "images/"
+      steps: 50
+      timeout_minutes: 15
+      continue_on_error: true
+
+  # Step 3: Generate content and publish
+  generate-content:
+    needs: [monitor-media, generate-image]
     runs-on: ubuntu-latest
 
     steps:
@@ -21,58 +82,14 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Cache Stable Diffusion models
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/huggingface
-          key: huggingface-sd-models-v1
-          restore-keys: |
-            huggingface-sd-models-
-
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install -r requirements-images.txt
+        run: pip install -r requirements.txt
+
+      - name: Pull latest changes (includes briefing and image)
+        run: git pull
 
       - name: Create directories
         run: mkdir -p research content/drafts _posts images
-
-      - name: Monitor Russian media
-        run: |
-          python scripts/monitor_russian_media.py \
-            --output "research/$(date -u +%Y-%m-%d)-briefing.json" \
-            --parallel
-
-      - name: Free up disk space for SDXL
-        run: |
-          echo "Disk space before cleanup:"
-          df -h
-
-          # Remove Android SDK (~10GB)
-          sudo rm -rf /usr/local/lib/android
-
-          # Remove .NET (~3GB)
-          sudo rm -rf /usr/share/dotnet
-
-          # Remove large tool caches
-          sudo rm -rf /opt/ghc
-          sudo rm -rf /usr/local/share/boost
-
-          # Remove Docker images
-          docker rmi $(docker images -q) || true
-
-          echo "Disk space after cleanup:"
-          df -h
-
-      - name: Generate AI image (free, SDXL)
-        timeout-minutes: 15
-        continue-on-error: true
-        run: |
-          python scripts/generate_images_local.py \
-            --briefing "research/$(date -u +%Y-%m-%d)-briefing.json" \
-            --output "images/" \
-            --auto \
-            --steps 50 || echo "Image generation skipped or failed"
 
       - name: Generate data visualizations
         run: |

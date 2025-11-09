@@ -1,0 +1,109 @@
+name: Generate AI Image (Reusable)
+
+on:
+  workflow_call:
+    inputs:
+      briefing_path:
+        description: 'Path to briefing JSON file'
+        required: true
+        type: string
+      output_dir:
+        description: 'Output directory for generated image'
+        required: false
+        type: string
+        default: 'images/'
+      steps:
+        description: 'Number of inference steps (25-50 optimal for SDXL)'
+        required: false
+        type: number
+        default: 50
+      timeout_minutes:
+        description: 'Timeout in minutes for image generation'
+        required: false
+        type: number
+        default: 15
+      continue_on_error:
+        description: 'Whether to continue workflow if generation fails'
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  generate-image:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache Stable Diffusion models
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/huggingface
+          key: huggingface-sd-models-v1
+          restore-keys: |
+            huggingface-sd-models-
+
+      - name: Install image generation dependencies
+        run: |
+          pip install -r requirements-images.txt
+
+      - name: Create output directory
+        run: mkdir -p ${{ inputs.output_dir }}
+
+      - name: Free up disk space for SDXL
+        run: |
+          echo "Disk space before cleanup:"
+          df -h
+
+          # Remove Android SDK (~10GB)
+          sudo rm -rf /usr/local/lib/android
+
+          # Remove .NET (~3GB)
+          sudo rm -rf /usr/share/dotnet
+
+          # Remove large tool caches
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /usr/local/share/boost
+
+          # Remove Docker images
+          docker rmi $(docker images -q) || true
+
+          echo "Disk space after cleanup:"
+          df -h
+
+      - name: Pull latest changes (includes briefing)
+        run: git pull
+
+      - name: Generate AI image (free, SDXL)
+        timeout-minutes: ${{ inputs.timeout_minutes }}
+        continue-on-error: ${{ inputs.continue_on_error }}
+        run: |
+          python scripts/generate_images_local.py \
+            --briefing "${{ inputs.briefing_path }}" \
+            --output "${{ inputs.output_dir }}" \
+            --auto \
+            --steps ${{ inputs.steps }} || echo "Image generation skipped or failed"
+
+      - name: Commit generated image
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add ${{ inputs.output_dir }}
+
+          if ! git diff --staged --quiet; then
+            git commit -m "AI image: $(date -u +%Y-%m-%d) [automated]"
+            git push
+          fi
+
+      - name: Upload generated image
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-image
+          path: ${{ inputs.output_dir }}/*.png
+          if-no-files-found: ignore
