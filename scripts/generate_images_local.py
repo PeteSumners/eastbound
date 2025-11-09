@@ -28,30 +28,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-# Cache directory
-CACHE_DIR = Path('images/local_generated')
-CACHE_DIR.mkdir(parents=True, exist_ok=True)
-
-METADATA_FILE = CACHE_DIR / 'local_image_metadata.json'
-
-
-def _load_metadata() -> Dict:
-    """Load metadata cache."""
-    if METADATA_FILE.exists():
-        with open(METADATA_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return {}
-
-
-def _save_metadata(metadata: Dict):
-    """Save metadata cache."""
-    with open(METADATA_FILE, 'w', encoding='utf-8') as f:
-        json.dump(metadata, f, indent=2)
-
-
-def _get_cache_key(prompt: str) -> str:
-    """Generate cache key."""
-    return hashlib.md5(prompt.encode()).hexdigest()
+# Note: Image caching removed - generates fresh images every time
+# HuggingFace model caching is still enabled (automatic via ~/.cache/huggingface)
 
 
 def generate_image_cpu(prompt: str, output_path: Path,
@@ -157,21 +135,9 @@ def generate_image_cpu(prompt: str, output_path: Path,
         image.save(output_path)
 
         print(f"[OK] Generated: {output_path.name}")
-
-        # Save metadata
-        metadata = _load_metadata()
-        cache_key = _get_cache_key(prompt)
-        metadata[cache_key] = {
-            'source': 'local-stable-diffusion',
-            'prompt': prompt,
-            'path': str(output_path),
-            'generated_at': datetime.now().isoformat(),
-            'model': model_id,
-            'steps': num_steps,
-            'license': 'CreativeML Open RAIL-M - you own generated images',
-            'cost': 'FREE (local generation)'
-        }
-        _save_metadata(metadata)
+        print(f"[INFO] Model: {model_id}")
+        print(f"[INFO] Steps: {num_steps}")
+        print(f"[INFO] Cost: FREE (local generation)")
 
         # Clean up to free memory
         del pipe
@@ -284,17 +250,7 @@ def generate_for_briefing(briefing_path: Path, output_dir: Path,
     prompt = create_prompt_from_briefing(briefing)
     print(f"[INFO] Auto-generated prompt: {prompt}")
 
-    # Check cache
-    cache_key = _get_cache_key(prompt)
-    metadata = _load_metadata()
-
-    if cache_key in metadata:
-        cached_path = Path(metadata[cache_key]['path'])
-        if cached_path.exists():
-            print(f"[OK] Using cached image: {cached_path.name}")
-            return cached_path
-
-    # Generate new image
+    # Generate new image (no caching - always fresh)
     date = briefing.get('date', datetime.now().strftime('%Y-%m-%d'))
     output_path = output_dir / f"{date}-generated.png"
 

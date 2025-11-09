@@ -154,7 +154,11 @@ The article should:
 3. Compare with Western media coverage
 4. Be 1000-1500 words
 5. Include proper frontmatter in Jekyll format
-6. Be saved to content/drafts/{date}-analysis.md
+6. **IMPORTANT**: Include a "## Key Articles Referenced" section at the end with links to the original articles from the briefing
+   - Extract article URLs from the briefing JSON
+   - Format as a bulleted list with article titles and links
+   - Group by source (TASS, RT, Kommersant, etc.)
+7. Be saved to content/drafts/{date}-analysis.md
 
 Use the Write tool to create the article file."""
 
