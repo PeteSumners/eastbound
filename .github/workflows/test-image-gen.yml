@@ -1,0 +1,98 @@
+name: Test Image Generation
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: 'Custom prompt for image generation (use unique prompt to bypass cache)'
+        required: false
+        type: string
+        default: 'Moscow Kremlin at sunset with dramatic storm clouds, professional news photography, architectural details, photorealistic'
+      steps:
+        description: 'Number of inference steps (25-50 optimal for SDXL)'
+        required: false
+        type: number
+        default: 50
+
+jobs:
+  test-image-generation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache Stable Diffusion models
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/huggingface
+          key: huggingface-sd-models-v1
+          restore-keys: |
+            huggingface-sd-models-
+
+      - name: Install image generation dependencies
+        run: pip install -r requirements-images.txt
+
+      - name: Create output directory
+        run: mkdir -p images/
+
+      - name: Free up disk space for SDXL
+        run: |
+          echo "Disk space before cleanup:"
+          df -h
+
+          # Remove Android SDK (~10GB)
+          sudo rm -rf /usr/local/lib/android
+
+          # Remove .NET (~3GB)
+          sudo rm -rf /usr/share/dotnet
+
+          # Remove large tool caches
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /usr/local/share/boost
+
+          # Remove Docker images
+          docker rmi $(docker images -q) || true
+
+          echo "Disk space after cleanup:"
+          df -h
+
+      - name: Generate AI image with custom prompt (SDXL, no image cache)
+        timeout-minutes: 20
+        run: |
+          echo "Generating with prompt: ${{ inputs.prompt }}"
+          echo "Using ${{ inputs.steps }} inference steps"
+
+          python scripts/generate_images_local.py \
+            --prompt "${{ inputs.prompt }}" \
+            --output "images/" \
+            --steps ${{ inputs.steps }}
+
+      - name: List generated images
+        run: |
+          echo "Generated images:"
+          ls -lh images/*.png || echo "No images found"
+
+      - name: Commit generated image
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add images/
+
+          if ! git diff --staged --quiet; then
+            git commit -m "Test image generation: $(date -u +%Y-%m-%d-%H%M%S) [automated]"
+            git push
+          else
+            echo "No new images to commit"
+          fi
+
+      - name: Upload generated image as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-generated-image-${{ github.run_number }}
+          path: images/custom-*.png
+          if-no-files-found: error
