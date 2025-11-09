@@ -134,7 +134,7 @@ def create_thread(frontmatter, sections, post_url):
 def post_thread(tweets, api_client):
     """Post a thread to Twitter using API v2."""
 
-    print(f"🐦 Posting thread with {len(tweets)} tweets...")
+    print(f"[TWITTER] Posting thread with {len(tweets)} tweets...")
 
     previous_tweet_id = None
 
@@ -142,7 +142,7 @@ def post_thread(tweets, api_client):
         try:
             # Ensure tweet is under 280 chars
             if len(tweet_text) > 280:
-                print(f"⚠️  Warning: Tweet {i} is {len(tweet_text)} chars, truncating...")
+                print(f"[WARNING]  Warning: Tweet {i} is {len(tweet_text)} chars, truncating...")
                 tweet_text = tweet_text[:277] + "..."
 
             # Post tweet as reply to previous if this is a thread
