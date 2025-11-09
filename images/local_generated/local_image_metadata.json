@@ -28,5 +28,15 @@
     "steps": 50,
     "license": "CreativeML Open RAIL-M - you own generated images",
     "cost": "FREE (local generation)"
+  },
+  "9211c79836332c63248d609bb077f0c1": {
+    "source": "local-stable-diffusion",
+    "prompt": "European Union headquarters with member state flags, modern glass architecture, dramatic evening sky, professional diplomatic photography, detailed reflections, photorealistic",
+    "path": "images/custom-20251109-031753.png",
+    "generated_at": "2025-11-09T03:34:34.954757",
+    "model": "stabilityai/stable-diffusion-xl-base-1.0",
+    "steps": 50,
+    "license": "CreativeML Open RAIL-M - you own generated images",
+    "cost": "FREE (local generation)"
   }
 }
