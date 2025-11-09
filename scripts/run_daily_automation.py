@@ -211,7 +211,7 @@ Use the Write tool to create the article file."""
     success = run_command(
         f'git add content/ research/ images/ _posts/ && git commit -m "AI content: {date} [automated - local]" && git push',
         "Commit and push to GitHub",
-        timeout=120  # 2 minutes,
+        timeout=120,  # 2 minutes
         check=False  # Don't fail if nothing to commit
     )
 
