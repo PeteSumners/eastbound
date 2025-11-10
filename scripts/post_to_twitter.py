@@ -15,6 +15,15 @@ import yaml
 import tweepy
 from config import generate_post_url, TWITTER_HASHTAGS
 
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).parent.parent / '.env'
+    if env_path.exists():
+        load_dotenv(env_path)
+except ImportError:
+    pass  # dotenv not installed, rely on system environment variables
+
 
 def parse_frontmatter(content):
     """Extract YAML frontmatter and content from markdown file."""
@@ -157,13 +166,13 @@ def post_thread(tweets, api_client):
             tweet_id = response.data['id']
             previous_tweet_id = tweet_id
 
-            print(f"   ✅ Tweet {i}/{len(tweets)} posted (ID: {tweet_id})")
+            print(f"   [OK] Tweet {i}/{len(tweets)} posted (ID: {tweet_id})")
 
         except Exception as e:
-            print(f"   ❌ Error posting tweet {i}: {e}")
+            print(f"   [ERROR] Error posting tweet {i}: {e}")
             return False
 
-    print(f"✅ Thread posted successfully!")
+    print(f"[SUCCESS] Thread posted successfully!")
     return True
 
 
@@ -178,7 +187,7 @@ def main():
     file_path = Path(args.file)
 
     if not file_path.exists():
-        print(f"❌ Error: File not found: {file_path}")
+        print(f"[ERROR] File not found: {file_path}")
         return
 
     # Read file
@@ -220,14 +229,14 @@ def main():
     bearer_token = os.getenv('TWITTER_BEARER_TOKEN')
 
     if not all([api_key, api_secret, access_token, access_token_secret]):
-        print("❌ Error: Missing Twitter API credentials")
+        print("[ERROR] Missing Twitter API credentials")
         print("Required environment variables:")
         print("- TWITTER_API_KEY")
         print("- TWITTER_API_SECRET")
         print("- TWITTER_ACCESS_TOKEN")
         print("- TWITTER_ACCESS_TOKEN_SECRET")
         print("- TWITTER_BEARER_TOKEN")
-        print("\nSet these in GitHub Secrets for automation.")
+        print("\nSet these in .env file or environment variables.")
         return
 
     # Initialize Twitter API client

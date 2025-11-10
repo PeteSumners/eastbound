@@ -7,7 +7,17 @@ import json
 import argparse
 import requests
 import yaml
+from pathlib import Path
 from config import generate_post_url, LINKEDIN_HASHTAGS
+
+# Load environment variables from .env file
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).parent.parent / '.env'
+    if env_path.exists():
+        load_dotenv(env_path)
+except ImportError:
+    pass  # dotenv not installed, rely on system environment variables
 
 def extract_post_content(file_path):
     """Extract title, content, and URL from markdown post."""
@@ -44,7 +54,7 @@ def post_to_linkedin(access_token, user_urn, text, url=None):
 
     # Build post payload
     payload = {
-        'author': f'urn:li:person:{user_urn}',
+        'author': user_urn,  # URN should already be in correct format from .env
         'lifecycleState': 'PUBLISHED',
         'specificContent': {
             'com.linkedin.ugc.ShareContent': {

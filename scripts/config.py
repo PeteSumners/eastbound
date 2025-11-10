@@ -21,31 +21,67 @@ def generate_post_url(filename: str) -> str:
     Generate the canonical post URL from a filename.
 
     Args:
-        filename: Post filename in format YYYY-MM-DD-slug.md
+        filename: Post filename in format YYYY-MM-DD-slug.md or full path to post
 
     Returns:
-        Full URL to the published post (e.g., https://petesumners.github.io/eastbound/2025/11/06/ukraine.html)
+        Full URL to the published post, including categories if found in frontmatter
 
     Example:
         >>> generate_post_url("2025-11-06-ukraine.md")
-        'https://petesumners.github.io/eastbound/2025/11/06/ukraine.html'
+        'https://petesumners.github.io/eastbound/analysis/media/geopolitics/2025/11/06/ukraine.html'
     """
-    # Extract filename without extension
-    if isinstance(filename, Path):
-        filename = filename.stem
-    else:
-        filename = os.path.basename(filename).replace('.md', '')
+    import re
+    import yaml
 
-    # Parse date parts: YYYY-MM-DD-slug.md -> /YYYY/MM/DD/slug.html
-    parts = filename.split('-', 3)
-
-    if len(parts) >= 4:
-        year, month, day = parts[0], parts[1], parts[2]
-        slug = parts[3]
-        return f"{SITE_BASE_URL}/{year}/{month}/{day}/{slug}.html"
+    # Convert to Path object if string
+    if not isinstance(filename, Path):
+        # If it's a full path, use it; otherwise assume it's in _posts
+        if os.path.exists(filename):
+            filepath = Path(filename)
+        else:
+            filepath = POSTS_DIR / os.path.basename(filename)
     else:
+        filepath = filename
+
+    # Extract filename without extension for parsing
+    basename = filepath.stem
+
+    # Parse date parts: YYYY-MM-DD-slug.md
+    parts = basename.split('-', 3)
+
+    if len(parts) < 4:
         # Fallback to homepage if filename doesn't match expected format
         return SITE_BASE_URL
+
+    year, month, day = parts[0], parts[1], parts[2]
+    slug = parts[3]
+
+    # Try to read categories from frontmatter
+    categories = []
+    if filepath.exists():
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = f.read()
+                # Extract frontmatter
+                pattern = r'^---\s*\n(.*?\n)---\s*\n'
+                match = re.match(pattern, content, re.DOTALL)
+                if match:
+                    frontmatter = yaml.safe_load(match.group(1))
+                    if 'categories' in frontmatter:
+                        cats = frontmatter['categories']
+                        if isinstance(cats, list):
+                            categories = cats
+                        elif isinstance(cats, str):
+                            categories = [cats]
+        except Exception:
+            pass  # If reading fails, just use date-based URL
+
+    # Build URL: categories + date + slug
+    if categories:
+        category_path = '/'.join(categories)
+        return f"{SITE_BASE_URL}/{category_path}/{year}/{month}/{day}/{slug}.html"
+    else:
+        return f"{SITE_BASE_URL}/{year}/{month}/{day}/{slug}.html"
 
 
 def generate_image_path(today: str, image_type: str) -> str:
