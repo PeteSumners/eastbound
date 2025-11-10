@@ -19,8 +19,20 @@ from collections import Counter, defaultdict
 
 
 def tokenize(text):
-    """Extract words from text."""
+    """Extract words from text, removing HTML and URLs."""
     text = text.lower()
+
+    # Remove HTML tags
+    text = re.sub(r'<[^>]+>', ' ', text)
+
+    # Remove URLs (http, https, www)
+    text = re.sub(r'https?://\S+', ' ', text)
+    text = re.sub(r'www\.\S+', ' ', text)
+
+    # Remove HTML entities
+    text = re.sub(r'&\w+;', ' ', text)
+
+    # Extract words (4+ characters)
     words = re.findall(r'\b\w{4,}\b', text)
     return words
 
