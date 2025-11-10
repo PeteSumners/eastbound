@@ -152,10 +152,27 @@ def create_thread(frontmatter, sections, post_url):
     return tweets
 
 
-def post_thread(tweets, api_client):
-    """Post a thread to Twitter using API v2."""
+def upload_image(api_v1, image_path):
+    """Upload image to Twitter using v1.1 API."""
+    try:
+        media = api_v1.media_upload(filename=image_path)
+        print(f"   [OK] Image uploaded (media_id: {media.media_id})")
+        return media.media_id
+    except Exception as e:
+        print(f"   [WARNING] Image upload failed: {e}")
+        return None
+
+
+def post_thread(tweets, api_client, api_v1=None, image_path=None):
+    """Post a thread to Twitter using API v2, with optional image for first tweet."""
 
     print(f"[TWITTER] Posting thread with {len(tweets)} tweets...")
+
+    # Upload image if provided (for first tweet)
+    media_id = None
+    if image_path and api_v1 and Path(image_path).exists():
+        print(f"[TWITTER] Uploading image: {image_path}")
+        media_id = upload_image(api_v1, str(image_path))
 
     previous_tweet_id = None
 
@@ -166,14 +183,16 @@ def post_thread(tweets, api_client):
                 print(f"[WARNING]  Warning: Tweet {i} is {len(tweet_text)} chars, truncating...")
                 tweet_text = tweet_text[:277] + "..."
 
+            # Attach image to first tweet only
+            tweet_params = {'text': tweet_text}
+            if i == 1 and media_id:
+                tweet_params['media_ids'] = [media_id]
+
             # Post tweet as reply to previous if this is a thread
             if previous_tweet_id:
-                response = api_client.create_tweet(
-                    text=tweet_text,
-                    in_reply_to_tweet_id=previous_tweet_id
-                )
-            else:
-                response = api_client.create_tweet(text=tweet_text)
+                tweet_params['in_reply_to_tweet_id'] = previous_tweet_id
+
+            response = api_client.create_tweet(**tweet_params)
 
             tweet_id = response.data['id']
             previous_tweet_id = tweet_id
@@ -251,7 +270,7 @@ def main():
         print("\nSet these in .env file or environment variables.")
         return
 
-    # Initialize Twitter API client
+    # Initialize Twitter API v2 client
     client = tweepy.Client(
         bearer_token=bearer_token,
         consumer_key=api_key,
@@ -260,8 +279,22 @@ def main():
         access_token_secret=access_token_secret
     )
 
-    # Post thread
-    post_thread(tweets, client)
+    # Initialize Twitter API v1.1 for media upload
+    auth = tweepy.OAuth1UserHandler(api_key, api_secret, access_token, access_token_secret)
+    api_v1 = tweepy.API(auth)
+
+    # Determine image path from post date
+    # Extract date from filename: YYYY-MM-DD-slug.md
+    filename = file_path.stem
+    date_parts = filename.split('-', 3)
+    if len(date_parts) >= 3:
+        date_str = '-'.join(date_parts[:3])  # YYYY-MM-DD
+        image_path = Path(f"images/{date_str}-generated.png")
+    else:
+        image_path = None
+
+    # Post thread with image
+    post_thread(tweets, client, api_v1, image_path)
 
 
 if __name__ == '__main__':
