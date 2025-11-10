@@ -20,7 +20,9 @@ except ImportError:
     pass  # dotenv not installed, rely on system environment variables
 
 def extract_post_content(file_path):
-    """Extract title, content, and URL from markdown post."""
+    """Extract title, excerpt, and clean preview from markdown post."""
+    import re
+
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
@@ -32,13 +34,24 @@ def extract_post_content(file_path):
             body = parts[2].strip()
 
             title = frontmatter.get('title', '')
-            subtitle = frontmatter.get('subtitle', '')
+            excerpt = frontmatter.get('excerpt', '')
 
-            # Extract first 300 chars of actual content for preview
-            lines = [line for line in body.split('\n') if line.strip() and not line.startswith('#')]
-            preview = ' '.join(lines[:3])[:300]
+            # Use excerpt if available (clean text from frontmatter)
+            # Otherwise extract clean text from body
+            if excerpt:
+                preview = excerpt
+            else:
+                # Remove markdown images, links, and formatting
+                clean_body = re.sub(r'!\[.*?\]\(.*?\)', '', body)  # Remove images
+                clean_body = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', clean_body)  # Links to text
+                clean_body = re.sub(r'[#*_`]', '', clean_body)  # Remove markdown formatting
+                clean_body = re.sub(r'---+', '', clean_body)  # Remove horizontal rules
 
-            return title, subtitle, preview
+                # Extract first sentence or ~200 chars
+                lines = [line.strip() for line in clean_body.split('\n') if line.strip()]
+                preview = ' '.join(lines[:2])[:200]
+
+            return title, excerpt, preview
 
     return None, None, None
 
@@ -126,7 +139,7 @@ def main():
         sys.exit(1)
 
     # Extract content
-    title, subtitle, preview = extract_post_content(args.file)
+    title, excerpt, preview = extract_post_content(args.file)
 
     if not title:
         print("ERROR: Could not extract content from file")
@@ -135,11 +148,9 @@ def main():
     # Build post URL
     post_url = generate_post_url(args.file)
 
-    # Create LinkedIn post text
+    # Create LinkedIn post text - clean and simple
     post_text = f"{title}\n\n"
-    if subtitle:
-        post_text += f"{subtitle}\n\n"
-    post_text += f"{preview}...\n\n"
+    post_text += f"{preview}\n\n"
     post_text += f"Read more: {post_url}\n\n"
     post_text += LINKEDIN_HASHTAGS
 

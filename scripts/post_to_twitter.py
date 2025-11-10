@@ -95,6 +95,7 @@ def create_thread(frontmatter, sections, post_url):
     """Create a Twitter thread from content sections."""
 
     title = frontmatter.get('title', '')
+    excerpt = frontmatter.get('excerpt', '')
     content_type = frontmatter.get('type', '')
 
     tweets = []
@@ -134,8 +135,19 @@ def create_thread(frontmatter, sections, post_url):
                 tweet4 += "..."
             tweets.append(tweet4)
 
-    # Add final tweet: Read more + tags
-    tweets.append(f"Read the full analysis:\n{post_url}\n\n{TWITTER_HASHTAGS}")
+    # If no specific content type or no tweets created yet, create simple post with excerpt
+    if not tweets and excerpt:
+        # Simple tweet with title and excerpt
+        tweet = f"{title}\n\n{excerpt}\n\nRead more: {post_url}\n\n{TWITTER_HASHTAGS}"
+        # Truncate if too long (280 char limit)
+        if len(tweet) > 280:
+            max_excerpt_len = 280 - len(title) - len(post_url) - len(TWITTER_HASHTAGS) - 20  # 20 for formatting
+            truncated_excerpt = excerpt[:max_excerpt_len] + "..."
+            tweet = f"{title}\n\n{truncated_excerpt}\n\nRead more: {post_url}\n\n{TWITTER_HASHTAGS}"
+        tweets.append(tweet)
+    elif not tweets:
+        # Fallback if no excerpt
+        tweets.append(f"Read the full analysis:\n{post_url}\n\n{TWITTER_HASHTAGS}")
 
     return tweets
 
