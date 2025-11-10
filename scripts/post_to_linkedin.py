@@ -42,6 +42,29 @@ def extract_post_content(file_path):
 
     return None, None, None
 
+def delete_linkedin_post(access_token, post_id):
+    """Delete a LinkedIn post by ID."""
+    import urllib.parse
+
+    headers = {
+        'Authorization': f'Bearer {access_token}',
+        'LinkedIn-Version': '202210',
+        'X-Restli-Protocol-Version': '2.0.0'
+    }
+
+    # URL encode the full URN
+    encoded_id = urllib.parse.quote(post_id, safe='')
+
+    response = requests.delete(
+        f'https://api.linkedin.com/v2/ugcPosts/{encoded_id}',
+        headers=headers
+    )
+
+    if response.status_code in [200, 204]:
+        return True
+    else:
+        raise Exception(f"LinkedIn delete error {response.status_code}: {response.text}")
+
 def post_to_linkedin(access_token, user_urn, text, url=None):
     """Post to LinkedIn using API."""
 
