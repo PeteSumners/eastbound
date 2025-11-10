@@ -8,14 +8,34 @@ More sophisticated than simple word counting - identifies terms that are:
 
 This catches important specific terms while filtering generic common words.
 
+ENHANCED VERSION:
+- Named Entity Recognition (people, places, organizations)
+- Multi-word phrase extraction
+- Geopolitical term boosting
+- Keyword clustering
+
 Usage:
-    from advanced_keywords import extract_tfidf_keywords
-    keywords = extract_tfidf_keywords(articles)
+    from advanced_keywords import extract_enhanced_keywords
+    keywords = extract_enhanced_keywords(articles)
 """
 
 import re
 import math
 from collections import Counter, defaultdict
+
+# Try to import spaCy for NER (optional but recommended)
+try:
+    import spacy
+    try:
+        nlp = spacy.load("en_core_web_sm")
+        NER_AVAILABLE = True
+    except OSError:
+        # Model not downloaded
+        NER_AVAILABLE = False
+        nlp = None
+except ImportError:
+    NER_AVAILABLE = False
+    nlp = None
 
 
 def tokenize(text):
@@ -182,6 +202,109 @@ def extract_bigram_tfidf(articles, top_n=30, min_df=2):
                 tfidf_scores[bigram] += term_freq * inverse_doc_freq
 
     ranked = sorted(tfidf_scores.items(), key=lambda x: x[1], reverse=True)
+
+    return ranked[:top_n]
+
+
+def extract_named_entities(articles):
+    """
+    Extract named entities (people, places, organizations) using spaCy NER.
+
+    Returns:
+        Counter of entity_text: count
+    """
+    if not NER_AVAILABLE:
+        return Counter()
+
+    entities = []
+    for article in articles:
+        text = f"{article.get('title', '')} {article.get('summary', '')}"
+
+        # Remove HTML
+        text = re.sub(r'<[^>]+>', ' ', text)
+        text = re.sub(r'https?://\S+', ' ', text)
+
+        try:
+            doc = nlp(text[:10000])  # Limit text length for performance
+            for ent in doc.ents:
+                # Focus on geopolitically relevant entity types
+                if ent.label_ in ['PERSON', 'ORG', 'GPE', 'LOC', 'NORP', 'EVENT']:
+                    # Clean and normalize
+                    entity_text = ent.text.strip()
+                    if len(entity_text) > 3 and not entity_text.isdigit():
+                        entities.append(entity_text.lower())
+        except:
+            pass  # Skip if NER fails on this article
+
+    return Counter(entities)
+
+
+def extract_enhanced_keywords(articles, top_n=15):
+    """
+    Enhanced keyword extraction combining multiple techniques:
+    1. Named Entity Recognition (people, places, orgs)
+    2. TF-IDF keywords
+    3. Meaningful bigrams
+    4. Geopolitical term boosting
+
+    Returns:
+        List of (keyword, score, source) tuples
+        source indicates: 'entity', 'keyword', or 'phrase'
+    """
+    results = []
+
+    # 1. Extract named entities (if available)
+    if NER_AVAILABLE:
+        entities = extract_named_entities(articles)
+        # Boost entities - they're often the most relevant
+        for entity, count in entities.most_common(20):
+            if count >= 2:  # Must appear in at least 2 articles
+                score = count * 2.0  # Boost entity scores
+                results.append((entity, score, 'entity'))
+
+    # 2. Extract TF-IDF keywords
+    tfidf_keywords = extract_tfidf_keywords(articles, top_n=30, min_df=2)
+    for keyword, score in tfidf_keywords:
+        # Boost geopolitically relevant terms
+        boost = 1.0
+        geopolitical_terms = {
+            'ukraine', 'ukrainian', 'zelensky', 'biden', 'trump', 'putin',
+            'nato', 'sanctions', 'military', 'diplomatic', 'treaty',
+            'nuclear', 'alliance', 'summit', 'conflict', 'peace', 'war',
+            'china', 'chinese', 'beijing', 'washington', 'europe', 'european'
+        }
+        if keyword in geopolitical_terms:
+            boost = 1.5
+
+        results.append((keyword, score * boost, 'keyword'))
+
+    # 3. Extract meaningful bigrams/phrases
+    bigrams = extract_bigram_tfidf(articles, top_n=20, min_df=2)
+    for bigram, score in bigrams:
+        # Only keep phrases that look meaningful
+        words = bigram.split()
+        if len(words) == 2:
+            # Skip if either word is too common
+            common_words = {'government', 'minister', 'president', 'officials'}
+            if not any(w in common_words for w in words):
+                results.append((bigram, score * 1.2, 'phrase'))
+
+    # Combine and deduplicate
+    keyword_scores = defaultdict(lambda: {'score': 0, 'sources': []})
+    for keyword, score, source in results:
+        keyword_scores[keyword]['score'] += score
+        keyword_scores[keyword]['sources'].append(source)
+
+    # Rank by combined score
+    ranked = []
+    for keyword, data in keyword_scores.items():
+        # Bonus for appearing in multiple extraction methods
+        diversity_bonus = 1.0 + (len(set(data['sources'])) - 1) * 0.3
+        final_score = data['score'] * diversity_bonus
+        primary_source = data['sources'][0]
+        ranked.append((keyword, final_score, primary_source))
+
+    ranked.sort(key=lambda x: x[1], reverse=True)
 
     return ranked[:top_n]
 
