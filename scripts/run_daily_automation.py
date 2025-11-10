@@ -156,11 +156,40 @@ The article should:
 5. Include proper frontmatter in Jekyll format with these required fields:
    - title, date, author, categories, tags, excerpt
    - **IMPORTANT**: image: /eastbound/images/{date}-generated.png
-6. **IMPORTANT**: Include a "## Key Articles Referenced" section at the end with links to the original articles from the briefing
+6. **IMPORTANT**: After frontmatter, include this inline image display:
+   ![AI-Generated Featured Image](/eastbound/images/{date}-generated.png)
+   *AI-generated image created using Stable Diffusion based on today's coverage*
+
+   ---
+7. **IMPORTANT**: Before the "## Key Articles Referenced" section, include a "## Data Visualizations" section with smaller embedded images:
+
+   ---
+
+   ## Data Visualizations
+
+   <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
+     <div style="flex: 1; min-width: 300px;">
+       <h3>Trending Topics</h3>
+       <img src="/eastbound/images/{date}-keywords.png" alt="Keyword Trends" style="width: 100%; max-width: 500px;">
+     </div>
+
+     <div style="flex: 1; min-width: 300px;">
+       <h3>Source Distribution</h3>
+       <img src="/eastbound/images/{date}-sources.png" alt="Source Distribution" style="width: 100%; max-width: 500px;">
+     </div>
+   </div>
+
+   <div style="margin-top: 20px;">
+     <h3>By The Numbers</h3>
+     <img src="/eastbound/images/{date}-stats.png" alt="Statistics" style="width: 100%; max-width: 600px;">
+   </div>
+
+   ---
+8. **IMPORTANT**: Include a "## Key Articles Referenced" section at the end with links to the original articles from the briefing
    - Extract article URLs from the briefing JSON
    - Format as a bulleted list with article titles and links
    - Group by source (TASS, RT, Kommersant, etc.)
-7. Be saved to content/drafts/{date}-analysis.md
+9. Be saved to content/drafts/{date}-analysis.md
 
 Use the Write tool to create the article file."""
 
