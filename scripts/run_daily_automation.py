@@ -153,7 +153,9 @@ The article should:
 2. Provide cultural and political context for English-speaking audiences
 3. Compare with Western media coverage
 4. Be 1000-1500 words
-5. Include proper frontmatter in Jekyll format
+5. Include proper frontmatter in Jekyll format with these required fields:
+   - title, date, author, categories, tags, excerpt
+   - **IMPORTANT**: image: /eastbound/images/{date}-generated.png
 6. **IMPORTANT**: Include a "## Key Articles Referenced" section at the end with links to the original articles from the briefing
    - Extract article URLs from the briefing JSON
    - Format as a bulleted list with article titles and links
@@ -181,10 +183,17 @@ Use the Write tool to create the article file."""
 
         if result.returncode == 0:
             print("[OK] Content generation completed successfully")
-            print(result.stdout)
+            if result.stdout:
+                print("[STDOUT]", result.stdout[:500])  # First 500 chars
         else:
             print("[FAILED] Content generation failed")
-            print(result.stderr)
+            print(f"[DEBUG] Return code: {result.returncode}")
+            if result.stdout:
+                print(f"[DEBUG] Stdout: {result.stdout}")
+            if result.stderr:
+                print(f"[DEBUG] Stderr: {result.stderr}")
+            else:
+                print("[DEBUG] Stderr was empty")
             print("\n[ERROR] Content generation failed. Exiting.")
             return 1
     except Exception as e:
