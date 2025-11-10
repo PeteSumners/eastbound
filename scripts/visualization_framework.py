@@ -172,19 +172,29 @@ class SourceDistributionChart(BaseChart):
         sources = [s[0] for s in top_sources]
         counts = [s[1] for s in top_sources]
 
+        # Custom autopct function to hide percentages for very small slices
+        def make_autopct(values):
+            def my_autopct(pct):
+                # Only show percentage if > 5%
+                return f'{pct:.1f}%' if pct > 5 else ''
+            return my_autopct
+
         wedges, texts, autotexts = self.ax.pie(
-            counts, labels=sources, autopct='%1.1f%%',
-            colors=PALETTE[:len(sources)], startangle=90
+            counts, labels=sources, autopct=make_autopct(counts),
+            colors=PALETTE[:len(sources)], startangle=90,
+            pctdistance=0.85  # Move percentages closer to center to avoid overlap
         )
 
+        # Style labels (source names)
         for text in texts:
-            text.set_fontsize(11)
+            text.set_fontsize(10)
             text.set_fontweight('bold')
             text.set_color(COLORS['text'])
 
+        # Style percentages
         for autotext in autotexts:
             autotext.set_color('white')
-            autotext.set_fontsize(10)
+            autotext.set_fontsize(9)
             autotext.set_fontweight('bold')
 
         self.title = 'Article Distribution by Source'

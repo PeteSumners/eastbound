@@ -50,7 +50,12 @@ def extract_tfidf_keywords(articles, top_n=50, min_df=2):
         'president', 'government', 'country', 'state', 'says', 'told', 'plan',
         'plans', 'year', 'years', 'talks', 'meeting', 'held', 'announced',
         'military', 'report', 'full', 'political', 'economic', 'social',
-        'foreign', 'domestic', 'federal', 'regional', 'local', 'global'
+        'foreign', 'domestic', 'federal', 'regional', 'local', 'global',
+        # News-specific stopwords
+        'article', 'articles', 'story', 'stories', 'read', 'preview', 'https',
+        'http', 'link', 'click', 'here', 'view', 'watch', 'video', 'photo',
+        'image', 'source', 'sources', 'details', 'information', 'update',
+        'updates', 'breaking', 'latest', 'continue', 'reading', 'part'
     }
 
     # Build document collection
@@ -107,7 +112,9 @@ def extract_bigram_tfidf(articles, top_n=30, min_df=2):
         'this', 'that', 'with', 'from', 'have', 'been', 'will', 'said', 'says',
         'more', 'about', 'after', 'their', 'which', 'when', 'where', 'there',
         'russia', 'russian', 'moscow', 'kremlin', 'media', 'tass', 'reported',
-        'military', 'report', 'political', 'official'
+        'military', 'report', 'political', 'official',
+        'article', 'articles', 'story', 'stories', 'read', 'preview', 'https',
+        'http', 'link', 'click', 'here', 'view', 'watch', 'full', 'continue'
     }
 
     # Build bigram collection
