@@ -1,0 +1,1 @@
+Write a very short test message (just 2-3 sentences) to test_claude_output.txt using the Write tool. The message should say "Claude Code CLI test successful on [current date]" and include a brief note about testing automation.

@@ -1,0 +1,15 @@
+
+Loaded 100 articles from today's briefing
+
+======================================================================
+
+OLD METHOD (Basic TF-IDF):
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\PeteS\Desktop\Eastbound\keyword_demo.py", line 29, in <module>
+    print(f"{i:2d}. {keyword:25s} score: {score:.2f}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 4-10: character maps to <undefined>
