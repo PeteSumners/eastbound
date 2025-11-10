@@ -156,12 +156,7 @@ The article should:
 5. Include proper frontmatter in Jekyll format with these required fields:
    - title, date, author, categories, tags, excerpt
    - **IMPORTANT**: image: /eastbound/images/{date}-generated.png
-6. **IMPORTANT**: After frontmatter, include this inline image display:
-   ![AI-Generated Featured Image](/eastbound/images/{date}-generated.png)
-   *AI-generated image created using Stable Diffusion based on today's coverage*
-
-   ---
-7. **IMPORTANT**: Before the "## Key Articles Referenced" section, include a "## Data Visualizations" section with smaller embedded images:
+6. **IMPORTANT**: Before the "## Key Articles Referenced" section, include a "## Data Visualizations" section with smaller embedded images:
 
    ---
 
@@ -185,11 +180,11 @@ The article should:
    </div>
 
    ---
-8. **IMPORTANT**: Include a "## Key Articles Referenced" section at the end with links to the original articles from the briefing
+7. **IMPORTANT**: Include a "## Key Articles Referenced" section at the end with links to the original articles from the briefing
    - Extract article URLs from the briefing JSON
    - Format as a bulleted list with article titles and links
    - Group by source (TASS, RT, Kommersant, etc.)
-9. Be saved to content/drafts/{date}-analysis.md
+8. Be saved to content/drafts/{date}-analysis.md
 
 Use the Write tool to create the article file."""
 

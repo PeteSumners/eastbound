@@ -25,6 +25,13 @@ layout: default
         {% endif %}
     </header>
 
+    {% if page.image %}
+    <div class="featured-image">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" />
+        <p class="image-caption">AI-generated image created using Stable Diffusion based on today's coverage</p>
+    </div>
+    {% endif %}
+
     <div class="post-content">
         {{ content }}
     </div>
@@ -47,6 +54,26 @@ layout: default
         margin-bottom: 40px;
         padding-bottom: 20px;
         border-bottom: 2px solid #ecf0f1;
+    }
+
+    .featured-image {
+        margin: 30px 0 40px 0;
+        text-align: center;
+    }
+
+    .featured-image img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .image-caption {
+        font-size: 0.9em;
+        color: #95a5a6;
+        font-style: italic;
+        margin-top: 10px;
     }
 
     .post-header h1 {
