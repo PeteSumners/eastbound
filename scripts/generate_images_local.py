@@ -107,8 +107,27 @@ def generate_image_cpu(prompt: str, output_path: Path,
         if negative_prompt is None:
             negative_prompt = "blurry, low quality, distorted, deformed, ugly, bad anatomy, watermark, text, logo"
 
+        # Progress callback to show live updates
+        import time
+        start_time = time.time()
+        last_print_time = start_time
+
+        def progress_callback(pipe, step, timestep, callback_kwargs):
+            nonlocal last_print_time
+            current_time = time.time()
+            elapsed = current_time - start_time
+
+            # Print every step for visibility
+            percent = (step / num_steps) * 100
+            elapsed_str = f"{int(elapsed)}s"
+            print(f"[PROGRESS] Step {step}/{num_steps} ({percent:.0f}%) - Elapsed: {elapsed_str}")
+
+            return callback_kwargs
+
         # Generate image
         with torch.no_grad():
+            print(f"[GENERATE] Starting inference at {time.strftime('%H:%M:%S')}")
+
             if model_id == "stabilityai/sdxl-turbo":
                 # SDXL Turbo optimal settings: guidance_scale=0.0, 1-4 steps
                 image = pipe(
@@ -117,7 +136,8 @@ def generate_image_cpu(prompt: str, output_path: Path,
                     num_inference_steps=num_steps,
                     guidance_scale=0.0,  # SDXL Turbo requires guidance_scale=0.0
                     height=512,
-                    width=512
+                    width=512,
+                    callback_on_step_end=progress_callback
                 ).images[0]
             else:
                 # Full SDXL settings: guidance_scale=7.5, 25-50 steps
@@ -127,8 +147,12 @@ def generate_image_cpu(prompt: str, output_path: Path,
                     num_inference_steps=num_steps,
                     guidance_scale=7.5,
                     height=512,
-                    width=512
+                    width=512,
+                    callback_on_step_end=progress_callback
                 ).images[0]
+
+            total_time = time.time() - start_time
+            print(f"[COMPLETE] Generation finished in {int(total_time)}s ({total_time/60:.1f} minutes)")
 
         # Save image
         output_path.parent.mkdir(parents=True, exist_ok=True)
