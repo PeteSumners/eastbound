@@ -376,13 +376,18 @@ def main():
 
     print(f"\n[OK] Briefing saved to: {args.output}")
 
-    # Print summary
-    print("\n[SUMMARY] Top trending stories:")
-    for i, story in enumerate(trending[:3], 1):
-        print(f"\n{i}. Keyword: {story['keyword']}")
-        print(f"   Sources: {story['source_count']}")
-        for article in story['articles'][:2]:
-            print(f"   - {article['source']}: {article['title'][:80]}...")
+    # Print summary (with encoding safety for Windows console)
+    try:
+        print("\n[SUMMARY] Top trending stories:")
+        for i, story in enumerate(trending[:3], 1):
+            keyword = story['keyword'].encode('utf-8', errors='replace').decode('utf-8', errors='replace')
+            print(f"\n{i}. Keyword: {keyword}")
+            print(f"   Sources: {story['source_count']}")
+            for article in story['articles'][:2]:
+                title = article['title'][:80].encode('utf-8', errors='replace').decode('utf-8', errors='replace')
+                print(f"   - {article['source']}: {title}...")
+    except UnicodeEncodeError:
+        print("\n[SUMMARY] Top trending stories saved to briefing (console encoding error prevented display)")
 
 if __name__ == '__main__':
     main()
