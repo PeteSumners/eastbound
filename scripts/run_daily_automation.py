@@ -204,7 +204,7 @@ The article should:
 4. Be 1000-1500 words
 5. Include proper frontmatter in Jekyll format with these required fields:
    - title, date, author, categories, tags, excerpt
-   - **IMPORTANT**: image: /images/{date}-generated.png
+   - **IMPORTANT**: image: {{{{site.baseurl}}}}/images/{date}-generated.png
 6. **IMPORTANT**: Do NOT include an H1 heading (# Title) after the frontmatter. The Jekyll layout displays the title automatically from the frontmatter. Start the content directly with the first paragraph.
 7. **IMPORTANT**: Before the "## Key Articles Referenced" section, include a "## Data Visualizations" section with smaller embedded images:
 
@@ -215,18 +215,18 @@ The article should:
    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
      <div style="flex: 1; min-width: 300px;">
        <h3>Trending Topics</h3>
-       <img src="/images/{date}-keywords.png" alt="Keyword Trends" style="width: 100%; max-width: 500px;">
+       <img src="{{{{site.baseurl}}}}/images/{date}-keywords.png" alt="Keyword Trends" style="width: 100%; max-width: 500px;">
      </div>
 
      <div style="flex: 1; min-width: 300px;">
        <h3>Source Distribution</h3>
-       <img src="/images/{date}-sources.png" alt="Source Distribution" style="width: 100%; max-width: 500px;">
+       <img src="{{{{site.baseurl}}}}/images/{date}-sources.png" alt="Source Distribution" style="width: 100%; max-width: 500px;">
      </div>
    </div>
 
    <div style="margin-top: 20px;">
      <h3>By The Numbers</h3>
-     <img src="/images/{date}-stats.png" alt="Statistics" style="width: 100%; max-width: 600px;">
+     <img src="{{{{site.baseurl}}}}/images/{date}-stats.png" alt="Statistics" style="width: 100%; max-width: 600px;">
    </div>
 
    ---
