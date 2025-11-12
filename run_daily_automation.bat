@@ -10,5 +10,3 @@ python scripts\run_daily_automation.py
 
 REM Log completion
 echo Automation completed at %date% %time% >> automation.log
-
-pause

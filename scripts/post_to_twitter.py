@@ -10,10 +10,17 @@ Usage:
 import argparse
 import os
 import re
+import sys
+import io
 from pathlib import Path
 import yaml
 import tweepy
 from config import generate_post_url, TWITTER_HASHTAGS
+
+# Force UTF-8 encoding for Windows console (fixes emoji support)
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 # Load environment variables from .env file
 try:
