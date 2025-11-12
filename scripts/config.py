@@ -78,7 +78,8 @@ def generate_post_url(filename: str) -> str:
 
     # Build URL: categories + date + slug
     if categories:
-        category_path = '/'.join(categories)
+        # Jekyll lowercases categories in URLs
+        category_path = '/'.join(cat.lower() for cat in categories)
         return f"{SITE_BASE_URL}/{category_path}/{year}/{month}/{day}/{slug}.html"
     else:
         return f"{SITE_BASE_URL}/{year}/{month}/{day}/{slug}.html"
