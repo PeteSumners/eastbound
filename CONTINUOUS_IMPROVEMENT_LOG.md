@@ -1,5 +1,90 @@
 # Continuous Improvement Log - Eastbound Reports
 
+---
+
+## IMMEDIATE TODO - November 11, 2025
+
+### Priority Issues to Fix
+
+#### 1. 🔴 **TF-IDF Removing Too Many Articles**
+**Problem:** The TF-IDF keyword extraction is filtering down from ~300+ articles to only 10-20 trending topics, losing valuable context.
+
+**Desired Behavior:** Include the initial few hundred articles in each analysis, not just the top trending keywords.
+
+**File:** `scripts/monitor_russian_media.py` (lines ~200-250, trending topic detection)
+
+**Approach:**
+- Option A: Pass ALL unique articles (not just trending topics) to AI generation
+- Option B: Increase trending topics from 10 to 50-100
+- Option C: Create two tiers: "trending" (10) + "background context" (100+)
+
+**Impact:** Richer, more comprehensive analysis with broader perspective
+
+---
+
+#### 2. 🟡 **RSS Feeds Failing**
+**Problem:** Multiple RSS feeds consistently failing with parsing errors:
+
+**Confirmed Failures:**
+```
+[ERROR] TASS Economy: Feed parsing error: <unknown>:2:2764: not well-formed (invalid token)
+[ERROR] TASS Politics: Feed parsing error: <unknown>:2:2765: not well-formed (invalid token)
+[ERROR] TASS World: Feed parsing error: <unknown>:2:2762: not well-formed (invalid token)
+[ERROR] Kommersant Politics: No articles found in feed
+[ERROR] Kommersant Economics: No articles found in feed
+```
+
+**File:** `scripts/monitor_russian_media.py` (RSS feed URLs configuration)
+
+**Actions Needed:**
+1. Double-check TASS category feed URLs (may have changed)
+2. Verify Kommersant Politics/Economics feed URLs
+3. Add alternative feeds if primary ones are broken
+4. Consider scraping fallback if RSS is unavailable
+5. Update retry logic to handle malformed XML better
+
+**Impact:** Currently getting ~318 articles instead of 400+, missing key sources
+
+---
+
+### Quick Wins
+
+#### 3. 📊 **Enhanced Deduplication Stats**
+Add logging to show how many articles were removed at each stage:
+- Initial fetch: X articles
+- After deduplication: Y articles (-Z removed)
+- After TF-IDF filtering: N articles (-M removed)
+
+Helps diagnose where articles are being lost.
+
+---
+
+#### 4. 🔧 **Twitter Posting Now Fixed!**
+**Status:** ✅ COMPLETED (November 11, 2025)
+
+Fixed Unicode encoding bug that prevented emoji support on Windows.
+
+**File:** `scripts/post_to_twitter.py` (lines 20-23)
+**Fix:** Added UTF-8 console wrapper for Windows
+
+---
+
+#### 5. 🔧 **Batch File Blocking Fixed!**
+**Status:** ✅ COMPLETED (November 11, 2025)
+
+Removed `pause` command from `run_daily_automation.bat` that was blocking scheduled tasks.
+
+---
+
+### Next Session Priorities
+
+1. **Fix TF-IDF article filtering** (Priority 1)
+2. **Debug and fix RSS feeds** (Priority 2)
+3. Test full automation pipeline with fixes
+4. Monitor article counts at each pipeline stage
+
+---
+
 **Session:** November 6, 2025 (Continued)
 **Goal:** Squeeze out every last bit of quality and performance
 **Status:** Ongoing optimization beyond "production ready"
