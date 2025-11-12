@@ -39,39 +39,83 @@ except ImportError:
     print("          (API keys can still be set via environment variables)")
 
 
-def run_command(cmd, description, timeout=None, check=True):
+def run_command(cmd, description, timeout=None, check=True, verbose=False):
     """Run a command and handle errors."""
     print(f"\n{'='*60}")
     print(f"STEP: {description}")
     print(f"{'='*60}")
 
+    if verbose:
+        print(f"[VERBOSE] Command: {cmd}")
+        print(f"[VERBOSE] Timeout: {timeout if timeout else 'None'}")
+        print(f"[VERBOSE] Starting execution...")
+
     try:
-        result = subprocess.run(
-            cmd,
-            shell=True,
-            check=check,
-            capture_output=True,
-            text=True,
-            timeout=timeout
-        )
+        if verbose:
+            # Stream output in real-time
+            import time
+            start_time = time.time()
+            process = subprocess.Popen(
+                cmd,
+                shell=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+                bufsize=1,
+                universal_newlines=True
+            )
 
-        if result.stdout:
-            print(result.stdout)
+            print(f"[VERBOSE] Process PID: {process.pid}")
 
-        if result.returncode == 0:
-            print(f"[OK] {description} completed successfully")
+            # Read output line by line
+            for line in iter(process.stdout.readline, ''):
+                if line:
+                    print(line.rstrip())
+
+            process.wait(timeout=timeout)
+            elapsed = time.time() - start_time
+
+            print(f"[VERBOSE] Execution time: {elapsed:.2f}s")
+            print(f"[VERBOSE] Return code: {process.returncode}")
+
+            if process.returncode == 0:
+                print(f"[OK] {description} completed successfully")
+                return True
+            else:
+                print(f"[FAILED] {description} failed with exit code {process.returncode}")
+                return False if check else True
         else:
-            print(f"[FAILED] {description} failed with exit code {result.returncode}")
-            if result.stderr:
-                print(f"Error: {result.stderr}")
+            # Original behavior: capture output
+            result = subprocess.run(
+                cmd,
+                shell=True,
+                check=check,
+                capture_output=True,
+                text=True,
+                timeout=timeout
+            )
 
-        return result.returncode == 0
+            if result.stdout:
+                print(result.stdout)
+
+            if result.returncode == 0:
+                print(f"[OK] {description} completed successfully")
+            else:
+                print(f"[FAILED] {description} failed with exit code {result.returncode}")
+                if result.stderr:
+                    print(f"Error: {result.stderr}")
+
+            return result.returncode == 0
 
     except subprocess.TimeoutExpired:
-        print(f"[FAILED] {description} timed out")
+        print(f"[FAILED] {description} timed out after {timeout}s")
         return False
     except Exception as e:
         print(f"[FAILED] {description} failed: {e}")
+        import traceback
+        if verbose:
+            print("[VERBOSE] Traceback:")
+            traceback.print_exc()
         return False
 
 
@@ -85,6 +129,8 @@ def main():
                        help='Create draft only, do not auto-publish')
     parser.add_argument('--skip-visuals', action='store_true',
                        help='Skip data visualization generation')
+    parser.add_argument('--verbose', '-v', action='store_true',
+                       help='Enable verbose output with real-time streaming')
 
     args = parser.parse_args()
 
@@ -102,7 +148,8 @@ def main():
     success = run_command(
         f'python scripts/monitor_russian_media.py --output "{briefing_path}" --parallel',
         "Monitor Russian media sources",
-        timeout=600  # 10 minutes
+        timeout=600,  # 10 minutes
+        verbose=args.verbose
     )
 
     if not success:
@@ -114,7 +161,8 @@ def main():
         success = run_command(
             f'python scripts/generate_images_local.py --briefing "{briefing_path}" --output "images/" --auto --steps 50',
             "Generate AI image with SDXL (this takes 15-20 minutes)",
-            timeout=1800  # 30 minutes
+            timeout=1800,  # 30 minutes
+            verbose=args.verbose
         )
 
         if not success:
@@ -127,7 +175,8 @@ def main():
         success = run_command(
             f'python scripts/generate_visuals.py --briefing "{briefing_path}" --output "images/"',
             "Generate data visualizations",
-            timeout=300  # 5 minutes
+            timeout=300,  # 5 minutes
+            verbose=args.verbose
         )
 
         if not success:
@@ -257,7 +306,8 @@ Use the Write tool to create the article file."""
         f'git add content/ research/ images/ _posts/ && git commit -m "AI content: {date} [automated - local]" && git push',
         "Commit and push to GitHub",
         timeout=120,  # 2 minutes
-        check=False  # Don't fail if nothing to commit
+        check=False,  # Don't fail if nothing to commit
+        verbose=args.verbose
     )
 
     # Step 7: Post to social media
@@ -285,7 +335,8 @@ Use the Write tool to create the article file."""
                     f'python scripts/post_to_twitter.py --file "{latest_post}"',
                     "Post to Twitter",
                     timeout=60,
-                    check=False
+                    check=False,
+                    verbose=args.verbose
                 )
             else:
                 print("\n[WARNING]  Twitter API keys not set, skipping Twitter post")
@@ -295,7 +346,8 @@ Use the Write tool to create the article file."""
                     f'python scripts/post_to_linkedin.py --file "{latest_post}"',
                     "Post to LinkedIn",
                     timeout=60,
-                    check=False
+                    check=False,
+                    verbose=args.verbose
                 )
             else:
                 print("\n[WARNING]  LinkedIn API keys not set, skipping LinkedIn post")
