@@ -5,8 +5,8 @@ REM API keys are loaded from .env file (not committed to git)
 
 cd /d "%~dp0"
 
-REM Run the automation script (draft-only mode for review before publishing)
-python scripts\run_daily_automation.py --draft-only
+REM Run the automation script (draft-only mode with verbose SDXL progress)
+python scripts\run_daily_automation.py --draft-only --verbose
 
 REM Log completion
 echo Automation completed at %date% %time% >> automation.log
