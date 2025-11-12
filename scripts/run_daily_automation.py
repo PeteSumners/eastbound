@@ -205,7 +205,7 @@ The article should:
 5. Include proper frontmatter in Jekyll format with these required fields:
    - title, date, author, categories, tags, excerpt
    - **IMPORTANT**: categories must be from [Analysis, News, Translation] and ONE region [Russia, Ukraine, EasternEurope, CentralAsia, Caucasus] - NO SPACES in category names
-   - **IMPORTANT**: image: {{{{site.baseurl}}}}/images/{date}-generated.png
+   - **IMPORTANT**: image: "{{{{site.baseurl}}}}/images/{date}-generated.png" (MUST be quoted because of curly braces)
 6. **IMPORTANT**: Do NOT include an H1 heading (# Title) after the frontmatter. The Jekyll layout displays the title automatically from the frontmatter. Start the content directly with the first paragraph.
 7. **IMPORTANT**: Before the "## Key Articles Referenced" section, include a "## Data Visualizations" section with smaller embedded images:
 
