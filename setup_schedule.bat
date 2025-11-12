@@ -1,6 +1,6 @@
 @echo off
 REM Setup Windows Task Scheduler for Eastbound Daily Automation
-REM This creates a scheduled task that runs every day at 6:00 AM
+REM This creates a scheduled task that runs every day at 11:30 AM
 
 echo ========================================
 echo Setting up Eastbound Daily Automation
@@ -15,7 +15,7 @@ schtasks /create ^
     /tn "Eastbound Daily Automation" ^
     /tr "\"%SCRIPT_DIR%run_daily_automation.bat\"" ^
     /sc daily ^
-    /st 08:00 ^
+    /st 11:30 ^
     /rl highest ^
     /f
 
@@ -24,7 +24,7 @@ if %errorlevel% equ 0 (
     echo [SUCCESS] Scheduled task created!
     echo.
     echo Task name: Eastbound Daily Automation
-    echo Schedule: Every day at 8:00 AM
+    echo Schedule: Every day at 11:30 AM
     echo Script: %SCRIPT_DIR%run_daily_automation.bat
     echo.
     echo To view the task:
