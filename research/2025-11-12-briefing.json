@@ -1,14 +1,28 @@
 {
-  "date": "2025-11-11",
-  "generated_at": "2025-11-11T22:03:18.416220",
-  "total_articles_scanned": 320,
+  "date": "2025-11-12",
+  "generated_at": "2025-11-12T00:45:51.229405",
+  "total_articles_scanned": 285,
   "trending_stories": [
     {
       "keyword": "trump",
-      "source_count": 6,
-      "tfidf_score": 0.9852,
-      "combined_score": 5.9113,
+      "source_count": 5,
+      "tfidf_score": 1.0,
+      "combined_score": 5.0,
       "articles": [
+        {
+          "source": "TASS",
+          "title": "Trump’s criticism of SMO progress is unfounded — former CIA employee",
+          "link": "https://tass.com/world/2042375",
+          "published": "Wed, 12 Nov 2025 10:05:47 +0300",
+          "summary": "While addressing Trump’s criticism directed at Russia concerning what he referred to as the country’s slow offensive on the special military operation front in Ukraine, Larry Johnson stated that the US leader was either receiving incorrect intelligence or misrepresenting what he was being told"
+        },
+        {
+          "source": "TASS",
+          "title": "Almost no interest in Trump’s circle in normalization with Russia — former CIA employee",
+          "link": "https://tass.com/world/2042367",
+          "published": "Wed, 12 Nov 2025 09:46:31 +0300",
+          "summary": "According to Larry Johnson, Trump has \"had ample opportunity to take some steps, to make some gestures towards Moscow to show that he's serious\""
+        },
         {
           "source": "TASS",
           "title": "Trump’s decision on nuclear testing \"blindsided\" his team — former CIA employee",
@@ -38,13 +52,6 @@
           "summary": "Viktor Orban recalled that the Putin-Trump meeting was postponed, not cancelled"
         },
         {
-          "source": "TASS",
-          "title": "US aircraft carrier Gerald R. Ford arrives in Latin America — Pentagon",
-          "link": "https://tass.com/world/2042217",
-          "published": "Tue, 11 Nov 2025 19:55:07 +0300",
-          "summary": "The department specified that the ships will be used to carry out US President Donald Trump's instructions to \"dismantle Transnational Criminal Organizations and counter narco-terrorism\""
-        },
-        {
           "source": "RT News",
           "title": "‘TRUMP’ party launches in EU state",
           "link": "https://www.rt.com/news/627618-belgium-new-party-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
@@ -71,22 +78,29 @@
           "link": "https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Mon, 10 Nov 2025 22:17:02 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912644485f5400eec4dadff.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has hailed Syria’s new leader, Ahmad al-Sharaa, after hosting him in the White House <br /><a href=\"https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "‘Woke pro-trans’ BBC staff rebel – media",
-          "link": "https://www.rt.com/news/627593-woke-pro-trans-bbc-staff-rebel/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 21:15:21 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691252e72030277df619ce6c.jpg\" style=\"margin-right: 10px;\" /> The broadcaster’s staff are reportedly in a “civil war” against its management after the latter admitted to doctoring a Trump documentary <br /><a href=\"https://www.rt.com/news/627593-woke-pro-trans-bbc-staff-rebel/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     },
     {
       "keyword": "ukraine",
       "source_count": 5,
-      "tfidf_score": 1.0,
-      "combined_score": 5.0,
+      "tfidf_score": 0.9724,
+      "combined_score": 4.8621,
       "articles": [
+        {
+          "source": "TASS",
+          "title": "Ukraine removes justice chief Galushchenko from his position",
+          "link": "https://tass.com/world/2042389",
+          "published": "Wed, 12 Nov 2025 10:51:19 +0300",
+          "summary": "Lyudmila Sugak, previously deputy justice minister, will be acting justice chief"
+        },
+        {
+          "source": "TASS",
+          "title": "Trump’s criticism of SMO progress is unfounded — former CIA employee",
+          "link": "https://tass.com/world/2042375",
+          "published": "Wed, 12 Nov 2025 10:05:47 +0300",
+          "summary": "While addressing Trump’s criticism directed at Russia concerning what he referred to as the country’s slow offensive on the special military operation front in Ukraine, Larry Johnson stated that the US leader was either receiving incorrect intelligence or misrepresenting what he was being told"
+        },
         {
           "source": "TASS",
           "title": "Cases of desertion, absence in Ukraine’s Armed Forces reach 311,000 since February 2022",
@@ -142,28 +156,14 @@
           "link": "https://www.rt.com/news/627584-ukraine-us-food-assistance/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Mon, 10 Nov 2025 15:51:07 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912099e85f54032626c8791.jpg\" style=\"margin-right: 10px;\" /> Ukrainians in the US have lost access to food aid after the Trump administration reduced eligibility for SNAP benefits <br /><a href=\"https://www.rt.com/news/627584-ukraine-us-food-assistance/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Polish support for Ukrainians collapsing – Bloomberg",
-          "link": "https://www.rt.com/news/627567-poland-anti-ukraine-mood/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 14:16:21 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911ef902030274cf61b6355.jpg\" style=\"margin-right: 10px;\" /> Backing has almost halved to 48%, as half of Poles now deem state benefits too generous, according to a survey cited by Bloomberg <br /><a href=\"https://www.rt.com/news/627567-poland-anti-ukraine-mood/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Ukraine is too corrupt to join the EU, and the West is too dishonest to trust",
-          "link": "https://www.rt.com/news/627527-ukraine-corrupt-eu-dishonest/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 10:12:13 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69107d632030275aca1b5dd1.jpg\" style=\"margin-right: 10px;\" /> Brussels has noticed the obvious problems with Zelensky’s regime, but would still like Ukrainians to keep dying in its proxy war with Russia <br /><a href=\"https://www.rt.com/news/627527-ukraine-corrupt-eu-dishonest/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     },
     {
       "keyword": "ukrainian",
       "source_count": 5,
-      "tfidf_score": 0.8612,
-      "combined_score": 4.3058,
+      "tfidf_score": 0.819,
+      "combined_score": 4.0952,
       "articles": [
         {
           "source": "TASS",
@@ -192,13 +192,6 @@
           "link": "https://tass.com/politics/2042273",
           "published": "Tue, 11 Nov 2025 21:24:36 +0300",
           "summary": "Kupyansk is of great importance to the Ukrainian authorities, Andrey Marochko noted"
-        },
-        {
-          "source": "TASS",
-          "title": "Tough measures needed to snuff out Kiev’s attacks on ZNPP — Russian diplomat",
-          "link": "https://tass.com/politics/2042219",
-          "published": "Tue, 11 Nov 2025 19:57:00 +0300",
-          "summary": "Rodion Miroshnik recalled that Ukrainian drones had attacked four Russian nuclear plants in recent months"
         },
         {
           "source": "RT News",
@@ -234,14 +227,21 @@
           "link": "https://www.rt.com/russia/627649-ukraine-troop-withdrawal-demand/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Tue, 11 Nov 2025 17:50:15 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913759585f5403b5f42e936.jpg\" style=\"margin-right: 10px;\" /> Ukrainian experts and civil groups have urged Kiev to withdraw from encircled cities, warning of manpower shortages and command failures <br /><a href=\"https://www.rt.com/russia/627649-ukraine-troop-withdrawal-demand/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT",
+          "title": "Ukrainian MPs demand new cabinet after Zelensky ally embroiled in graft scandal",
+          "link": "https://www.rt.com/russia/627610-ukraine-cabinet-recall-mindich/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 09:28:16 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912fdf585f5403d5b4ddf63.jpg\" style=\"margin-right: 10px;\" /> The party of former Ukrainian President Pyotr Poroshenko has called for the replacement of the cabinet amid a major graft probe <br /><a href=\"https://www.rt.com/russia/627610-ukraine-cabinet-recall-mindich/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     },
     {
       "keyword": "kiev",
       "source_count": 5,
-      "tfidf_score": 0.7225,
-      "combined_score": 3.6123,
+      "tfidf_score": 0.6841,
+      "combined_score": 3.4207,
       "articles": [
         {
           "source": "TASS",
@@ -256,13 +256,6 @@
           "link": "https://tass.com/economy/2042259",
           "published": "Tue, 11 Nov 2025 21:08:22 +0300",
           "summary": "\"Atlanta and Kansas City-marked dollars also say 'thank you' to the war financiers,\" the head of the Russian Direct Investment Fund added"
-        },
-        {
-          "source": "TASS",
-          "title": "Tough measures needed to snuff out Kiev’s attacks on ZNPP — Russian diplomat",
-          "link": "https://tass.com/politics/2042219",
-          "published": "Tue, 11 Nov 2025 19:57:00 +0300",
-          "summary": "Rodion Miroshnik recalled that Ukrainian drones had attacked four Russian nuclear plants in recent months"
         },
         {
           "source": "RT News",
@@ -312,14 +305,99 @@
           "link": "https://www.rt.com/russia/627411-nato-sabotage-nuclear-plant-kiev/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Thu, 06 Nov 2025 09:10:46 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c697b85f54035e0396a67.jpg\" style=\"margin-right: 10px;\" /> European NATO members are pushing Kiev to cause an accident at the facility and blame it on Russia <br /><a href=\"https://www.rt.com/russia/627411-nato-sabotage-nuclear-plant-kiev/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Russia",
+          "title": "Ukraine to lose key city within one week – Russian military commander",
+          "link": "https://www.rt.com/russia/627398-ukraine-to-lose-key-city/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 06 Nov 2025 05:31:22 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c326b2030277ee3256412.jpg\" style=\"margin-right: 10px;\" /> Russia’s Ministry of Defense has released footage which challenges Kiev’s account of the fighting <br /><a href=\"https://www.rt.com/russia/627398-ukraine-to-lose-key-city/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        }
+      ]
+    },
+    {
+      "keyword": "bloomberg",
+      "source_count": 5,
+      "tfidf_score": 0.5645,
+      "combined_score": 2.8224,
+      "articles": [
+        {
+          "source": "RIA Novosti",
+          "title": "Зеленский может быть замешан в коррупционном деле, пишет Bloomberg",
+          "link": "https://ria.ru/20251112/zelenskij-2054413078.html",
+          "published": "Wed, 12 Nov 2025 11:01:38 +0300",
+          "summary": ""
+        },
+        {
+          "source": "RIA Novosti",
+          "title": "Ситуация на Украине доказывает, что ей не стоит помогать, пишет Bloomberg",
+          "link": "https://ria.ru/20251112/skandal-2054405216.html",
+          "published": "Wed, 12 Nov 2025 10:37:17 +0300",
+          "summary": ""
+        },
+        {
+          "source": "TASS",
+          "title": "US considers building base for 10,000 troops near Gaza — media",
+          "link": "https://tass.com/world/2042299",
+          "published": "Tue, 11 Nov 2025 23:28:31 +0300",
+          "summary": "An unnamed US administration official told Bloomberg that the military’s request represents an initial step toward planning the establishment of a base for international stabilization forces"
+        },
+        {
+          "source": "RT News",
+          "title": "UK balks at EU militarization demand – Bloomberg",
+          "link": "https://www.rt.com/news/627645-uk-balks-eu-militarization-demand/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 14:51:28 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69134d3385f540254f2c7514.jpg\" style=\"margin-right: 10px;\" /> The British government has reportedly rejected an EU demand to pay billions to join a scheme aimed at deterring an alleged Russian threat <br /><a href=\"https://www.rt.com/news/627645-uk-balks-eu-militarization-demand/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT News",
+          "title": "Polish support for Ukrainians collapsing – Bloomberg",
+          "link": "https://www.rt.com/news/627567-poland-anti-ukraine-mood/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 14:16:21 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911ef902030274cf61b6355.jpg\" style=\"margin-right: 10px;\" /> Backing has almost halved to 48%, as half of Poles now deem state benefits too generous, according to a survey cited by Bloomberg <br /><a href=\"https://www.rt.com/news/627567-poland-anti-ukraine-mood/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT",
+          "title": "EU to ban Chinese communcations tech – Bloomberg",
+          "link": "https://www.rt.com/business/627611-eu-ban-chinese-telecom-tech/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 15:24:09 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69134da52030270268581357.jpg\" style=\"margin-right: 10px;\" /> EU member states could be forced to phase out Chinese telecommunications equipment in their mobile networks under the bloc’s proposed ban <br /><a href=\"https://www.rt.com/business/627611-eu-ban-chinese-telecom-tech/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "Dutch may loosen grip on Chinese chipmaker – Bloomberg",
+          "link": "https://www.rt.com/business/627483-dutch-seizure-nexperia-china-chips/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Fri, 07 Nov 2025 21:00:17 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e448420302730f24e0873.jpg\" style=\"margin-right: 10px;\" /> The Netherlands could reportedly hand back control of Chinese-owned chipmaker Nexperia after Beijing lifted export curbs <br /><a href=\"https://www.rt.com/business/627483-dutch-seizure-nexperia-china-chips/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "IMF pushes Kiev to weaken currency – Bloomberg",
+          "link": "https://www.rt.com/business/626654-ukraine-imf-devalue-hryvnia/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Sat, 18 Oct 2025 15:10:23 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f394f385f540508e1e75a2.jpg\" style=\"margin-right: 10px;\" /> The IMF is reportedly pressuring Ukraine to devalue the hryvnia to secure a new loan <br /><a href=\"https://www.rt.com/business/626654-ukraine-imf-devalue-hryvnia/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "Poland seeking EU ban on Ukrainian steel imports – Bloomberg",
+          "link": "https://www.rt.com/business/626432-poland-ukraine-steel-imports/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 14 Oct 2025 17:08:44 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68ee5f6d85f54043317f1532.jpg\" style=\"margin-right: 10px;\" /> Cheap, duty-free supplies are endangering the domestic steel sector, according to Warsaw officials <br /><a href=\"https://www.rt.com/business/626432-poland-ukraine-steel-imports/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "Ukraine has lost 60% of gas output – Bloomberg",
+          "link": "https://www.rt.com/business/626140-ukraine-gas-emergency-bloomberg/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 09 Oct 2025 16:24:23 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68e7c21020302731fd560944.jpg\" style=\"margin-right: 10px;\" /> Kiev will need over $2 billion in emergency gas imports to avert a winter energy crisis, Bloomberg has claimed <br /><a href=\"https://www.rt.com/business/626140-ukraine-gas-emergency-bloomberg/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     },
     {
       "keyword": "sanctions",
       "source_count": 4,
-      "tfidf_score": 0.6908,
-      "combined_score": 2.7631,
+      "tfidf_score": 0.6701,
+      "combined_score": 2.6806,
       "articles": [
         {
           "source": "TASS",
@@ -396,9 +474,16 @@
     {
       "keyword": "west",
       "source_count": 5,
-      "tfidf_score": 0.5384,
-      "combined_score": 2.692,
+      "tfidf_score": 0.5082,
+      "combined_score": 2.541,
       "articles": [
+        {
+          "source": "TASS",
+          "title": "Russia open to all law-abiding Western online platforms — official",
+          "link": "https://tass.com/economy/2042385",
+          "published": "Wed, 12 Nov 2025 10:28:52 +0300",
+          "summary": "The presence of domestic elements of the information infrastructure makes it possible for Russia to hold such an open stance, First Deputy Head of the Presidential Administration Sergey Kiriyenko said"
+        },
         {
           "source": "TASS",
           "title": "Vuсic says Europe is preparing for war with Russia",
@@ -419,13 +504,6 @@
           "link": "https://tass.com/economy/2042259",
           "published": "Tue, 11 Nov 2025 21:08:22 +0300",
           "summary": "\"Atlanta and Kansas City-marked dollars also say 'thank you' to the war financiers,\" the head of the Russian Direct Investment Fund added"
-        },
-        {
-          "source": "TASS",
-          "title": "West acts out of desperation by trying to steal Kinzhal technology — expert",
-          "link": "https://tass.com/politics/2042245",
-          "published": "Tue, 11 Nov 2025 20:29:03 +0300",
-          "summary": "According to Andrey Marochko, it would take billions of dollars and decades of work for Western countries to develop similar technologies"
         },
         {
           "source": "RT News",
@@ -474,8 +552,8 @@
     {
       "keyword": "reportedly",
       "source_count": 4,
-      "tfidf_score": 0.6557,
-      "combined_score": 2.6226,
+      "tfidf_score": 0.6308,
+      "combined_score": 2.5232,
       "articles": [
         {
           "source": "RT News",
@@ -550,222 +628,130 @@
       ]
     },
     {
-      "keyword": "donald trump",
-      "source_count": 5,
-      "tfidf_score": 0.516,
-      "combined_score": 2.5801,
-      "articles": [
-        {
-          "source": "TASS",
-          "title": "US aircraft carrier Gerald R. Ford arrives in Latin America — Pentagon",
-          "link": "https://tass.com/world/2042217",
-          "published": "Tue, 11 Nov 2025 19:55:07 +0300",
-          "summary": "The department specified that the ships will be used to carry out US President Donald Trump's instructions to \"dismantle Transnational Criminal Organizations and counter narco-terrorism\""
-        },
-        {
-          "source": "RT News",
-          "title": "‘TRUMP’ party launches in EU state",
-          "link": "https://www.rt.com/news/627618-belgium-new-party-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 14:20:25 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69133e732030274446738782.jpg\" style=\"margin-right: 10px;\" /> A new right-wing party named after US President Donald Trump has been launched in Belgium <br /><a href=\"https://www.rt.com/news/627618-belgium-new-party-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump threatens to sue BBC for $1 billion",
-          "link": "https://www.rt.com/news/627622-trump-sue-bbc/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 11:18:07 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913294185f540362666c707.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has reportedly threatened to sue the BBC for $1 billion amid a scandal over unethical edits of a speech <br /><a href=\"https://www.rt.com/news/627622-trump-sue-bbc/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump warns of ‘catastrophe’ if tariffs scrapped",
-          "link": "https://www.rt.com/news/627600-trump-warning-us-catastrophe/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 08:08:12 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912eec6203027393d4b547d.jpg\" style=\"margin-right: 10px;\" /> The US would have to pay back $2 trillion to foreign partners if tariffs are ruled illegal, President Donald Trump has warned <br /><a href=\"https://www.rt.com/news/627600-trump-warning-us-catastrophe/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump praises Syria’s ‘tough-guy’ leader after White House visit",
-          "link": "https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 22:17:02 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912644485f5400eec4dadff.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has hailed Syria’s new leader, Ahmad al-Sharaa, after hosting him in the White House <br /><a href=\"https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump accuses BBC of election meddling",
-          "link": "https://www.rt.com/news/627549-trump-bbc-election-meddling/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sun, 09 Nov 2025 23:30:31 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911aacc85f5401d1d43a5da.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has accused the BBC of manipulating public perception ahead of the 2024 US election <br /><a href=\"https://www.rt.com/news/627549-trump-bbc-election-meddling/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump promises $2,000 ‘tariff dividend’ for every American",
-          "link": "https://www.rt.com/news/627547-trump-tariff-dividend-americans/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sun, 09 Nov 2025 21:52:20 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691104e285f5403d176a8d1c.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has promised every qualifying citizen a $2,000 dividend funded by revenue from his tariff policy <br /><a href=\"https://www.rt.com/news/627547-trump-tariff-dividend-americans/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "India and US inching closer to trade agreement – Trump",
-          "link": "https://www.rt.com/india/627603-us-india-fair-deal-trade/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 07:50:31 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912e57d203027410f03601e.jpg\" style=\"margin-right: 10px;\" /> Donald Trump has said Washington and New Delhi were working on a “fair deal” for trade <br /><a href=\"https://www.rt.com/india/627603-us-india-fair-deal-trade/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Russia",
-          "title": "US has not elaborated on nuclear test plans – Lavrov",
-          "link": "https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sat, 08 Nov 2025 20:51:25 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690fa9b920302729cf09ecc1.jpg\" style=\"margin-right: 10px;\" /> Moscow has said it had not received any clarifications from Washington about nuclear tests ordered by President Donald Trump <br /><a href=\"https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Business",
-          "title": "China overtakes US as Germany’s top trading partner – Reuters",
-          "link": "https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Thu, 23 Oct 2025 11:09:48 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f9f78d85f54017c07030c2.jpg\" style=\"margin-right: 10px;\" /> US tariffs under President Donald Trump have weighed on German exports to the US <br /><a href=\"https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        }
-      ]
-    },
-    {
-      "keyword": "donald",
-      "source_count": 5,
-      "tfidf_score": 0.4763,
-      "combined_score": 2.3813,
-      "articles": [
-        {
-          "source": "TASS",
-          "title": "US aircraft carrier Gerald R. Ford arrives in Latin America — Pentagon",
-          "link": "https://tass.com/world/2042217",
-          "published": "Tue, 11 Nov 2025 19:55:07 +0300",
-          "summary": "The department specified that the ships will be used to carry out US President Donald Trump's instructions to \"dismantle Transnational Criminal Organizations and counter narco-terrorism\""
-        },
-        {
-          "source": "RT News",
-          "title": "‘TRUMP’ party launches in EU state",
-          "link": "https://www.rt.com/news/627618-belgium-new-party-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 14:20:25 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69133e732030274446738782.jpg\" style=\"margin-right: 10px;\" /> A new right-wing party named after US President Donald Trump has been launched in Belgium <br /><a href=\"https://www.rt.com/news/627618-belgium-new-party-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump threatens to sue BBC for $1 billion",
-          "link": "https://www.rt.com/news/627622-trump-sue-bbc/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 11:18:07 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913294185f540362666c707.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has reportedly threatened to sue the BBC for $1 billion amid a scandal over unethical edits of a speech <br /><a href=\"https://www.rt.com/news/627622-trump-sue-bbc/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump warns of ‘catastrophe’ if tariffs scrapped",
-          "link": "https://www.rt.com/news/627600-trump-warning-us-catastrophe/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 08:08:12 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912eec6203027393d4b547d.jpg\" style=\"margin-right: 10px;\" /> The US would have to pay back $2 trillion to foreign partners if tariffs are ruled illegal, President Donald Trump has warned <br /><a href=\"https://www.rt.com/news/627600-trump-warning-us-catastrophe/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump praises Syria’s ‘tough-guy’ leader after White House visit",
-          "link": "https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 22:17:02 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912644485f5400eec4dadff.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has hailed Syria’s new leader, Ahmad al-Sharaa, after hosting him in the White House <br /><a href=\"https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump accuses BBC of election meddling",
-          "link": "https://www.rt.com/news/627549-trump-bbc-election-meddling/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sun, 09 Nov 2025 23:30:31 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911aacc85f5401d1d43a5da.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has accused the BBC of manipulating public perception ahead of the 2024 US election <br /><a href=\"https://www.rt.com/news/627549-trump-bbc-election-meddling/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump promises $2,000 ‘tariff dividend’ for every American",
-          "link": "https://www.rt.com/news/627547-trump-tariff-dividend-americans/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sun, 09 Nov 2025 21:52:20 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691104e285f5403d176a8d1c.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has promised every qualifying citizen a $2,000 dividend funded by revenue from his tariff policy <br /><a href=\"https://www.rt.com/news/627547-trump-tariff-dividend-americans/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "India and US inching closer to trade agreement – Trump",
-          "link": "https://www.rt.com/india/627603-us-india-fair-deal-trade/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 07:50:31 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912e57d203027410f03601e.jpg\" style=\"margin-right: 10px;\" /> Donald Trump has said Washington and New Delhi were working on a “fair deal” for trade <br /><a href=\"https://www.rt.com/india/627603-us-india-fair-deal-trade/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Russia",
-          "title": "US has not elaborated on nuclear test plans – Lavrov",
-          "link": "https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sat, 08 Nov 2025 20:51:25 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690fa9b920302729cf09ecc1.jpg\" style=\"margin-right: 10px;\" /> Moscow has said it had not received any clarifications from Washington about nuclear tests ordered by President Donald Trump <br /><a href=\"https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Business",
-          "title": "China overtakes US as Germany’s top trading partner – Reuters",
-          "link": "https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Thu, 23 Oct 2025 11:09:48 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f9f78d85f54017c07030c2.jpg\" style=\"margin-right: 10px;\" /> US tariffs under President Donald Trump have weighed on German exports to the US <br /><a href=\"https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        }
-      ]
-    },
-    {
-      "keyword": "lavrov",
+      "keyword": "forces",
       "source_count": 4,
-      "tfidf_score": 0.5715,
-      "combined_score": 2.2858,
+      "tfidf_score": 0.5496,
+      "combined_score": 2.1984,
       "articles": [
         {
           "source": "TASS",
-          "title": "Lavrov baffled at Britain's lack of shame over MiG-31 hijacking plot",
-          "link": "https://tass.com/politics/2042233",
-          "published": "Tue, 11 Nov 2025 20:24:06 +0300",
-          "summary": "The Russian foreign minister said that he does not know how the British will wash themselves clean of it"
+          "title": "Russia establishes Unmanned Systems Forces",
+          "link": "https://tass.com/defense/2042371",
+          "published": "Wed, 12 Nov 2025 09:56:34 +0300",
+          "summary": "The structure of this new branch of the armed forces has been determined, the head of the Unmanned Systems Forces has been appointed, military administration units have been created at all levels"
         },
         {
           "source": "TASS",
-          "title": "Lavrov accuses London, British media of smear campaign against Russia",
-          "link": "https://tass.com/politics/2042223",
-          "published": "Tue, 11 Nov 2025 20:03:01 +0300",
-          "summary": "The Russian foreign minister called the media's coverage of certain events harmful"
+          "title": "Cases of desertion, absence in Ukraine’s Armed Forces reach 311,000 since February 2022",
+          "link": "https://tass.com/world/2042343",
+          "published": "Wed, 12 Nov 2025 07:45:43 +0300",
+          "summary": "The number of cases involving unauthorized absence from a military unit"
         },
         {
           "source": "TASS",
-          "title": "Baltic states try to force Russia into act that would precipitate NATO war — Lavrov",
-          "link": "https://tass.com/politics/2042215",
-          "published": "Tue, 11 Nov 2025 19:48:00 +0300",
-          "summary": "Commenting on Lithuania’s proposals to limit transit to Kaliningrad, the Russian foreign minister said the European Union is every bit as responsible as Lithuania here"
+          "title": "Ukrainian forces shell DPR once in 24 hours, two civilians injured",
+          "link": "https://tass.com/defense/2042331",
+          "published": "Wed, 12 Nov 2025 03:35:11 +0300",
+          "summary": "It was noted that Ukrainian forces struck in the Gorlovka direction"
+        },
+        {
+          "source": "TASS",
+          "title": "US considers building base for 10,000 troops near Gaza — media",
+          "link": "https://tass.com/world/2042299",
+          "published": "Tue, 11 Nov 2025 23:28:31 +0300",
+          "summary": "An unnamed US administration official told Bloomberg that the military’s request represents an initial step toward planning the establishment of a base for international stabilization forces"
+        },
+        {
+          "source": "TASS",
+          "title": "Ukraine builds up forces at Khatneye, but morale lacking — security forces",
+          "link": "https://tass.com/politics/2042279",
+          "published": "Tue, 11 Nov 2025 21:37:05 +0300",
+          "summary": "The source said that a huge number of Ukrainian prisoners comes from this direction"
+        },
+        {
+          "source": "TASS",
+          "title": "'Azov' squad flees positions, abandoning wounded soldiers — security forces",
+          "link": "https://tass.com/politics/2042261",
+          "published": "Tue, 11 Nov 2025 21:09:51 +0300",
+          "summary": "According to the source, this situation shows that the brigade has been dubbed the \"running team\""
         },
         {
           "source": "RT News",
-          "title": "Lots of ‘mess’ to clear up in Russia-US ties – Lavrov",
-          "link": "https://www.rt.com/news/627523-lavrov-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sun, 09 Nov 2025 11:57:23 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69106da9203027613a298767.jpg\" style=\"margin-right: 10px;\" /> Dialogue between Moscow and Washington is underway but it isn’t fast enough, Russian Foreign Minister Sergey Lavrov has said <br /><a href=\"https://www.rt.com/news/627523-lavrov-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+          "title": "Soros, Clinton, USAID and Nobel laureate: Ex-Bangladeshi minister exposes forces behind GenZ regime change (VIDEO)",
+          "link": "https://www.rt.com/news/627551-bangladesh-us-regime-change/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 06:27:25 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911556c85f540415600e937.png\" style=\"margin-right: 10px;\" /> The 2024 unrest in Bangladesh was a foreign-backed regime change operation, Mohibul Hasan Chowdhury told RT in an exclusive interview <br /><a href=\"https://www.rt.com/news/627551-bangladesh-us-regime-change/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
           "source": "RT",
-          "title": "Russia urges US to extend New START treaty for one year",
+          "title": "Eastern Kupyansk under Russian control – MOD",
+          "link": "https://www.rt.com/russia/627620-eastern-kupliansk-liberated-mod/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 10:21:02 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913105620302743471703f9.jpg\" style=\"margin-right: 10px;\" /> The eastern part of Kupyansk, a key frontline city in Ukraine, has been fully captured by Russian forces, the MOD has reported <br /><a href=\"https://www.rt.com/russia/627620-eastern-kupliansk-liberated-mod/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Russia",
+          "title": "Russia commemorates liberation of Kiev from Nazis",
+          "link": "https://www.rt.com/russia/627441-kiev-nazi-liberation-anniversary/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 06 Nov 2025 22:26:40 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690d20372030273db23b1c14.jpg\" style=\"margin-right: 10px;\" /> Russia commemorated the 82nd anniversary of the Red Army’s liberation of Kiev from Nazi forces on Thursday <br /><a href=\"https://www.rt.com/russia/627441-kiev-nazi-liberation-anniversary/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Russia",
+          "title": "Ukrainian commander laments mass desertions",
+          "link": "https://www.rt.com/russia/627390-ukrainian-commander-laments-massive-desertions/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 05 Nov 2025 20:19:26 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690b96ad20302744670dad44.jpg\" style=\"margin-right: 10px;\" /> Sergey Filimonov, the commander of an elite Ukrainian battalion, has suggested that Kiev’s forces are facing an acute desertion problem <br /><a href=\"https://www.rt.com/russia/627390-ukrainian-commander-laments-massive-desertions/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        }
+      ]
+    },
+    {
+      "keyword": "nuclear",
+      "source_count": 4,
+      "tfidf_score": 0.4996,
+      "combined_score": 1.9985,
+      "articles": [
+        {
+          "source": "TASS",
+          "title": "Trump’s decision on nuclear testing \"blindsided\" his team — former CIA employee",
+          "link": "https://tass.com/world/2042359",
+          "published": "Wed, 12 Nov 2025 08:52:33 +0300",
+          "summary": "Larry Johnson answered in the negative when asked whether it is likely that Trump will resume live nuclear testing, and whether the US leader could decide to do so despite warnings from US experts and opposition from a number of US Congress members"
+        },
+        {
+          "source": "TASS",
+          "title": "Trump says US ordered batch of B-2 strategic bombers",
+          "link": "https://tass.com/world/2042305",
+          "published": "Tue, 11 Nov 2025 23:41:13 +0300",
+          "summary": "In US President's view, these aircraft \"completely obliterated Iran's nuclear capability\""
+        },
+        {
+          "source": "RT News",
+          "title": "How the West dismantled the last pillars of nuclear stability",
+          "link": "https://www.rt.com/news/627561-west-dismantled-last-pillars-of-stability/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 09:58:51 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911b68e203027461548a454.jpg\" style=\"margin-right: 10px;\" /> From ABM to New START: the slow collapse of an era of restraint <br /><a href=\"https://www.rt.com/news/627561-west-dismantled-last-pillars-of-stability/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT",
+          "title": "Russia urges US to extend New START treaty",
           "link": "https://www.rt.com/russia/627654-lavrov-nuclear-treaty-extention/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Wed, 12 Nov 2025 00:37:40 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913d68e2030270e840a5b6c.jpg\" style=\"margin-right: 10px;\" /> Russian Foreign Minister Sergey Lavrov has said the offer for a one-year extension of the New START treaty with the US is still on the table <br /><a href=\"https://www.rt.com/russia/627654-lavrov-nuclear-treaty-extention/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
           "source": "RT",
-          "title": "Attempts to defend BBC are a “disgrace” – Lavrov",
-          "link": "https://www.rt.com/russia/627634-lavrov-british-media-bbc/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 18:14:53 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691379d585f5403bef022bdd.jpg\" style=\"margin-right: 10px;\" /> Russian Foreign Minister Sergey Lavrov has described efforts to defend the BBC over doctored Trump documentary a “disgrace” <br /><a href=\"https://www.rt.com/russia/627634-lavrov-british-media-bbc/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "US should fight drugs in EU ‘narco-state’ instead of Venezuela – Lavrov",
-          "link": "https://www.rt.com/russia/627631-lavrov-belgium-narco-state/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 13:45:31 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913378820302774321e6f55.jpg\" style=\"margin-right: 10px;\" /> Russian Foreign Minister Sergey Lavrov has condemned US strikes off the coast of Venezuela and urged Washington to focus on Belgium instead <br /><a href=\"https://www.rt.com/russia/627631-lavrov-belgium-narco-state/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+          "title": "Russia ready to transfer nuclear tech to India – Rosatom head",
+          "link": "https://www.rt.com/india/627587-russia-india-transfer-nuclear-technology/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 18:53:56 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691225a885f5403126432e3c.jpg\" style=\"margin-right: 10px;\" /> Moscow is offering New Delhi new projects in the nuclear domain with large scale of localization, Alexey Likhachev told RT <br /><a href=\"https://www.rt.com/india/627587-russia-india-transfer-nuclear-technology/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
           "source": "RT Russia",
-          "title": "‘No legal way’ for West to seize Russia’s assets – Lavrov",
-          "link": "https://www.rt.com/russia/627525-lavrov-legal-basis-frozen-assets/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sun, 09 Nov 2025 11:39:54 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6910658f20302765a95f6abd.jpg\" style=\"margin-right: 10px;\" /> The EU has been seeking ways to use Russia’s frozen assets as collateral for a new loan to Ukraine <br /><a href=\"https://www.rt.com/russia/627525-lavrov-legal-basis-frozen-assets/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+          "title": "Russia won’t break nuclear test ban unless US does – Kremlin",
+          "link": "https://www.rt.com/russia/627528-peskov-russia-nuclear-test-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Sun, 09 Nov 2025 14:38:31 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691082bf20302765a95f6acc.jpg\" style=\"margin-right: 10px;\" /> Russia has no intention of violating its nuclear test ban obligations but will resume testing if other countries do, Dmitry Peskov has said <br /><a href=\"https://www.rt.com/russia/627528-peskov-russia-nuclear-test-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
           "source": "RT Russia",
@@ -773,6 +759,13 @@
           "link": "https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Sat, 08 Nov 2025 20:51:25 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690fa9b920302729cf09ecc1.jpg\" style=\"margin-right: 10px;\" /> Moscow has said it had not received any clarifications from Washington about nuclear tests ordered by President Donald Trump <br /><a href=\"https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Russia",
+          "title": "West planning major sabotage at Zaporozhye nuclear plant – Moscow",
+          "link": "https://www.rt.com/russia/627411-nato-sabotage-nuclear-plant-kiev/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 06 Nov 2025 09:10:46 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c697b85f54035e0396a67.jpg\" style=\"margin-right: 10px;\" /> European NATO members are pushing Kiev to cause an accident at the facility and blame it on Russia <br /><a href=\"https://www.rt.com/russia/627411-nato-sabotage-nuclear-plant-kiev/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     }
@@ -954,179 +947,179 @@
       "summary": "Россия могла бы нарастить поставки в Малайзию энергоресурсов, промышленного оборудования и продукции агропромышленного комплекса, а также рассмотреть строительство в стране АЭС большой и малой мощности, сообщила пресс-служба вице-премьера Алексея Оверчука.Оверчук обсудил вопросы двустороннего сотрудничества с вице-премьером, министром энергетического перехода и водных ресурсов Малайзии Фадиллой Юсуфом.\"Российская сторона видит хорошие возможности для наращивания поставок в Малайзию энергоресурсов, фармацевтических препаратов, промышленного оборудования, включая медицинское."
     },
     {
-      "source": "TASS",
-      "title": "Trump’s decision on nuclear testing \"blindsided\" his team — former CIA employee",
-      "link": "https://tass.com/world/2042359",
-      "published": "Wed, 12 Nov 2025 08:52:33 +0300",
-      "summary": "Larry Johnson answered in the negative when asked whether it is likely that Trump will resume live nuclear testing, and whether the US leader could decide to do so despite warnings from US experts and opposition from a number of US Congress members"
+      "source": "RIA Novosti",
+      "title": "Тренер школы в Красногорске рассказал подробности инцидента со взрывом",
+      "link": "https://ria.ru/20251112/krasnogorsk-2054427107.html",
+      "published": "Wed, 12 Nov 2025 11:43:45 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Russia expects tourist flow growth to Turkey this year — diplomat",
-      "link": "https://tass.com/politics/2042361",
-      "published": "Wed, 12 Nov 2025 08:50:47 +0300",
-      "summary": "\"Our citizens keep standing interest in visiting Turkey and the Turkish side certainly endeavors to provide comfortable conditions of stay here for Russians,\" Charge d’Affaires ad interim of Russia to Turkey Alexey Ivanov said"
+      "source": "RIA Novosti",
+      "title": "Взрыв в Дели мог быть следствием случайной детонации, пишут СМИ",
+      "link": "https://ria.ru/20251112/smi-2054426873.html",
+      "published": "Wed, 12 Nov 2025 11:43:18 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Former Gazprom subsidiary in Germany urged to terminate Yamal LNG deal",
-      "link": "https://tass.com/economy/2042353",
-      "published": "Wed, 12 Nov 2025 08:19:01 +0300",
-      "summary": "\"According to the German government, both the REPowerEU directive and the 19th sanctions package mean that SEFE must stop purchasing LNG under the old Yamal contract and may invoke force majeure,\" the ministry said"
+      "source": "RIA Novosti",
+      "title": "Матвиенко и Токаев проводят встречу",
+      "link": "https://ria.ru/20251112/tokaev--2054426450.html",
+      "published": "Wed, 12 Nov 2025 11:42:10 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Soyuz-5 arrives at Baikonur ahead of December launch — Roscosmos",
-      "link": "https://tass.com/science/2042351",
-      "published": "Wed, 12 Nov 2025 08:16:07 +0300",
-      "summary": "The Soyuz-5 is a next-generation Russian medium-class launch vehicle with enhanced payload capacity"
+      "source": "RIA Novosti",
+      "title": "Армения не намерена отказываться от российского зерна, заявил Пашинян",
+      "link": "https://ria.ru/20251112/pashinyan-2054425721.html",
+      "published": "Wed, 12 Nov 2025 11:39:21 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Russia, Turkey ready to organize high-level visits if necessary — charge d’affaires",
-      "link": "https://tass.com/politics/2042349",
-      "published": "Wed, 12 Nov 2025 08:02:07 +0300",
-      "summary": "Alexey Ivanov noted the leaders and the foreign ministers remain in constant contact"
+      "source": "RIA Novosti",
+      "title": "Польша не будет ставить интересы Украины выше своих, заявил Навроцкий",
+      "link": "https://ria.ru/20251112/polsha-2054425290.html",
+      "published": "Wed, 12 Nov 2025 11:39:08 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Russia, Turkey have yet to resolve payment issues — charge d’affaires",
-      "link": "https://tass.com/politics/2042347",
-      "published": "Wed, 12 Nov 2025 07:51:54 +0300",
-      "summary": "They were caused by the illegal unilateral sanctions imposed against Russian, Alexey Ivanov said"
+      "source": "RIA Novosti",
+      "title": "Стармер вызывает негодование британцев, заявил Пушков",
+      "link": "https://ria.ru/20251112/starmer--2054424767.html",
+      "published": "Wed, 12 Nov 2025 11:37:13 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Cases of desertion, absence in Ukraine’s Armed Forces reach 311,000 since February 2022",
-      "link": "https://tass.com/world/2042343",
-      "published": "Wed, 12 Nov 2025 07:45:43 +0300",
-      "summary": "The number of cases involving unauthorized absence from a military unit"
+      "source": "RIA Novosti",
+      "title": "Бельгия понимает преступность идеи кредита для Украины, заявила Захарова",
+      "link": "https://ria.ru/20251112/belgija-2054422877.html",
+      "published": "Wed, 12 Nov 2025 11:33:20 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Cargo turnover at Russian seaports down 1.5% to 732.6 mln tons in January-October",
-      "link": "https://tass.com/economy/2042341",
-      "published": "Wed, 12 Nov 2025 06:50:58 +0300",
-      "summary": "The data showed that the volume of dry cargo handled reached 362.9 mln tons"
+      "source": "RIA Novosti",
+      "title": "Миндич требовал от Умерова закупать некачественные бронежилеты, пишут СМИ",
+      "link": "https://ria.ru/20251112/umerov-2054421696.html",
+      "published": "Wed, 12 Nov 2025 11:30:21 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Ukraine incapable of winning conflict with Russia — UK journalist",
-      "link": "https://tass.com/world/2042339",
-      "published": "Wed, 12 Nov 2025 06:38:34 +0300",
-      "summary": "The territorial conquests of the Russians now amount to around 20% of the landmass of Ukraine before 2022, and the Europeans haven't got the money to sustain the military confrontation on their own, he said"
+      "source": "RIA Novosti",
+      "title": "В Москве началась церемония прощания с Владимиром Симоновым",
+      "link": "https://ria.ru/20251112/simonov-2054421168.html",
+      "published": "Wed, 12 Nov 2025 11:28:03 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Vuсic says Europe is preparing for war with Russia",
-      "link": "https://tass.com/world/2042337",
-      "published": "Wed, 12 Nov 2025 05:55:07 +0300",
-      "summary": "Serbia has found itself \"between a rock and a hard place\" amid the conflicting objectives pursued by Western countries and Russia, said serbian leader"
+      "source": "RIA Novosti",
+      "title": "Зеленский впервые за долгое время не записал обращение к украинцам",
+      "link": "https://ria.ru/20251112/zelenskij-2054420832.html",
+      "published": "Wed, 12 Nov 2025 11:27:19 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Total of 392 people killed in drone attacks in Russia over first 10 months of 2025",
-      "link": "https://tass.com/politics/2042335",
-      "published": "Wed, 12 Nov 2025 05:36:10 +0300",
-      "summary": "According to Ambassador-at-Large of the Russian Foreign Ministry Rodion Miroshnik, 3,205 people were injured, including 195 minors"
+      "source": "RIA Novosti",
+      "title": "Минфин России планирует разместить гособлигации в юанях",
+      "link": "https://ria.ru/20251112/minfin-2054420193.html",
+      "published": "Wed, 12 Nov 2025 11:24:23 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Putin and Tokayev will hold official talks in Kremlin",
-      "link": "https://tass.com/politics/2042333",
-      "published": "Wed, 12 Nov 2025 04:12:37 +0300",
-      "summary": "According to Dmitry Peskov, the Russian leader's spokesman, they plan to discuss economic, political, cultural, and humanitarian cooperation and key regional and global issues"
+      "source": "RIA Novosti",
+      "title": "В Челябинской области автобус столкнулся со стоящим на обочине автомобилем",
+      "link": "https://ria.ru/20251112/avtobus-2054419770.html",
+      "published": "Wed, 12 Nov 2025 11:22:59 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Ukrainian forces shell DPR once in 24 hours, two civilians injured",
-      "link": "https://tass.com/defense/2042331",
-      "published": "Wed, 12 Nov 2025 03:35:11 +0300",
-      "summary": "It was noted that Ukrainian forces struck in the Gorlovka direction"
+      "source": "RIA Novosti",
+      "title": "В Челябинске нашли мужчину, подозреваемого в запуске фейерверка у домов",
+      "link": "https://ria.ru/20251112/cheljabinsk-2054419584.html",
+      "published": "Wed, 12 Nov 2025 11:21:07 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Mellon Blue diamond sells for $25.6 mln in Geneva",
-      "link": "https://tass.com/society/2042327",
-      "published": "Wed, 12 Nov 2025 01:36:01 +0300",
-      "summary": "According to the Christie’s auction house, due to its rich coloration, the Mellon Blue belongs to the rare category of vivid fancy diamonds, which accounts for less than 1% of all rare blue diamonds"
+      "source": "RIA Novosti",
+      "title": "В Хабаровске разбираются в причинах инцидента с избиением второклассницы",
+      "link": "https://ria.ru/20251112/habarovsk-2054418659.html",
+      "published": "Wed, 12 Nov 2025 11:18:12 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Russia ready to resume Istanbul talks with Ukraine at any moment — charge d’affaires",
-      "link": "https://tass.com/politics/2042323",
-      "published": "Wed, 12 Nov 2025 00:29:49 +0300",
-      "summary": "Alexey Ivanov noted that the Russian side had conveyed a number of proposals during previous rounds of negotiations"
+      "source": "RIA Novosti",
+      "title": "СМИ: ФРГ тратит деньги на работников американских баз из-за шатдауна в США",
+      "link": "https://ria.ru/20251112/germanija-2054417458.html",
+      "published": "Wed, 12 Nov 2025 11:16:17 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Putin sees Kazakh leader off after their informal meeting at Kremlin",
-      "link": "https://tass.com/politics/2042319",
-      "published": "Wed, 12 Nov 2025 00:14:17 +0300",
-      "summary": "The two leaders exchanged a firm handshake and embraced in farewell"
+      "source": "RIA Novosti",
+      "title": "Суд продлил арест экс-ректору Нижегородского агротехуниверситета",
+      "link": "https://ria.ru/20251112/sud-2054416206.html",
+      "published": "Wed, 12 Nov 2025 11:13:43 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Russian, Chinese, Iranian envoys meet with IAEA chief — Russian diplomat",
-      "link": "https://tass.com/politics/2042317",
-      "published": "Tue, 11 Nov 2025 23:56:56 +0300",
-      "summary": "The regular session of the IAEA Board of Governors will be held in Vienna on November 17 through 21"
+      "source": "RIA Novosti",
+      "title": "Фигурант дела о коррупции в энергетике на Украине при обыске рвал документы",
+      "link": "https://ria.ru/20251112/ukraina-2054415799.html",
+      "published": "Wed, 12 Nov 2025 11:10:45 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Putin’s informal meeting with visiting Kazakh leader lasted for over 2.5 hours",
-      "link": "https://tass.com/world/2042307",
-      "published": "Tue, 11 Nov 2025 23:48:46 +0300",
-      "summary": "The official part on Tokayev’s program is scheduled for November 12"
+      "source": "RIA Novosti",
+      "title": "Медведчук назвал скандал на Украине началом конца режима Зеленского",
+      "link": "https://ria.ru/20251112/medvedchuk-2054415590.html",
+      "published": "Wed, 12 Nov 2025 11:10:23 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Trump says US ordered batch of B-2 strategic bombers",
-      "link": "https://tass.com/world/2042305",
-      "published": "Tue, 11 Nov 2025 23:41:13 +0300",
-      "summary": "In US President's view, these aircraft \"completely obliterated Iran's nuclear capability\""
+      "source": "RIA Novosti",
+      "title": "В Казани задержали жителя Чувашии, планировавшего стать террористом",
+      "link": "https://ria.ru/20251112/kazan-2054415067.html",
+      "published": "Wed, 12 Nov 2025 11:08:39 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Russia imposes entry ban on 30 Japanese citizens as response measure — foreign ministry",
-      "link": "https://tass.com/politics/2042303",
-      "published": "Tue, 11 Nov 2025 23:34:44 +0300",
-      "summary": "The list includes journalists and professors of Japanese universities"
+      "source": "RIA Novosti",
+      "title": "Минздрав Башкирии опроверг данные о проблемах с датчиками для диабетиков",
+      "link": "https://ria.ru/20251112/bashkirija-2054413942.html",
+      "published": "Wed, 12 Nov 2025 11:04:59 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Venezuelan parliament thanks Russia for support in difficult time",
-      "link": "https://tass.com/world/2042301",
-      "published": "Tue, 11 Nov 2025 23:32:52 +0300",
-      "summary": "Speaker Jorge Rodriguez stressed that \"true friends are known in difficult, challenging times, and Russia is a true and loyal friend of Venezuela.\""
+      "source": "RIA Novosti",
+      "title": "Зеленский может быть замешан в коррупционном деле, пишет Bloomberg",
+      "link": "https://ria.ru/20251112/zelenskij-2054413078.html",
+      "published": "Wed, 12 Nov 2025 11:01:38 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "US considers building base for 10,000 troops near Gaza — media",
-      "link": "https://tass.com/world/2042299",
-      "published": "Tue, 11 Nov 2025 23:28:31 +0300",
-      "summary": "An unnamed US administration official told Bloomberg that the military’s request represents an initial step toward planning the establishment of a base for international stabilization forces"
+      "source": "RIA Novosti",
+      "title": "В центре Москвы временно перекрыли движение транспорта",
+      "link": "https://ria.ru/20251112/moskva-2054412774.html",
+      "published": "Wed, 12 Nov 2025 11:00:41 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Ukraine approves list of countries eligible for fast-tracked citizenship",
-      "link": "https://tass.com/world/2042295",
-      "published": "Tue, 11 Nov 2025 22:35:32 +0300",
-      "summary": "According to a resolution adopted by the Cabinet of Ministers, citizens of Germany, Canada, Poland, the United States, and the Czech Republic are eligible for a simplified path toward Ukrainian citizenship"
+      "source": "RIA Novosti",
+      "title": "Президент Польши анонсировал изменения конституции страны",
+      "link": "https://ria.ru/20251112/prezident-2054412021.html",
+      "published": "Wed, 12 Nov 2025 10:57:59 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Trump says observed Russia’s commemorative events on Victory Day",
-      "link": "https://tass.com/world/2042287",
-      "published": "Tue, 11 Nov 2025 21:53:30 +0300",
-      "summary": "The US president said that for this and other reasons, in May of this year, he declared November 11 and May 8 as victory days for the first and second world wars, respectively"
+      "source": "RIA Novosti",
+      "title": "В Харькове прогремел взрыв",
+      "link": "https://ria.ru/20251112/vzryv-2054411875.html",
+      "published": "Wed, 12 Nov 2025 10:57:14 +0300",
+      "summary": ""
     },
     {
-      "source": "TASS",
-      "title": "Russia calls on Hague to pay attention to Kiev's attempts to push NATO against Moscow",
-      "link": "https://tass.com/politics/2042281",
-      "published": "Tue, 11 Nov 2025 21:41:21 +0300",
-      "summary": "The Kiev regime has made another attempt at provocation - it tried to hijack a Russian MiG-31 fighter jet, the Russian embassy in the Netherlands said"
+      "source": "RIA Novosti",
+      "title": "СМИ сообщили об изменении состояния отца главкома ВСУ",
+      "link": "https://ria.ru/20251112/sostoyanie-2054411740.html",
+      "published": "Wed, 12 Nov 2025 10:57:01 +0300",
+      "summary": ""
     }
   ],
   "all_articles": [
@@ -1304,6 +1297,440 @@
       "link": "https://www.interfax.ru/russia/1054853",
       "published": "Mon, 27 Oct 2025 08:07:00 +0300",
       "summary": "Россия могла бы нарастить поставки в Малайзию энергоресурсов, промышленного оборудования и продукции агропромышленного комплекса, а также рассмотреть строительство в стране АЭС большой и малой мощности, сообщила пресс-служба вице-премьера Алексея Оверчука.Оверчук обсудил вопросы двустороннего сотрудничества с вице-премьером, министром энергетического перехода и водных ресурсов Малайзии Фадиллой Юсуфом.\"Российская сторона видит хорошие возможности для наращивания поставок в Малайзию энергоресурсов, фармацевтических препаратов, промышленного оборудования, включая медицинское."
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Тренер школы в Красногорске рассказал подробности инцидента со взрывом",
+      "link": "https://ria.ru/20251112/krasnogorsk-2054427107.html",
+      "published": "Wed, 12 Nov 2025 11:43:45 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Взрыв в Дели мог быть следствием случайной детонации, пишут СМИ",
+      "link": "https://ria.ru/20251112/smi-2054426873.html",
+      "published": "Wed, 12 Nov 2025 11:43:18 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Матвиенко и Токаев проводят встречу",
+      "link": "https://ria.ru/20251112/tokaev--2054426450.html",
+      "published": "Wed, 12 Nov 2025 11:42:10 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Армения не намерена отказываться от российского зерна, заявил Пашинян",
+      "link": "https://ria.ru/20251112/pashinyan-2054425721.html",
+      "published": "Wed, 12 Nov 2025 11:39:21 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Польша не будет ставить интересы Украины выше своих, заявил Навроцкий",
+      "link": "https://ria.ru/20251112/polsha-2054425290.html",
+      "published": "Wed, 12 Nov 2025 11:39:08 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Стармер вызывает негодование британцев, заявил Пушков",
+      "link": "https://ria.ru/20251112/starmer--2054424767.html",
+      "published": "Wed, 12 Nov 2025 11:37:13 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Бельгия понимает преступность идеи кредита для Украины, заявила Захарова",
+      "link": "https://ria.ru/20251112/belgija-2054422877.html",
+      "published": "Wed, 12 Nov 2025 11:33:20 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Миндич требовал от Умерова закупать некачественные бронежилеты, пишут СМИ",
+      "link": "https://ria.ru/20251112/umerov-2054421696.html",
+      "published": "Wed, 12 Nov 2025 11:30:21 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Москве началась церемония прощания с Владимиром Симоновым",
+      "link": "https://ria.ru/20251112/simonov-2054421168.html",
+      "published": "Wed, 12 Nov 2025 11:28:03 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Зеленский впервые за долгое время не записал обращение к украинцам",
+      "link": "https://ria.ru/20251112/zelenskij-2054420832.html",
+      "published": "Wed, 12 Nov 2025 11:27:19 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Минфин России планирует разместить гособлигации в юанях",
+      "link": "https://ria.ru/20251112/minfin-2054420193.html",
+      "published": "Wed, 12 Nov 2025 11:24:23 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Челябинской области автобус столкнулся со стоящим на обочине автомобилем",
+      "link": "https://ria.ru/20251112/avtobus-2054419770.html",
+      "published": "Wed, 12 Nov 2025 11:22:59 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Челябинске нашли мужчину, подозреваемого в запуске фейерверка у домов",
+      "link": "https://ria.ru/20251112/cheljabinsk-2054419584.html",
+      "published": "Wed, 12 Nov 2025 11:21:07 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Хабаровске разбираются в причинах инцидента с избиением второклассницы",
+      "link": "https://ria.ru/20251112/habarovsk-2054418659.html",
+      "published": "Wed, 12 Nov 2025 11:18:12 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "СМИ: ФРГ тратит деньги на работников американских баз из-за шатдауна в США",
+      "link": "https://ria.ru/20251112/germanija-2054417458.html",
+      "published": "Wed, 12 Nov 2025 11:16:17 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Суд продлил арест экс-ректору Нижегородского агротехуниверситета",
+      "link": "https://ria.ru/20251112/sud-2054416206.html",
+      "published": "Wed, 12 Nov 2025 11:13:43 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Фигурант дела о коррупции в энергетике на Украине при обыске рвал документы",
+      "link": "https://ria.ru/20251112/ukraina-2054415799.html",
+      "published": "Wed, 12 Nov 2025 11:10:45 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Медведчук назвал скандал на Украине началом конца режима Зеленского",
+      "link": "https://ria.ru/20251112/medvedchuk-2054415590.html",
+      "published": "Wed, 12 Nov 2025 11:10:23 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Казани задержали жителя Чувашии, планировавшего стать террористом",
+      "link": "https://ria.ru/20251112/kazan-2054415067.html",
+      "published": "Wed, 12 Nov 2025 11:08:39 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Минздрав Башкирии опроверг данные о проблемах с датчиками для диабетиков",
+      "link": "https://ria.ru/20251112/bashkirija-2054413942.html",
+      "published": "Wed, 12 Nov 2025 11:04:59 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Зеленский может быть замешан в коррупционном деле, пишет Bloomberg",
+      "link": "https://ria.ru/20251112/zelenskij-2054413078.html",
+      "published": "Wed, 12 Nov 2025 11:01:38 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В центре Москвы временно перекрыли движение транспорта",
+      "link": "https://ria.ru/20251112/moskva-2054412774.html",
+      "published": "Wed, 12 Nov 2025 11:00:41 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Президент Польши анонсировал изменения конституции страны",
+      "link": "https://ria.ru/20251112/prezident-2054412021.html",
+      "published": "Wed, 12 Nov 2025 10:57:59 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Харькове прогремел взрыв",
+      "link": "https://ria.ru/20251112/vzryv-2054411875.html",
+      "published": "Wed, 12 Nov 2025 10:57:14 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "СМИ сообщили об изменении состояния отца главкома ВСУ",
+      "link": "https://ria.ru/20251112/sostoyanie-2054411740.html",
+      "published": "Wed, 12 Nov 2025 10:57:01 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Подмосковье возбудили дело после ДТП с подростком на багги",
+      "link": "https://ria.ru/20251112/podmoskove-2054411188.html",
+      "published": "Wed, 12 Nov 2025 10:56:18 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Люди приходят к театру Вахтангова, чтобы проститься с Владимиром Симоновым",
+      "link": "https://ria.ru/20251112/simonov-2054410233.html",
+      "published": "Wed, 12 Nov 2025 10:54:05 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Появились подробности о ребенке россиянки, арестованной в Бангкоке",
+      "link": "https://ria.ru/20251112/bangkok-2054410044.html",
+      "published": "Wed, 12 Nov 2025 10:52:48 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Турция изучает версии крушения военного самолета в Грузии",
+      "link": "https://ria.ru/20251112/turtsija-2054409446.html",
+      "published": "Wed, 12 Nov 2025 10:50:14 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Запорожской области предупредили о росте числа диверсий на энергообъектах",
+      "link": "https://ria.ru/20251112/popytki-2054408950.html",
+      "published": "Wed, 12 Nov 2025 10:48:42 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Боец пережил атаку двух дронов на Запорожском направлении",
+      "link": "https://ria.ru/20251112/drony-2054407933.html",
+      "published": "Wed, 12 Nov 2025 10:46:22 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Мирошник прокомментировал отстранение министра юстиции Украины",
+      "link": "https://ria.ru/20251112/miroshnik-2054407490.html",
+      "published": "Wed, 12 Nov 2025 10:45:08 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Замгендиректора филармонии Кузбасса обвинили в получении взятки",
+      "link": "https://ria.ru/20251112/obvinenie-2054406328.html",
+      "published": "Wed, 12 Nov 2025 10:39:53 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Агентство по развитию США спонсировало Би-би-си, заявил Дмитриев",
+      "link": "https://ria.ru/20251112/dmitriev-2054406168.html",
+      "published": "Wed, 12 Nov 2025 10:39:40 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Ситуация на Украине доказывает, что ей не стоит помогать, пишет Bloomberg",
+      "link": "https://ria.ru/20251112/skandal-2054405216.html",
+      "published": "Wed, 12 Nov 2025 10:37:17 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "FT: советник премьера Британии пытался установить канал связи с Россией",
+      "link": "https://ria.ru/20251112/pauelly-2054404832.html",
+      "published": "Wed, 12 Nov 2025 10:34:16 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "FT рассказала о странах, недовольных позицией Трампа по договорам Авраама",
+      "link": "https://ria.ru/20251112/ft-2054404557.html",
+      "published": "Wed, 12 Nov 2025 10:32:37 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Россиянку, дважды пропавшую в Бангкоке, доставили в аэропорт для депортации",
+      "link": "https://ria.ru/20251112/bangkok-2054403882.html",
+      "published": "Wed, 12 Nov 2025 10:31:40 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Захарова: целью статьи FT о Рубио и Лаврове была попытка сорвать переговоры",
+      "link": "https://ria.ru/20251112/zakharova-2054403623.html",
+      "published": "Wed, 12 Nov 2025 10:28:48 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Полиция выяснила личность водителя авто, взорвавшегося в Дели, пишут СМИ",
+      "link": "https://ria.ru/20251112/deli-2054403459.html",
+      "published": "Wed, 12 Nov 2025 10:28:30 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Киргизии в школах ввели меры по энергосбережению",
+      "link": "https://ria.ru/20251112/defitsit-2054403073.html",
+      "published": "Wed, 12 Nov 2025 10:25:47 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В экстренных службах рассказали об устройстве, взорвавшемся в Красногорске",
+      "link": "https://ria.ru/20251112/ustrojstvo-2054402350.html",
+      "published": "Wed, 12 Nov 2025 10:23:41 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Во Владивостоке по дороге в аэропорт произошло ДТП, есть пострадавшие",
+      "link": "https://ria.ru/20251112/vladivostok-2054402032.html",
+      "published": "Wed, 12 Nov 2025 10:22:32 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Суд оставил в СИЗО миллиардера Сулейманова по делу об организации убийств",
+      "link": "https://ria.ru/20251112/suleymanov-2054401823.html",
+      "published": "Wed, 12 Nov 2025 10:20:28 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Захарова назвала действия Би-би-си преступлением",
+      "link": "https://ria.ru/20251112/zaharova-2054401498.html",
+      "published": "Wed, 12 Nov 2025 10:19:35 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Коррупционный скандал помешает Украине вступить в ЕС, пишут СМИ",
+      "link": "https://ria.ru/20251112/skandal-2054401348.html",
+      "published": "Wed, 12 Nov 2025 10:19:11 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Спасатели обнаружили трех туристов, сорвавшихся с ледяного склона в КЧР",
+      "link": "https://ria.ru/20251112/turisty-2054400952.html",
+      "published": "Wed, 12 Nov 2025 10:16:19 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "ВС России уничтожили до десяти антенн управления БПЛА ВСУ в зоне СВО",
+      "link": "https://ria.ru/20251112/antenny-2054400812.html",
+      "published": "Wed, 12 Nov 2025 10:15:35 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Сбербанк нарастил кредиты физлицам на четыре процента",
+      "link": "https://ria.ru/20251112/portfel-2054400631.html",
+      "published": "Wed, 12 Nov 2025 10:12:24 +0300",
+      "summary": ""
+    },
+    {
+      "source": "TASS",
+      "title": "US strikes alleged drug boats near Venezuelan coast with drones, F-35s — CNN",
+      "link": "https://tass.com/world/2042401",
+      "published": "Wed, 12 Nov 2025 11:32:51 +0300",
+      "summary": "The TV channel emphasized that to date, \"the Pentagon has not publicly acknowledged what aircraft or hardware the military is using to conduct the strikes\""
+    },
+    {
+      "source": "TASS",
+      "title": "Child injured in blast in Moscow Region hospitalized in serious condition",
+      "link": "https://tass.com/emergencies/2042393",
+      "published": "Wed, 12 Nov 2025 11:15:20 +0300",
+      "summary": "According to Ksenia Mishonova, children’s rights ombudswoman for the Moscow Region, the boy’s fingers have been partially amputated"
+    },
+    {
+      "source": "TASS",
+      "title": "Ukraine removes justice chief Galushchenko from his position",
+      "link": "https://tass.com/world/2042389",
+      "published": "Wed, 12 Nov 2025 10:51:19 +0300",
+      "summary": "Lyudmila Sugak, previously deputy justice minister, will be acting justice chief"
+    },
+    {
+      "source": "TASS",
+      "title": "Syria complying with Israeli demilitarization demands could trigger chaos — interim leader",
+      "link": "https://tass.com/world/2042387",
+      "published": "Wed, 12 Nov 2025 10:42:21 +0300",
+      "summary": "Ahmed al-Sharaa emphasized that the Golan Heights, whose demilitarization is one of Israel’s demands for concluding a new security agreement, are a sovereign and indivisible part of the country"
+    },
+    {
+      "source": "TASS",
+      "title": "Russia open to all law-abiding Western online platforms — official",
+      "link": "https://tass.com/economy/2042385",
+      "published": "Wed, 12 Nov 2025 10:28:52 +0300",
+      "summary": "The presence of domestic elements of the information infrastructure makes it possible for Russia to hold such an open stance, First Deputy Head of the Presidential Administration Sergey Kiriyenko said"
+    },
+    {
+      "source": "TASS",
+      "title": "Russian stock market on the rise in early trading hours",
+      "link": "https://tass.com/economy/2042383",
+      "published": "Wed, 12 Nov 2025 10:27:43 +0300",
+      "summary": "The MOEX Russia Index accelerated to 2,576.45 points, up 0.4%, while the RTS Index also grew to reach 997.64 points"
+    },
+    {
+      "source": "TASS",
+      "title": "UK to stop providing maritime services in Russian LNG carriage since 2026",
+      "link": "https://tass.com/economy/2042379",
+      "published": "Wed, 12 Nov 2025 10:26:13 +0300",
+      "summary": "Such restrictions will be introduced during the next year in interaction with other European countries, The Independent added"
+    },
+    {
+      "source": "TASS",
+      "title": "Russians most interested in short-term deposits in October — marketplace",
+      "link": "https://tass.com/economy/2042373",
+      "published": "Wed, 12 Nov 2025 10:07:08 +0300",
+      "summary": "Deposits opened for twelve months and more stood at 3.2% in October 2025"
+    },
+    {
+      "source": "TASS",
+      "title": "Trump’s criticism of SMO progress is unfounded — former CIA employee",
+      "link": "https://tass.com/world/2042375",
+      "published": "Wed, 12 Nov 2025 10:05:47 +0300",
+      "summary": "While addressing Trump’s criticism directed at Russia concerning what he referred to as the country’s slow offensive on the special military operation front in Ukraine, Larry Johnson stated that the US leader was either receiving incorrect intelligence or misrepresenting what he was being told"
+    },
+    {
+      "source": "TASS",
+      "title": "Russia establishes Unmanned Systems Forces",
+      "link": "https://tass.com/defense/2042371",
+      "published": "Wed, 12 Nov 2025 09:56:34 +0300",
+      "summary": "The structure of this new branch of the armed forces has been determined, the head of the Unmanned Systems Forces has been appointed, military administration units have been created at all levels"
+    },
+    {
+      "source": "TASS",
+      "title": "Almost no interest in Trump’s circle in normalization with Russia — former CIA employee",
+      "link": "https://tass.com/world/2042367",
+      "published": "Wed, 12 Nov 2025 09:46:31 +0300",
+      "summary": "According to Larry Johnson, Trump has \"had ample opportunity to take some steps, to make some gestures towards Moscow to show that he's serious\""
+    },
+    {
+      "source": "TASS",
+      "title": "New railway terminal starts operating in Arkhangelsk",
+      "link": "https://tass.com/economy/2042365",
+      "published": "Wed, 12 Nov 2025 09:13:51 +0300",
+      "summary": "The terminal's annual cargo capacity is more than 200,000 tons"
+    },
+    {
+      "source": "TASS",
+      "title": "Scientists make registry of Arkhangelsk Region patients suffering blood system anomalies",
+      "link": "https://tass.com/economy/2042363",
+      "published": "Wed, 12 Nov 2025 09:13:19 +0300",
+      "summary": "The list contains data on more than 5,000 patients, and scientists use various methods, including artificial intelligence, Professor Nadezhda Vorobyova said"
     },
     {
       "source": "TASS",
@@ -1565,445 +1992,11 @@
       "summary": "Serbian specialist Dejan Stankovic, 47, has been with Spartak Moscow FC as the head coach since the summer of 2024"
     },
     {
-      "source": "TASS",
-      "title": "Putin meets visiting Kazakh leader in Kremlin",
-      "link": "https://tass.com/politics/2042247",
-      "published": "Tue, 11 Nov 2025 20:41:11 +0300",
-      "summary": "Kassym-Jomart Tokayev and Vladimir Putin are expected to discuss pressing issues of further development of Russian-Kazakh relations"
-    },
-    {
-      "source": "TASS",
-      "title": "Moscow court rules for Uralkali Trading in claim against Yara",
-      "link": "https://tass.com/society/2042249",
-      "published": "Tue, 11 Nov 2025 20:40:04 +0300",
-      "summary": "The majority of other counterparts of the company have completely settled their debts for the delivery of fertilizers, Uralkali Trading said"
-    },
-    {
-      "source": "TASS",
-      "title": "West acts out of desperation by trying to steal Kinzhal technology — expert",
-      "link": "https://tass.com/politics/2042245",
-      "published": "Tue, 11 Nov 2025 20:29:03 +0300",
-      "summary": "According to Andrey Marochko, it would take billions of dollars and decades of work for Western countries to develop similar technologies"
-    },
-    {
-      "source": "TASS",
-      "title": "Kazakh leader arrives in Kremlin for meeting with Putin",
-      "link": "https://tass.com/politics/2042237",
-      "published": "Tue, 11 Nov 2025 20:27:25 +0300",
-      "summary": "According to Russian Presidential Spokesman Dmitry Peskov, the official program of Kassym-Jomart Tokayev's state visit will begin on Wednesday and today the leaders will speak informally, including during an unofficial dinner"
-    },
-    {
-      "source": "TASS",
-      "title": "EU stonewalls Russia's requests to consult on drone incidents — Foreign Ministry",
-      "link": "https://tass.com/politics/2042235",
-      "published": "Tue, 11 Nov 2025 20:25:09 +0300",
-      "summary": "Deputy Foreign Minister Dmitry Lyubinsky said that these incidents are well-planned provocations"
-    },
-    {
-      "source": "TASS",
-      "title": "Lavrov baffled at Britain's lack of shame over MiG-31 hijacking plot",
-      "link": "https://tass.com/politics/2042233",
-      "published": "Tue, 11 Nov 2025 20:24:06 +0300",
-      "summary": "The Russian foreign minister said that he does not know how the British will wash themselves clean of it"
-    },
-    {
-      "source": "TASS",
-      "title": "Ronaldo says 2026 FIFA World Cup to be last of his career",
-      "link": "https://tass.com/sports/2042229",
-      "published": "Tue, 11 Nov 2025 20:05:36 +0300",
-      "summary": "The 2026 FIFA World Cup will be co-hosted by Canada, Mexico and the United States"
-    },
-    {
-      "source": "TASS",
-      "title": "Death toll from Typhoon Fung-wong in Philippines rises to 25",
-      "link": "https://tass.com/emergencies/2042225",
-      "published": "Tue, 11 Nov 2025 20:04:10 +0300",
-      "summary": "Among the deceased is a 10-year-old child"
-    },
-    {
-      "source": "TASS",
-      "title": "Lavrov accuses London, British media of smear campaign against Russia",
-      "link": "https://tass.com/politics/2042223",
-      "published": "Tue, 11 Nov 2025 20:03:01 +0300",
-      "summary": "The Russian foreign minister called the media's coverage of certain events harmful"
-    },
-    {
-      "source": "TASS",
-      "title": "Spain’s oldest resident dies at age 112",
-      "link": "https://tass.com/society/2042221",
-      "published": "Tue, 11 Nov 2025 19:58:54 +0300",
-      "summary": "President of the Government of Catalonia Salvador Illa expressed his condolences to Angelina Torres's family"
-    },
-    {
-      "source": "TASS",
-      "title": "Tough measures needed to snuff out Kiev’s attacks on ZNPP — Russian diplomat",
-      "link": "https://tass.com/politics/2042219",
-      "published": "Tue, 11 Nov 2025 19:57:00 +0300",
-      "summary": "Rodion Miroshnik recalled that Ukrainian drones had attacked four Russian nuclear plants in recent months"
-    },
-    {
-      "source": "TASS",
-      "title": "US aircraft carrier Gerald R. Ford arrives in Latin America — Pentagon",
-      "link": "https://tass.com/world/2042217",
-      "published": "Tue, 11 Nov 2025 19:55:07 +0300",
-      "summary": "The department specified that the ships will be used to carry out US President Donald Trump's instructions to \"dismantle Transnational Criminal Organizations and counter narco-terrorism\""
-    },
-    {
-      "source": "TASS",
-      "title": "Baltic states try to force Russia into act that would precipitate NATO war — Lavrov",
-      "link": "https://tass.com/politics/2042215",
-      "published": "Tue, 11 Nov 2025 19:48:00 +0300",
-      "summary": "Commenting on Lithuania’s proposals to limit transit to Kaliningrad, the Russian foreign minister said the European Union is every bit as responsible as Lithuania here"
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "ВС России наносят поражение ВСУ в южной части Купянска",
-      "link": "https://ria.ru/20251112/vsu--2054388708.html",
-      "published": "Wed, 12 Nov 2025 09:01:49 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Кличко признал растущую нехватку солдат на Украине",
-      "link": "https://ria.ru/20251112/klichko-2054388241.html",
-      "published": "Wed, 12 Nov 2025 09:01:15 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Самаре повысили надежность напечатанных деталей для авиации",
-      "link": "https://ria.ru/20251112/nauka-2053396083.html",
-      "published": "Wed, 12 Nov 2025 09:00:00 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Кличко призвал снизить мобилизационный возраст на Украине до 22 лет",
-      "link": "https://ria.ru/20251112/klichko-2054387942.html",
-      "published": "Wed, 12 Nov 2025 08:55:09 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "ФСБ раскрыла подробности дела о покушении Киева на митрополита Тихона",
-      "link": "https://ria.ru/20251112/fsb-2054387707.html",
-      "published": "Wed, 12 Nov 2025 08:51:07 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Власти Австралии отказались вернуть России землю для постройки посольства",
-      "link": "https://ria.ru/20251112/avstraliya-2054387518.html",
-      "published": "Wed, 12 Nov 2025 08:50:09 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "ФСБ получила доказательства по делу о покушении на митрополита Тихона",
-      "link": "https://ria.ru/20251112/pokushenie-2054387351.html",
-      "published": "Wed, 12 Nov 2025 08:49:25 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В деле о покушении на митрополита Тихона появились новые фигуранты",
-      "link": "https://ria.ru/20251112/fsb-2054386980.html",
-      "published": "Wed, 12 Nov 2025 08:47:11 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Киев хотел убить митрополита Тихона, чтобы сорвать переговоры России и США",
-      "link": "https://ria.ru/20251112/tikhon-2054386753.html",
-      "published": "Wed, 12 Nov 2025 08:46:54 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Грузии началось расследование крушения турецкого военного самолета",
-      "link": "https://ria.ru/20251112/gruziya-2054386527.html",
-      "published": "Wed, 12 Nov 2025 08:43:55 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Россия удвоит экспорт газа в Китай",
-      "link": "https://ria.ru/20251112/rossija-2054385763.html",
-      "published": "Wed, 12 Nov 2025 08:36:44 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Минобороны показало кадры с военными ВСУ, взятыми в плен в районе Купянска",
-      "link": "https://ria.ru/20251112/minoborony--2054385544.html",
-      "published": "Wed, 12 Nov 2025 08:33:20 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В ЕЦБ оценили последствия пошлин США для европейской экономики",
-      "link": "https://ria.ru/20251112/etsb-2054385356.html",
-      "published": "Wed, 12 Nov 2025 08:31:31 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Лондон отказался платить ЕК за доступ к оборонному фонду SAFE, пишут СМИ",
-      "link": "https://ria.ru/20251112/london-2054384519.html",
-      "published": "Wed, 12 Nov 2025 08:26:55 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Тольятти микроавтобус столкнулся с легковушкой, есть погибшие",
-      "link": "https://ria.ru/20251112/dtp-2054384040.html",
-      "published": "Wed, 12 Nov 2025 08:22:41 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "ВСУ взяли в заложники иностранных наемников ради выкупа, сообщил эксперт",
-      "link": "https://ria.ru/20251112/kiselev-2054383920.html",
-      "published": "Wed, 12 Nov 2025 08:22:07 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Новосибирске потушили открытый огонь в административном здании",
-      "link": "https://ria.ru/20251112/pozhar-2054383772.html",
-      "published": "Wed, 12 Nov 2025 08:20:22 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Глава Орловской области рассказал о ночной атаке БПЛА",
-      "link": "https://ria.ru/20251112/bpla-2054383486.html",
-      "published": "Wed, 12 Nov 2025 08:15:37 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "МЭА ожидает роста добычи нефти ОПЕК+ до 63 миллионов баррелей в сутки",
-      "link": "https://ria.ru/20251112/mea-2054383054.html",
-      "published": "Wed, 12 Nov 2025 08:06:23 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Жителя Приморья осудят по обвинению в контрабанде сильнодействующих веществ",
-      "link": "https://ria.ru/20251112/sud-2054382900.html",
-      "published": "Wed, 12 Nov 2025 08:05:15 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Ученые назвали пропаганду наркотиков самой массовой угрозой в соцсетях",
-      "link": "https://ria.ru/20251112/nauka-2053952150.html",
-      "published": "Wed, 12 Nov 2025 08:01:00 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Турция определит страну, которая построит вторую АЭС в 2026 году, пишут СМИ",
-      "link": "https://ria.ru/20251112/turtsija-2054382584.html",
-      "published": "Wed, 12 Nov 2025 07:58:52 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "На Западе поймали Зеленского на дешевом трюке",
-      "link": "https://ria.ru/20251112/zlelenskiy-2054382266.html",
-      "published": "Wed, 12 Nov 2025 07:54:04 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Минобороны Турции назвало число погибших при крушении самолета в Грузии",
-      "link": "https://ria.ru/20251112/turtsiya-2054382082.html",
-      "published": "Wed, 12 Nov 2025 07:51:41 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "СК раскрыл подробности взрыва в Красногорске, при котором пострадал ребенок",
-      "link": "https://ria.ru/20251112/krasnogorsk-2054381803.html",
-      "published": "Wed, 12 Nov 2025 07:49:39 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Синоптик рассказал, когда в Москве ожидаются снегопады",
-      "link": "https://ria.ru/20251112/moskva-2054380743.html",
-      "published": "Wed, 12 Nov 2025 07:29:40 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Врач рассказал, как курение повышает риск развития пневмонии",
-      "link": "https://ria.ru/20251112/pnevmoniya-2054380265.html",
-      "published": "Wed, 12 Nov 2025 07:24:30 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Совфеде попросили установить особый порядок в сфере связи для приграничья",
-      "link": "https://ria.ru/20251112/svyaz-2054379792.html",
-      "published": "Wed, 12 Nov 2025 07:20:24 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Москвичам рассказали о погоде в среду",
-      "link": "https://ria.ru/20251112/pogoda-2054379618.html",
-      "published": "Wed, 12 Nov 2025 07:18:58 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В США объяснили, что произойдет на Украине после завершения конфликта",
-      "link": "https://ria.ru/20251112/ukraina-2054379351.html",
-      "published": "Wed, 12 Nov 2025 07:13:15 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Российские операторы БПЛА не дают восстановить переправы ВСУ под Купянском",
-      "link": "https://ria.ru/20251112/spetsoperatsiya-2054379174.html",
-      "published": "Wed, 12 Nov 2025 07:09:03 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Санкции ЕС могут остановить операции банков Турции и России, заявил эксперт",
-      "link": "https://ria.ru/20251112/sanktsii-2054378967.html",
-      "published": "Wed, 12 Nov 2025 07:06:30 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Тайфун \"Фунг-Вонг\" приближается к островам Окинава",
-      "link": "https://ria.ru/20251112/tajfun-2054378809.html",
-      "published": "Wed, 12 Nov 2025 07:04:09 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Разрушение турецкого самолета в воздухе может указывать на взрыв, пишут СМИ",
-      "link": "https://ria.ru/20251112/aviakatastrofa-2054378521.html",
-      "published": "Wed, 12 Nov 2025 07:01:26 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Суд не стал рассматривать протокол на кинокритика Барабаш*",
-      "link": "https://ria.ru/20251112/sud-2054378307.html",
-      "published": "Wed, 12 Nov 2025 06:56:06 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В российском посольстве оценили соглашение Минцифры и КНДР",
-      "link": "https://ria.ru/20251112/kndr-2054378086.html",
-      "published": "Wed, 12 Nov 2025 06:49:50 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Сумской области уничтожили пункт дислокации иностранных наемников",
-      "link": "https://ria.ru/20251112/punkt-2054377549.html",
-      "published": "Wed, 12 Nov 2025 06:44:38 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "ВСУ отправили женщин на боевые задачи из-за массового дезертирства",
-      "link": "https://ria.ru/20251112/vsu-2054377155.html",
-      "published": "Wed, 12 Nov 2025 06:39:19 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Россияне назвали самые популярные компании для трудоустройства",
-      "link": "https://ria.ru/20251112/trud-2054376952.html",
-      "published": "Wed, 12 Nov 2025 06:37:19 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Новосибирске охранник горящего здания получил ожоги",
-      "link": "https://ria.ru/20251112/pozhar-2054376791.html",
-      "published": "Wed, 12 Nov 2025 06:35:18 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Над Тульской областью уничтожили два украинских беспилотника",
-      "link": "https://ria.ru/20251112/pvo-2054376653.html",
-      "published": "Wed, 12 Nov 2025 06:34:05 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "На Ставрополье из-за падения обломков БПЛА вспыхнул пожар",
-      "link": "https://ria.ru/20251112/bezopasnost-2054376507.html",
-      "published": "Wed, 12 Nov 2025 06:32:15 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Прибалтика столкнулась с ростом долгосрочной безработицы",
-      "link": "https://ria.ru/20251112/pribaltika-2054376306.html",
-      "published": "Wed, 12 Nov 2025 06:25:40 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Госсовете Китая Японию призвали глубоко задуматься о своей истории",
-      "link": "https://ria.ru/20251112/kitay-2054376079.html",
-      "published": "Wed, 12 Nov 2025 06:20:25 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "ЦБ включит крупные переводы самому себе по СБП в признаки мошеннических",
-      "link": "https://ria.ru/20251112/moshenniki-2054375864.html",
-      "published": "Wed, 12 Nov 2025 06:16:01 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Наемники из Мадагаскара, Великобритании, Франции и США присоединились к ВСУ",
-      "link": "https://ria.ru/20251112/naemniki-2054375666.html",
-      "published": "Wed, 12 Nov 2025 06:13:01 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "ВСУ дезертировали в районе Кучеровки в Харьковской области, заявил Марочко",
-      "link": "https://ria.ru/20251112/spetsoperatsiya-2054375521.html",
-      "published": "Wed, 12 Nov 2025 06:10:27 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "На Байконур доставили первую ракету \"Союз-5\"",
-      "link": "https://ria.ru/20251112/raketa-2054375334.html",
-      "published": "Wed, 12 Nov 2025 06:09:29 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Ростовской области отразили атаку беспилотников",
-      "link": "https://ria.ru/20251112/ataka-2054375172.html",
-      "published": "Wed, 12 Nov 2025 05:58:21 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Военные ВСУ переодеваются в штатское, передвигаясь по Купянску",
-      "link": "https://ria.ru/20251112/vsu-2054374963.html",
-      "published": "Wed, 12 Nov 2025 05:53:19 +0300",
-      "summary": ""
+      "source": "RT News",
+      "title": "Colombia suspends intel sharing with US over Caribbean airstrikes",
+      "link": "https://www.rt.com/news/627659-colombia-intelligence-sharing-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Wed, 12 Nov 2025 07:47:59 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691436cb20302735a55012c6.jpg\" style=\"margin-right: 10px;\" /> Colombian President Gustavo Petro has suspended intelligence sharing with the US over its airstrikes on alleged drug boats in the Caribbean <br /><a href=\"https://www.rt.com/news/627659-colombia-intelligence-sharing-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
     },
     {
       "source": "RT News",
@@ -2349,15 +2342,22 @@
       "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6910827920302765a95f6ac2.jpg\" style=\"margin-right: 10px;\" /> The fighting in southern Lebanon marks the collapse of a fragile truce – and could redraw the region’s balance of power <br /><a href=\"https://www.rt.com/news/627526-israel-opens-new-front/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
     },
     {
-      "source": "RT News",
-      "title": "Lots of ‘mess’ to clear up in Russia-US ties – Lavrov",
-      "link": "https://www.rt.com/news/627523-lavrov-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sun, 09 Nov 2025 11:57:23 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69106da9203027613a298767.jpg\" style=\"margin-right: 10px;\" /> Dialogue between Moscow and Washington is underway but it isn’t fast enough, Russian Foreign Minister Sergey Lavrov has said <br /><a href=\"https://www.rt.com/news/627523-lavrov-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+      "source": "Kommersant",
+      "title": "Контролеров готовят к худшему // В Москве пройдет первый Всероссийский конгресс наблюдателей за выборами",
+      "link": "https://www.kommersant.ru/doc/8194674",
+      "published": "Wed, 12 Nov 2025 10:59:13 +0300",
+      "summary": "Участники общественного наблюдения из разных регионов России на следующей неделе соберутся в Москве, чтобы обсудить, как повысить эффективность системы контроля за выборами в преддверии большой федеральной кампании 2026 года. Одна из ключевых задач — не дать поводов для фейков и провокаций из-за рубежа, говорят в Центризбиркоме. Враг «умен, изощрен и аморален», поэтому нужно «упреждающе бить наотмашь», уверена председатель комиссии Элла Памфилова."
     },
     {
       "source": "RT",
-      "title": "Russia urges US to extend New START treaty for one year",
+      "title": "India and Pakistan spar after blast rocks Islamabad",
+      "link": "https://www.rt.com/india/627658-india-allegations-pakistan-attack/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Wed, 12 Nov 2025 07:14:22 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914329420302736b068697d.jpg\" style=\"margin-right: 10px;\" /> India has rejected Pakistan’s allegations of a role in a suicide attack, calling them an effort to “concoct false narratives” <br /><a href=\"https://www.rt.com/india/627658-india-allegations-pakistan-attack/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT",
+      "title": "Russia urges US to extend New START treaty",
       "link": "https://www.rt.com/russia/627654-lavrov-nuclear-treaty-extention/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
       "published": "Wed, 12 Nov 2025 00:37:40 +0000",
       "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913d68e2030270e840a5b6c.jpg\" style=\"margin-right: 10px;\" /> Russian Foreign Minister Sergey Lavrov has said the offer for a one-year extension of the New START treaty with the US is still on the table <br /><a href=\"https://www.rt.com/russia/627654-lavrov-nuclear-treaty-extention/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
@@ -2378,7 +2378,7 @@
     },
     {
       "source": "RT",
-      "title": "Attempts to defend BBC are a “disgrace” – Lavrov",
+      "title": "Attempts to defend BBC are a ‘disgrace’ – Lavrov",
       "link": "https://www.rt.com/russia/627634-lavrov-british-media-bbc/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
       "published": "Tue, 11 Nov 2025 18:14:53 +0000",
       "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691379d585f5403bef022bdd.jpg\" style=\"margin-right: 10px;\" /> Russian Foreign Minister Sergey Lavrov has described efforts to defend the BBC over doctored Trump documentary a “disgrace” <br /><a href=\"https://www.rt.com/russia/627634-lavrov-british-media-bbc/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
@@ -2524,263 +2524,11 @@
       "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691225a885f5403126432e3c.jpg\" style=\"margin-right: 10px;\" /> Moscow is offering New Delhi new projects in the nuclear domain with large scale of localization, Alexey Likhachev told RT <br /><a href=\"https://www.rt.com/india/627587-russia-india-transfer-nuclear-technology/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
     },
     {
-      "source": "RT",
+      "source": "RT Russia",
       "title": "EU talks of friendship while plotting coups – Georgian official",
       "link": "https://www.rt.com/russia/627576-georgia-eu-coups-kaladze/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
       "published": "Mon, 10 Nov 2025 16:28:23 +0000",
       "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911e9b320302751b2741fe3.jpg\" style=\"margin-right: 10px;\" /> Tbilisi Mayor Kakha Kaladze has accused the European Union of hypocrisy and meddling in Georgia’s internal affairs <br /><a href=\"https://www.rt.com/russia/627576-georgia-eu-coups-kaladze/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "Kommersant",
-      "title": "Клен ты мой упавший // Власти Москвы намерены очистить город от инвазивных видов растений",
-      "link": "https://www.kommersant.ru/doc/8194665",
-      "published": "Wed, 12 Nov 2025 08:59:20 +0300",
-      "summary": "В ближайшие десять лет в Москве вырубят все ясенелистные клены, заявила руководитель столичного департамента природопользования Юлия Урожаева. Это будет сделано в рамках нового постановления по борьбе с инвазивными видами растений. Инициатива предполагает «полное удаление» семи видов растений, включая известный борщевик Сосновского, а также «контроль численности» еще 25 видов. Опрошенные “Ъ” ученые одобряют составленный мэрией список, но предупреждают, что нужно тщательно продумать, какие растения высаживать взамен «удаленных»."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Маркетплейсы пододвигают к госзаказу // Чиновники и бизнес обсудили перспективы малых госзакупок на цифровых платформах",
-      "link": "https://www.kommersant.ru/doc/8194617",
-      "published": "Wed, 12 Nov 2025 02:15:00 +0300",
-      "summary": "Экспериментальные закупки учебного оборудования для школ на маркетплейсах дадут образовательным организациям доступ к более качественным товарам по более низким ценам, в перспективе «пилот» мог бы быть расширен на весь госзаказ малого объема — идея обсуждалась 11 ноября на панельной сессии «Дня платформенной экономики» в наццентре «Россия». Рыночная «оцифровка» процессов и «естественная» конкуренция поставщиков за госзакупки малого объема выглядят более перспективными, чем попытки Минфина создать полный каталог закупок для стимулирования такой борьбы «внутри» системы госзаказа. Это подтверждает и опыт московского портала для поставщиков, работающего в формате электронного магазина. В Минфине, впрочем, возможность интеграции маркетплейсов в систему госзакупок не отрицают — она предусмотрена концепцией по совершенствованию закупок малого объема."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Инвестиции упираются в барьеры // Повышение импортных пошлин сокращает вложения в обрабатывающие производства",
-      "link": "https://www.kommersant.ru/doc/8194630",
-      "published": "Wed, 12 Nov 2025 02:15:00 +0300",
-      "summary": "Увеличение импортных пошлин ради стимулирования привлечения прямых иностранных инвестиций (ПИИ) — рискованная стратегия, заключают в своей работе аналитики Европейского центрального банка (ЕЦБ). На короткой дистанции рост вложений в ответ на тарифные барьеры действительно фиксируется — опасаясь пошлин, некоторые компании стремятся как можно быстрее перенести производства в повышающую их страну. Среднесрочно же возникающий высокий уровень неопределенности в такой экономике подрывает доверие инвесторов. Особенно заметно, по оценкам экономистов, сокращаются вложения в обрабатывающую промышленность: высокие тарифы сказываются на стоимости промежуточных товаров и, как следствие, снижают привлекательность инвестиций."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Бюджет вернулся к дефициту // В октябре годовые доходы бюджета отстали от расходов еще на 0,4 трлн рублей",
-      "link": "https://www.kommersant.ru/doc/8194589",
-      "published": "Wed, 12 Nov 2025 02:15:00 +0300",
-      "summary": "Выросшие в октябре по сравнению с предыдущими двумя месяцами расходы при некотором снижении доходов привели к увеличению накопленного в этом году дефицита федерального бюджета еще на 400 млрд руб.,— до 4,2 трлн руб., или 1,9% ВВП. В оставшиеся до конца года два месяца отрыв трат от поступлений, согласно обновленным расчетам Минфина, вырастет еще — до 5,7 трлн руб., или до 2,6% ВВП. Причины — несокращаемый уровень необходимых государству расходов при урезании ожиданий сначала по нефтегазовым, а потом и по остальным бюджетным доходам."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Октябрь спроса не остудил // Мониторинг потребления",
-      "link": "https://www.kommersant.ru/doc/8194524",
-      "published": "Wed, 12 Nov 2025 02:15:00 +0300",
-      "summary": "Свежие данные «Сбериндекса» демонстрируют сохранение положительной динамики спроса граждан на товары и услуги (отклонение данных от более медленной статистики Росстата, по оценке аналитиков, не превышает 0,5%). В октябре 2025 года номинальный объем потребительских расходов достиг 7,3 трлн руб."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Абортам подбирают государственные показания // В Смоленской области готовы официально запретить аборты в частных клиниках",
-      "link": "https://www.kommersant.ru/doc/8194603",
-      "published": "Wed, 12 Nov 2025 07:30:00 +0300",
-      "summary": "Смоленская область может стать первым регионом, где частные клиники закрепят в своих официальных документах отказ от проведения абортов. Опрошенные “Ъ” врачи и юристы предупреждают о рисках, которые следуют за такими решениями, указывая на то, что они противоречат Конституции и нарушают права женщин. Тем временем, по данным РПЦ, более 750 коммерческих медорганизаций по всей России уже добровольно отказались от проведения абортов без официальных запретов."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Дисконты на своей волне // Скидки на российскую нефть выросли до максимума с начала года",
-      "link": "https://www.kommersant.ru/doc/8194584",
-      "published": "Wed, 12 Nov 2025 06:00:00 +0300",
-      "summary": "Российская нефть столкнулась с самым резким ростом дисконтов за последний год — скидки на Urals в портах на Балтике и Черном море достигли почти $20 за баррель. Расширение дисконтов аналитики связывают с санкциями США против ЛУКОЙЛа и «Роснефти» и вынужденными пересмотрами схем поставок. Последний раз скидки на Балтике превышали $15 за баррель в начале этого года."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Рыбу тянет на дно // Оптовая стоимость сельди резко снизилась",
-      "link": "https://www.kommersant.ru/doc/8194648",
-      "published": "Wed, 12 Nov 2025 02:15:00 +0300",
-      "summary": "За неделю оптовые цены на сельдь в России сократились на 4,2–12,1%, год к году — на 11,5—32,7%. Падение объясняется ростом вылова, формированием складских излишков и сезонным снижением спроса. Но коррекция вряд ли будет долгосрочной. Уже в начале 2026 года стоимость самой популярной в России рыбы снова может начать расти из-за высокого экспортного спроса."
-    },
-    {
-      "source": "Kommersant",
-      "title": "«Озон» отыграл индекс // Бумаги компании вернулись на Мосбиржу по ожидаемой траектории",
-      "link": "https://www.kommersant.ru/doc/8194679",
-      "published": "Wed, 12 Nov 2025 02:15:00 +0300",
-      "summary": "На старте торгов вернувшимися на биржу бумагами «Озона» котировки акций упали на 8%, но по итогам торгов почти вернулись к уровням двухмесячной давности. За это время индекс Московской биржи (MOEX: <a href=\"https://www.kommersant.ru/quotes/ru000a0jr4a1\">MOEX</a>) потерял почти 8%, так что движение цен бумаг «Озона» эксперты называют ожидаемым. Кроме того, компания своевременно поддержала котировки хорошими корпоративными новостями."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Граждане вложились в инвестиции // ИСЖ стало расти быстрее накопительного страхования жизни",
-      "link": "https://www.kommersant.ru/doc/8194560",
-      "published": "Wed, 12 Nov 2025 02:15:00 +0300",
-      "summary": "По итогам января—сентября 2025 года инвестиционное страхование жизни (ИСЖ) показало рост на 93% год к году, впервые за три года обогнав темпы роста накопительного страхования жизни (НСЖ). По словам экспертов, граждане отчасти перестали гнаться за долгосрочной доходностью, которую дает НСЖ, а отчасти стремились приобрести полисы ИСЖ перед отменой этого вида договоров страхования в 2026 году. Впрочем, защитники прав потребителей не исключают активизации навязывания услуг."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Факторинг проставился // Снижение ключевой ставки ЦБ сыграло против доходов факторов",
-      "link": "https://www.kommersant.ru/doc/8194623",
-      "published": "Wed, 12 Nov 2025 02:15:00 +0300",
-      "summary": "Доходы факторинговых компаний показали резкое, на 15%, падение по итогам третьего квартала 2025 года. Тенденция, наметившаяся кварталом ранее, усилилась, в частности, из-за снижения ключевой ставки ЦБ. Доходы факторов, работающих с короткими средствами, сократились при общем снижении стоимости денег в экономике, указывают участники рынка."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Москва протянула ключи // Fizika может выкупить площадку под строительство элитного жилья в центре столицы",
-      "link": "https://www.kommersant.ru/doc/8194642",
-      "published": "Wed, 12 Nov 2025 07:00:00 +0300",
-      "summary": "Негативная рыночная конъюнктура вынуждает девелоперов избавляться от своих активов. Так, Sun Development ведет переговоры о продаже проекта строительства элитного комплекса в центре Москвы с петербургским Fizika Development. Для потенциального покупателя этот проект может стать первым в российской столице."
-    },
-    {
-      "source": "Kommersant",
-      "title": "«Наш главный конкурент — это будущее» // Гендиректор МТС Инесса Галактионова о том, каким будет «Телеком 2.0»",
-      "link": "https://www.kommersant.ru/doc/8193662",
-      "published": "Wed, 12 Nov 2025 00:00:33 +0300",
-      "summary": "В конце 2025 года российский телеком-рынок оказался в уникальной ситуации. С одной стороны, на него давят макроэкономика и геополитика, с другой — перед отраслью стоят задачи, решение которых необходимо для перехода индустрии к новому витку развития. Гендиректор МТС Инесса Галактионова рассказала “Ъ”, почему рынок стал сильнее за последние несколько лет, какие новые точки роста он найдет и почему индустрии предстоит совершить прорыв, чтобы стать опорой новой экономики данных."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Низкий заряд цен // Существенный рост стоимости никеля ожидается только в 2028 году",
-      "link": "https://www.kommersant.ru/doc/8194622",
-      "published": "Wed, 12 Nov 2025 00:00:29 +0300",
-      "summary": "Стоимость никеля, снижающаяся с 2022 года, может восстановиться выше прошлогоднего уровня в $16,8 тыс. за тонну только в 2028 году. На котировки давят перепроизводство этого металла, слабый спрос китайской сталелитейной отрасли и переменчивое отношение производителей электромобилей. Поддержать цены могли бы ограничения производства в Индонезии."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Старший друг лучше новых двух // Это выяснилось поздним вечером в Кремле на встрече Владимира Путина и Касым-Жомарта Токаева",
-      "link": "https://www.kommersant.ru/doc/8194562",
-      "published": "Tue, 11 Nov 2025 22:36:01 +0300",
-      "summary": "11 ноября президент России Владимир Путин принял в Кремле президента Казахстана Касым-Жомарта Токаева, который хотел поговорить с ним как со «старшим товарищем». Специальный корреспондент “Ъ” Андрей Колесников считает, что у него это непременно получится."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Деян Станкович накрикал отставку // «Спартак» уволил скандального тренера",
-      "link": "https://www.kommersant.ru/doc/8194591",
-      "published": "Tue, 11 Nov 2025 21:52:26 +0300",
-      "summary": "В Российской премьер-лиге (РПЛ) состоялась громкая отставка, которая на самом деле, кажется, могла произойти гораздо раньше. Пост главного тренера «Спартака» покинул Деян Станкович. Футбол, намекающий на возможность бороться за ценные призы, команда при нем показывала лишь на коротком отрезке прошлого, дебютного для серба сезона в отечественном футболе. А сам Станкович успел заработать репутацию удивительно скандального наставника, постоянно влипающего из-за своей несдержанности в неприятные истории."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Утильсбор творит историю // Продажи гибридных автомобилей установили абсолютный рекорд",
-      "link": "https://www.kommersant.ru/doc/8194654",
-      "published": "Tue, 11 Nov 2025 21:37:21 +0300",
-      "summary": "Продажи новых гибридных автомобилей в октябре установили абсолютный рекорд, а электромобилей — максимум с мая 2024 года. Спрос подстегнуло ожидание роста цен, в некоторых случаях — на 1,2 млн руб. в связи с изменениями правил расчета утилизационного сбора. Самые конкурентные ценники останутся у местных производителей, считают дилеры. В октябре собираемые в России Voyah и Amberauto уже вышли в лидеры в своих сегментах."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Депутаты позанимались гуманизмом // Госдума снизила возраст ответственности за диверсии не без сомнений, но единогласно",
-      "link": "https://www.kommersant.ru/doc/8194625",
-      "published": "Tue, 11 Nov 2025 21:28:19 +0300",
-      "summary": "Госдума 11 ноября приняла во втором и третьем, окончательном, чтениях закон об ужесточении наказания за диверсионную деятельность и снижении возраста уголовной ответственности за такие преступления с 16 до 14 лет. Как и при рассмотрении в первом чтении, сомнения в целесообразности «омоложения» этих норм выразили только коммунисты, но спикер Вячеслав Володин заверил их, что Дума поступает очень гуманно, препятствуя «затаскиванию ребятишек» в преступное сообщество."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Госдума подправила законопроект об отмене стажировок в МВД",
-      "link": "https://www.kommersant.ru/doc/8194628",
-      "published": "Tue, 11 Nov 2025 21:16:25 +0300",
-      "summary": "Госдума 11 ноября приняла во втором чтении законопроект об отмене стажировки при поступлении на службу в органы внутренних дел. Документ, внесенный группой депутатов и сенаторов, по мнению авторов, должен помочь решению кадровых проблем в МВД."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Лекарству прописали патент // «Аксельфарм» удалось сохранить права на препарат от рака легких",
-      "link": "https://www.kommersant.ru/doc/8194633",
-      "published": "Tue, 11 Nov 2025 21:12:49 +0300",
-      "summary": "Российской компании «Аксельфарм» удалось в суде отстоять свой патент на одну из форм действующего вещества осимертиниба. Это средство применяется при терапии рака легких. Оспорить правовую защиту пыталась «АстраЗенека АБ», владеющая патентом на «Тагриссо» — оригинальный препарат на основе осимертиниба. Госзакупки подобных препаратов с начала 2025 года выросли на 13% год к году, до 5,2 млрд руб."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Сервер без сервиса // Отвечает ли поставщик оборудования за отказ иностранного производителя от техподдержки в РФ",
-      "link": "https://www.kommersant.ru/doc/8194637",
-      "published": "Tue, 11 Nov 2025 21:12:15 +0300",
-      "summary": "Верховный суд (ВС) разберется, кто отвечает за недоступность техподдержки оборудования после ухода зарубежного производителя с российского рынка. Структура IT-холдинга Т1, купившая через дистрибутора сервер Dell, требует от поставщика вернуть 20% от цены контракта, поскольку обещанное техсопровождение от производителя он получить не может: Dell отказалась от обслуживания своей продукции в России. Арбитражные суды отклонили иск, решив, что дистрибутор за это не отвечает. Но доводы покупателя заинтересовали ВС, позиция которого будет важной для всей отрасли, так как условие о техподдержке при поставке IT-оборудования — стандартное."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Всем ПО штрафу // Компаниям грозят оборотные санкции за нежелание переходить на российский софт",
-      "link": "https://www.kommersant.ru/doc/8194626",
-      "published": "Tue, 11 Nov 2025 20:59:11 +0300",
-      "summary": "Для российских компаний, которые не переведут свои значимые объекты критической информационной инфраструктуры на российское ПО к 2028 году, Минцифры готовится ввести оборотные штрафы. Представители отрасли решение поддерживают, но говорят, что сейчас у отечественного софта есть недоработки: по их оценкам, на российское ПО перешли только 40-45% субъектов. При этом узкоспециализированные классы софта пока не замещены, а российские решения иногда оказываются дороже аналогов."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Генпрокурор расписал депутатские взятки // Анатолию Вороновскому за общее покровительство купили квартиру и построили дамбу",
-      "link": "https://www.kommersant.ru/doc/8194561",
-      "published": "Tue, 11 Nov 2025 20:18:12 +0300",
-      "summary": "Генпрокурор Александр Гуцан предоставил Госдуме настолько убедительные доказательства причастности депутата, члена фракции «Единой России» Анатолия Вороновского к коррупции, что снятие с него иммунитета народные избранники поддержали единогласно. В материалах, которые в самое ближайшее время станут основанием для возбуждения уголовного дела о взяточничестве, говорится, что, будучи вице-губернатором Краснодарского края, Анатолий Вороновский получил незаконное вознаграждение в виде трактора, квартиры, а также услуг — ремонта жилья его сына и строительства дамбы на территории семейного имения. Сам депутат, которому грозит арест и до 15 лет заключения, вину отрицает."
-    },
-    {
-      "source": "Kommersant",
-      "title": "На учебу как на отработку // Госдума приняла закон о наставничестве и целевом обучении студентов-медиков",
-      "link": "https://www.kommersant.ru/doc/8194436",
-      "published": "Tue, 11 Nov 2025 19:58:55 +0300",
-      "summary": "Госдума приняла в третьем окончательном чтении закон об обязательных отработках выпускников медицинских вузов и колледжей. В Минздраве, где готовился документ, считают, что поправки помогут решить кадровую проблему в системе здравоохранения. Документ поддержали фракции «Единая Россия» и ЛДПР. «Справедливая Россия» и КПРФ воздержались от поддержки, поскольку не увидели в поправках социальных гарантий для начинающих врачей. Спикер Госдумы Вячеслав Володин заявил, что депутаты ждут от Минздрава предложений по закреплению в законодательстве таких гарантий."
-    },
-    {
-      "source": "Kommersant",
-      "title": "«Лидеры» сообразят на пятерых // Президентский кадровый конкурс станет командным",
-      "link": "https://www.kommersant.ru/doc/8194546",
-      "published": "Tue, 11 Nov 2025 19:30:59 +0300",
-      "summary": "Новый сезон курируемого администрацией президента (АП) кадрового конкурса «Лидеры России» впервые пройдет в командной квалификации — участие в нем примут группы по пять человек. Об этом 11 ноября рассказал первый заместитель руководителя АП Сергей Кириенко. По словам чиновника, новый подход соответствует российским традиционным ценностям."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Больше так не собираться // Алтайским депутатам запретят проводить несогласованные встречи с избирателями",
-      "link": "https://www.kommersant.ru/doc/8194534",
-      "published": "Tue, 11 Nov 2025 19:03:40 +0300",
-      "summary": "Глава Республики Алтай Андрей Турчак («Единая Россия») подготовил законопроект, меняющий порядок проведения встреч депутатов со своими избирателями. В случае одобрения документа народным избранникам придется согласовывать подобные мероприятия с местными властями. Ранее оппозиция использовала формат встреч с избирателями для организации протестов против реформы местного самоуправления (МСУ)."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Настоящий зомби-полковник // В российском прокате показывают фильм «Франкенштейн: Воскрешение»",
-      "link": "https://www.kommersant.ru/doc/8194058",
-      "published": "Tue, 11 Nov 2025 18:23:20 +0300",
-      "summary": "На экранах — фильм Пола Дадбриджа «Франкенштейн: Воскрешение» (Frankenstein: Legacy). Михаил Трофименков, изнывая от скуки, ждал гибели монстра, сотворенного доктором Виктором Франкенштейном из мертвой плоти."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Генералу армии сидеть разрешили // Начался процесс над бывшим замминистра обороны Поповым",
-      "link": "https://www.kommersant.ru/doc/8194412",
-      "published": "Tue, 11 Nov 2025 17:54:15 +0300",
-      "summary": "235-й гарнизонный военный суд приступил в закрытом режиме к рассмотрению уголовного дела бывшего замминистра обороны генерала армии Павла Попова, обвиняемого в хищении средств парка «Патриот», взяточничестве и других преступлениях. Свою вину ни по одному пункту генерал не признал, утверждая, что его оговорили ранее осужденные в особом порядке фигуранты."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Бронезащита не спасла от срока // Осужден предприниматель, поставивший военным некачественные бронежилеты",
-      "link": "https://www.kommersant.ru/doc/8194368",
-      "published": "Tue, 11 Nov 2025 17:24:41 +0300",
-      "summary": "В Москве суд приговорил к девяти годам колонии предпринимателя Андрея Есипова. Он обвинялся в хищении средств Минобороны на сумму 2,4 млрд руб. при поставке 30 тыс. бронежилетов для участников СВО. Защитные средства оказались не соответствующими требованиям, указанным в контракте."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Сирийский лидер зашел не в ту дверь // Ахмед аш-Шараа получил скромный, но многообещающий прием в Белом доме",
-      "link": "https://www.kommersant.ru/doc/8193888",
-      "published": "Tue, 11 Nov 2025 17:14:13 +0300",
-      "summary": "Президент США Дональд Трамп вечером в понедельник, 10 ноября, принял в Вашингтоне лидера переходного периода Сирии Ахмеда аш-Шараа. Этот визит стал первым с тех пор, как ближневосточная страна обрела независимость от Франции в 1946 году. Несмотря на исторический характер встречи, прием сирийского лидера был обставлен скромно. Ахмед аш-Шараа без торжественных церемоний зашел в здание Белого дома с бокового, а не с парадного входа и провел с американским президентом закрытую двухчасовую беседу. Сирии дали новую отсрочку от санкций и разрешили открыть посольство в США, но многое пока упирается в готовность страны к долгосрочному миру с Израилем."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Плотские успехи // Букеровскую премию получил роман «Плоть» Дэвида Солоя",
-      "link": "https://www.kommersant.ru/doc/8194057",
-      "published": "Tue, 11 Nov 2025 16:49:46 +0300",
-      "summary": "Поздно вечером 10 ноября в Лондоне объявили лауреата Букеровской премии — им стал 51-летний венгерско-британский писатель Дэвид Солой за роман «Плоть». Поспешил прочитать лауреата Константин Мильчин."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Соединенные Штаты — Армении // Дональд Трамп-младший проложит «дорогу отца»",
-      "link": "https://www.kommersant.ru/doc/8194307",
-      "published": "Tue, 11 Nov 2025 16:37:35 +0300",
-      "summary": "Сын президента США Дональд Трамп-младший 12 ноября посетит Ереван с визитом, главной темой которого станет строительство армянского участка проекта «Маршрут Трампа во имя международного мира и процветания», призванного соединить основную часть Азербайджана с Нахичеванью. Поездка Трампа-младшего, о которой сообщают региональные СМИ, продолжит девелоперскую дипломатию президента Трампа, пытающегося превратить семейный бизнес компании The Trump Organization в проект создания мультимодального хаба, интегрированного в Средний коридор между Центральной Азией и Европой."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Число выявленных случаев гриппа в России выросло в шесть раз за неделю",
-      "link": "https://www.kommersant.ru/doc/8194324",
-      "published": "Tue, 11 Nov 2025 16:25:08 +0300",
-      "summary": "Количество выявленных случаев гриппа в России за прошедшую неделю увеличилось более чем в шесть раз, сообщил Роспотребнадзор. В ведомстве уточнили, что среди циркулирующих штаммов доминирует грипп A (H3N2).  Одновременно с этим заболеваемость COVID-19 за неделю с 3 по 9 ноября в России снизилась на 22,2%, всего было выявлено 5,6 тыс. случаев.  По данным Роспотребнадзора, на данный момент 59,4 млн россиян сделали прививку от гриппа, что составляет 40,3% населения страны. Вакцинация против гриппа в России стартовала 4 сентября. В этом году, сообщала глава Роспотребнадзора Анна Попова, планируется охватить до 60% населения и не менее 75% россиян, находящихся в группах риска. Для кампании было закуплено более 70 млн доз вакцин, большая часть из них — квадривалентные, то есть защищающие от четырех видов гриппа (двух вирусов типа А и двух типа В).  Полина Мотызлевская"
-    },
-    {
-      "source": "Kommersant",
-      "title": "Верховно-международный // Игорь Краснов решил развивать международные связи судебной системы России",
-      "link": "https://www.kommersant.ru/doc/8194263",
-      "published": "Tue, 11 Nov 2025 16:00:11 +0300",
-      "summary": "Как стало известно “Ъ”, председатель Верховного суда (ВС) Игорь Краснов решил укрепить и развивать международно-правовое сотрудничество судебной системы Российской Федерации. Соответствующее управление ВС возглавил выходец из надзорного ведомства генерал Денис Грунис, являвшийся помощником по особым поручениям господина Краснова в бытность его генпрокурором РФ."
-    },
-    {
-      "source": "Kommersant",
-      "title": "Демократы проявили открытость // Кто выиграл от рекордного шатдауна в США",
-      "link": "https://www.kommersant.ru/doc/8194125",
-      "published": "Tue, 11 Nov 2025 13:55:47 +0300",
-      "summary": "В США в ближайшие дни должна возобновиться работа федерального правительства: после более чем 40 дней самого продолжительного в истории шатдауна Сенат наконец провел решающее техническое, а потом и финальное голосование. Переломную роль в этом сыграла группа из семи демократов-центристов, которые вопреки позиции партийного руководства поддержали республиканский законопроект о финансировании. В то время как республиканцы празднуют тактическую победу, в стане демократов углубляется раскол, что уже привело к призывам поменять руководство партии."
-    },
-    {
-      "source": "Kommersant",
-      "title": "ТЭС вне конкуренции // Инвесторы обновят еще 2,72 ГВт мощностей тепловых электростанций",
-      "link": "https://www.kommersant.ru/doc/8193812",
-      "published": "Tue, 11 Nov 2025 10:19:47 +0300",
-      "summary": "Проекты модернизации старых ТЭС снова столкнулись с низким интересом со стороны рынка. На залповом отборе газовых турбин на 2029–2031 годы при предложении 5 ГВт отобрано всего 1 ГВт, по стандартной программе модернизации ТЭС — 1,72 ГВт из 2 ГВт. Причиной слабой конкуренции могут быть не устроившие инвесторов ценовые параметры, финансовые проблемы генерирующих компаний и низкая цена конкурентного отбора мощности (КОМ), не обеспечивающая приток инвестиций, считают аналитики."
     },
     {
       "source": "RT Russia",
