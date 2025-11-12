@@ -1,7 +1,7 @@
 {
   "date": "2025-11-12",
-  "generated_at": "2025-11-12T10:22:35.092609",
-  "total_articles_scanned": 305,
+  "generated_at": "2025-11-12T10:48:16.632560",
+  "total_articles_scanned": 304,
   "trending_stories": [
     {
       "keyword": "ukraine",
@@ -11,31 +11,59 @@
       "articles": [
         {
           "source": "TASS",
-          "title": "IN BRIEF: Operation Midas, Mindich tapes: what we know about corruption scandal in Ukraine",
-          "link": "https://tass.com/world/2042925",
-          "published": "Wed, 12 Nov 2025 20:51:04 +0300",
-          "summary": "Five people have been detained, NABU said"
+          "title": "Ukraine, Russia to pore over memoranda exchanged at talks — Foreign Ministry",
+          "link": "https://tass.com/politics/1968329",
+          "published": "Wed, 04 Jun 2025 14:21:03 +0300",
+          "summary": "\"As agreed on May 16, the Russian side handed over to the Ukrainian delegation a detailed two-part memorandum outlining its position on ways to achieve long-term peace and a possible full-fledged ceasefire,\" Maria Zakharova said"
         },
         {
           "source": "TASS",
-          "title": "Antibiotic-resistant super bacteria in Ukraine pose threat to Europe — article",
-          "link": "https://tass.com/science/2042903",
-          "published": "Wed, 12 Nov 2025 19:53:09 +0300",
-          "summary": "Henry Skinner referred to a study by researchers from Ukraine’s Sumy State University, which showed that \"85% of infections they examined among injured Ukrainian combatants were caused by bacteria that were resistant to multiple types of antibiotics\""
+          "title": "Russia, Ukraine to agree on date of new round of talks after memorandums are studied",
+          "link": "https://tass.com/politics/1968333",
+          "published": "Wed, 04 Jun 2025 14:20:34 +0300",
+          "summary": "\"It will take some time to examine the draft memorandums that have been exchanged,\" Dmitry Peskov said"
         },
         {
           "source": "TASS",
-          "title": "London, Brussels pushing US to abandon diplomacy in Ukraine conflict — Russian MFA",
-          "link": "https://tass.com/politics/2042833",
-          "published": "Wed, 12 Nov 2025 17:44:27 +0300",
-          "summary": "According to Alexey Polishchuk, mutually acceptable agreements on the terms for resolving the crisis around Ukraine - with compromises made - were reached during the Russian-US summit in Alaska on August 15"
+          "title": "Frequency of meetings on Ukraine talks can’t be strictly standardized — Kremlin",
+          "link": "https://tass.com/politics/1968321",
+          "published": "Wed, 04 Jun 2025 14:12:19 +0300",
+          "summary": "\"Contacts are underway and in the course of them suitable timeframes will be discussed,\" Dmitry Peskov added"
         },
         {
           "source": "TASS",
-          "title": "Canada blacklists 13 individuals, 11 entities as part of sanctions on Russia",
-          "link": "https://tass.com/economy/2042697",
-          "published": "Wed, 12 Nov 2025 17:00:49 +0300",
-          "summary": "According to the statement, \"Anita Anand, Minister of Foreign Affairs, today announced that Canada is imposing additional sanctions\" on Russia over the conflict in Ukraine"
+          "title": "Poland's capacity to deliver arms to Ukraine heavily constrained — paper",
+          "link": "https://tass.com/world/1968271",
+          "published": "Wed, 04 Jun 2025 13:22:26 +0300",
+          "summary": "According to Head of the country’s intelligence agency Dariusz Lukowski, Poland supplied weapons and military equipment worth about €5 billion to Ukraine"
+        },
+        {
+          "source": "TASS",
+          "title": "Russia not interested in arms race with Europe, European Parliament member says",
+          "link": "https://tass.com/world/1968241",
+          "published": "Wed, 04 Jun 2025 13:02:43 +0300",
+          "summary": "Fernand Kartheiser described Russia’s approach to resolving the conflict in Ukraine as \"strategic patience\""
+        },
+        {
+          "source": "TASS",
+          "title": "More than 20 children return to Lugansk People’s Republic from Ukraine in two years",
+          "link": "https://tass.com/politics/1968233",
+          "published": "Wed, 04 Jun 2025 12:48:56 +0300",
+          "summary": "The LPR children’s rights commissioner Inna Shvenk noted that most commonly, children were separated from their legal representatives during evacuation from combat zones"
+        },
+        {
+          "source": "TASS",
+          "title": "Ukraine's NATO membership off the table at upcoming The Hague summit — news agency",
+          "link": "https://tass.com/world/1968165",
+          "published": "Wed, 04 Jun 2025 10:32:06 +0300",
+          "summary": "The alliance does not intend to make \"any new financial commitments\" to support Ukraine"
+        },
+        {
+          "source": "RT",
+          "title": "No desire to listen – Kremlin on failed UK talks",
+          "link": "https://www.rt.com/news/627687-uk-russia-contact-failed-kremlin/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 12 Nov 2025 18:26:01 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914c9d020302772a64ddbe6.jpg\" style=\"margin-right: 10px;\" /> London ignored Moscow’s position on Ukraine during an attempt to reopen dialogue earlier this year, spokesman Dmitry Peskov has said <br /><a href=\"https://www.rt.com/news/627687-uk-russia-contact-failed-kremlin/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
           "source": "RT",
@@ -50,56 +78,35 @@
           "link": "https://www.rt.com/russia/627686-ukraine-leadership-corruption-scandal-ministers-resign/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Wed, 12 Nov 2025 16:27:48 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914b2c285f5402c6e5e38bc.jpg\" style=\"margin-right: 10px;\" /> A major corruption scheme within Ukraine’s energy sector, involving one of Vladimir Zelensky’s associates, has seen two ministers resign <br /><a href=\"https://www.rt.com/russia/627686-ukraine-leadership-corruption-scandal-ministers-resign/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "Poland will not put Ukraine’s interests above its own – president",
-          "link": "https://www.rt.com/news/627672-poland-ukraine-hostage-interests/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 12 Nov 2025 14:48:31 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914734e85f5401b840a21a6.jpg\" style=\"margin-right: 10px;\" /> Poland will not become a “hostage” to its relationship with Ukraine, President Karol Nawrocki has said <br /><a href=\"https://www.rt.com/news/627672-poland-ukraine-hostage-interests/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "Germany to funnel more cash into Ukraine’s corruption-plagued energy sector",
-          "link": "https://www.rt.com/news/627681-germany-aid-ukraine-energy-sector-corruption/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 12 Nov 2025 14:47:43 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914918885f5403d8028c984.jpg\" style=\"margin-right: 10px;\" /> Germany has pledged €40 million more in aid for Ukraine’s energy sector, where a major corruption scandal recently erupted <br /><a href=\"https://www.rt.com/news/627681-germany-aid-ukraine-energy-sector-corruption/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "Ukrainian civilian opens fire on draft squad – media (VIDEO)",
-          "link": "https://www.rt.com/russia/627669-ukraine-mobilization-shooting/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 12 Nov 2025 12:43:21 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914805520302735a55012f5.jpg\" style=\"margin-right: 10px;\" /> A Ukrainian man facing forced conscription has reportedly shot and wounded two draft officers <br /><a href=\"https://www.rt.com/russia/627669-ukraine-mobilization-shooting/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "Britain needs war: Why London can’t afford peace in Ukraine",
-          "link": "https://www.rt.com/news/627673-britain-needs-war-in-ukraine/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 12 Nov 2025 12:23:00 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69147c0f85f5403c851a585b.jpg\" style=\"margin-right: 10px;\" /> The UK’s power machine runs on war, and conflict in Eastern Europe is its new fuel <br /><a href=\"https://www.rt.com/news/627673-britain-needs-war-in-ukraine/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     },
     {
       "keyword": "trump",
       "source_count": 5,
-      "tfidf_score": 0.8298,
-      "combined_score": 4.1491,
+      "tfidf_score": 0.8115,
+      "combined_score": 4.0574,
       "articles": [
         {
           "source": "TASS",
-          "title": "Pentagon chief says US freeing Panama Canal from 'malign Chinese influence'",
-          "link": "https://tass.com/world/2042889",
-          "published": "Wed, 12 Nov 2025 19:25:35 +0300",
-          "summary": "US President Donald Trump has repeatedly stated his intention to regain control of the Panama Canal"
+          "title": "Trump slams use of Biden’s autopen as one of biggest scandals in American history",
+          "link": "https://tass.com/world/1968205",
+          "published": "Wed, 04 Jun 2025 12:06:56 +0300",
+          "summary": "According to the US Congress, four White House officials were identified to have used an autopen to sign documents on Biden’s behalf"
         },
         {
           "source": "TASS",
-          "title": "Construction of 'Trump route' to begin in second half of 2026 — Armenian PM",
-          "link": "https://tass.com/world/2042815",
-          "published": "Wed, 12 Nov 2025 17:42:39 +0300",
-          "summary": "Nikol Pashinyan said that Armenia will do its best to ensure that there are no delays, and everything is completed on time"
+          "title": "Zelensky likely to be invited to NATO summit but excluded from working meetings — agency",
+          "link": "https://tass.com/world/1968197",
+          "published": "Wed, 04 Jun 2025 11:51:21 +0300",
+          "summary": "The source added that most of the alliance’s member states one way or another insist that Vladimir Zelensky should be present in the Hague but no one wants to upset Donald Trump"
+        },
+        {
+          "source": "TASS",
+          "title": "Trump says 'always liked' Xi Jinping, but dealing with him 'extremely hard'",
+          "link": "https://tass.com/world/1968189",
+          "published": "Wed, 04 Jun 2025 11:26:36 +0300",
+          "summary": "On June 2, the White House said that Trump and Xi Jinping might have a telephone conversation this week"
         },
         {
           "source": "RT",
@@ -149,120 +156,77 @@
           "link": "https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Mon, 10 Nov 2025 22:17:02 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912644485f5400eec4dadff.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has hailed Syria’s new leader, Ahmad al-Sharaa, after hosting him in the White House <br /><a href=\"https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "‘Woke pro-trans’ BBC staff rebel – media",
-          "link": "https://www.rt.com/news/627593-woke-pro-trans-bbc-staff-rebel/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 21:15:21 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691252e72030277df619ce6c.jpg\" style=\"margin-right: 10px;\" /> The broadcaster’s staff are reportedly in a “civil war” against its management after the latter admitted to doctoring a Trump documentary <br /><a href=\"https://www.rt.com/news/627593-woke-pro-trans-bbc-staff-rebel/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        }
-      ]
-    },
-    {
-      "keyword": "sanctions",
-      "source_count": 5,
-      "tfidf_score": 0.7237,
-      "combined_score": 3.6183,
-      "articles": [
-        {
-          "source": "TASS",
-          "title": "Sanctions, reckless use of force hinder global development — Russian senator",
-          "link": "https://tass.com/politics/2042801",
-          "published": "Wed, 12 Nov 2025 17:41:02 +0300",
-          "summary": "Konstantin Kosachev believes that creating equal conditions for the development of all members of the international community is integral to ensuring global security"
-        },
-        {
-          "source": "TASS",
-          "title": "Japanese PM should meet with Putin, restore relations with Russia — lawmaker",
-          "link": "https://tass.com/world/2042777",
-          "published": "Wed, 12 Nov 2025 17:37:10 +0300",
-          "summary": "Shoji Nishida pointed out that when most of Japan joined the Western push against Moscow, he opposed sanctions"
-        },
-        {
-          "source": "TASS",
-          "title": "Canada blacklists 13 individuals, 11 entities as part of sanctions on Russia",
-          "link": "https://tass.com/economy/2042697",
-          "published": "Wed, 12 Nov 2025 17:00:49 +0300",
-          "summary": "According to the statement, \"Anita Anand, Minister of Foreign Affairs, today announced that Canada is imposing additional sanctions\" on Russia over the conflict in Ukraine"
-        },
-        {
-          "source": "RT",
-          "title": "A ‘historic’ visit wrapped in old distrust: The harsh truth about Syria’s White House moment",
-          "link": "https://www.rt.com/news/627675-historic-visit-old-distrust/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 12 Nov 2025 16:47:05 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914863785f54006e4071802.jpg\" style=\"margin-right: 10px;\" /> Al-Sharaa’s visit to Washington was hailed as historic – yet behind the smiles lie sanctions, red lines, and a fragile balance of power <br /><a href=\"https://www.rt.com/news/627675-historic-visit-old-distrust/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "US extends pause on Syria sanctions",
-          "link": "https://www.rt.com/news/627591-us-extend-pause-syria-sanctions/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 20:33:43 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69124bfd2030270c560c1b87.jpg\" style=\"margin-right: 10px;\" /> Washington has extended a waiver on comprehensive sanctions against Syria for another 180 days <br /><a href=\"https://www.rt.com/news/627591-us-extend-pause-syria-sanctions/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Business",
-          "title": "Blocking Russian asset sale could trigger oil supply crisis – trader",
-          "link": "https://www.rt.com/business/627356-lukoil-gunvor-deal/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 05 Nov 2025 12:07:45 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690b3a8385f54056e9723506.jpg\" style=\"margin-right: 10px;\" /> Lukoil has moved to sell its overseas assets to the Swiss-based trader following the latest US sanctions <br /><a href=\"https://www.rt.com/business/627356-lukoil-gunvor-deal/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Business",
-          "title": "EU nation limits fuel exports to bloc members amid Lukoil sanctions",
-          "link": "https://www.rt.com/business/627229-bulgaria-lukoil-restriction-fuel-exports/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sat, 01 Nov 2025 15:44:47 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690605e72030272fc421e577.jpg\" style=\"margin-right: 10px;\" /> Bulgaria has partly restricted fuel exports to EU states after US sanctions on Russia’s Lukoil triggered security and supply concerns <br /><a href=\"https://www.rt.com/business/627229-bulgaria-lukoil-restriction-fuel-exports/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Business",
-          "title": "Italian firms to lose €140 million from toilet sanctions on Russia – union chief",
-          "link": "https://www.rt.com/business/627084-italy-losses-russia-toilet-ban/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 29 Oct 2025 00:21:59 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/69015dac20302711896822b3.jpg\" style=\"margin-right: 10px;\" /> Italian companies will suffer major losses from the ban on exporting toilets to Russia, according to a regional union chief <br /><a href=\"https://www.rt.com/business/627084-italy-losses-russia-toilet-ban/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Business",
-          "title": "Sanctioned Russian oil giant to sell foreign assets",
-          "link": "https://www.rt.com/business/627072-us-sanctions-lukoil-business/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 28 Oct 2025 20:10:29 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/6901109e85f5404bb932a7ae.jpg\" style=\"margin-right: 10px;\" /> Sanctioned Russian oil producer Lukoil has announced the sale of its international assets under a US wind-down license <br /><a href=\"https://www.rt.com/business/627072-us-sanctions-lukoil-business/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Business",
-          "title": "How Washington’s crusade against Russian oil went sideways",
-          "link": "https://www.rt.com/business/626930-washingtons-crusade-against-russian-oil/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Fri, 24 Oct 2025 19:28:27 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68fbc12b85f54036752b48b6.jpg\" style=\"margin-right: 10px;\" /> The US failed to woo India away from Russian oil, so it reached for its favorite weapon: sanctions. But coercion comes with a price. <br /><a href=\"https://www.rt.com/business/626930-washingtons-crusade-against-russian-oil/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     },
     {
       "keyword": "ukrainian",
       "source_count": 5,
-      "tfidf_score": 0.6972,
-      "combined_score": 3.4862,
+      "tfidf_score": 0.7663,
+      "combined_score": 3.8314,
       "articles": [
         {
           "source": "TASS",
-          "title": "Kiev officially halts peace talks with Moscow — Ukrainian Foreign Ministry",
-          "link": "https://tass.com/world/2042933",
-          "published": "Wed, 12 Nov 2025 21:02:20 +0300",
-          "summary": "\"Since the peace talks ended this year without significant progress, they were halted,\" Sergey Kislitsa said"
+          "title": "Ukraine, Russia to pore over memoranda exchanged at talks — Foreign Ministry",
+          "link": "https://tass.com/politics/1968329",
+          "published": "Wed, 04 Jun 2025 14:21:03 +0300",
+          "summary": "\"As agreed on May 16, the Russian side handed over to the Ukrainian delegation a detailed two-part memorandum outlining its position on ways to achieve long-term peace and a possible full-fledged ceasefire,\" Maria Zakharova said"
         },
         {
           "source": "TASS",
-          "title": "Antibiotic-resistant super bacteria in Ukraine pose threat to Europe — article",
-          "link": "https://tass.com/science/2042903",
-          "published": "Wed, 12 Nov 2025 19:53:09 +0300",
-          "summary": "Henry Skinner referred to a study by researchers from Ukraine’s Sumy State University, which showed that \"85% of infections they examined among injured Ukrainian combatants were caused by bacteria that were resistant to multiple types of antibiotics\""
+          "title": "Russia takes measures proceeding from Kiev’s attacks on peaceful facilities — Kremlin",
+          "link": "https://tass.com/politics/1968289",
+          "published": "Wed, 04 Jun 2025 13:34:27 +0300",
+          "summary": "Having lost the initiative on the battlefield, Ukrainian servicemen resorted to terrorist tactics, attempting to attack deep within Russia with drones"
         },
         {
           "source": "TASS",
-          "title": "Kiev loses 1,150 troops along engagement line in past day — Russia’s top brass",
-          "link": "https://tass.com/politics/2042673",
-          "published": "Wed, 12 Nov 2025 16:56:42 +0300",
-          "summary": "Russian forces struck energy and transport infrastructure facilities used to support the Ukrainian army’s operations and troop deployment areas over the past 24 hours, the ministry reported"
+          "title": "Ukrainian army attacks Russia’s borderline Belgorod Region with over 70 UAVs in 24 hours",
+          "link": "https://tass.com/politics/1968231",
+          "published": "Wed, 04 Jun 2025 12:44:23 +0300",
+          "summary": "In the village of Afonyevka, an 18-year-old young man suffered injuries"
+        },
+        {
+          "source": "TASS",
+          "title": "Rada approves final changes to laws for US minerals deal",
+          "link": "https://tass.com/world/1968223",
+          "published": "Wed, 04 Jun 2025 12:36:51 +0300",
+          "summary": "On May 8, the Ukrainian parliament ratified the document, and on May 12, Vladimir Zelensky approved the ratification"
+        },
+        {
+          "source": "TASS",
+          "title": "Zelensky's office to procrastinate in talks for fear of armed radicals — expert",
+          "link": "https://tass.com/world/1968207",
+          "published": "Wed, 04 Jun 2025 12:10:41 +0300",
+          "summary": "Both ceasefire options proposed by Russia in their memorandum are expected to encounter resistance from Ukrainian political and military structures that benefit from ongoing hostilities - both domestically and in Europe"
+        },
+        {
+          "source": "TASS",
+          "title": "Russia uses Lancet loitering munition in protecting Crimea, destroying unmanned boats",
+          "link": "https://tass.com/politics/1968183",
+          "published": "Wed, 04 Jun 2025 11:07:48 +0300",
+          "summary": "Russian troops disabled a Ukrainian crewless boat Magura V7 with the help of a ZALA Lancet reconnaissance and strike system"
+        },
+        {
+          "source": "TASS",
+          "title": "Russian troops suppress Ukrainian gun emplacements by combat drones near Dzerzhinsk",
+          "link": "https://tass.com/politics/1968177",
+          "published": "Wed, 04 Jun 2025 10:52:43 +0300",
+          "summary": "The coordinated effort by the Russian personnel allowed assault units to move forward in that frontline area"
+        },
+        {
+          "source": "TASS",
+          "title": "Ukrainian attacks kill over 320 children, injure almost 1,250 in DPR, LPR since 2014",
+          "link": "https://tass.com/politics/1968159",
+          "published": "Wed, 04 Jun 2025 10:17:10 +0300",
+          "summary": "\"A total of 247 children were killed and 1,012 were injured during Ukrainian aggression in the Donetsk People’s Republic since 2014,\" DPR acting head Denis Pushilin stated"
+        },
+        {
+          "source": "TASS",
+          "title": "Russian troops breach Ukrainian defenses near Redkodub in Donetsk region — military expert",
+          "link": "https://tass.com/politics/1968149",
+          "published": "Wed, 04 Jun 2025 09:55:29 +0300",
+          "summary": "The Ukrainian military did not expect such a swift advance by Russian forces and did not properly prepare the second and third defensive lines, Andrey Marochko said"
         },
         {
           "source": "RT",
@@ -270,77 +234,35 @@
           "link": "https://www.rt.com/russia/627684-rick-sanchez-ukraine-corruption/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Wed, 12 Nov 2025 18:07:08 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914cc4d2030275cd217f51f.jpg\" style=\"margin-right: 10px;\" /> A close ally of the Ukrainian leader is the target of a major graft probe that reportedly involves the FBI <br /><a href=\"https://www.rt.com/russia/627684-rick-sanchez-ukraine-corruption/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "Russian forces continue advance on encircled city in Donbass – MOD",
-          "link": "https://www.rt.com/russia/627683-pokrovsk-kupyansk-advance-update/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 12 Nov 2025 15:48:43 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914ac3c85f54047e43f5580.jpg\" style=\"margin-right: 10px;\" /> The Russian military has made new gains to the south of Mirnograd, advancing on the encircled Ukrainian-held Donbass city <br /><a href=\"https://www.rt.com/russia/627683-pokrovsk-kupyansk-advance-update/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "Ukrainian civilian opens fire on draft squad – media (VIDEO)",
-          "link": "https://www.rt.com/russia/627669-ukraine-mobilization-shooting/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 12 Nov 2025 12:43:21 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914805520302735a55012f5.jpg\" style=\"margin-right: 10px;\" /> A Ukrainian man facing forced conscription has reportedly shot and wounded two draft officers <br /><a href=\"https://www.rt.com/russia/627669-ukraine-mobilization-shooting/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "Ukraine’s justice minister suspended in graft probe tied to Zelensky associate",
-          "link": "https://www.rt.com/russia/627662-ukrainian-minister-suspended-mindich/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 12 Nov 2025 09:34:16 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69143f3385f5403bef022bfe.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s Justice Minister German Galushchenko has been suspended over alleged corruption links tied to an associate of Vladimir Zelensky <br /><a href=\"https://www.rt.com/russia/627662-ukrainian-minister-suspended-mindich/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "Experts begged Kiev to pull troops out of encircled stronghold – FT",
-          "link": "https://www.rt.com/russia/627649-ukraine-troop-withdrawal-demand/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 17:50:15 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913759585f5403b5f42e936.jpg\" style=\"margin-right: 10px;\" /> Ukrainian experts and civil groups have urged Kiev to withdraw from encircled cities, warning of manpower shortages and command failures <br /><a href=\"https://www.rt.com/russia/627649-ukraine-troop-withdrawal-demand/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Spike in Ukrainian males entering EU – Eurostat",
-          "link": "https://www.rt.com/news/627594-eu-spike-ukrainian-men/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 06:24:42 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912fd7d85f5403126432e7b.jpg\" style=\"margin-right: 10px;\" /> The number of adult males granted temporary protection in the bloc increased by almost half month-on-month in September <br /><a href=\"https://www.rt.com/news/627594-eu-spike-ukrainian-men/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Ukrainians lose food assistance in US",
-          "link": "https://www.rt.com/news/627584-ukraine-us-food-assistance/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 15:51:07 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912099e85f54032626c8791.jpg\" style=\"margin-right: 10px;\" /> Ukrainians in the US have lost access to food aid after the Trump administration reduced eligibility for SNAP benefits <br /><a href=\"https://www.rt.com/news/627584-ukraine-us-food-assistance/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     },
     {
       "keyword": "kiev",
       "source_count": 4,
-      "tfidf_score": 0.6516,
-      "combined_score": 2.6063,
+      "tfidf_score": 0.6075,
+      "combined_score": 2.4301,
       "articles": [
         {
           "source": "TASS",
-          "title": "Kiev officially halts peace talks with Moscow — Ukrainian Foreign Ministry",
-          "link": "https://tass.com/world/2042933",
-          "published": "Wed, 12 Nov 2025 21:02:20 +0300",
-          "summary": "\"Since the peace talks ended this year without significant progress, they were halted,\" Sergey Kislitsa said"
+          "title": "Russia takes measures proceeding from Kiev’s attacks on peaceful facilities — Kremlin",
+          "link": "https://tass.com/politics/1968289",
+          "published": "Wed, 04 Jun 2025 13:34:27 +0300",
+          "summary": "Having lost the initiative on the battlefield, Ukrainian servicemen resorted to terrorist tactics, attempting to attack deep within Russia with drones"
         },
         {
           "source": "TASS",
-          "title": "Kiev continues to attack civilian energy infrastructure including CPC — Kremlin",
-          "link": "https://tass.com/politics/2042875",
-          "published": "Wed, 12 Nov 2025 18:54:42 +0300",
-          "summary": "The Kazakh Foreign Ministry said earlier that Astana had conveyed its concerns about those attacks to Kiev"
+          "title": "Crimean bridge unaffected by Kiev’s attack, Kremlin spokesman says",
+          "link": "https://tass.com/politics/1968275",
+          "published": "Wed, 04 Jun 2025 13:26:52 +0300",
+          "summary": "According to Dmitry Peskov, the bridge is operational"
         },
         {
           "source": "TASS",
-          "title": "Kiev loses 1,150 troops along engagement line in past day — Russia’s top brass",
-          "link": "https://tass.com/politics/2042673",
-          "published": "Wed, 12 Nov 2025 16:56:42 +0300",
-          "summary": "Russian forces struck energy and transport infrastructure facilities used to support the Ukrainian army’s operations and troop deployment areas over the past 24 hours, the ministry reported"
+          "title": "Press review: Kiev’s terrorist acts risk derailing talks as NATO expands Arctic footprint",
+          "link": "https://tass.com/pressreview/1968153",
+          "published": "Wed, 04 Jun 2025 13:00:01 +0300",
+          "summary": "Top stories from the Russian press on Wednesday, June 4th"
         },
         {
           "source": "RT",
@@ -364,40 +286,40 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913759585f5403b5f42e936.jpg\" style=\"margin-right: 10px;\" /> Ukrainian experts and civil groups have urged Kiev to withdraw from encircled cities, warning of manpower shortages and command failures <br /><a href=\"https://www.rt.com/russia/627649-ukraine-troop-withdrawal-demand/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
-          "source": "RT Business",
-          "title": "EU could sue member states defying Kiev trade deal – Politico",
-          "link": "https://www.rt.com/business/627197-eu-ukraine-trade-pact/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Fri, 31 Oct 2025 15:52:57 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/6904cdee20302730126e1198.jpg\" style=\"margin-right: 10px;\" /> The European Commission could reportedly take legal action against Poland, Slovakia and Hungary for defying the EU’s trade deal with Ukraine <br /><a href=\"https://www.rt.com/business/627197-eu-ukraine-trade-pact/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+          "source": "RT Russia",
+          "title": "Kiev treats conscripts like cannon fodder – POW",
+          "link": "https://www.rt.com/russia/627596-kiev-treat-people-cannon-fodder/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 23:57:38 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691263e685f540321b4b522f.png\" style=\"margin-right: 10px;\" /> Ukrainian draft officials use violence to force conscripts to go to the front line, a captured soldier told the Russian military <br /><a href=\"https://www.rt.com/russia/627596-kiev-treat-people-cannon-fodder/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
-          "source": "RT Business",
-          "title": "Poland extends ban on Ukrainian food imports",
-          "link": "https://www.rt.com/business/627151-poland-ban-eu-ukraine-food/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Thu, 30 Oct 2025 15:09:26 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/69036831203027389131b841.jpg\" style=\"margin-right: 10px;\" /> Poland has extended a ban on Ukrainian food imports to protect local farmers, despite a new EU free trade agreement with Kiev <br /><a href=\"https://www.rt.com/business/627151-poland-ban-eu-ukraine-food/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+          "source": "RT Russia",
+          "title": "Ukrainian porn ban costing Kiev millions in tax revenues – MP",
+          "link": "https://www.rt.com/russia/627475-ukrainian-porn-millions-tax-revenue/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Fri, 07 Nov 2025 17:02:11 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e160c2030272f0d1309f0.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s ban on adult content is discouraging OnlyFans models from paying taxes, MP Daniil Getmantsev has claimed <br /><a href=\"https://www.rt.com/russia/627475-ukrainian-porn-millions-tax-revenue/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
-          "source": "RT Business",
-          "title": "IMF pushes Kiev to weaken currency – Bloomberg",
-          "link": "https://www.rt.com/business/626654-ukraine-imf-devalue-hryvnia/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sat, 18 Oct 2025 15:10:23 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f394f385f540508e1e75a2.jpg\" style=\"margin-right: 10px;\" /> The IMF is reportedly pressuring Ukraine to devalue the hryvnia to secure a new loan <br /><a href=\"https://www.rt.com/business/626654-ukraine-imf-devalue-hryvnia/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+          "source": "RT Russia",
+          "title": "Russia commemorates liberation of Kiev from Nazis",
+          "link": "https://www.rt.com/russia/627441-kiev-nazi-liberation-anniversary/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 06 Nov 2025 22:26:40 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690d20372030273db23b1c14.jpg\" style=\"margin-right: 10px;\" /> Russia commemorated the 82nd anniversary of the Red Army’s liberation of Kiev from Nazi forces on Thursday <br /><a href=\"https://www.rt.com/russia/627441-kiev-nazi-liberation-anniversary/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
-          "source": "RT Business",
-          "title": "Ukraine has lost 60% of gas output – Bloomberg",
-          "link": "https://www.rt.com/business/626140-ukraine-gas-emergency-bloomberg/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Thu, 09 Oct 2025 16:24:23 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68e7c21020302731fd560944.jpg\" style=\"margin-right: 10px;\" /> Kiev will need over $2 billion in emergency gas imports to avert a winter energy crisis, Bloomberg has claimed <br /><a href=\"https://www.rt.com/business/626140-ukraine-gas-emergency-bloomberg/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+          "source": "RT Russia",
+          "title": "Complaints about ‘illegal’ Ukrainian mobilization double – ombudsman",
+          "link": "https://www.rt.com/russia/627406-ukraine-mobilization-complaints-ombudsman/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 06 Nov 2025 09:35:18 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c4ae985f54035e0396a56.jpg\" style=\"margin-right: 10px;\" /> Ukrainians reported Kiev’s notorious press gangs nearly 5,000 times this year, Dmitry Lubinets has said <br /><a href=\"https://www.rt.com/russia/627406-ukraine-mobilization-complaints-ombudsman/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     },
     {
       "keyword": "reportedly",
       "source_count": 4,
-      "tfidf_score": 0.639,
-      "combined_score": 2.5562,
+      "tfidf_score": 0.6033,
+      "combined_score": 2.4131,
       "articles": [
         {
           "source": "RT",
@@ -472,123 +394,17 @@
       ]
     },
     {
-      "keyword": "donald trump",
-      "source_count": 5,
-      "tfidf_score": 0.469,
-      "combined_score": 2.345,
+      "keyword": "sanctions",
+      "source_count": 4,
+      "tfidf_score": 0.6022,
+      "combined_score": 2.4089,
       "articles": [
         {
-          "source": "TASS",
-          "title": "Pentagon chief says US freeing Panama Canal from 'malign Chinese influence'",
-          "link": "https://tass.com/world/2042889",
-          "published": "Wed, 12 Nov 2025 19:25:35 +0300",
-          "summary": "US President Donald Trump has repeatedly stated his intention to regain control of the Panama Canal"
-        },
-        {
           "source": "RT",
-          "title": "Trump requests pardon for Netanyahu",
-          "link": "https://www.rt.com/news/627676-trump-israel-netanyahu-pardon/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 12 Nov 2025 15:30:33 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914939c85f54047e43f5573.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has urged the Israeli government to pardon Prime Minister Benjamin Netanyahu in his corruption case <br /><a href=\"https://www.rt.com/news/627676-trump-israel-netanyahu-pardon/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT",
-          "title": "‘TRUMP’ party launches in EU state",
-          "link": "https://www.rt.com/news/627618-belgium-new-party-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 14:20:25 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914501185f5401b840a2193.jpg\" style=\"margin-right: 10px;\" /> A new right-wing party named after US President Donald Trump has been launched in Belgium <br /><a href=\"https://www.rt.com/news/627618-belgium-new-party-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump threatens to sue BBC for $1 billion",
-          "link": "https://www.rt.com/news/627622-trump-sue-bbc/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 11:18:07 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913294185f540362666c707.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has reportedly threatened to sue the BBC for $1 billion amid a scandal over unethical edits of a speech <br /><a href=\"https://www.rt.com/news/627622-trump-sue-bbc/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump warns of ‘catastrophe’ if tariffs scrapped",
-          "link": "https://www.rt.com/news/627600-trump-warning-us-catastrophe/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 08:08:12 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912eec6203027393d4b547d.jpg\" style=\"margin-right: 10px;\" /> The US would have to pay back $2 trillion to foreign partners if tariffs are ruled illegal, President Donald Trump has warned <br /><a href=\"https://www.rt.com/news/627600-trump-warning-us-catastrophe/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump praises Syria’s ‘tough-guy’ leader after White House visit",
-          "link": "https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 22:17:02 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912644485f5400eec4dadff.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has hailed Syria’s new leader, Ahmad al-Sharaa, after hosting him in the White House <br /><a href=\"https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "Trump accuses BBC of election meddling",
-          "link": "https://www.rt.com/news/627549-trump-bbc-election-meddling/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sun, 09 Nov 2025 23:30:31 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911aacc85f5401d1d43a5da.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has accused the BBC of manipulating public perception ahead of the 2024 US election <br /><a href=\"https://www.rt.com/news/627549-trump-bbc-election-meddling/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Business",
-          "title": "China overtakes US as Germany’s top trading partner – Reuters",
-          "link": "https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Thu, 23 Oct 2025 11:09:48 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f9f78d85f54017c07030c2.jpg\" style=\"margin-right: 10px;\" /> US tariffs under President Donald Trump have weighed on German exports to the US <br /><a href=\"https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Business",
-          "title": "Beijing vows to ‘fight to the end’ in trade war with US",
-          "link": "https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 14 Oct 2025 14:52:14 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68ee64fb85f540698a1b21cc.jpg\" style=\"margin-right: 10px;\" /> Donald Trump has threatened to impose extra 100% tariffs on all Chinese goods <br /><a href=\"https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT Russia",
-          "title": "US has not elaborated on nuclear test plans – Lavrov",
-          "link": "https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sat, 08 Nov 2025 20:51:25 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690fa9b920302729cf09ecc1.jpg\" style=\"margin-right: 10px;\" /> Moscow has said it had not received any clarifications from Washington about nuclear tests ordered by President Donald Trump <br /><a href=\"https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        }
-      ]
-    },
-    {
-      "keyword": "against",
-      "source_count": 5,
-      "tfidf_score": 0.453,
-      "combined_score": 2.2649,
-      "articles": [
-        {
-          "source": "TASS",
-          "title": "US didn't push back against Moscow’s territorial claims at Alaska summit — Russian MFA",
-          "link": "https://tass.com/politics/2042901",
-          "published": "Wed, 12 Nov 2025 19:50:45 +0300",
-          "summary": "Alexey Polishchuk also emphasized the need to remember that \"the territorial issue is part of the settlement package\""
-        },
-        {
-          "source": "TASS",
-          "title": "Kazakhstan, Russia oppose discrimination against athletes, scientists, cultural figures",
-          "link": "https://tass.com/society/2042855",
-          "published": "Wed, 12 Nov 2025 18:18:33 +0300",
-          "summary": "The declaration notes that the countries \"will jointly advocate for the development of an open and respectful intercultural dialogue that excludes discrimination\""
-        },
-        {
-          "source": "TASS",
-          "title": "Japanese PM should meet with Putin, restore relations with Russia — lawmaker",
-          "link": "https://tass.com/world/2042777",
-          "published": "Wed, 12 Nov 2025 17:37:10 +0300",
-          "summary": "Shoji Nishida pointed out that when most of Japan joined the Western push against Moscow, he opposed sanctions"
-        },
-        {
-          "source": "RT",
-          "title": "Russia offers condolences to victims of Delhi and Islamabad blasts",
-          "link": "https://www.rt.com/india/627680-zakharova-condolences-delhi-islamabad-blasts/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 12 Nov 2025 13:31:47 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69148b1a20302731f8661856.jpg\" style=\"margin-right: 10px;\" /> Russia has urged the international community to be uncompromising in the fight against terrorism <br /><a href=\"https://www.rt.com/india/627680-zakharova-condolences-delhi-islamabad-blasts/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "‘Woke pro-trans’ BBC staff rebel – media",
-          "link": "https://www.rt.com/news/627593-woke-pro-trans-bbc-staff-rebel/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 21:15:21 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691252e72030277df619ce6c.jpg\" style=\"margin-right: 10px;\" /> The broadcaster’s staff are reportedly in a “civil war” against its management after the latter admitted to doctoring a Trump documentary <br /><a href=\"https://www.rt.com/news/627593-woke-pro-trans-bbc-staff-rebel/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+          "title": "A ‘historic’ visit wrapped in old distrust: The harsh truth about Syria’s White House moment",
+          "link": "https://www.rt.com/news/627675-historic-visit-old-distrust/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 12 Nov 2025 16:47:05 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914863785f54006e4071802.jpg\" style=\"margin-right: 10px;\" /> Al-Sharaa’s visit to Washington was hailed as historic – yet behind the smiles lie sanctions, red lines, and a fragile balance of power <br /><a href=\"https://www.rt.com/news/627675-historic-visit-old-distrust/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
           "source": "RT News",
@@ -598,25 +414,39 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69124bfd2030270c560c1b87.jpg\" style=\"margin-right: 10px;\" /> Washington has extended a waiver on comprehensive sanctions against Syria for another 180 days <br /><a href=\"https://www.rt.com/news/627591-us-extend-pause-syria-sanctions/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
-          "source": "RT News",
-          "title": "FBI chief makes secret visit to China – Reuters",
-          "link": "https://www.rt.com/news/627574-fbi-director-visit-china/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 12:37:02 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911dbe420302748f534f066.jpg\" style=\"margin-right: 10px;\" /> FBI Director Kash Patel secretly visited China to discuss the fight against fentanyl smuggling, Reuters reports <br /><a href=\"https://www.rt.com/news/627574-fbi-director-visit-china/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-        },
-        {
-          "source": "RT News",
-          "title": "German draft plan triggers mass protest call",
-          "link": "https://www.rt.com/news/627564-germany-conscription-protest/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 10 Nov 2025 10:15:02 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911ba5185f5403126432de6.jpg\" style=\"margin-right: 10px;\" /> Activists in Germany have announced plans for a nationwide protest against the government’s conscription and rearmament drive <br /><a href=\"https://www.rt.com/news/627564-germany-conscription-protest/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+          "source": "RT Russia",
+          "title": "Zelensky sanctions leading Russian peace negotiator",
+          "link": "https://www.rt.com/russia/627535-zelensky-sanctions-russian-peace-negotiator/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Sun, 09 Nov 2025 16:21:29 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6910c4c685f540323b730ca1.jpg\" style=\"margin-right: 10px;\" /> Russian President Vladimir Putin’s economic aide, Kirill Dmitriev, has been added to Ukraine’s latest sanctions list <br /><a href=\"https://www.rt.com/russia/627535-zelensky-sanctions-russian-peace-negotiator/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
           "source": "RT Business",
-          "title": "EU could sue member states defying Kiev trade deal – Politico",
-          "link": "https://www.rt.com/business/627197-eu-ukraine-trade-pact/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Fri, 31 Oct 2025 15:52:57 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/6904cdee20302730126e1198.jpg\" style=\"margin-right: 10px;\" /> The European Commission could reportedly take legal action against Poland, Slovakia and Hungary for defying the EU’s trade deal with Ukraine <br /><a href=\"https://www.rt.com/business/627197-eu-ukraine-trade-pact/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+          "title": "Blocking Russian asset sale could trigger oil supply crisis – trader",
+          "link": "https://www.rt.com/business/627356-lukoil-gunvor-deal/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 05 Nov 2025 12:07:45 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690b3a8385f54056e9723506.jpg\" style=\"margin-right: 10px;\" /> Lukoil has moved to sell its overseas assets to the Swiss-based trader following the latest US sanctions <br /><a href=\"https://www.rt.com/business/627356-lukoil-gunvor-deal/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "EU nation limits fuel exports to bloc members amid Lukoil sanctions",
+          "link": "https://www.rt.com/business/627229-bulgaria-lukoil-restriction-fuel-exports/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Sat, 01 Nov 2025 15:44:47 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690605e72030272fc421e577.jpg\" style=\"margin-right: 10px;\" /> Bulgaria has partly restricted fuel exports to EU states after US sanctions on Russia’s Lukoil triggered security and supply concerns <br /><a href=\"https://www.rt.com/business/627229-bulgaria-lukoil-restriction-fuel-exports/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "Italian firms to lose €140 million from toilet sanctions on Russia – union chief",
+          "link": "https://www.rt.com/business/627084-italy-losses-russia-toilet-ban/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 29 Oct 2025 00:21:59 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/69015dac20302711896822b3.jpg\" style=\"margin-right: 10px;\" /> Italian companies will suffer major losses from the ban on exporting toilets to Russia, according to a regional union chief <br /><a href=\"https://www.rt.com/business/627084-italy-losses-russia-toilet-ban/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "Sanctioned Russian oil giant to sell foreign assets",
+          "link": "https://www.rt.com/business/627072-us-sanctions-lukoil-business/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 28 Oct 2025 20:10:29 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/6901109e85f5404bb932a7ae.jpg\" style=\"margin-right: 10px;\" /> Sanctioned Russian oil producer Lukoil has announced the sale of its international assets under a US wind-down license <br /><a href=\"https://www.rt.com/business/627072-us-sanctions-lukoil-business/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
           "source": "RT Business",
@@ -624,99 +454,35 @@
           "link": "https://www.rt.com/business/626930-washingtons-crusade-against-russian-oil/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Fri, 24 Oct 2025 19:28:27 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68fbc12b85f54036752b48b6.jpg\" style=\"margin-right: 10px;\" /> The US failed to woo India away from Russian oil, so it reached for its favorite weapon: sanctions. But coercion comes with a price. <br /><a href=\"https://www.rt.com/business/626930-washingtons-crusade-against-russian-oil/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "Oil spikes following US sanctions on Russia",
+          "link": "https://www.rt.com/business/626899-oil-spikes-us-sanctions-russia/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Fri, 24 Oct 2025 10:34:32 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68fb54b7203027409523f141.jpg\" style=\"margin-right: 10px;\" /> Global oil prices are on course for their biggest weekly jump in four months amid concerns over new US sanctions on Russian crude <br /><a href=\"https://www.rt.com/business/626899-oil-spikes-us-sanctions-russia/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "UK exempts Russian oil giant’s subsidiaries from sanctions",
+          "link": "https://www.rt.com/business/626826-uk-exempts-german-rosneft-sanctions/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 22 Oct 2025 16:14:34 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f8eb7620302774a82dac90.jpg\" style=\"margin-right: 10px;\" /> The UK has lifted sanctions on Rosneft’s subsidiaries in Germany, saying the assets are under Berlin’s control <br /><a href=\"https://www.rt.com/business/626826-uk-exempts-german-rosneft-sanctions/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     },
     {
-      "keyword": "putin",
-      "source_count": 3,
-      "tfidf_score": 0.7403,
-      "combined_score": 2.2208,
-      "articles": [
-        {
-          "source": "TASS",
-          "title": "Russia accounts for one fifth of Kazakhstan's foreign trade — Putin",
-          "link": "https://tass.com/economy/2042939",
-          "published": "Wed, 12 Nov 2025 21:05:43 +0300",
-          "summary": "For Russia, Kazakhstan is also one of the largest trading partners in the CIS and the Eurasian region as a whole, the Russian leader added"
-        },
-        {
-          "source": "TASS",
-          "title": "Putin hails Kazakhstan at Russia’s ally, good neighbor, partner",
-          "link": "https://tass.com/politics/2042935",
-          "published": "Wed, 12 Nov 2025 21:04:34 +0300",
-          "summary": "The head of state stressed that Russia and Kazakhstan sought to strengthen and expand mutually beneficial cooperation in the political, economic and humanitarian fields"
-        },
-        {
-          "source": "TASS",
-          "title": "Gas supplies, Russian language status in Kazakhstan: Putin on talks with Tokayev",
-          "link": "https://tass.com/politics/2042929",
-          "published": "Wed, 12 Nov 2025 20:57:58 +0300",
-          "summary": "Vladimir Putin thanked the Kazakh president for supporting the Russian language in Kazakhstan"
-        },
-        {
-          "source": "TASS",
-          "title": "Russia ranks first in terms of investment in Kazakhstan — Putin",
-          "link": "https://tass.com/economy/2042927",
-          "published": "Wed, 12 Nov 2025 20:52:45 +0300",
-          "summary": "\"A large number of Russian companies operate successfully in Kazakhstan,\" the Russian president said"
-        },
-        {
-          "source": "TASS",
-          "title": "Russia hopes to see first launch from Baiterek space rocket center by yearend — Putin",
-          "link": "https://tass.com/science/2042923",
-          "published": "Wed, 12 Nov 2025 20:40:11 +0300",
-          "summary": "The Baiterek project envisages launches of Russia's Soyuz-5 carrier rockets from the Baikonur spaceport"
-        },
-        {
-          "source": "TASS",
-          "title": "Tokayev highly praises talks with Putin",
-          "link": "https://tass.com/world/2042915",
-          "published": "Wed, 12 Nov 2025 20:17:49 +0300",
-          "summary": "The Kazakh president expressed his gratitude to Vladimir Putin for the substantive talks and his consistently warm hospitality"
-        },
-        {
-          "source": "TASS",
-          "title": "Issue of operation of Caspian Pipeline Consortium raised at Putin-Tokayev talks",
-          "link": "https://tass.com/politics/2042913",
-          "published": "Wed, 12 Nov 2025 20:12:02 +0300",
-          "summary": "Russia is ready to cooperate and collaborate in every possible way in this area, Dmitry Peskov said"
-        },
-        {
-          "source": "TASS",
-          "title": "Russia, Kazakhstan developing cooperation on rare earths — Putin",
-          "link": "https://tass.com/economy/2042905",
-          "published": "Wed, 12 Nov 2025 19:57:02 +0300",
-          "summary": "Plans to intensify cooperation in the chemical industry are also being discussed, the Russian president added"
-        },
-        {
-          "source": "TASS",
-          "title": "Russia considering expansion of gas supplies to Kazakhstan — Putin",
-          "link": "https://tass.com/economy/2042879",
-          "published": "Wed, 12 Nov 2025 19:04:04 +0300",
-          "summary": "Bilateral energy cooperation is developing steadily, the Russian leader said"
-        },
-        {
-          "source": "TASS",
-          "title": "Putin calls his talks with Kazakh President Tokayev productive",
-          "link": "https://tass.com/politics/2042825",
-          "published": "Wed, 12 Nov 2025 17:42:48 +0300",
-          "summary": "The Russian president said that he and Kassym-Jomart Tokayev discussed in detail the entire range of bilateral cooperation topics, exchanged opinions on pressing regional and international matters"
-        }
-      ]
-    },
-    {
-      "keyword": "donald",
+      "keyword": "donald trump",
       "source_count": 5,
-      "tfidf_score": 0.4408,
-      "combined_score": 2.204,
+      "tfidf_score": 0.4312,
+      "combined_score": 2.156,
       "articles": [
         {
           "source": "TASS",
-          "title": "Pentagon chief says US freeing Panama Canal from 'malign Chinese influence'",
-          "link": "https://tass.com/world/2042889",
-          "published": "Wed, 12 Nov 2025 19:25:35 +0300",
-          "summary": "US President Donald Trump has repeatedly stated his intention to regain control of the Panama Canal"
+          "title": "Zelensky likely to be invited to NATO summit but excluded from working meetings — agency",
+          "link": "https://tass.com/world/1968197",
+          "published": "Wed, 04 Jun 2025 11:51:21 +0300",
+          "summary": "The source added that most of the alliance’s member states one way or another insist that Vladimir Zelensky should be present in the Hague but no one wants to upset Donald Trump"
         },
         {
           "source": "RT",
@@ -761,6 +527,13 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911aacc85f5401d1d43a5da.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has accused the BBC of manipulating public perception ahead of the 2024 US election <br /><a href=\"https://www.rt.com/news/627549-trump-bbc-election-meddling/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
+          "source": "RT Russia",
+          "title": "US has not elaborated on nuclear test plans – Lavrov",
+          "link": "https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Sat, 08 Nov 2025 20:51:25 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690fa9b920302729cf09ecc1.jpg\" style=\"margin-right: 10px;\" /> Moscow has said it had not received any clarifications from Washington about nuclear tests ordered by President Donald Trump <br /><a href=\"https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
           "source": "RT Business",
           "title": "China overtakes US as Germany’s top trading partner – Reuters",
           "link": "https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
@@ -773,6 +546,63 @@
           "link": "https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Tue, 14 Oct 2025 14:52:14 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68ee64fb85f540698a1b21cc.jpg\" style=\"margin-right: 10px;\" /> Donald Trump has threatened to impose extra 100% tariffs on all Chinese goods <br /><a href=\"https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        }
+      ]
+    },
+    {
+      "keyword": "donald",
+      "source_count": 5,
+      "tfidf_score": 0.4058,
+      "combined_score": 2.0289,
+      "articles": [
+        {
+          "source": "TASS",
+          "title": "Zelensky likely to be invited to NATO summit but excluded from working meetings — agency",
+          "link": "https://tass.com/world/1968197",
+          "published": "Wed, 04 Jun 2025 11:51:21 +0300",
+          "summary": "The source added that most of the alliance’s member states one way or another insist that Vladimir Zelensky should be present in the Hague but no one wants to upset Donald Trump"
+        },
+        {
+          "source": "RT",
+          "title": "Trump requests pardon for Netanyahu",
+          "link": "https://www.rt.com/news/627676-trump-israel-netanyahu-pardon/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 12 Nov 2025 15:30:33 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914939c85f54047e43f5573.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has urged the Israeli government to pardon Prime Minister Benjamin Netanyahu in his corruption case <br /><a href=\"https://www.rt.com/news/627676-trump-israel-netanyahu-pardon/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT",
+          "title": "‘TRUMP’ party launches in EU state",
+          "link": "https://www.rt.com/news/627618-belgium-new-party-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 14:20:25 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914501185f5401b840a2193.jpg\" style=\"margin-right: 10px;\" /> A new right-wing party named after US President Donald Trump has been launched in Belgium <br /><a href=\"https://www.rt.com/news/627618-belgium-new-party-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT News",
+          "title": "Trump threatens to sue BBC for $1 billion",
+          "link": "https://www.rt.com/news/627622-trump-sue-bbc/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 11:18:07 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913294185f540362666c707.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has reportedly threatened to sue the BBC for $1 billion amid a scandal over unethical edits of a speech <br /><a href=\"https://www.rt.com/news/627622-trump-sue-bbc/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT News",
+          "title": "Trump warns of ‘catastrophe’ if tariffs scrapped",
+          "link": "https://www.rt.com/news/627600-trump-warning-us-catastrophe/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 08:08:12 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912eec6203027393d4b547d.jpg\" style=\"margin-right: 10px;\" /> The US would have to pay back $2 trillion to foreign partners if tariffs are ruled illegal, President Donald Trump has warned <br /><a href=\"https://www.rt.com/news/627600-trump-warning-us-catastrophe/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT News",
+          "title": "Trump praises Syria’s ‘tough-guy’ leader after White House visit",
+          "link": "https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 22:17:02 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912644485f5400eec4dadff.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has hailed Syria’s new leader, Ahmad al-Sharaa, after hosting him in the White House <br /><a href=\"https://www.rt.com/news/627595-trump-syria-sharaa-meeting/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT News",
+          "title": "Trump accuses BBC of election meddling",
+          "link": "https://www.rt.com/news/627549-trump-bbc-election-meddling/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Sun, 09 Nov 2025 23:30:31 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911aacc85f5401d1d43a5da.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has accused the BBC of manipulating public perception ahead of the 2024 US election <br /><a href=\"https://www.rt.com/news/627549-trump-bbc-election-meddling/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         },
         {
           "source": "RT Russia",
@@ -780,6 +610,176 @@
           "link": "https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Sat, 08 Nov 2025 20:51:25 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690fa9b920302729cf09ecc1.jpg\" style=\"margin-right: 10px;\" /> Moscow has said it had not received any clarifications from Washington about nuclear tests ordered by President Donald Trump <br /><a href=\"https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "China overtakes US as Germany’s top trading partner – Reuters",
+          "link": "https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 23 Oct 2025 11:09:48 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f9f78d85f54017c07030c2.jpg\" style=\"margin-right: 10px;\" /> US tariffs under President Donald Trump have weighed on German exports to the US <br /><a href=\"https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Business",
+          "title": "Beijing vows to ‘fight to the end’ in trade war with US",
+          "link": "https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 14 Oct 2025 14:52:14 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68ee64fb85f540698a1b21cc.jpg\" style=\"margin-right: 10px;\" /> Donald Trump has threatened to impose extra 100% tariffs on all Chinese goods <br /><a href=\"https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        }
+      ]
+    },
+    {
+      "keyword": "zelensky",
+      "source_count": 4,
+      "tfidf_score": 0.5046,
+      "combined_score": 2.0186,
+      "articles": [
+        {
+          "source": "TASS",
+          "title": "Rada approves final changes to laws for US minerals deal",
+          "link": "https://tass.com/world/1968223",
+          "published": "Wed, 04 Jun 2025 12:36:51 +0300",
+          "summary": "On May 8, the Ukrainian parliament ratified the document, and on May 12, Vladimir Zelensky approved the ratification"
+        },
+        {
+          "source": "TASS",
+          "title": "Zelensky's office to procrastinate in talks for fear of armed radicals — expert",
+          "link": "https://tass.com/world/1968207",
+          "published": "Wed, 04 Jun 2025 12:10:41 +0300",
+          "summary": "Both ceasefire options proposed by Russia in their memorandum are expected to encounter resistance from Ukrainian political and military structures that benefit from ongoing hostilities - both domestically and in Europe"
+        },
+        {
+          "source": "TASS",
+          "title": "Zelensky likely to be invited to NATO summit but excluded from working meetings — agency",
+          "link": "https://tass.com/world/1968197",
+          "published": "Wed, 04 Jun 2025 11:51:21 +0300",
+          "summary": "The source added that most of the alliance’s member states one way or another insist that Vladimir Zelensky should be present in the Hague but no one wants to upset Donald Trump"
+        },
+        {
+          "source": "RT",
+          "title": "WATCH: Rick Sanchez on what Ukraine’s latest corruption scandal means for Zelensky",
+          "link": "https://www.rt.com/russia/627684-rick-sanchez-ukraine-corruption/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 12 Nov 2025 18:07:08 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914cc4d2030275cd217f51f.jpg\" style=\"margin-right: 10px;\" /> A close ally of the Ukrainian leader is the target of a major graft probe that reportedly involves the FBI <br /><a href=\"https://www.rt.com/russia/627684-rick-sanchez-ukraine-corruption/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT",
+          "title": "Corruption consumes Kiev: Zelensky’s justice and energy ministers exit (Live Updates)",
+          "link": "https://www.rt.com/russia/627686-ukraine-leadership-corruption-scandal-ministers-resign/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 12 Nov 2025 16:27:48 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914b2c285f5402c6e5e38bc.jpg\" style=\"margin-right: 10px;\" /> A major corruption scheme within Ukraine’s energy sector, involving one of Vladimir Zelensky’s associates, has seen two ministers resign <br /><a href=\"https://www.rt.com/russia/627686-ukraine-leadership-corruption-scandal-ministers-resign/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT",
+          "title": "Ukraine’s justice minister suspended in graft probe tied to Zelensky associate",
+          "link": "https://www.rt.com/russia/627662-ukrainian-minister-suspended-mindich/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 12 Nov 2025 09:34:16 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69143f3385f5403bef022bfe.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s Justice Minister German Galushchenko has been suspended over alleged corruption links tied to an associate of Vladimir Zelensky <br /><a href=\"https://www.rt.com/russia/627662-ukrainian-minister-suspended-mindich/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT",
+          "title": "Who is Timur Mindich, the Zelensky ally at the center of Ukraine’s latest corruption scandal? (VIDEO)",
+          "link": "https://www.rt.com/russia/627646-ukraine-mindich-corruption-scandal/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 20:27:01 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69139bf52030276aa91e8d0a.png\" style=\"margin-right: 10px;\" /> Timur Mindich, an associate of Vladimir Zelensky, fled the country shortly before a corruption probe reportedly targeting him became public <br /><a href=\"https://www.rt.com/russia/627646-ukraine-mindich-corruption-scandal/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT News",
+          "title": "Ukraine is too corrupt to join the EU, and the West is too dishonest to trust",
+          "link": "https://www.rt.com/news/627527-ukraine-corrupt-eu-dishonest/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 10:12:13 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69107d632030275aca1b5dd1.jpg\" style=\"margin-right: 10px;\" /> Brussels has noticed the obvious problems with Zelensky’s regime, but would still like Ukrainians to keep dying in its proxy war with Russia <br /><a href=\"https://www.rt.com/news/627527-ukraine-corrupt-eu-dishonest/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Russia",
+          "title": "Ukrainian MPs demand new cabinet after Zelensky ally embroiled in graft scandal",
+          "link": "https://www.rt.com/russia/627610-ukraine-cabinet-recall-mindich/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 09:28:16 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912fdf585f5403d5b4ddf63.jpg\" style=\"margin-right: 10px;\" /> The party of former Ukrainian President Pyotr Poroshenko has called for the replacement of the cabinet amid a major graft probe <br /><a href=\"https://www.rt.com/russia/627610-ukraine-cabinet-recall-mindich/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Russia",
+          "title": "Zelensky ally fled Ukraine before FBI-linked search – media",
+          "link": "https://www.rt.com/russia/627590-ukraine-zelensky-mindich-nabu/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 20:46:59 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691243aa85f54032283fc647.jpg\" style=\"margin-right: 10px;\" /> Long-time Zelensky ally Timur Mindich has reportedly fled Ukraine hours before anti-corruption raids linked to an FBI probe <br /><a href=\"https://www.rt.com/russia/627590-ukraine-zelensky-mindich-nabu/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        }
+      ]
+    },
+    {
+      "keyword": "time",
+      "source_count": 6,
+      "tfidf_score": 0.2993,
+      "combined_score": 1.7959,
+      "articles": [
+        {
+          "source": "RIA Novosti",
+          "title": "Захарова прокомментировала статью в Times о приостановке переговоров",
+          "link": "https://ria.ru/20251112/zaharova-2054610461.html",
+          "published": "Wed, 12 Nov 2025 21:05:22 +0300",
+          "summary": ""
+        },
+        {
+          "source": "TASS",
+          "title": "Russia, Ukraine to agree on date of new round of talks after memorandums are studied",
+          "link": "https://tass.com/politics/1968333",
+          "published": "Wed, 04 Jun 2025 14:20:34 +0300",
+          "summary": "\"It will take some time to examine the draft memorandums that have been exchanged,\" Dmitry Peskov said"
+        },
+        {
+          "source": "TASS",
+          "title": "Frequency of meetings on Ukraine talks can’t be strictly standardized — Kremlin",
+          "link": "https://tass.com/politics/1968321",
+          "published": "Wed, 04 Jun 2025 14:12:19 +0300",
+          "summary": "\"Contacts are underway and in the course of them suitable timeframes will be discussed,\" Dmitry Peskov added"
+        },
+        {
+          "source": "TASS",
+          "title": "MOEX Index up 0.53% as morning trading session opens",
+          "link": "https://tass.com/economy/1968141",
+          "published": "Wed, 04 Jun 2025 09:48:48 +0300",
+          "summary": "As of 7:10 a.m. Moscow time, the MOEX Index was up by 0.54% at 2,849.23 points"
+        },
+        {
+          "source": "RT",
+          "title": "German Protestant federation abandons long-time peace stance",
+          "link": "https://www.rt.com/news/627651-german-protestant-federation-abandons-peace-stance/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 20:10:02 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691450b420302743cc7220c7.jpg\" style=\"margin-right: 10px;\" /> The Evangelical Church in Germany has renounced its long-time pacifist stance, citing a “changed security policy landscape” <br /><a href=\"https://www.rt.com/news/627651-german-protestant-federation-abandons-peace-stance/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT",
+          "title": "Russians are the new Martians: A new kind of UFO craze is gripping Belgium",
+          "link": "https://www.rt.com/news/627629-russia-drones-belgium-ufos/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 14:59:33 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691336732030274f38555ed3.jpg\" style=\"margin-right: 10px;\" /> The last time Brussels was so twitchy about imaginary objects in the sky, it at least had the decency to blame aliens <br /><a href=\"https://www.rt.com/news/627629-russia-drones-belgium-ufos/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT News",
+          "title": "Olympics body mulls ban on trans women – Times",
+          "link": "https://www.rt.com/news/627575-transgender-athletes-ban-olympics/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 18:13:14 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69121f282030271652085ee6.jpg\" style=\"margin-right: 10px;\" /> The International Olympic Committee is expected to bar transgender women from all female events, according to a report <br /><a href=\"https://www.rt.com/news/627575-transgender-athletes-ban-olympics/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT News",
+          "title": "Rules changed, women adapted: Inside Afghanistan’s female-run businesses",
+          "link": "https://www.rt.com/news/627578-hard-times-create-strong-women/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 16:13:00 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691206cd85f5407a5169307a.jpg\" style=\"margin-right: 10px;\" /> Street vendors, tailors, and young designers are reshaping everyday life, balancing faith, family, and survival <br /><a href=\"https://www.rt.com/news/627578-hard-times-create-strong-women/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Russia",
+          "title": "Zelensky ally fled Ukraine before FBI-linked search – media",
+          "link": "https://www.rt.com/russia/627590-ukraine-zelensky-mindich-nabu/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 10 Nov 2025 20:46:59 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691243aa85f54032283fc647.jpg\" style=\"margin-right: 10px;\" /> Long-time Zelensky ally Timur Mindich has reportedly fled Ukraine hours before anti-corruption raids linked to an FBI probe <br /><a href=\"https://www.rt.com/russia/627590-ukraine-zelensky-mindich-nabu/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+        },
+        {
+          "source": "RT Russia",
+          "title": "Complaints about ‘illegal’ Ukrainian mobilization double – ombudsman",
+          "link": "https://www.rt.com/russia/627406-ukraine-mobilization-complaints-ombudsman/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 06 Nov 2025 09:35:18 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c4ae985f54035e0396a56.jpg\" style=\"margin-right: 10px;\" /> Ukrainians reported Kiev’s notorious press gangs nearly 5,000 times this year, Dmitry Lubinets has said <br /><a href=\"https://www.rt.com/russia/627406-ukraine-mobilization-complaints-ombudsman/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
         }
       ]
     }
@@ -962,6 +962,55 @@
     },
     {
       "source": "RIA Novosti",
+      "title": "В восьми областях Украины объявили воздушную тревогу",
+      "link": "https://ria.ru/20251112/ukraina-2054614770.html",
+      "published": "Wed, 12 Nov 2025 21:45:30 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Зеленский и антикоррупционные органы находятся на грани войны, сообщили СМИ",
+      "link": "https://ria.ru/20251112/ukraina-2054614578.html",
+      "published": "Wed, 12 Nov 2025 21:43:55 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Трамп с нетерпением ждет законопроекта о прекращении шатдауна",
+      "link": "https://ria.ru/20251112/tramp-2054614385.html",
+      "published": "Wed, 12 Nov 2025 21:39:19 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Белый дом обвинил демократов в попытке очернить репутацию Трампа",
+      "link": "https://ria.ru/20251112/ssha-2054614191.html",
+      "published": "Wed, 12 Nov 2025 21:38:56 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Вэнс назвал Рубио самым смешным человеком в администрации США",
+      "link": "https://ria.ru/20251112/vitse-prezident-2054613971.html",
+      "published": "Wed, 12 Nov 2025 21:35:15 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Турция опровергла сообщения о причастности к терактам в Индии",
+      "link": "https://ria.ru/20251112/turtsija-2054612778.html",
+      "published": "Wed, 12 Nov 2025 21:28:27 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Путин назвал казахских артистов \"алтыном\"",
+      "link": "https://ria.ru/20251112/putin-2054612167.html",
+      "published": "Wed, 12 Nov 2025 21:22:38 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
       "title": "Президент Польши в борьбе с правительством отказался назначать судей",
       "link": "https://ria.ru/20251112/polsha-2054611943.html",
       "published": "Wed, 12 Nov 2025 21:19:17 +0300",
@@ -1084,55 +1133,6 @@
       "title": "Российское вино лучше иностранного, заявил Киселев",
       "link": "https://ria.ru/20251112/kiselev-2054604937.html",
       "published": "Wed, 12 Nov 2025 20:28:47 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Кызыле мужчина насильно зацеловал школьницу",
-      "link": "https://ria.ru/20251112/kyzyl-2054604411.html",
-      "published": "Wed, 12 Nov 2025 20:24:15 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Спикер Рады поддержал начало процедуры отставки правительства Украины",
-      "link": "https://ria.ru/20251112/ukraina-2054604008.html",
-      "published": "Wed, 12 Nov 2025 20:20:48 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Путин и Токаев будут смотреть гала-концерт из Царской ложи Большого театра",
-      "link": "https://ria.ru/20251112/putin-2054603305.html",
-      "published": "Wed, 12 Nov 2025 20:15:39 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Путина и Токаева в Большом театре встретили министры культуры",
-      "link": "https://ria.ru/20251112/putin-2054603138.html",
-      "published": "Wed, 12 Nov 2025 20:13:20 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Германии владельца магазина обвинили в разжигании межнациональной розни",
-      "link": "https://ria.ru/20251112/germanija-2054602629.html",
-      "published": "Wed, 12 Nov 2025 20:03:24 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Британские СМИ сообщили о приостановке переговоров России и Украины",
-      "link": "https://ria.ru/20251112/peregovory-2054602228.html",
-      "published": "Wed, 12 Nov 2025 20:01:45 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Сибига отчитался перед Рубио об усилиях Киева по украинскому урегулированию",
-      "link": "https://ria.ru/20251112/sibiga-2054600538.html",
-      "published": "Wed, 12 Nov 2025 19:55:13 +0300",
       "summary": ""
     }
   ],
@@ -1311,6 +1311,55 @@
       "link": "https://www.interfax.ru/russia/1054853",
       "published": "Mon, 27 Oct 2025 08:07:00 +0300",
       "summary": "Россия могла бы нарастить поставки в Малайзию энергоресурсов, промышленного оборудования и продукции агропромышленного комплекса, а также рассмотреть строительство в стране АЭС большой и малой мощности, сообщила пресс-служба вице-премьера Алексея Оверчука.Оверчук обсудил вопросы двустороннего сотрудничества с вице-премьером, министром энергетического перехода и водных ресурсов Малайзии Фадиллой Юсуфом.\"Российская сторона видит хорошие возможности для наращивания поставок в Малайзию энергоресурсов, фармацевтических препаратов, промышленного оборудования, включая медицинское."
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В восьми областях Украины объявили воздушную тревогу",
+      "link": "https://ria.ru/20251112/ukraina-2054614770.html",
+      "published": "Wed, 12 Nov 2025 21:45:30 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Зеленский и антикоррупционные органы находятся на грани войны, сообщили СМИ",
+      "link": "https://ria.ru/20251112/ukraina-2054614578.html",
+      "published": "Wed, 12 Nov 2025 21:43:55 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Трамп с нетерпением ждет законопроекта о прекращении шатдауна",
+      "link": "https://ria.ru/20251112/tramp-2054614385.html",
+      "published": "Wed, 12 Nov 2025 21:39:19 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Белый дом обвинил демократов в попытке очернить репутацию Трампа",
+      "link": "https://ria.ru/20251112/ssha-2054614191.html",
+      "published": "Wed, 12 Nov 2025 21:38:56 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Вэнс назвал Рубио самым смешным человеком в администрации США",
+      "link": "https://ria.ru/20251112/vitse-prezident-2054613971.html",
+      "published": "Wed, 12 Nov 2025 21:35:15 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Турция опровергла сообщения о причастности к терактам в Индии",
+      "link": "https://ria.ru/20251112/turtsija-2054612778.html",
+      "published": "Wed, 12 Nov 2025 21:28:27 +0300",
+      "summary": ""
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Путин назвал казахских артистов \"алтыном\"",
+      "link": "https://ria.ru/20251112/putin-2054612167.html",
+      "published": "Wed, 12 Nov 2025 21:22:38 +0300",
+      "summary": ""
     },
     {
       "source": "RIA Novosti",
@@ -1614,403 +1663,361 @@
       "summary": ""
     },
     {
-      "source": "RIA Novosti",
-      "title": "Токаев назвал Россию Богом данным соседом",
-      "link": "https://ria.ru/20251112/tokaev-2054592644.html",
-      "published": "Wed, 12 Nov 2025 18:57:33 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Украина получила технологию для \"стены дронов\", пишут СМИ",
-      "link": "https://ria.ru/20251112/ukraina-2054592053.html",
-      "published": "Wed, 12 Nov 2025 18:56:25 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "На Украине инициировали введение санкций против Миндича и Цукермана",
-      "link": "https://ria.ru/20251112/ukraina-2054591676.html",
-      "published": "Wed, 12 Nov 2025 18:55:50 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "На Западе раскрыли угрозу безопасности ЕС от солдат ВСУ",
-      "link": "https://ria.ru/20251112/vsu-2054591514.html",
-      "published": "Wed, 12 Nov 2025 18:55:22 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Рейс с депортированной из Таиланда россиянкой приземлился во Владивостоке",
-      "link": "https://ria.ru/20251112/rossiyanka-2054591358.html",
-      "published": "Wed, 12 Nov 2025 18:54:21 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "Киселев оценил развитие винного туризма в России",
-      "link": "https://ria.ru/20251112/kiselev-2054591201.html",
-      "published": "Wed, 12 Nov 2025 18:54:04 +0300",
-      "summary": ""
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Москве открыли новый вид городского транспорта",
-      "link": "https://ria.ru/20251112/moskva-2054590983.html",
-      "published": "Wed, 12 Nov 2025 18:52:49 +0300",
-      "summary": ""
+      "source": "TASS",
+      "title": "Ukraine, Russia to pore over memoranda exchanged at talks — Foreign Ministry",
+      "link": "https://tass.com/politics/1968329",
+      "published": "Wed, 04 Jun 2025 14:21:03 +0300",
+      "summary": "\"As agreed on May 16, the Russian side handed over to the Ukrainian delegation a detailed two-part memorandum outlining its position on ways to achieve long-term peace and a possible full-fledged ceasefire,\" Maria Zakharova said"
     },
     {
       "source": "TASS",
-      "title": "Price of Brent oil down by over 3% on London’s ICE",
-      "link": "https://tass.com/economy/2042945",
-      "published": "Wed, 12 Nov 2025 21:16:19 +0300",
-      "summary": "The price of futures contracts of WTI crude oil for December 2025 delivery was down by 3.51% at $58.9 per barrel"
+      "title": "Russia, Ukraine to agree on date of new round of talks after memorandums are studied",
+      "link": "https://tass.com/politics/1968333",
+      "published": "Wed, 04 Jun 2025 14:20:34 +0300",
+      "summary": "\"It will take some time to examine the draft memorandums that have been exchanged,\" Dmitry Peskov said"
     },
     {
       "source": "TASS",
-      "title": "Russian stocks close in the red on Wednesday",
-      "link": "https://tass.com/economy/2042941",
-      "published": "Wed, 12 Nov 2025 21:11:44 +0300",
-      "summary": "The ruble-denominated MOEX Index lost 1.17% to 2,536.22 points"
+      "title": "Belarus’ defense ministry expects to strengthen cooperation with Pakistan significantly",
+      "link": "https://tass.com/world/1968325",
+      "published": "Wed, 04 Jun 2025 14:13:52 +0300",
+      "summary": "The ministers agreed to meet soon at an SCO event in China to discuss preliminary results of the agreements"
     },
     {
       "source": "TASS",
-      "title": "Russia accounts for one fifth of Kazakhstan's foreign trade — Putin",
-      "link": "https://tass.com/economy/2042939",
-      "published": "Wed, 12 Nov 2025 21:05:43 +0300",
-      "summary": "For Russia, Kazakhstan is also one of the largest trading partners in the CIS and the Eurasian region as a whole, the Russian leader added"
+      "title": "Frequency of meetings on Ukraine talks can’t be strictly standardized — Kremlin",
+      "link": "https://tass.com/politics/1968321",
+      "published": "Wed, 04 Jun 2025 14:12:19 +0300",
+      "summary": "\"Contacts are underway and in the course of them suitable timeframes will be discussed,\" Dmitry Peskov added"
     },
     {
       "source": "TASS",
-      "title": "Putin hails Kazakhstan at Russia’s ally, good neighbor, partner",
-      "link": "https://tass.com/politics/2042935",
-      "published": "Wed, 12 Nov 2025 21:04:34 +0300",
-      "summary": "The head of state stressed that Russia and Kazakhstan sought to strengthen and expand mutually beneficial cooperation in the political, economic and humanitarian fields"
+      "title": "Pakistani PM asks Putin to help resolve conflict with India — aide",
+      "link": "https://tass.com/world/1968319",
+      "published": "Wed, 04 Jun 2025 14:11:09 +0300",
+      "summary": "Syed Tariq Fatemi said that Pakistan and India must sit down at the negotiating table"
     },
     {
       "source": "TASS",
-      "title": "Kiev officially halts peace talks with Moscow — Ukrainian Foreign Ministry",
-      "link": "https://tass.com/world/2042933",
-      "published": "Wed, 12 Nov 2025 21:02:20 +0300",
-      "summary": "\"Since the peace talks ended this year without significant progress, they were halted,\" Sergey Kislitsa said"
+      "title": "Russia to take all measures to solve crime related to attacks on airfields — Kremlin",
+      "link": "https://tass.com/politics/1968317",
+      "published": "Wed, 04 Jun 2025 14:03:13 +0300",
+      "summary": "Dmitry Peskov said that everything that must be done to resolve this crime will be done"
     },
     {
       "source": "TASS",
-      "title": "Japan needs to decide on its own how to proceed in relations with Russia — MP",
-      "link": "https://tass.com/world/2042931",
-      "published": "Wed, 12 Nov 2025 21:00:42 +0300",
-      "summary": "Now Tokyo does essentially whatever the United States tells it, Nobuyuki Fukushima, a non-factional member of the lower house of the Japanese parliament, said"
+      "title": "France, Belgium oppose ban on gas imports from Russia to EU — Politico",
+      "link": "https://tass.com/economy/1968311",
+      "published": "Wed, 04 Jun 2025 13:57:48 +0300",
+      "summary": "Representatives of French and Belgian governments said that they need “more reassurances on the economic and legal consequences of the move before making a decision”"
     },
     {
       "source": "TASS",
-      "title": "Gas supplies, Russian language status in Kazakhstan: Putin on talks with Tokayev",
-      "link": "https://tass.com/politics/2042929",
-      "published": "Wed, 12 Nov 2025 20:57:58 +0300",
-      "summary": "Vladimir Putin thanked the Kazakh president for supporting the Russian language in Kazakhstan"
+      "title": "Putin’s stance on death penalty moratorium remains firm — Kremlin spokesman",
+      "link": "https://tass.com/politics/1968307",
+      "published": "Wed, 04 Jun 2025 13:49:31 +0300",
+      "summary": "President Vladimir Putin said in late 2024 that the Russian authorities had no plans to introduce capital punishment even amid the country’s special military operation"
     },
     {
       "source": "TASS",
-      "title": "Russia ranks first in terms of investment in Kazakhstan — Putin",
-      "link": "https://tass.com/economy/2042927",
-      "published": "Wed, 12 Nov 2025 20:52:45 +0300",
-      "summary": "\"A large number of Russian companies operate successfully in Kazakhstan,\" the Russian president said"
+      "title": "Europe’s gas stocks replenishment slower than usual, situation becomes tense",
+      "link": "https://tass.com/economy/1968299",
+      "published": "Wed, 04 Jun 2025 13:40:45 +0300",
+      "summary": "According to Gazprom, 8.9 bln cubic meters of gas were injected into European UGS facilities in May, which 1.1 bln cubic meters less than the average for that month over the past ten years"
     },
     {
       "source": "TASS",
-      "title": "IN BRIEF: Operation Midas, Mindich tapes: what we know about corruption scandal in Ukraine",
-      "link": "https://tass.com/world/2042925",
-      "published": "Wed, 12 Nov 2025 20:51:04 +0300",
-      "summary": "Five people have been detained, NABU said"
+      "title": "Japan reports record-low birth rate in 2024, ministry reveals",
+      "link": "https://tass.com/society/1968297",
+      "published": "Wed, 04 Jun 2025 13:40:28 +0300",
+      "summary": "Birth rates in Japan have been shrinking for a ninth consecutive year"
     },
     {
       "source": "TASS",
-      "title": "Russia hopes to see first launch from Baiterek space rocket center by yearend — Putin",
-      "link": "https://tass.com/science/2042923",
-      "published": "Wed, 12 Nov 2025 20:40:11 +0300",
-      "summary": "The Baiterek project envisages launches of Russia's Soyuz-5 carrier rockets from the Baikonur spaceport"
+      "title": "Russia takes measures proceeding from Kiev’s attacks on peaceful facilities — Kremlin",
+      "link": "https://tass.com/politics/1968289",
+      "published": "Wed, 04 Jun 2025 13:34:27 +0300",
+      "summary": "Having lost the initiative on the battlefield, Ukrainian servicemen resorted to terrorist tactics, attempting to attack deep within Russia with drones"
     },
     {
       "source": "TASS",
-      "title": "Kremlin unaware of South African citizens allegedly asked to leave special op zone",
-      "link": "https://tass.com/politics/2042921",
-      "published": "Wed, 12 Nov 2025 20:37:54 +0300",
-      "summary": "Earlier, South African President Cyril Ramaphosa’s office issued a statement saying that the South African government was working through diplomatic channels to secure the return of 17 South African men who found themselves surrounded in Donbass"
+      "title": "Diamond prices mixed in May — industry agency",
+      "link": "https://tass.com/economy/1968279",
+      "published": "Wed, 04 Jun 2025 13:27:01 +0300",
+      "summary": "Prices for diamonds weighing from 0.5 to 0.7 carats fell due to tariff policy adjustments, and the desire to complete sales before the beginning of summer holidays, Rapaport said"
     },
     {
       "source": "TASS",
-      "title": "Russian, Kazakh leaders expect declaration signed in Moscow to boost friendship",
-      "link": "https://tass.com/politics/2042917",
-      "published": "Wed, 12 Nov 2025 20:25:40 +0300",
-      "summary": "After the singing ceremony, a lunch was held at the Kremlin in honor of Tokayev’s visit to Russia, where he expressed confidence that all plans would be implemented"
+      "title": "Crimean bridge unaffected by Kiev’s attack, Kremlin spokesman says",
+      "link": "https://tass.com/politics/1968275",
+      "published": "Wed, 04 Jun 2025 13:26:52 +0300",
+      "summary": "According to Dmitry Peskov, the bridge is operational"
     },
     {
       "source": "TASS",
-      "title": "Tokayev highly praises talks with Putin",
-      "link": "https://tass.com/world/2042915",
-      "published": "Wed, 12 Nov 2025 20:17:49 +0300",
-      "summary": "The Kazakh president expressed his gratitude to Vladimir Putin for the substantive talks and his consistently warm hospitality"
+      "title": "Poland's capacity to deliver arms to Ukraine heavily constrained — paper",
+      "link": "https://tass.com/world/1968271",
+      "published": "Wed, 04 Jun 2025 13:22:26 +0300",
+      "summary": "According to Head of the country’s intelligence agency Dariusz Lukowski, Poland supplied weapons and military equipment worth about €5 billion to Ukraine"
     },
     {
       "source": "TASS",
-      "title": "Issue of operation of Caspian Pipeline Consortium raised at Putin-Tokayev talks",
-      "link": "https://tass.com/politics/2042913",
-      "published": "Wed, 12 Nov 2025 20:12:02 +0300",
-      "summary": "Russia is ready to cooperate and collaborate in every possible way in this area, Dmitry Peskov said"
+      "title": "Russia not interested in arms race with Europe, European Parliament member says",
+      "link": "https://tass.com/world/1968241",
+      "published": "Wed, 04 Jun 2025 13:02:43 +0300",
+      "summary": "Fernand Kartheiser described Russia’s approach to resolving the conflict in Ukraine as \"strategic patience\""
     },
     {
       "source": "TASS",
-      "title": "Russia, Kazakhstan developing cooperation on rare earths — Putin",
-      "link": "https://tass.com/economy/2042905",
-      "published": "Wed, 12 Nov 2025 19:57:02 +0300",
-      "summary": "Plans to intensify cooperation in the chemical industry are also being discussed, the Russian president added"
+      "title": "Moscow Exchange launches trade in Bitcoin futures for qualified investors",
+      "link": "https://tass.com/economy/1968239",
+      "published": "Wed, 04 Jun 2025 13:01:29 +0300",
+      "summary": "The quote with IBIT ticker will be traded in US dollars per lot, with settlements processed in Russian rubles"
     },
     {
       "source": "TASS",
-      "title": "Antibiotic-resistant super bacteria in Ukraine pose threat to Europe — article",
-      "link": "https://tass.com/science/2042903",
-      "published": "Wed, 12 Nov 2025 19:53:09 +0300",
-      "summary": "Henry Skinner referred to a study by researchers from Ukraine’s Sumy State University, which showed that \"85% of infections they examined among injured Ukrainian combatants were caused by bacteria that were resistant to multiple types of antibiotics\""
+      "title": "Press review: Kiev’s terrorist acts risk derailing talks as NATO expands Arctic footprint",
+      "link": "https://tass.com/pressreview/1968153",
+      "published": "Wed, 04 Jun 2025 13:00:01 +0300",
+      "summary": "Top stories from the Russian press on Wednesday, June 4th"
     },
     {
       "source": "TASS",
-      "title": "US didn't push back against Moscow’s territorial claims at Alaska summit — Russian MFA",
-      "link": "https://tass.com/politics/2042901",
-      "published": "Wed, 12 Nov 2025 19:50:45 +0300",
-      "summary": "Alexey Polishchuk also emphasized the need to remember that \"the territorial issue is part of the settlement package\""
+      "title": "More than 20 children return to Lugansk People’s Republic from Ukraine in two years",
+      "link": "https://tass.com/politics/1968233",
+      "published": "Wed, 04 Jun 2025 12:48:56 +0300",
+      "summary": "The LPR children’s rights commissioner Inna Shvenk noted that most commonly, children were separated from their legal representatives during evacuation from combat zones"
     },
     {
       "source": "TASS",
-      "title": "Kazakhstan sincerely interested in strong, stable, prosperous Russia — Tokayev",
-      "link": "https://tass.com/world/2042895",
-      "published": "Wed, 12 Nov 2025 19:39:39 +0300",
-      "summary": "The Kazakh president said that the common history of Kazakhstan and Russia proves the power of unity better than words"
+      "title": "Dialogue with Russia crucial as West shuns it — retired French officer",
+      "link": "https://tass.com/world/1968229",
+      "published": "Wed, 04 Jun 2025 12:46:52 +0300",
+      "summary": "Jacques Hogarde believes that it is necessary to maintain contacts of any kind"
     },
     {
       "source": "TASS",
-      "title": "Tokayev calls Russia unique country, civilization that influences global processes",
-      "link": "https://tass.com/world/2042893",
-      "published": "Wed, 12 Nov 2025 19:35:24 +0300",
-      "summary": "The Kazakh president noted that his visit highlights the key place that Russia occupies in the system of Astana's foreign policy priorities, calling Russia its main strategic partner and ally"
+      "title": "Ukrainian army attacks Russia’s borderline Belgorod Region with over 70 UAVs in 24 hours",
+      "link": "https://tass.com/politics/1968231",
+      "published": "Wed, 04 Jun 2025 12:44:23 +0300",
+      "summary": "In the village of Afonyevka, an 18-year-old young man suffered injuries"
     },
     {
       "source": "TASS",
-      "title": "Pentagon chief says US freeing Panama Canal from 'malign Chinese influence'",
-      "link": "https://tass.com/world/2042889",
-      "published": "Wed, 12 Nov 2025 19:25:35 +0300",
-      "summary": "US President Donald Trump has repeatedly stated his intention to regain control of the Panama Canal"
+      "title": "Rada approves final changes to laws for US minerals deal",
+      "link": "https://tass.com/world/1968223",
+      "published": "Wed, 04 Jun 2025 12:36:51 +0300",
+      "summary": "On May 8, the Ukrainian parliament ratified the document, and on May 12, Vladimir Zelensky approved the ratification"
     },
     {
       "source": "TASS",
-      "title": "Hainan’s earliest prehistoric burial discovered in China’s southernmost island province",
-      "link": "https://tass.com/science/2042881",
-      "published": "Wed, 12 Nov 2025 19:10:08 +0300",
-      "summary": "The skeletal remains of a child were laid on their side"
+      "title": "RUSADA reports 14 suspected violations of anti-doping rules in May",
+      "link": "https://tass.com/sports/1968219",
+      "published": "Wed, 04 Jun 2025 12:29:40 +0300",
+      "summary": "The total number of reported potential anti-doping rules violations since the start of the year is currently 38"
     },
     {
       "source": "TASS",
-      "title": "Russia considering expansion of gas supplies to Kazakhstan — Putin",
-      "link": "https://tass.com/economy/2042879",
-      "published": "Wed, 12 Nov 2025 19:04:04 +0300",
-      "summary": "Bilateral energy cooperation is developing steadily, the Russian leader said"
+      "title": "Belarus, China agree to enhance their cooperation — Lukashenko",
+      "link": "https://tass.com/world/1968213",
+      "published": "Wed, 04 Jun 2025 12:26:50 +0300",
+      "summary": "According to the report, the two leaders held a two-and-a-half-hour-long meeting"
     },
     {
       "source": "TASS",
-      "title": "Kiev continues to attack civilian energy infrastructure including CPC — Kremlin",
-      "link": "https://tass.com/politics/2042875",
-      "published": "Wed, 12 Nov 2025 18:54:42 +0300",
-      "summary": "The Kazakh Foreign Ministry said earlier that Astana had conveyed its concerns about those attacks to Kiev"
+      "title": "Putin expresses condolences over passing of composer Eugen Doga",
+      "link": "https://tass.com/society/1968211",
+      "published": "Wed, 04 Jun 2025 12:22:18 +0300",
+      "summary": "\"Eugen Doga’s unique art and his educational and charitable activities are a bright page in our multiethnic history,\" the Russian president emphasized"
     },
     {
       "source": "TASS",
-      "title": "Bank of Russia lowers dollar exchange rate to 81.29 rubles for November 13",
-      "link": "https://tass.com/economy/2042871",
-      "published": "Wed, 12 Nov 2025 18:46:01 +0300",
-      "summary": "The official euro exchange rate has been almost flat at 94.1893 rubles"
+      "title": "Total number of nuclear warheads worldwide rises to 12,340 year-on-year — experts",
+      "link": "https://tass.com/world/1968209",
+      "published": "Wed, 04 Jun 2025 12:15:25 +0300",
+      "summary": "The Center said in a comment that as long as the United States and Russia account for more than 80% of deployable nuclear warheads, the two \"hold a special responsibility for nuclear disarmament\""
     },
     {
       "source": "TASS",
-      "title": "External challenges cannot undermine trust between Astana, Moscow — Tokayev",
-      "link": "https://tass.com/world/2042863",
-      "published": "Wed, 12 Nov 2025 18:44:26 +0300",
-      "summary": "The Kazakh President said the declaration on a comprehensive strategic partnership and alliance serves to prove it"
+      "title": "Zelensky's office to procrastinate in talks for fear of armed radicals — expert",
+      "link": "https://tass.com/world/1968207",
+      "published": "Wed, 04 Jun 2025 12:10:41 +0300",
+      "summary": "Both ceasefire options proposed by Russia in their memorandum are expected to encounter resistance from Ukrainian political and military structures that benefit from ongoing hostilities - both domestically and in Europe"
     },
     {
       "source": "TASS",
-      "title": "Kazakhstan, Russia actively cooperate despite complicated int’l situation — Tokayev",
-      "link": "https://tass.com/world/2042859",
-      "published": "Wed, 12 Nov 2025 18:39:07 +0300",
-      "summary": "\"Particular attention was paid to the development of industry, energy, transport and logistics, agriculture, high technologies, digitalization, humanitarian cooperation, as well as the implementation of new infrastructure projects,\" the Kazakh president stated"
+      "title": "Trump slams use of Biden’s autopen as one of biggest scandals in American history",
+      "link": "https://tass.com/world/1968205",
+      "published": "Wed, 04 Jun 2025 12:06:56 +0300",
+      "summary": "According to the US Congress, four White House officials were identified to have used an autopen to sign documents on Biden’s behalf"
     },
     {
       "source": "TASS",
-      "title": "Kazakhstan, Russia oppose discrimination against athletes, scientists, cultural figures",
-      "link": "https://tass.com/society/2042855",
-      "published": "Wed, 12 Nov 2025 18:18:33 +0300",
-      "summary": "The declaration notes that the countries \"will jointly advocate for the development of an open and respectful intercultural dialogue that excludes discrimination\""
+      "title": "Bank of Russia sells yuan worth $167 mln with settlements on June 3",
+      "link": "https://tass.com/economy/1968203",
+      "published": "Wed, 04 Jun 2025 12:00:14 +0300",
+      "summary": "The Central Bank did not sell yuan on the domestic market with settlements on June 2, 2025"
     },
     {
       "source": "TASS",
-      "title": "Interaction between Russia, US underway albeit limited — Kremlin aide",
-      "link": "https://tass.com/politics/2042847",
-      "published": "Wed, 12 Nov 2025 18:06:44 +0300",
-      "summary": "Yury Ushakov specified that this involves both phone conversations and personal interaction, when possible"
+      "title": "Russian LNG supplies to Europe down 2.4% in January-May",
+      "link": "https://tass.com/economy/1968201",
+      "published": "Wed, 04 Jun 2025 11:57:28 +0300",
+      "summary": "Imports of Russian LNG by the EU amounted to around 9.45 bcm in January-May, down from 9.68 bcm in the previous year"
     },
     {
       "source": "TASS",
-      "title": "Armenia will never refuse grain from Russia but will consider other options — PM",
-      "link": "https://tass.com/economy/2042845",
-      "published": "Wed, 12 Nov 2025 18:00:52 +0300",
-      "summary": "Nikol Pashinyan added that Armenia would consider grain supplies from other countries if the price and quality are better"
+      "title": "Zelensky likely to be invited to NATO summit but excluded from working meetings — agency",
+      "link": "https://tass.com/world/1968197",
+      "published": "Wed, 04 Jun 2025 11:51:21 +0300",
+      "summary": "The source added that most of the alliance’s member states one way or another insist that Vladimir Zelensky should be present in the Hague but no one wants to upset Donald Trump"
     },
     {
       "source": "TASS",
-      "title": "Russia taps fir in Moscow Region for Kremlin's New Year tree",
-      "link": "https://tass.com/society/2042841",
-      "published": "Wed, 12 Nov 2025 17:57:37 +0300",
-      "summary": "Experts explained that the tree was selected from a list of candidates judged by their age, height, branch span, foliage and the ability to be safely transported"
+      "title": "Russia’s National Wealth Fund totals $148 bln as of June 1 — finance ministry",
+      "link": "https://tass.com/economy/1968195",
+      "published": "Wed, 04 Jun 2025 11:46:30 +0300",
+      "summary": "As of June 1, the amount of liquid assets of the NWF amounted to 2.84 trillion ruble, which equals $36.16 bln"
     },
     {
       "source": "TASS",
-      "title": "Sanya deepens ties in traditional Chinese medicine with Nordic countries",
-      "link": "https://tass.com/society/2042835",
-      "published": "Wed, 12 Nov 2025 17:47:55 +0300",
-      "summary": "University of Sanya has persistently developed health-related academic disciplines for years"
+      "title": "Trump says 'always liked' Xi Jinping, but dealing with him 'extremely hard'",
+      "link": "https://tass.com/world/1968189",
+      "published": "Wed, 04 Jun 2025 11:26:36 +0300",
+      "summary": "On June 2, the White House said that Trump and Xi Jinping might have a telephone conversation this week"
     },
     {
       "source": "TASS",
-      "title": "London, Brussels pushing US to abandon diplomacy in Ukraine conflict — Russian MFA",
-      "link": "https://tass.com/politics/2042833",
-      "published": "Wed, 12 Nov 2025 17:44:27 +0300",
-      "summary": "According to Alexey Polishchuk, mutually acceptable agreements on the terms for resolving the crisis around Ukraine - with compromises made - were reached during the Russian-US summit in Alaska on August 15"
+      "title": "Iran’s uranium enrichment secures independence, peaceful atom — supreme leader",
+      "link": "https://tass.com/world/1968185",
+      "published": "Wed, 04 Jun 2025 11:11:16 +0300",
+      "summary": "Ali Khamenei added that the US and other countries are not interested in Iran's progress and have put forward conditions presupposing a complete halt of uranium enrichment on Iranian territory"
     },
     {
       "source": "TASS",
-      "title": "Kremlin aide calls his conversation with UK adviser 'unremarkable'",
-      "link": "https://tass.com/politics/2042829",
-      "published": "Wed, 12 Nov 2025 17:44:26 +0300",
-      "summary": "Yury Ushakov said that his counterpart was focused on conveying Europeans’ stance instead of discussing any potential proposals"
+      "title": "Russia uses Lancet loitering munition in protecting Crimea, destroying unmanned boats",
+      "link": "https://tass.com/politics/1968183",
+      "published": "Wed, 04 Jun 2025 11:07:48 +0300",
+      "summary": "Russian troops disabled a Ukrainian crewless boat Magura V7 with the help of a ZALA Lancet reconnaissance and strike system"
     },
     {
       "source": "TASS",
-      "title": "Putin calls his talks with Kazakh President Tokayev productive",
-      "link": "https://tass.com/politics/2042825",
-      "published": "Wed, 12 Nov 2025 17:42:48 +0300",
-      "summary": "The Russian president said that he and Kassym-Jomart Tokayev discussed in detail the entire range of bilateral cooperation topics, exchanged opinions on pressing regional and international matters"
+      "title": "Israeli strike on school in Gaza Strip kills 18 people — TV",
+      "link": "https://tass.com/world/1968179",
+      "published": "Wed, 04 Jun 2025 10:56:27 +0300",
+      "summary": "\"Eighteen people, including children, were killed in an Israeli drone strike on tents at a school in the western part of Khan Yunis, where displaced persons were staying,\" the source said"
     },
     {
       "source": "TASS",
-      "title": "Construction of 'Trump route' to begin in second half of 2026 — Armenian PM",
-      "link": "https://tass.com/world/2042815",
-      "published": "Wed, 12 Nov 2025 17:42:39 +0300",
-      "summary": "Nikol Pashinyan said that Armenia will do its best to ensure that there are no delays, and everything is completed on time"
+      "title": "Russian troops suppress Ukrainian gun emplacements by combat drones near Dzerzhinsk",
+      "link": "https://tass.com/politics/1968177",
+      "published": "Wed, 04 Jun 2025 10:52:43 +0300",
+      "summary": "The coordinated effort by the Russian personnel allowed assault units to move forward in that frontline area"
     },
     {
       "source": "TASS",
-      "title": "Sanctions, reckless use of force hinder global development — Russian senator",
-      "link": "https://tass.com/politics/2042801",
-      "published": "Wed, 12 Nov 2025 17:41:02 +0300",
-      "summary": "Konstantin Kosachev believes that creating equal conditions for the development of all members of the international community is integral to ensuring global security"
+      "title": "Police in Russia’s Chelyabinsk Region eliminate lab producing 500 kg of drugs monthly",
+      "link": "https://tass.com/society/1968173",
+      "published": "Wed, 04 Jun 2025 10:46:40 +0300",
+      "summary": "Police officers discovered the illegal lab in a private house in the Kartalinsky District of the Chelyabinsk Region"
     },
     {
       "source": "TASS",
-      "title": "Kremlin agrees with Vucic’s statement that Europe 'prepares for war with Russia'",
-      "link": "https://tass.com/politics/2042805",
-      "published": "Wed, 12 Nov 2025 17:40:55 +0300",
-      "summary": "According to Dmitry Peskov, a number of European countries continue to increase their military budgets"
+      "title": "Russian stocks up as main trading session opens",
+      "link": "https://tass.com/economy/1968175",
+      "published": "Wed, 04 Jun 2025 10:46:11 +0300",
+      "summary": "The yuan exchange rate was down by 4.25 kopecks at 10.859 rubles"
     },
     {
       "source": "TASS",
-      "title": "Declaration on partnership with Kazakhstan reflects cross-border cooperation plans — Putin",
-      "link": "https://tass.com/politics/2042795",
-      "published": "Wed, 12 Nov 2025 17:39:23 +0300",
-      "summary": "The Russian president pointed out that the two countries were successfully implementing the 2028 program on regional cooperation, aimed at creating conditions for comprehensive regional growth and improving the quality of life of both countries’ people"
+      "title": "Ukraine's NATO membership off the table at upcoming The Hague summit — news agency",
+      "link": "https://tass.com/world/1968165",
+      "published": "Wed, 04 Jun 2025 10:32:06 +0300",
+      "summary": "The alliance does not intend to make \"any new financial commitments\" to support Ukraine"
     },
     {
       "source": "TASS",
-      "title": "Japanese PM should meet with Putin, restore relations with Russia — lawmaker",
-      "link": "https://tass.com/world/2042777",
-      "published": "Wed, 12 Nov 2025 17:37:10 +0300",
-      "summary": "Shoji Nishida pointed out that when most of Japan joined the Western push against Moscow, he opposed sanctions"
+      "title": "Tehran could weigh nuclear deal with US with Iran-based enrichment consortium — Axios",
+      "link": "https://tass.com/world/1968163",
+      "published": "Wed, 04 Jun 2025 10:29:28 +0300",
+      "summary": "According to the report, a sixth round of talks on the Iranian nuclear program between the US president’s Special Envoy Steve Witkoff and Iran’s top diplomat, Abbas Araghchi, could be held this weekend in a Middle Eastern country"
     },
     {
       "source": "TASS",
-      "title": "Putin notes development of Russian-Kazakh humanitarian ties",
-      "link": "https://tass.com/politics/2042767",
-      "published": "Wed, 12 Nov 2025 17:35:55 +0300",
-      "summary": "The Russian leader added that Moscow and Astana will draw on their positive historical ties and \"look and move ahead\""
+      "title": "Sales of new passenger cars in Russia down 28% in May to 91,200 units",
+      "link": "https://tass.com/economy/1968161",
+      "published": "Wed, 04 Jun 2025 10:20:00 +0300",
+      "summary": "The home-produced Lada brand secured the largest share of sales, which totaled 28% as of the end of this spring"
     },
     {
       "source": "TASS",
-      "title": "Several EU states criticize EC plans to create new intelligence unit — news agency",
-      "link": "https://tass.com/world/2042759",
-      "published": "Wed, 12 Nov 2025 17:33:55 +0300",
-      "summary": "Critics of the project emphasize that, according to the latest directives, the existing central SIAC unit is meant to provide enhanced support to the EU's foreign policy service, the European Commission, its security college, and the Council of Member States"
+      "title": "Ukrainian attacks kill over 320 children, injure almost 1,250 in DPR, LPR since 2014",
+      "link": "https://tass.com/politics/1968159",
+      "published": "Wed, 04 Jun 2025 10:17:10 +0300",
+      "summary": "\"A total of 247 children were killed and 1,012 were injured during Ukrainian aggression in the Donetsk People’s Republic since 2014,\" DPR acting head Denis Pushilin stated"
     },
     {
       "source": "TASS",
-      "title": "Oman, Russia confirm commitment to strengthing cooperation",
-      "link": "https://tass.com/world/2042745",
-      "published": "Wed, 12 Nov 2025 17:31:44 +0300",
-      "summary": "The representatives of the two countries also discussed \"a number of issues of mutual interest\""
+      "title": "Russian troops breach Ukrainian defenses near Redkodub in Donetsk region — military expert",
+      "link": "https://tass.com/politics/1968149",
+      "published": "Wed, 04 Jun 2025 09:55:29 +0300",
+      "summary": "The Ukrainian military did not expect such a swift advance by Russian forces and did not properly prepare the second and third defensive lines, Andrey Marochko said"
     },
     {
       "source": "TASS",
-      "title": "Canada blacklists 13 individuals, 11 entities as part of sanctions on Russia",
-      "link": "https://tass.com/economy/2042697",
-      "published": "Wed, 12 Nov 2025 17:00:49 +0300",
-      "summary": "According to the statement, \"Anita Anand, Minister of Foreign Affairs, today announced that Canada is imposing additional sanctions\" on Russia over the conflict in Ukraine"
+      "title": "West exerts unprecedented pressure on China — Belarusian president",
+      "link": "https://tass.com/world/1968143",
+      "published": "Wed, 04 Jun 2025 09:53:24 +0300",
+      "summary": "\"Today, the eyes of many states, including Belarus, are on Beijing,\" Alexander Lukashenko said"
     },
     {
       "source": "TASS",
-      "title": "Kiev loses 1,150 troops along engagement line in past day — Russia’s top brass",
-      "link": "https://tass.com/politics/2042673",
-      "published": "Wed, 12 Nov 2025 16:56:42 +0300",
-      "summary": "Russian forces struck energy and transport infrastructure facilities used to support the Ukrainian army’s operations and troop deployment areas over the past 24 hours, the ministry reported"
+      "title": "MOEX Index up 0.53% as morning trading session opens",
+      "link": "https://tass.com/economy/1968141",
+      "published": "Wed, 04 Jun 2025 09:48:48 +0300",
+      "summary": "As of 7:10 a.m. Moscow time, the MOEX Index was up by 0.54% at 2,849.23 points"
     },
     {
       "source": "TASS",
-      "title": "International Cycling Union clears three Russians to race as neutrals",
-      "link": "https://tass.com/sports/2042681",
-      "published": "Wed, 12 Nov 2025 16:54:16 +0300",
-      "summary": "The trio of Russian athletes approved by the UCI are Kirill Belov, Valeria Kovyazina and Viktoria Vaskova"
+      "title": "Russian services PMI index up to 52.2 points in May",
+      "link": "https://tass.com/economy/1968139",
+      "published": "Wed, 04 Jun 2025 09:32:16 +0300",
+      "summary": "The rise in activity was the quickest since January"
     },
     {
       "source": "TASS",
-      "title": "Companies invest more in datacenters than in oil, IEA says",
-      "link": "https://tass.com/economy/2042675",
-      "published": "Wed, 12 Nov 2025 16:50:23 +0300",
-      "summary": "\"In 2025, around $580 billion is estimated to be invested in data centers,\" the International Energy Agency said"
+      "title": "Zaporozhye Region once again faces blackout — administration",
+      "link": "https://tass.com/politics/1968131",
+      "published": "Wed, 04 Jun 2025 09:13:20 +0300",
+      "summary": "The administration said that specialists are already working to restore the power supply"
     },
     {
       "source": "TASS",
-      "title": "Putin, Tokayev sign Declaration on strategic partnership between Russia, Kazakhstan",
-      "link": "https://tass.com/politics/2042679",
-      "published": "Wed, 12 Nov 2025 16:47:36 +0300",
-      "summary": "Russia currently has strategic partnership relations with Venezuela, Indonesia, Iran, China and North Korea"
+      "title": "Xi says China views Beijing-Minsk relations in strategic terms",
+      "link": "https://tass.com/world/1968129",
+      "published": "Wed, 04 Jun 2025 09:01:30 +0300",
+      "summary": "The Chinese leader noted that the two sides have always treated each other with sincerity and trust"
     },
     {
       "source": "TASS",
-      "title": "Russia increased oil production in October — OPEC data",
-      "link": "https://tass.com/economy/2042659",
-      "published": "Wed, 12 Nov 2025 16:38:36 +0300",
-      "summary": "Russia produced below OPEC+ arrangements by 94,000 bpd in September 2025"
+      "title": "NATO’s Baltic exercises are part of preparations for military clash with Russia — diplomat",
+      "link": "https://tass.com/politics/1968125",
+      "published": "Wed, 04 Jun 2025 08:09:18 +0300",
+      "summary": "\"Of course, such exercises are extremely provocative,\" Alexander Grushko said"
     },
     {
       "source": "TASS",
-      "title": "Hungary’s Orban defends Russia ties, says acts in interests of own country",
-      "link": "https://tass.com/world/2042649",
-      "published": "Wed, 12 Nov 2025 16:36:28 +0300",
-      "summary": "\"I am well aware of the role Russia will play over the next 15 and 20 years in the fate of Europe and Hungary, and I intend to capitalize on that,\" the Hungarian PM said"
+      "title": "PREVIEW: Russian Prime Minister Mishustin to visit Tajikistan on June 4-5",
+      "link": "https://tass.com/politics/1968123",
+      "published": "Wed, 04 Jun 2025 07:51:32 +0300",
+      "summary": "The minister will attend a meeting of the heads of governments from the Commonwealth of Independent States"
     },
     {
-      "source": "TASS",
-      "title": "OPEC+ oil production below target in October — report",
-      "link": "https://tass.com/economy/2042655",
-      "published": "Wed, 12 Nov 2025 16:34:32 +0300",
-      "summary": "Total oil production by OPEC+ member-countries, not including Libya, Iran and Venezuela exempted from performance of the deal, totaled 37.576 mln bpd"
+      "source": "RT",
+      "title": "No desire to listen – Kremlin on failed UK talks",
+      "link": "https://www.rt.com/news/627687-uk-russia-contact-failed-kremlin/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Wed, 12 Nov 2025 18:26:01 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914c9d020302772a64ddbe6.jpg\" style=\"margin-right: 10px;\" /> London ignored Moscow’s position on Ukraine during an attempt to reopen dialogue earlier this year, spokesman Dmitry Peskov has said <br /><a href=\"https://www.rt.com/news/627687-uk-russia-contact-failed-kremlin/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
     },
     {
       "source": "RT",
@@ -2356,13 +2363,6 @@
       "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69132c9485f5403bef022bc4.jpg\" style=\"margin-right: 10px;\" /> Moscow’s UN ambassador, Vassily Nebenzia, says the West is beginning to realize that defeating Russia by using Ukraine is impossible <br /><a href=\"https://www.rt.com/russia/627626-nebenzia-russia-defeat-impossible/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
     },
     {
-      "source": "RT",
-      "title": "India focusing on terror angle in Delhi blast – RT sources",
-      "link": "https://www.rt.com/india/627624-terror-angle-new-delhi-blast/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Tue, 11 Nov 2025 12:19:42 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913250d85f5403d8028c8f2.jpg\" style=\"margin-right: 10px;\" /> Indian security agencies are focusing on the terrorism angle as part of a probe into Monday’s car blast in New Delhi <br /><a href=\"https://www.rt.com/india/627624-terror-angle-new-delhi-blast/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
       "source": "RT News",
       "title": "Apple scraps gay dating apps from Chinese market – media",
       "link": "https://www.rt.com/news/627609-china-gay-apps-apple/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
@@ -2552,13 +2552,6 @@
       "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911aacc85f5401d1d43a5da.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has accused the BBC of manipulating public perception ahead of the 2024 US election <br /><a href=\"https://www.rt.com/news/627549-trump-bbc-election-meddling/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
     },
     {
-      "source": "RT News",
-      "title": "White House trolls BBC over top executives’ resignations",
-      "link": "https://www.rt.com/news/627548-white-house-bbc-resignations/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sun, 09 Nov 2025 22:42:14 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691118b520302716c432a9e7.jpg\" style=\"margin-right: 10px;\" /> The White House press secretary has mocked the BBC after top executives resigned amid a scandal over the 2021 US Capitol riot coverage <br /><a href=\"https://www.rt.com/news/627548-white-house-bbc-resignations/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
       "source": "Kommersant",
       "title": "Маркетплейсы свяжут контрактами // Онлайн-розницу могут подвергнуть ценовому регулированию",
       "link": "https://www.kommersant.ru/doc/8195542",
@@ -2690,6 +2683,244 @@
       "link": "https://www.kommersant.ru/doc/8194674",
       "published": "Wed, 12 Nov 2025 10:59:13 +0300",
       "summary": "Участники общественного наблюдения из разных регионов России на следующей неделе соберутся в Москве, чтобы обсудить, как повысить эффективность системы контроля за выборами в преддверии большой федеральной кампании 2026 года. Одна из ключевых задач — не дать поводов для фейков и провокаций из-за рубежа, говорят в Центризбиркоме. Враг «умен, изощрен и аморален», поэтому нужно «упреждающе бить наотмашь», уверена председатель комиссии Элла Памфилова."
+    },
+    {
+      "source": "RT Russia",
+      "title": "Eastern Kupyansk under Russian control – MOD",
+      "link": "https://www.rt.com/russia/627620-eastern-kupliansk-liberated-mod/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Tue, 11 Nov 2025 10:21:02 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913105620302743471703f9.jpg\" style=\"margin-right: 10px;\" /> The eastern part of Kupyansk, a key frontline city in Ukraine, has been fully captured by Russian forces, the MOD has reported <br /><a href=\"https://www.rt.com/russia/627620-eastern-kupliansk-liberated-mod/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Ukrainian MPs demand new cabinet after Zelensky ally embroiled in graft scandal",
+      "link": "https://www.rt.com/russia/627610-ukraine-cabinet-recall-mindich/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Tue, 11 Nov 2025 09:28:16 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912fdf585f5403d5b4ddf63.jpg\" style=\"margin-right: 10px;\" /> The party of former Ukrainian President Pyotr Poroshenko has called for the replacement of the cabinet amid a major graft probe <br /><a href=\"https://www.rt.com/russia/627610-ukraine-cabinet-recall-mindich/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Russian troops advance inside encircled Kupyansk – MOD",
+      "link": "https://www.rt.com/russia/627602-russian-advancement-mupyansk-mod/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Tue, 11 Nov 2025 07:51:15 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912e18f85f5401d1d43a671.jpg\" style=\"margin-right: 10px;\" /> The Russian Defense Ministry has reported continued progress in the battle for Kupyansk in  Kharkov Region, Ukraine <br /><a href=\"https://www.rt.com/russia/627602-russian-advancement-mupyansk-mod/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Ukrainian-UK plot to steal MiG-31 and detonate Kinzhal missile thwarted – FSB",
+      "link": "https://www.rt.com/russia/627598-fsb-foils-plane-hijacking/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Tue, 11 Nov 2025 05:24:30 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69130c9085f5403126432e8a.jpg\" style=\"margin-right: 10px;\" /> Russia says it has foiled a Ukrainian-British attempt to hijack a MiG-31 aircraft <br /><a href=\"https://www.rt.com/russia/627598-fsb-foils-plane-hijacking/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Kiev treats conscripts like cannon fodder – POW",
+      "link": "https://www.rt.com/russia/627596-kiev-treat-people-cannon-fodder/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Mon, 10 Nov 2025 23:57:38 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691263e685f540321b4b522f.png\" style=\"margin-right: 10px;\" /> Ukrainian draft officials use violence to force conscripts to go to the front line, a captured soldier told the Russian military <br /><a href=\"https://www.rt.com/russia/627596-kiev-treat-people-cannon-fodder/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "The battle the world is watching, but few understand: What’s really going on in Pokrovsk?",
+      "link": "https://www.rt.com/russia/627586-battle-world-is-watching-pokrovsk/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Mon, 10 Nov 2025 21:02:20 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912223b203027055f660f0a.jpg\" style=\"margin-right: 10px;\" /> Behind the headlines, Russia’s advance in Donbass reveals shifting tactics, collapsing defenses, and the stakes of 2025’s decisive fight <br /><a href=\"https://www.rt.com/russia/627586-battle-world-is-watching-pokrovsk/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Zelensky ally fled Ukraine before FBI-linked search – media",
+      "link": "https://www.rt.com/russia/627590-ukraine-zelensky-mindich-nabu/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Mon, 10 Nov 2025 20:46:59 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691243aa85f54032283fc647.jpg\" style=\"margin-right: 10px;\" /> Long-time Zelensky ally Timur Mindich has reportedly fled Ukraine hours before anti-corruption raids linked to an FBI probe <br /><a href=\"https://www.rt.com/russia/627590-ukraine-zelensky-mindich-nabu/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "EU talks of friendship while plotting coups – Georgian official",
+      "link": "https://www.rt.com/russia/627576-georgia-eu-coups-kaladze/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Mon, 10 Nov 2025 16:28:23 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911e9b320302751b2741fe3.jpg\" style=\"margin-right: 10px;\" /> Tbilisi Mayor Kakha Kaladze has accused the European Union of hypocrisy and meddling in Georgia’s internal affairs <br /><a href=\"https://www.rt.com/russia/627576-georgia-eu-coups-kaladze/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Zelensky should halt ‘senseless’ attacks on Russia – Finnish politician",
+      "link": "https://www.rt.com/russia/627583-zelensky-halt-senseless-attacks-russia/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Mon, 10 Nov 2025 15:16:02 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912003d85f5403126432e2c.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s military strategy of long-range drone strikes on Russian cities is not working, Finnish politician Armando Mema has said <br /><a href=\"https://www.rt.com/russia/627583-zelensky-halt-senseless-attacks-russia/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Kremlin confirms Putin’s visit to India",
+      "link": "https://www.rt.com/russia/627573-putin-visit-india-peskov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Mon, 10 Nov 2025 14:55:41 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911f56785f5400a9d283cc6.jpg\" style=\"margin-right: 10px;\" /> Russian President Vladimir Putin’s trip to India is scheduled to take place before the end of 2025, spokesman Dmitry Peskov has said <br /><a href=\"https://www.rt.com/russia/627573-putin-visit-india-peskov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "‘Nazi-themed’ postal stamps seized at Ukrainian border",
+      "link": "https://www.rt.com/russia/627577-ukraine-nazi-postal-stamps/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Mon, 10 Nov 2025 14:33:42 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69133bc785f5403cf3001706.jpg\" style=\"margin-right: 10px;\" /> Ukrainian border agents have intercepted a shipment of thousands of “Nazi-themed” postal stamps <br /><a href=\"https://www.rt.com/russia/627577-ukraine-nazi-postal-stamps/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Moscow man detained over treason and terror links – FSB",
+      "link": "https://www.rt.com/russia/627572-fsb-moscow-man-detained/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Mon, 10 Nov 2025 12:57:12 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911dbd1203027461548a461.png\" style=\"margin-right: 10px;\" /> A Moscow resident has been charged with treason and terrorism-related offenses for cooperating with Ukrainian intelligence, the FSB has said <br /><a href=\"https://www.rt.com/russia/627572-fsb-moscow-man-detained/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Zelensky associate and justice minister raided by anti-graft agency – MP",
+      "link": "https://www.rt.com/russia/627558-mindich-nabu-raids-energoatom/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Mon, 10 Nov 2025 09:52:12 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911a71c85f54032ec531aeb.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s National Anti-Corruption Bureau has reportedly searched properties tied to businessman and Zelensky associate Timur Mindich <br /><a href=\"https://www.rt.com/russia/627558-mindich-nabu-raids-energoatom/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Zelensky’s office accused of energy damage cover-up",
+      "link": "https://www.rt.com/russia/627556-ukrainian-damage-report-suppressed/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Mon, 10 Nov 2025 08:31:16 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911bcd485f5402c6231d31c.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s presidential office reportedly pressured state energy firm Centrenergo to edit a report on damage from Russian strikes  <br /><a href=\"https://www.rt.com/russia/627556-ukrainian-damage-report-suppressed/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Zelensky sanctions leading Russian peace negotiator",
+      "link": "https://www.rt.com/russia/627535-zelensky-sanctions-russian-peace-negotiator/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sun, 09 Nov 2025 16:21:29 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6910c4c685f540323b730ca1.jpg\" style=\"margin-right: 10px;\" /> Russian President Vladimir Putin’s economic aide, Kirill Dmitriev, has been added to Ukraine’s latest sanctions list <br /><a href=\"https://www.rt.com/russia/627535-zelensky-sanctions-russian-peace-negotiator/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Russia won’t break nuclear test ban unless US does – Kremlin",
+      "link": "https://www.rt.com/russia/627528-peskov-russia-nuclear-test-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sun, 09 Nov 2025 14:38:31 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691082bf20302765a95f6acc.jpg\" style=\"margin-right: 10px;\" /> Russia has no intention of violating its nuclear test ban obligations but will resume testing if other countries do, Dmitry Peskov has said <br /><a href=\"https://www.rt.com/russia/627528-peskov-russia-nuclear-test-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "‘No legal way’ for West to seize Russia’s assets – Lavrov",
+      "link": "https://www.rt.com/russia/627525-lavrov-legal-basis-frozen-assets/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sun, 09 Nov 2025 11:39:54 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6910658f20302765a95f6abd.jpg\" style=\"margin-right: 10px;\" /> The EU has been seeking ways to use Russia’s frozen assets as collateral for a new loan to Ukraine <br /><a href=\"https://www.rt.com/russia/627525-lavrov-legal-basis-frozen-assets/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "US has not elaborated on nuclear test plans – Lavrov",
+      "link": "https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 08 Nov 2025 20:51:25 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690fa9b920302729cf09ecc1.jpg\" style=\"margin-right: 10px;\" /> Moscow has said it had not received any clarifications from Washington about nuclear tests ordered by President Donald Trump <br /><a href=\"https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Putin shuffles top general to Security Council",
+      "link": "https://www.rt.com/russia/627509-putin-general-bulyga-security-council/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 08 Nov 2025 17:52:22 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690f755b20302728c07e35f1.jpg\" style=\"margin-right: 10px;\" /> Former Deputy Defense Minister Andrey Bulyga will now serve as deputy to Russian Security Council Secretary Sergey Shoigu <br /><a href=\"https://www.rt.com/russia/627509-putin-general-bulyga-security-council/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Ukraine hits desertion record – BBC",
+      "link": "https://www.rt.com/russia/627507-ukraine-hits-desertion-record-bbc/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 08 Nov 2025 15:16:15 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690f5a6c20302729b65bda55.jpg\" style=\"margin-right: 10px;\" /> More Ukrainian soldiers have gone AWOL or deserted in October than in any single month of the conflict, BBC Ukraine has reported <br /><a href=\"https://www.rt.com/russia/627507-ukraine-hits-desertion-record-bbc/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Russian commander details advances in key city",
+      "link": "https://www.rt.com/russia/627502-kupyansk-encirclement-ukraine-zelensky/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 08 Nov 2025 11:36:41 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690f118485f54046a2012e1c.png\" style=\"margin-right: 10px;\" /> The liberation of the logistics hub of Kupyansk continues, the leader of an assault unit has said <br /><a href=\"https://www.rt.com/russia/627502-kupyansk-encirclement-ukraine-zelensky/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "WATCH Russian police arrest suspects in crypto-scammer’s murder",
+      "link": "https://www.rt.com/russia/627481-arrest-suspects-crypto-scammer-murder/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 07 Nov 2025 21:02:51 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e2eec20302754627410d7.png\" style=\"margin-right: 10px;\" /> Cryptocurrency investor and convicted fraudster Roman Novak and his wife were killed in the UAE, police sources have told RT <br /><a href=\"https://www.rt.com/russia/627481-arrest-suspects-crypto-scammer-murder/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Thousands protest EU member move to exit domestic violence treaty (VIDEO)",
+      "link": "https://www.rt.com/russia/627484-protest-eu-domestic-violence-treaty/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 07 Nov 2025 19:58:42 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e4c8285f54015893466bb.jpg\" style=\"margin-right: 10px;\" /> Thousands of people have protested a bill that would remove Latvia from the Istanbul Convention aimed at fighting violence against women <br /><a href=\"https://www.rt.com/russia/627484-protest-eu-domestic-violence-treaty/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "US mercenary scammed in Ukraine ‘laser weapon’ fraud case – prosecutors",
+      "link": "https://www.rt.com/russia/627476-us-mercenary-scammed-ukraine/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 07 Nov 2025 18:37:46 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e1c3e203027367f7b86dc.jpg\" style=\"margin-right: 10px;\" /> Two Ukrainian men duped a US mercenary out of $85,000 with promises of a drone-killing device, prosecutors have said <br /><a href=\"https://www.rt.com/russia/627476-us-mercenary-scammed-ukraine/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Ukrainian porn ban costing Kiev millions in tax revenues – MP",
+      "link": "https://www.rt.com/russia/627475-ukrainian-porn-millions-tax-revenue/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 07 Nov 2025 17:02:11 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e160c2030272f0d1309f0.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s ban on adult content is discouraging OnlyFans models from paying taxes, MP Daniil Getmantsev has claimed <br /><a href=\"https://www.rt.com/russia/627475-ukrainian-porn-millions-tax-revenue/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Four killed in helicopter crash in Russia (VIDEO)",
+      "link": "https://www.rt.com/russia/627470-dagestan-helicopter-crash-tourists/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 07 Nov 2025 15:08:10 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690df89920302730f24e0850.jpg\" style=\"margin-right: 10px;\" /> The aircraft collided with a private home in Russia’s Republic of Dagestan, according to emergency services <br /><a href=\"https://www.rt.com/russia/627470-dagestan-helicopter-crash-tourists/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Russian communists hail victory of ‘partner’ Mamdani",
+      "link": "https://www.rt.com/russia/627465-russian-communitsts-mamdani-partner/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 07 Nov 2025 13:31:06 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690df23320302731a62cd160.jpg\" style=\"margin-right: 10px;\" /> The Communist Party of Russia has reacted to Zohran Mamdani’s New York City mayoral victory <br /><a href=\"https://www.rt.com/russia/627465-russian-communitsts-mamdani-partner/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Putin backs total vape ban",
+      "link": "https://www.rt.com/russia/627445-putin-total-vape-ban/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 07 Nov 2025 04:13:45 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690d71782030275154437df2.jpg\" style=\"margin-right: 10px;\" /> Russian lawmakers and public health advocates are pushing for a nationwide prohibition on e-cigarette sales, calling them “liquid poison” <br /><a href=\"https://www.rt.com/russia/627445-putin-total-vape-ban/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Russia commemorates liberation of Kiev from Nazis",
+      "link": "https://www.rt.com/russia/627441-kiev-nazi-liberation-anniversary/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 06 Nov 2025 22:26:40 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690d20372030273db23b1c14.jpg\" style=\"margin-right: 10px;\" /> Russia commemorated the 82nd anniversary of the Red Army’s liberation of Kiev from Nazi forces on Thursday <br /><a href=\"https://www.rt.com/russia/627441-kiev-nazi-liberation-anniversary/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Moscow calls out NATO chief",
+      "link": "https://www.rt.com/russia/627427-zakharova-nato-chief-double-standards/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 06 Nov 2025 16:23:01 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690cb61f2030272433303e9d.jpg\" style=\"margin-right: 10px;\" /> NATO chief Mark Rutte is using double standards toward Moscow and Beijing, Russian Foreign Ministry spokeswoman Maria Zakharova has said <br /><a href=\"https://www.rt.com/russia/627427-zakharova-nato-chief-double-standards/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "EU planning more entry restrictions for Russians – Politico",
+      "link": "https://www.rt.com/russia/627419-eu-russia-visa-restrictions/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 06 Nov 2025 12:31:15 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c94d020302736ec7b864a.jpg\" style=\"margin-right: 10px;\" /> Brussels is reportedly looking to stop issuing the potential visitors multi-entry Schengen visas <br /><a href=\"https://www.rt.com/russia/627419-eu-russia-visa-restrictions/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Complaints about ‘illegal’ Ukrainian mobilization double – ombudsman",
+      "link": "https://www.rt.com/russia/627406-ukraine-mobilization-complaints-ombudsman/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 06 Nov 2025 09:35:18 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c4ae985f54035e0396a56.jpg\" style=\"margin-right: 10px;\" /> Ukrainians reported Kiev’s notorious press gangs nearly 5,000 times this year, Dmitry Lubinets has said <br /><a href=\"https://www.rt.com/russia/627406-ukraine-mobilization-complaints-ombudsman/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "West planning major sabotage at Zaporozhye nuclear plant – Moscow",
+      "link": "https://www.rt.com/russia/627411-nato-sabotage-nuclear-plant-kiev/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 06 Nov 2025 09:10:46 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c697b85f54035e0396a67.jpg\" style=\"margin-right: 10px;\" /> European NATO members are pushing Kiev to cause an accident at the facility and blame it on Russia <br /><a href=\"https://www.rt.com/russia/627411-nato-sabotage-nuclear-plant-kiev/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
+    },
+    {
+      "source": "RT Russia",
+      "title": "Ukraine to lose key city within one week – Russian military commander",
+      "link": "https://www.rt.com/russia/627398-ukraine-to-lose-key-city/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 06 Nov 2025 05:31:22 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c326b2030277ee3256412.jpg\" style=\"margin-right: 10px;\" /> Russia’s Ministry of Defense has released footage which challenges Kiev’s account of the fighting <br /><a href=\"https://www.rt.com/russia/627398-ukraine-to-lose-key-city/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
     },
     {
       "source": "RT Business",
@@ -3033,244 +3264,6 @@
       "link": "https://www.rt.com/business/625702-eu-arms-gold-rush-ukraine/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
       "published": "Wed, 01 Oct 2025 14:44:38 +0000",
       "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68dd3123203027708d1def08.jpg\" style=\"margin-right: 10px;\" /> EU military startups are reportedly turning the country into a warfare testing lab in the race to arm Kiev <br /><a href=\"https://www.rt.com/business/625702-eu-arms-gold-rush-ukraine/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Eastern Kupyansk under Russian control – MOD",
-      "link": "https://www.rt.com/russia/627620-eastern-kupliansk-liberated-mod/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Tue, 11 Nov 2025 10:21:02 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6913105620302743471703f9.jpg\" style=\"margin-right: 10px;\" /> The eastern part of Kupyansk, a key frontline city in Ukraine, has been fully captured by Russian forces, the MOD has reported <br /><a href=\"https://www.rt.com/russia/627620-eastern-kupliansk-liberated-mod/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Ukrainian MPs demand new cabinet after Zelensky ally embroiled in graft scandal",
-      "link": "https://www.rt.com/russia/627610-ukraine-cabinet-recall-mindich/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Tue, 11 Nov 2025 09:28:16 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912fdf585f5403d5b4ddf63.jpg\" style=\"margin-right: 10px;\" /> The party of former Ukrainian President Pyotr Poroshenko has called for the replacement of the cabinet amid a major graft probe <br /><a href=\"https://www.rt.com/russia/627610-ukraine-cabinet-recall-mindich/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Russian troops advance inside encircled Kupyansk – MOD",
-      "link": "https://www.rt.com/russia/627602-russian-advancement-mupyansk-mod/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Tue, 11 Nov 2025 07:51:15 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912e18f85f5401d1d43a671.jpg\" style=\"margin-right: 10px;\" /> The Russian Defense Ministry has reported continued progress in the battle for Kupyansk in  Kharkov Region, Ukraine <br /><a href=\"https://www.rt.com/russia/627602-russian-advancement-mupyansk-mod/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Ukrainian-UK plot to steal MiG-31 and detonate Kinzhal missile thwarted – FSB",
-      "link": "https://www.rt.com/russia/627598-fsb-foils-plane-hijacking/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Tue, 11 Nov 2025 05:24:30 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69130c9085f5403126432e8a.jpg\" style=\"margin-right: 10px;\" /> Russia says it has foiled a Ukrainian-British attempt to hijack a MiG-31 aircraft <br /><a href=\"https://www.rt.com/russia/627598-fsb-foils-plane-hijacking/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Kiev treats conscripts like cannon fodder – POW",
-      "link": "https://www.rt.com/russia/627596-kiev-treat-people-cannon-fodder/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Mon, 10 Nov 2025 23:57:38 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691263e685f540321b4b522f.png\" style=\"margin-right: 10px;\" /> Ukrainian draft officials use violence to force conscripts to go to the front line, a captured soldier told the Russian military <br /><a href=\"https://www.rt.com/russia/627596-kiev-treat-people-cannon-fodder/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "The battle the world is watching, but few understand: What’s really going on in Pokrovsk?",
-      "link": "https://www.rt.com/russia/627586-battle-world-is-watching-pokrovsk/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Mon, 10 Nov 2025 21:02:20 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912223b203027055f660f0a.jpg\" style=\"margin-right: 10px;\" /> Behind the headlines, Russia’s advance in Donbass reveals shifting tactics, collapsing defenses, and the stakes of 2025’s decisive fight <br /><a href=\"https://www.rt.com/russia/627586-battle-world-is-watching-pokrovsk/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Zelensky ally fled Ukraine before FBI-linked search – media",
-      "link": "https://www.rt.com/russia/627590-ukraine-zelensky-mindich-nabu/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Mon, 10 Nov 2025 20:46:59 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691243aa85f54032283fc647.jpg\" style=\"margin-right: 10px;\" /> Long-time Zelensky ally Timur Mindich has reportedly fled Ukraine hours before anti-corruption raids linked to an FBI probe <br /><a href=\"https://www.rt.com/russia/627590-ukraine-zelensky-mindich-nabu/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "EU talks of friendship while plotting coups – Georgian official",
-      "link": "https://www.rt.com/russia/627576-georgia-eu-coups-kaladze/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Mon, 10 Nov 2025 16:28:23 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911e9b320302751b2741fe3.jpg\" style=\"margin-right: 10px;\" /> Tbilisi Mayor Kakha Kaladze has accused the European Union of hypocrisy and meddling in Georgia’s internal affairs <br /><a href=\"https://www.rt.com/russia/627576-georgia-eu-coups-kaladze/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Zelensky should halt ‘senseless’ attacks on Russia – Finnish politician",
-      "link": "https://www.rt.com/russia/627583-zelensky-halt-senseless-attacks-russia/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Mon, 10 Nov 2025 15:16:02 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912003d85f5403126432e2c.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s military strategy of long-range drone strikes on Russian cities is not working, Finnish politician Armando Mema has said <br /><a href=\"https://www.rt.com/russia/627583-zelensky-halt-senseless-attacks-russia/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Kremlin confirms Putin’s visit to India",
-      "link": "https://www.rt.com/russia/627573-putin-visit-india-peskov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Mon, 10 Nov 2025 14:55:41 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911f56785f5400a9d283cc6.jpg\" style=\"margin-right: 10px;\" /> Russian President Vladimir Putin’s trip to India is scheduled to take place before the end of 2025, spokesman Dmitry Peskov has said <br /><a href=\"https://www.rt.com/russia/627573-putin-visit-india-peskov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "‘Nazi-themed’ postal stamps seized at Ukrainian border",
-      "link": "https://www.rt.com/russia/627577-ukraine-nazi-postal-stamps/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Mon, 10 Nov 2025 14:33:42 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69133bc785f5403cf3001706.jpg\" style=\"margin-right: 10px;\" /> Ukrainian border agents have intercepted a shipment of thousands of “Nazi-themed” postal stamps <br /><a href=\"https://www.rt.com/russia/627577-ukraine-nazi-postal-stamps/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Moscow man detained over treason and terror links – FSB",
-      "link": "https://www.rt.com/russia/627572-fsb-moscow-man-detained/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Mon, 10 Nov 2025 12:57:12 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911dbd1203027461548a461.png\" style=\"margin-right: 10px;\" /> A Moscow resident has been charged with treason and terrorism-related offenses for cooperating with Ukrainian intelligence, the FSB has said <br /><a href=\"https://www.rt.com/russia/627572-fsb-moscow-man-detained/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Zelensky associate and justice minister raided by anti-graft agency – MP",
-      "link": "https://www.rt.com/russia/627558-mindich-nabu-raids-energoatom/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Mon, 10 Nov 2025 09:52:12 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911a71c85f54032ec531aeb.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s National Anti-Corruption Bureau has reportedly searched properties tied to businessman and Zelensky associate Timur Mindich <br /><a href=\"https://www.rt.com/russia/627558-mindich-nabu-raids-energoatom/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Zelensky’s office accused of energy damage cover-up",
-      "link": "https://www.rt.com/russia/627556-ukrainian-damage-report-suppressed/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Mon, 10 Nov 2025 08:31:16 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6911bcd485f5402c6231d31c.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s presidential office reportedly pressured state energy firm Centrenergo to edit a report on damage from Russian strikes  <br /><a href=\"https://www.rt.com/russia/627556-ukrainian-damage-report-suppressed/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Zelensky sanctions leading Russian peace negotiator",
-      "link": "https://www.rt.com/russia/627535-zelensky-sanctions-russian-peace-negotiator/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sun, 09 Nov 2025 16:21:29 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6910c4c685f540323b730ca1.jpg\" style=\"margin-right: 10px;\" /> Russian President Vladimir Putin’s economic aide, Kirill Dmitriev, has been added to Ukraine’s latest sanctions list <br /><a href=\"https://www.rt.com/russia/627535-zelensky-sanctions-russian-peace-negotiator/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Russia won’t break nuclear test ban unless US does – Kremlin",
-      "link": "https://www.rt.com/russia/627528-peskov-russia-nuclear-test-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sun, 09 Nov 2025 14:38:31 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691082bf20302765a95f6acc.jpg\" style=\"margin-right: 10px;\" /> Russia has no intention of violating its nuclear test ban obligations but will resume testing if other countries do, Dmitry Peskov has said <br /><a href=\"https://www.rt.com/russia/627528-peskov-russia-nuclear-test-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "‘No legal way’ for West to seize Russia’s assets – Lavrov",
-      "link": "https://www.rt.com/russia/627525-lavrov-legal-basis-frozen-assets/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sun, 09 Nov 2025 11:39:54 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6910658f20302765a95f6abd.jpg\" style=\"margin-right: 10px;\" /> The EU has been seeking ways to use Russia’s frozen assets as collateral for a new loan to Ukraine <br /><a href=\"https://www.rt.com/russia/627525-lavrov-legal-basis-frozen-assets/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "US has not elaborated on nuclear test plans – Lavrov",
-      "link": "https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 08 Nov 2025 20:51:25 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690fa9b920302729cf09ecc1.jpg\" style=\"margin-right: 10px;\" /> Moscow has said it had not received any clarifications from Washington about nuclear tests ordered by President Donald Trump <br /><a href=\"https://www.rt.com/russia/627514-us-nuclear-test-plans-lavrov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Putin shuffles top general to Security Council",
-      "link": "https://www.rt.com/russia/627509-putin-general-bulyga-security-council/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 08 Nov 2025 17:52:22 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690f755b20302728c07e35f1.jpg\" style=\"margin-right: 10px;\" /> Former Deputy Defense Minister Andrey Bulyga will now serve as deputy to Russian Security Council Secretary Sergey Shoigu <br /><a href=\"https://www.rt.com/russia/627509-putin-general-bulyga-security-council/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Ukraine hits desertion record – BBC",
-      "link": "https://www.rt.com/russia/627507-ukraine-hits-desertion-record-bbc/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 08 Nov 2025 15:16:15 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690f5a6c20302729b65bda55.jpg\" style=\"margin-right: 10px;\" /> More Ukrainian soldiers have gone AWOL or deserted in October than in any single month of the conflict, BBC Ukraine has reported <br /><a href=\"https://www.rt.com/russia/627507-ukraine-hits-desertion-record-bbc/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Russian commander details advances in key city",
-      "link": "https://www.rt.com/russia/627502-kupyansk-encirclement-ukraine-zelensky/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 08 Nov 2025 11:36:41 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690f118485f54046a2012e1c.png\" style=\"margin-right: 10px;\" /> The liberation of the logistics hub of Kupyansk continues, the leader of an assault unit has said <br /><a href=\"https://www.rt.com/russia/627502-kupyansk-encirclement-ukraine-zelensky/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "WATCH Russian police arrest suspects in crypto-scammer’s murder",
-      "link": "https://www.rt.com/russia/627481-arrest-suspects-crypto-scammer-murder/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 07 Nov 2025 21:02:51 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e2eec20302754627410d7.png\" style=\"margin-right: 10px;\" /> Cryptocurrency investor and convicted fraudster Roman Novak and his wife were killed in the UAE, police sources have told RT <br /><a href=\"https://www.rt.com/russia/627481-arrest-suspects-crypto-scammer-murder/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Thousands protest EU member move to exit domestic violence treaty (VIDEO)",
-      "link": "https://www.rt.com/russia/627484-protest-eu-domestic-violence-treaty/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 07 Nov 2025 19:58:42 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e4c8285f54015893466bb.jpg\" style=\"margin-right: 10px;\" /> Thousands of people have protested a bill that would remove Latvia from the Istanbul Convention aimed at fighting violence against women <br /><a href=\"https://www.rt.com/russia/627484-protest-eu-domestic-violence-treaty/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "US mercenary scammed in Ukraine ‘laser weapon’ fraud case – prosecutors",
-      "link": "https://www.rt.com/russia/627476-us-mercenary-scammed-ukraine/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 07 Nov 2025 18:37:46 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e1c3e203027367f7b86dc.jpg\" style=\"margin-right: 10px;\" /> Two Ukrainian men duped a US mercenary out of $85,000 with promises of a drone-killing device, prosecutors have said <br /><a href=\"https://www.rt.com/russia/627476-us-mercenary-scammed-ukraine/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Ukrainian porn ban costing Kiev millions in tax revenues – MP",
-      "link": "https://www.rt.com/russia/627475-ukrainian-porn-millions-tax-revenue/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 07 Nov 2025 17:02:11 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e160c2030272f0d1309f0.jpg\" style=\"margin-right: 10px;\" /> Ukraine’s ban on adult content is discouraging OnlyFans models from paying taxes, MP Daniil Getmantsev has claimed <br /><a href=\"https://www.rt.com/russia/627475-ukrainian-porn-millions-tax-revenue/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Four killed in helicopter crash in Russia (VIDEO)",
-      "link": "https://www.rt.com/russia/627470-dagestan-helicopter-crash-tourists/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 07 Nov 2025 15:08:10 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690df89920302730f24e0850.jpg\" style=\"margin-right: 10px;\" /> The aircraft collided with a private home in Russia’s Republic of Dagestan, according to emergency services <br /><a href=\"https://www.rt.com/russia/627470-dagestan-helicopter-crash-tourists/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Russian communists hail victory of ‘partner’ Mamdani",
-      "link": "https://www.rt.com/russia/627465-russian-communitsts-mamdani-partner/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 07 Nov 2025 13:31:06 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690df23320302731a62cd160.jpg\" style=\"margin-right: 10px;\" /> The Communist Party of Russia has reacted to Zohran Mamdani’s New York City mayoral victory <br /><a href=\"https://www.rt.com/russia/627465-russian-communitsts-mamdani-partner/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Putin backs total vape ban",
-      "link": "https://www.rt.com/russia/627445-putin-total-vape-ban/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 07 Nov 2025 04:13:45 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690d71782030275154437df2.jpg\" style=\"margin-right: 10px;\" /> Russian lawmakers and public health advocates are pushing for a nationwide prohibition on e-cigarette sales, calling them “liquid poison” <br /><a href=\"https://www.rt.com/russia/627445-putin-total-vape-ban/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Russia commemorates liberation of Kiev from Nazis",
-      "link": "https://www.rt.com/russia/627441-kiev-nazi-liberation-anniversary/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 06 Nov 2025 22:26:40 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690d20372030273db23b1c14.jpg\" style=\"margin-right: 10px;\" /> Russia commemorated the 82nd anniversary of the Red Army’s liberation of Kiev from Nazi forces on Thursday <br /><a href=\"https://www.rt.com/russia/627441-kiev-nazi-liberation-anniversary/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Moscow calls out NATO chief",
-      "link": "https://www.rt.com/russia/627427-zakharova-nato-chief-double-standards/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 06 Nov 2025 16:23:01 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690cb61f2030272433303e9d.jpg\" style=\"margin-right: 10px;\" /> NATO chief Mark Rutte is using double standards toward Moscow and Beijing, Russian Foreign Ministry spokeswoman Maria Zakharova has said <br /><a href=\"https://www.rt.com/russia/627427-zakharova-nato-chief-double-standards/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "EU planning more entry restrictions for Russians – Politico",
-      "link": "https://www.rt.com/russia/627419-eu-russia-visa-restrictions/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 06 Nov 2025 12:31:15 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c94d020302736ec7b864a.jpg\" style=\"margin-right: 10px;\" /> Brussels is reportedly looking to stop issuing the potential visitors multi-entry Schengen visas <br /><a href=\"https://www.rt.com/russia/627419-eu-russia-visa-restrictions/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Complaints about ‘illegal’ Ukrainian mobilization double – ombudsman",
-      "link": "https://www.rt.com/russia/627406-ukraine-mobilization-complaints-ombudsman/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 06 Nov 2025 09:35:18 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c4ae985f54035e0396a56.jpg\" style=\"margin-right: 10px;\" /> Ukrainians reported Kiev’s notorious press gangs nearly 5,000 times this year, Dmitry Lubinets has said <br /><a href=\"https://www.rt.com/russia/627406-ukraine-mobilization-complaints-ombudsman/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "West planning major sabotage at Zaporozhye nuclear plant – Moscow",
-      "link": "https://www.rt.com/russia/627411-nato-sabotage-nuclear-plant-kiev/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 06 Nov 2025 09:10:46 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c697b85f54035e0396a67.jpg\" style=\"margin-right: 10px;\" /> European NATO members are pushing Kiev to cause an accident at the facility and blame it on Russia <br /><a href=\"https://www.rt.com/russia/627411-nato-sabotage-nuclear-plant-kiev/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
-    },
-    {
-      "source": "RT Russia",
-      "title": "Ukraine to lose key city within one week – Russian military commander",
-      "link": "https://www.rt.com/russia/627398-ukraine-to-lose-key-city/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 06 Nov 2025 05:31:22 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690c326b2030277ee3256412.jpg\" style=\"margin-right: 10px;\" /> Russia’s Ministry of Defense has released footage which challenges Kiev’s account of the fighting <br /><a href=\"https://www.rt.com/russia/627398-ukraine-to-lose-key-city/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>"
     }
   ]
 }
