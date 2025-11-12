@@ -85,6 +85,233 @@ Removed `pause` command from `run_daily_automation.bat` that was blocking schedu
 
 ---
 
+## EXPANSION ROADMAP - Future Development
+
+### Infrastructure & System Testing
+
+#### 6. 🖼️ **Debug SDXL Image Generation**
+**Goal:** Ensure local SDXL image generation works reliably
+
+**File:** `scripts/generate_images_local.py`
+
+**Actions:**
+- Test full SDXL pipeline (CPU generation)
+- Verify image quality and relevance to content
+- Check generation time benchmarks
+- Ensure images are properly saved and linked
+- Test GitHub Actions cloud-based generation workflow
+
+**Priority:** Medium (automation works without it, but images enhance posts)
+
+---
+
+#### 7. ✅ **Full End-to-End System Run-Through**
+**Goal:** Comprehensive test of entire automation pipeline
+
+**Steps:**
+1. Monitor Russian media → Generate briefing
+2. Generate SDXL image → Save to images/
+3. Generate data visualizations → 4 chart types
+4. Generate AI content → 1500+ word analysis
+5. Auto-publish → Move to _posts/
+6. Commit & push → GitHub
+7. Post to Twitter → Thread with image
+8. Post to LinkedIn → Professional summary
+
+**Validation:**
+- Check logs at each step
+- Verify file outputs exist
+- Confirm social media posts published
+- Review content quality
+- Monitor for errors/warnings
+
+**Priority:** High (ensures production readiness)
+
+---
+
+### Content Expansion - New Sources
+
+#### 8. 🌏 **CJK (Chinese, Japanese, Korean) News Outlets**
+**Goal:** Expand beyond Russian media to cover East Asian perspectives
+
+**Chinese Sources:**
+- Xinhua News Agency (新华社)
+- People's Daily (人民日报)
+- Global Times (环球时报)
+- CGTN (China Global Television Network)
+- South China Morning Post (SCMP)
+- Caixin (财新)
+
+**Japanese Sources:**
+- NHK World
+- The Japan Times
+- Asahi Shimbun (朝日新聞)
+- Nikkei Asia
+- Kyodo News
+
+**Korean Sources:**
+- Yonhap News Agency
+- Korea Herald
+- Chosun Ilbo (조선일보)
+- Hankyoreh (한겨레)
+
+**Implementation:**
+- Create `scripts/monitor_cjk_media.py` (similar to Russian version)
+- Add CJK language handling (UTF-8, character encoding)
+- Translation pipeline (Chinese/Japanese/Korean → English)
+- Cultural context notes for East Asian perspectives
+- Knowledge base entries for regional conflicts/policies
+
+**Priority:** Low-Medium (expand after Russian system is optimized)
+
+---
+
+#### 9. 🇪🇺 **Western European News Outlets**
+**Goal:** Add European perspectives for balanced global coverage
+
+**Sources:**
+- **France:** Le Monde, Le Figaro, AFP
+- **Germany:** Deutsche Welle (DW), Der Spiegel, Frankfurter Allgemeine
+- **UK:** BBC, The Guardian, Financial Times, Reuters
+- **Spain:** El País, El Mundo
+- **Italy:** La Repubblica, Corriere della Sera
+- **Netherlands:** NOS, De Telegraaf
+- **Belgium:** VRT, Le Soir
+- **EU Institutions:** Euronews, Politico Europe
+
+**Implementation:**
+- Create `scripts/monitor_european_media.py`
+- Multi-language support (French, German, Spanish, Italian)
+- EU policy context (Brexit, sanctions, energy policy)
+- Knowledge base for EU-Russia relations
+- Comparison of European vs. Russian coverage of same events
+
+**Priority:** Low-Medium (adds balance to Russian-focused analysis)
+
+---
+
+### Content Expansion - Research & Science
+
+#### 10. 🧬 **Research Database: Biohacking & Longevity**
+**Goal:** Track cutting-edge research on health optimization, longevity, and performance enhancement
+
+**Topic Categories:**
+
+**A. Peptides**
+- Growth hormone secretagogues (CJC-1295, Ipamorelin, GHRP-6)
+- BPC-157 (tissue repair, gut health)
+- TB-500 (injury recovery, inflammation)
+- Thymosin Alpha-1 (immune system)
+- Melanotan II (tanning, libido)
+- Selank, Semax (nootropics, anxiety)
+- Clinical trials and safety data
+- Celebrity/athlete usage patterns
+
+**B. Light Therapy**
+- Red Light Therapy (RLT): 660nm, 850nm wavelengths
+- Near-infrared (NIR) therapy
+- Photobiomodulation (PBM) mechanisms
+- Mitochondrial function enhancement
+- Skin health, collagen production
+- Athletic recovery applications
+- Brain health (transcranial photobiomodulation)
+- Commercial devices (Joovv, Red Therapy Co., etc.)
+
+**C. Brain-Computer Interfaces (BCIs)**
+- Neuralink progress and trials
+- Kernel, Paradromics, Synchron competitors
+- Non-invasive BCIs (EEG-based)
+- Medical applications (paralysis, ALS)
+- Cognitive enhancement potential
+- Ethical and safety concerns
+- Investment trends and funding
+
+**D. Elite Health Optimization**
+- Concierge medicine services
+- Regenerative medicine (stem cells, exosomes)
+- NAD+ IV therapy
+- Hyperbaric oxygen therapy (HBOT)
+- Cryotherapy protocols
+- Blood testing and biomarker optimization
+- Continuous glucose monitoring (CGM)
+- Wearables (Whoop, Oura, Apple Watch)
+- Performance coaches and protocols
+
+**E. Pharmaceutical & Clinical**
+- Off-label drug use (metformin, rapamycin)
+- GLP-1 agonists (Ozempic, Wegovy, Mounjaro)
+- Testosterone replacement therapy (TRT)
+- Human growth hormone (HGH)
+- Nootropics (modafinil, racetams)
+- Senolytic drugs (aging research)
+
+**Sources to Monitor:**
+- PubMed / NIH research papers
+- bioRxiv preprints
+- Nature, Science, Cell journals
+- Longevity research orgs (SENS, Buck Institute)
+- Peter Attia, Andrew Huberman, Bryan Johnson content
+- Biohacker forums (Reddit r/Biohacking, Longecity)
+- FDA clinical trial database
+- Athletic performance research
+- Celebrity/athlete health trends (via wellness media)
+
+**Implementation:**
+- Create `scripts/monitor_research.py`
+- PubMed API integration
+- Academic paper parsing
+- Research briefing generation
+- Clinical trial tracking
+- Safety alert system
+- Knowledge base for each topic category
+
+**Content Types:**
+- Weekly research roundup (5-10 studies)
+- Deep-dive analysis on specific peptides/therapies
+- Risk/benefit analysis for each intervention
+- Celebrity/athlete usage trends
+- Regulatory updates (FDA, EMA)
+- Protocol guides (dosing, timing, stacking)
+
+**Priority:** Low (new vertical, requires separate content strategy)
+
+---
+
+### Implementation Strategy
+
+**Phase 1: Core System Optimization** (Current - Week 1)
+- Fix TF-IDF filtering
+- Debug RSS feeds
+- Full system test
+- SDXL image debugging
+
+**Phase 2: Russian Media Excellence** (Weeks 2-3)
+- Add 10+ more Knowledge Base entries
+- Optimize content quality
+- Fine-tune automation
+- Build analytics dashboard
+
+**Phase 3: Geographic Expansion** (Months 2-3)
+- Add Western European sources
+- Add CJK sources
+- Multi-language translation pipeline
+- Regional knowledge bases
+
+**Phase 4: Vertical Expansion** (Months 3-6)
+- Launch biohacking/research vertical
+- Separate content tracks (Russia + Research)
+- Build research knowledge base
+- Audience development for health/performance niche
+
+**Phase 5: Premium Features** (Months 6-12)
+- Payment integration (Stripe)
+- Premium tier subscriptions
+- Corporate accounts
+- Custom research requests
+- API access for data
+
+---
+
 **Session:** November 6, 2025 (Continued)
 **Goal:** Squeeze out every last bit of quality and performance
 **Status:** Ongoing optimization beyond "production ready"
