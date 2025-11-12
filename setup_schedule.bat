@@ -15,7 +15,7 @@ schtasks /create ^
     /tn "Eastbound Daily Automation" ^
     /tr "\"%SCRIPT_DIR%run_daily_automation.bat\"" ^
     /sc daily ^
-    /st 06:55 ^
+    /st 07:05 ^
     /rl highest ^
     /f
 
@@ -24,7 +24,7 @@ if %errorlevel% equ 0 (
     echo [SUCCESS] Scheduled task created!
     echo.
     echo Task name: Eastbound Daily Automation
-    echo Schedule: Every day at 6:55 AM
+    echo Schedule: Every day at 7:05 AM
     echo Script: %SCRIPT_DIR%run_daily_automation.bat
     echo.
     echo To view the task:
