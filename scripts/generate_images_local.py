@@ -21,7 +21,7 @@ import os
 from pathlib import Path
 from datetime import datetime
 import hashlib
-from typing import Optional, Dict
+from typing import Optional, Dict, List
 import warnings
 
 # Suppress warnings
@@ -34,32 +34,34 @@ warnings.filterwarnings('ignore')
 
 def generate_image_cpu(prompt: str, output_path: Path,
                        num_steps: int = 50,
-                       use_fast_model: bool = False,
-                       negative_prompt: str = None) -> Optional[Path]:
+                       negative_prompt: str = None,
+                       lora_path: str = None,
+                       lora_strength: float = 0.5,
+                       lora_configs: List[Dict] = None) -> Optional[Path]:
     """
     Generate image using SDXL on CPU.
 
-    Optimized for GitHub Actions:
-    - Uses full SDXL base (best quality at 25-50 steps)
+    Optimized for quality:
+    - Uses full SDXL base (best quality at 50 steps)
     - CPU-only (no GPU required)
-    - ~8-10 minutes per image on GitHub runners
+    - ~40-50 minutes per image on CPU
 
     Args:
         prompt: Description of image
         output_path: Where to save
-        num_steps: Inference steps (25-50 optimal for SDXL)
-        use_fast_model: Use SDXL Turbo (faster but lower quality)
+        num_steps: Inference steps (default: 50, optimal for SDXL)
         negative_prompt: What to avoid in generation
+        lora_configs: List of LoRA configs for multi-LoRA loading
 
     Returns:
         Path to generated image or None if failed
     """
     try:
-        print(f"[LOCAL-GEN] Generating image on CPU...")
-        print(f"[LOCAL-GEN] Prompt: {prompt}")
-        print(f"[LOCAL-GEN] Steps: {num_steps}")
+        print(f"[LOCAL-GEN] Generating image on CPU...", flush=True)
+        print(f"[LOCAL-GEN] Prompt: {prompt}", flush=True)
+        print(f"[LOCAL-GEN] Steps: {num_steps}", flush=True)
         if negative_prompt:
-            print(f"[LOCAL-GEN] Negative: {negative_prompt}")
+            print(f"[LOCAL-GEN] Negative: {negative_prompt}", flush=True)
 
         # Import here to avoid slow startup if not needed
         from diffusers import AutoPipelineForText2Image
@@ -69,27 +71,16 @@ def generate_image_cpu(prompt: str, output_path: Path,
         device = "cpu"
         torch_dtype = torch.float32  # CPU needs float32
 
-        # Choose model
-        if use_fast_model:
-            # SDXL Turbo: SDXL quality at 1-4 steps (much faster!)
-            # ~6.5GB download, ~2-3 min generation on GitHub Actions
-            model_id = "stabilityai/sdxl-turbo"
-            print(f"[LOCAL-GEN] Using SDXL Turbo: {model_id}")
-            print(f"[LOCAL-GEN] (SDXL quality optimized for 1-4 steps)")
-        else:
-            # Full SDXL: Best quality at 25-50 steps
-            # ~6.9GB download, ~8-10 min at 50 steps on GitHub Actions
-            model_id = "stabilityai/stable-diffusion-xl-base-1.0"
-            print(f"[LOCAL-GEN] Using full SDXL: {model_id}")
-            print(f"[LOCAL-GEN] (Best quality at 25-50 steps)")
-
-        print(f"[LOCAL-GEN] Loading model... (first run downloads ~6.9GB)")
+        # Use full SDXL base model
+        model_id = "stabilityai/stable-diffusion-xl-base-1.0"
+        print(f"[LOCAL-GEN] Using full SDXL: {model_id}", flush=True)
+        print(f"[LOCAL-GEN] Best quality at 50 steps", flush=True)
+        print(f"[LOCAL-GEN] Loading model... (first run downloads ~6.9GB)", flush=True)
 
         # Load pipeline with CPU optimizations
         pipe = AutoPipelineForText2Image.from_pretrained(
             model_id,
             torch_dtype=torch_dtype,
-            variant="fp16" if model_id == "stabilityai/sdxl-turbo" else None,
         )
 
         pipe = pipe.to(device)
@@ -97,11 +88,37 @@ def generate_image_cpu(prompt: str, output_path: Path,
         # Enable CPU optimizations
         pipe.enable_attention_slicing()
 
-        print(f"[LOCAL-GEN] Model loaded, starting generation...")
-        if model_id == "stabilityai/sdxl-turbo":
-            print(f"[LOCAL-GEN] This will take 2-3 minutes on CPU...")
-        else:
-            print(f"[LOCAL-GEN] This will take 8-10 minutes on CPU...")
+        # Load LoRA weights if provided (multi-LoRA support)
+        if lora_configs:
+            print(f"[LORA] Loading {len(lora_configs)} LoRA model(s)...", flush=True)
+            for i, lora_config in enumerate(lora_configs, 1):
+                lora_path = lora_config['path']
+                strength = lora_config['strength']
+                lora_name = Path(lora_path).stem
+
+                print(f"[LORA] {i}. {lora_name} @ strength {strength}", flush=True)
+
+                try:
+                    pipe.load_lora_weights(lora_path)
+                    pipe.fuse_lora(lora_scale=strength)
+                    print(f"[OK] LoRA {i} fused successfully", flush=True)
+                except Exception as e:
+                    print(f"[WARNING] Failed to load LoRA {i}: {e}", flush=True)
+                    print(f"[INFO] Continuing with previous LoRAs", flush=True)
+        elif lora_path:
+            # Legacy single LoRA support (backward compatible)
+            print(f"[LOCAL-GEN] Loading LoRA weights from: {lora_path}", flush=True)
+            print(f"[LOCAL-GEN] LoRA strength: {lora_strength}", flush=True)
+            try:
+                pipe.load_lora_weights(lora_path)
+                pipe.fuse_lora(lora_scale=lora_strength)
+                print(f"[LOCAL-GEN] LoRA loaded successfully", flush=True)
+            except Exception as e:
+                print(f"[WARNING] Failed to load LoRA: {e}", flush=True)
+                print(f"[INFO] Continuing with base SDXL model", flush=True)
+
+        print(f"[LOCAL-GEN] Model loaded, starting generation...", flush=True)
+        print(f"[LOCAL-GEN] Estimated time: {int(num_steps * 0.8)}-{int(num_steps * 1.0)} minutes on CPU...", flush=True)
 
         # Default negative prompt if none provided
         if negative_prompt is None:
@@ -120,48 +137,36 @@ def generate_image_cpu(prompt: str, output_path: Path,
             # Print every step for visibility
             percent = (step / num_steps) * 100
             elapsed_str = f"{int(elapsed)}s"
-            print(f"[PROGRESS] Step {step}/{num_steps} ({percent:.0f}%) - Elapsed: {elapsed_str}")
+            print(f"[PROGRESS] Step {step}/{num_steps} ({percent:.0f}%) - Elapsed: {elapsed_str}", flush=True)
 
             return callback_kwargs
 
         # Generate image
         with torch.no_grad():
-            print(f"[GENERATE] Starting inference at {time.strftime('%H:%M:%S')}")
+            print(f"[GENERATE] Starting inference at {time.strftime('%H:%M:%S')}", flush=True)
 
-            if model_id == "stabilityai/sdxl-turbo":
-                # SDXL Turbo optimal settings: guidance_scale=0.0, 1-4 steps
-                image = pipe(
-                    prompt=prompt,
-                    negative_prompt=negative_prompt,
-                    num_inference_steps=num_steps,
-                    guidance_scale=0.0,  # SDXL Turbo requires guidance_scale=0.0
-                    height=512,
-                    width=512,
-                    callback_on_step_end=progress_callback
-                ).images[0]
-            else:
-                # Full SDXL settings: guidance_scale=7.5, 25-50 steps
-                image = pipe(
-                    prompt=prompt,
-                    negative_prompt=negative_prompt,
-                    num_inference_steps=num_steps,
-                    guidance_scale=7.5,
-                    height=512,
-                    width=512,
-                    callback_on_step_end=progress_callback
-                ).images[0]
+            # Full SDXL settings: guidance_scale=7.5, 50 steps optimal
+            image = pipe(
+                prompt=prompt,
+                negative_prompt=negative_prompt,
+                num_inference_steps=num_steps,
+                guidance_scale=7.5,
+                height=512,
+                width=512,
+                callback_on_step_end=progress_callback
+            ).images[0]
 
             total_time = time.time() - start_time
-            print(f"[COMPLETE] Generation finished in {int(total_time)}s ({total_time/60:.1f} minutes)")
+            print(f"[COMPLETE] Generation finished in {int(total_time)}s ({total_time/60:.1f} minutes)", flush=True)
 
         # Save image
         output_path.parent.mkdir(parents=True, exist_ok=True)
         image.save(output_path)
 
-        print(f"[OK] Generated: {output_path.name}")
-        print(f"[INFO] Model: {model_id}")
-        print(f"[INFO] Steps: {num_steps}")
-        print(f"[INFO] Cost: FREE (local generation)")
+        print(f"[OK] Generated: {output_path.name}", flush=True)
+        print(f"[INFO] Model: {model_id}", flush=True)
+        print(f"[INFO] Steps: {num_steps}", flush=True)
+        print(f"[INFO] Cost: FREE (local generation)", flush=True)
 
         # Clean up to free memory
         del pipe
@@ -171,11 +176,11 @@ def generate_image_cpu(prompt: str, output_path: Path,
         return output_path
 
     except ImportError as e:
-        print(f"[ERROR] Required libraries not installed: {e}")
-        print("[INFO] Install with: pip install diffusers transformers accelerate pillow torch")
+        print(f"[ERROR] Required libraries not installed: {e}", flush=True)
+        print("[INFO] Install with: pip install diffusers transformers accelerate pillow torch", flush=True)
         return None
     except Exception as e:
-        print(f"[ERROR] Image generation failed: {e}")
+        print(f"[ERROR] Image generation failed: {e}", flush=True)
         return None
 
 
@@ -256,7 +261,9 @@ def create_prompt_from_briefing(briefing: Dict) -> str:
 
 
 def generate_for_briefing(briefing_path: Path, output_dir: Path,
-                         num_steps: int = 50) -> Optional[Path]:
+                         num_steps: int = 50,
+                         lora_path: str = None,
+                         lora_strength: float = 0.5) -> Optional[Path]:
     """
     Auto-generate image from briefing.
 
@@ -264,6 +271,8 @@ def generate_for_briefing(briefing_path: Path, output_dir: Path,
         briefing_path: Path to briefing JSON
         output_dir: Output directory
         num_steps: Inference steps (25-50 optimal for SDXL)
+        lora_path: Optional path to LoRA weights
+        lora_strength: LoRA strength (0.0-1.0)
 
     Returns:
         Path to generated image
@@ -272,13 +281,14 @@ def generate_for_briefing(briefing_path: Path, output_dir: Path,
         briefing = json.load(f)
 
     prompt = create_prompt_from_briefing(briefing)
-    print(f"[INFO] Auto-generated prompt: {prompt}")
+    print(f"[INFO] Auto-generated prompt: {prompt}", flush=True)
 
     # Generate new image (no caching - always fresh)
     date = briefing.get('date', datetime.now().strftime('%Y-%m-%d'))
     output_path = output_dir / f"{date}-generated.png"
 
-    return generate_image_cpu(prompt, output_path, num_steps=num_steps)
+    return generate_image_cpu(prompt, output_path, num_steps=num_steps,
+                             lora_path=lora_path, lora_strength=lora_strength)
 
 
 def main():
@@ -289,45 +299,115 @@ def main():
     parser.add_argument('--briefing', help='Briefing JSON for auto-generation')
     parser.add_argument('--output', default='images/', help='Output directory')
     parser.add_argument('--steps', type=int, default=50,
-                       help='Inference steps (25-50 optimal for SDXL)')
+                       help='Inference steps (default: 50, optimal for SDXL)')
     parser.add_argument('--auto', action='store_true',
                        help='Auto-generate from briefing')
-    parser.add_argument('--fast', action='store_true', default=False,
-                       help='Use SDXL Turbo (faster, lower quality)')
+    parser.add_argument('--lora', help='Path to single LoRA weights file (.safetensors)')
+    parser.add_argument('--lora-strength', type=float, default=0.5,
+                       help='LoRA strength/scale (0.0-1.0, default: 0.5)')
+    parser.add_argument('--loras', nargs='+', help='Multiple LoRA paths (e.g., --loras lora1.safetensors lora2.safetensors)')
+    parser.add_argument('--lora-weights', nargs='+', type=float, help='Weights for multiple LoRAs (e.g., --lora-weights 0.7 0.4)')
+    parser.add_argument('--lora-combo', help='Preset LoRA combination (photojournalism, soviet, kremlin, diplomatic, portrait, military, energy, east_asian)')
+    parser.add_argument('--negative', help='Negative prompt')
 
     args = parser.parse_args()
 
     output_dir = Path(args.output)
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # Build LoRA configuration
+    lora_configs = None
+
+    if args.lora_combo:
+        # Use preset combination
+        LORA_DIR = Path("models/loras")
+        PRESETS = {
+            'photojournalism_standard': [
+                {'path': str(LORA_DIR / 'steve_mccurry_v08.safetensors'), 'strength': 0.7},
+                {'path': str(LORA_DIR / 'touch_of_realism_v2.safetensors'), 'strength': 0.4}
+            ],
+            'soviet_nostalgia': [
+                {'path': str(LORA_DIR / 'film_photography_v1.safetensors'), 'strength': 0.5},
+                {'path': str(LORA_DIR / 'steve_mccurry_v08.safetensors'), 'strength': 0.5}
+            ],
+            'kremlin_architecture': [
+                {'path': str(LORA_DIR / 'steve_mccurry_v08.safetensors'), 'strength': 0.6},
+                {'path': str(LORA_DIR / 'touch_of_realism_v2.safetensors'), 'strength': 0.5}
+            ],
+            'diplomatic_summit': [
+                {'path': str(LORA_DIR / 'steve_mccurry_v08.safetensors'), 'strength': 0.6},
+                {'path': str(LORA_DIR / 'touch_of_realism_v2.safetensors'), 'strength': 0.5}
+            ],
+            'military_operations': [
+                {'path': str(LORA_DIR / 'steve_mccurry_v08.safetensors'), 'strength': 0.7},
+                {'path': str(LORA_DIR / 'touch_of_realism_v2.safetensors'), 'strength': 0.4}
+            ],
+            'energy_infrastructure': [
+                {'path': str(LORA_DIR / 'steve_mccurry_v08.safetensors'), 'strength': 0.6},
+                {'path': str(LORA_DIR / 'touch_of_realism_v2.safetensors'), 'strength': 0.5}
+            ],
+            'east_asian_context': [
+                {'path': str(LORA_DIR / 'steve_mccurry_v08.safetensors'), 'strength': 0.7},
+                {'path': str(LORA_DIR / 'touch_of_realism_v2.safetensors'), 'strength': 0.4}
+            ]
+        }
+
+        if args.lora_combo in PRESETS:
+            lora_configs = PRESETS[args.lora_combo]
+            print(f"[INFO] Using preset combo: {args.lora_combo}", flush=True)
+        else:
+            print(f"[WARNING] Unknown preset '{args.lora_combo}', using base SDXL", flush=True)
+
+    elif args.loras:
+        # Multiple LoRAs specified manually
+        if args.lora_weights and len(args.lora_weights) == len(args.loras):
+            lora_configs = [
+                {'path': path, 'strength': weight}
+                for path, weight in zip(args.loras, args.lora_weights)
+            ]
+        else:
+            # Use default strength if weights not specified
+            default_weight = args.lora_strength
+            lora_configs = [
+                {'path': path, 'strength': default_weight}
+                for path in args.loras
+            ]
+            print(f"[INFO] No weights specified, using {default_weight} for all LoRAs", flush=True)
+
     if args.auto and args.briefing:
         # Auto-generate
-        print("[INFO] Auto-generating image from briefing...")
-        img = generate_for_briefing(Path(args.briefing), output_dir, args.steps)
+        print("[INFO] Auto-generating image from briefing...", flush=True)
+        img = generate_for_briefing(Path(args.briefing), output_dir, args.steps,
+                                   lora_path=args.lora, lora_strength=args.lora_strength)
 
         if img:
-            print(f"\n[SUCCESS] Image generated: {img}")
-            print(f"[INFO] Cost: $0 (local generation)")
+            print(f"\n[SUCCESS] Image generated: {img}", flush=True)
+            print(f"[INFO] Cost: $0 (local generation)", flush=True)
+            if args.lora:
+                print(f"[INFO] LoRA used: {args.lora} (strength: {args.lora_strength})", flush=True)
         else:
-            print("\n[FAILED] Could not generate image")
+            print("\n[FAILED] Could not generate image", flush=True)
 
     elif args.prompt:
         # Custom prompt
-        print("[INFO] Generating from custom prompt...")
+        print("[INFO] Generating from custom prompt...", flush=True)
         output_path = output_dir / f"custom-{datetime.now().strftime('%Y%m%d-%H%M%S')}.png"
 
         img = generate_image_cpu(args.prompt, output_path,
                                 num_steps=args.steps,
-                                use_fast_model=args.fast)
+                                negative_prompt=args.negative,
+                                lora_path=args.lora,
+                                lora_strength=args.lora_strength,
+                                lora_configs=lora_configs)
 
         if img:
-            print(f"\n[SUCCESS] Image generated: {img}")
-            print(f"[INFO] Cost: $0 (local generation)")
+            print(f"\n[SUCCESS] Image generated: {img}", flush=True)
+            print(f"[INFO] Cost: $0 (local generation)", flush=True)
         else:
-            print("\n[FAILED] Could not generate image")
+            print("\n[FAILED] Could not generate image", flush=True)
 
     else:
-        print("[ERROR] Provide either --prompt or --briefing with --auto")
+        print("[ERROR] Provide either --prompt or --briefing with --auto", flush=True)
         parser.print_help()
 
 

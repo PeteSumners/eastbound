@@ -39,7 +39,79 @@ RSS_SOURCES = {
     'TASS World': 'https://tass.com/world/rss',
 }
 
+# East Asian media RSS feeds - provides regional perspectives on Russian narratives
+EAST_ASIA_SOURCES = {
+    # China - State perspectives often align with or counter Russian narratives
+    'CGTN': 'https://www.cgtn.com/subscribe/rss/section/world.xml',
+    'Xinhua': 'https://english.news.cn/rss/world.xml',
+    'Global Times': 'https://www.globaltimes.cn/rss/outbrain.xml',
+
+    # Japan - Western-aligned perspective, often critical of Russian actions
+    'NHK World': 'https://www3.nhk.or.jp/nhkworld/en/news/rss.xml',
+    'The Japan Times': 'https://www.japantimes.co.jp/feed/',
+
+    # South Korea - Balanced regional power perspective
+    'Yonhap': 'https://en.yna.co.kr/RSS/world.xml',
+    'Arirang News': 'https://www.arirang.com/xml/news_rss.xml',
+
+    # Taiwan - Democratic perspective, often skeptical of authoritarian narratives
+    'Focus Taiwan': 'https://focustaiwan.tw/rss/news/afav.xml',
+    'Taipei Times': 'https://www.taipeitimes.com/xml/rss.xml',
+
+    # North Korea - Provides rare perspective from DPRK (often pro-Russian)
+    'KCNA': 'https://kcnawatch.org/feed/',
+}
+
 # Note: Removed duplicate 'TASS English' which was same URL as 'TASS'
+
+def analyze_sentiment(text):
+    """
+    Simple sentiment analysis using keyword-based approach.
+
+    Returns:
+        tuple: (sentiment_label, sentiment_score)
+        - sentiment_label: 'positive', 'negative', or 'neutral'
+        - sentiment_score: float between -1.0 (very negative) and 1.0 (very positive)
+    """
+    text_lower = text.lower()
+
+    # Positive keywords (weighted)
+    positive_keywords = {
+        'peace': 2, 'agreement': 2, 'cooperation': 2, 'success': 2, 'victory': 2,
+        'growth': 1.5, 'development': 1.5, 'prosperity': 1.5, 'stability': 1.5,
+        'positive': 1, 'good': 1, 'improved': 1, 'progress': 1, 'advanced': 1,
+        'strong': 1, 'strengthening': 1, 'alliance': 1, 'partnership': 1,
+    }
+
+    # Negative keywords (weighted)
+    negative_keywords = {
+        'war': 2, 'conflict': 2, 'attack': 2, 'strike': 2, 'killed': 2, 'death': 2,
+        'crisis': 1.5, 'threat': 1.5, 'danger': 1.5, 'sanctions': 1.5, 'violation': 1.5,
+        'failed': 1, 'failure': 1, 'problem': 1, 'concern': 1, 'worried': 1,
+        'accused': 1, 'condemned': 1, 'criticized': 1, 'protest': 1, 'opposition': 1,
+    }
+
+    # Count weighted occurrences
+    positive_score = sum(weight for keyword, weight in positive_keywords.items() if keyword in text_lower)
+    negative_score = sum(weight for keyword, weight in negative_keywords.items() if keyword in text_lower)
+
+    # Calculate net sentiment
+    total = positive_score + negative_score
+    if total == 0:
+        return 'neutral', 0.0
+
+    net_score = (positive_score - negative_score) / total
+
+    # Classify
+    if net_score > 0.2:
+        label = 'positive'
+    elif net_score < -0.2:
+        label = 'negative'
+    else:
+        label = 'neutral'
+
+    return label, round(net_score, 3)
+
 
 def fetch_feed(url, source_name, max_articles=50, retries=2):
     """
@@ -77,12 +149,18 @@ def fetch_feed(url, source_name, max_articles=50, retries=2):
                 if not entry.get('title') or not entry.get('link'):
                     continue
 
+                # Analyze sentiment
+                text_for_sentiment = entry.get('title', '') + ' ' + entry.get('summary', '')[:500]
+                sentiment_label, sentiment_score = analyze_sentiment(text_for_sentiment)
+
                 articles.append({
                     'source': source_name,
                     'title': entry.get('title', '').strip(),
                     'link': entry.get('link', '').strip(),
                     'published': entry.get('published', ''),
                     'summary': entry.get('summary', '')[:1000],
+                    'sentiment': sentiment_label,
+                    'sentiment_score': sentiment_score,
                 })
 
             if len(articles) == 0 and len(feed.entries) == 0:
@@ -254,13 +332,31 @@ def identify_trending_stories(all_articles, use_tfidf=True):
     return sorted_trending[:10]  # Top 10 trending topics (increased from 5)
 
 def create_briefing(trending_stories, all_articles):
-    """Create a briefing document with EXPANDED coverage."""
+    """Create a briefing document with EXPANDED coverage and sentiment analysis."""
     today = datetime.now().strftime('%Y-%m-%d')
+
+    # Calculate overall sentiment distribution
+    sentiment_counts = {'positive': 0, 'negative': 0, 'neutral': 0}
+    sentiment_scores = []
+
+    for article in all_articles:
+        sentiment = article.get('sentiment', 'neutral')
+        sentiment_counts[sentiment] += 1
+        sentiment_scores.append(article.get('sentiment_score', 0.0))
+
+    avg_sentiment = sum(sentiment_scores) / len(sentiment_scores) if sentiment_scores else 0.0
 
     briefing = {
         'date': today,
         'generated_at': datetime.now().isoformat(),
         'total_articles_scanned': len(all_articles),
+        'sentiment_analysis': {
+            'distribution': sentiment_counts,
+            'average_score': round(avg_sentiment, 3),
+            'positive_percentage': round(100 * sentiment_counts['positive'] / len(all_articles), 1) if all_articles else 0,
+            'negative_percentage': round(100 * sentiment_counts['negative'] / len(all_articles), 1) if all_articles else 0,
+            'neutral_percentage': round(100 * sentiment_counts['neutral'] / len(all_articles), 1) if all_articles else 0,
+        },
         'trending_stories': trending_stories,
         'top_headlines': all_articles[:50],  # Top 50 overall (increased from 15)
         'all_articles': all_articles  # Include EVERYTHING for AI to analyze
@@ -314,22 +410,29 @@ def deduplicate_articles(articles):
 def main():
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
-    parser = argparse.ArgumentParser(description='Monitor Russian media sources')
+    parser = argparse.ArgumentParser(description='Monitor Russian and East Asian media sources')
     parser.add_argument('--output', required=True, help='Output JSON file path')
     parser.add_argument('--parallel', action='store_true', help='Use parallel fetching (faster)')
+    parser.add_argument('--include-asia', action='store_true', help='Include East Asian news sources')
     args = parser.parse_args()
 
     print("[RSS] Monitoring Russian media sources...")
 
     all_articles = []
 
+    # Combine Russian sources with Asian sources if requested
+    sources_to_fetch = dict(RSS_SOURCES)
+    if args.include_asia:
+        print("[INFO] Including East Asian sources for regional perspective...")
+        sources_to_fetch.update(EAST_ASIA_SOURCES)
+
     if args.parallel:
         # Parallel fetching (much faster!)
-        print("  [PARALLEL] Fetching feeds in parallel...")
-        with ThreadPoolExecutor(max_workers=5) as executor:
+        print(f"  [PARALLEL] Fetching {len(sources_to_fetch)} feeds in parallel...")
+        with ThreadPoolExecutor(max_workers=8) as executor:  # Increased from 5 to handle more sources
             future_to_source = {
                 executor.submit(fetch_feed, url, source_name, 50): source_name
-                for source_name, url in RSS_SOURCES.items()
+                for source_name, url in sources_to_fetch.items()
             }
 
             for future in as_completed(future_to_source):
@@ -342,7 +445,7 @@ def main():
                     print(f"    [ERROR] {source_name}: {e}")
     else:
         # Sequential fetching (original)
-        for source_name, url in RSS_SOURCES.items():
+        for source_name, url in sources_to_fetch.items():
             print(f"  Fetching {source_name}...")
             articles = fetch_feed(url, source_name, max_articles=50)
             all_articles.extend(articles)
@@ -386,6 +489,14 @@ def main():
             for article in story['articles'][:2]:
                 title = article['title'][:80].encode('utf-8', errors='replace').decode('utf-8', errors='replace')
                 print(f"   - {article['source']}: {title}...")
+
+        # Print sentiment analysis summary
+        print("\n[SENTIMENT] Overall sentiment distribution:")
+        print(f"  Positive: {briefing['sentiment_analysis']['positive_percentage']}%")
+        print(f"  Negative: {briefing['sentiment_analysis']['negative_percentage']}%")
+        print(f"  Neutral:  {briefing['sentiment_analysis']['neutral_percentage']}%")
+        print(f"  Average score: {briefing['sentiment_analysis']['average_score']:.3f} (-1.0 to 1.0)")
+
     except UnicodeEncodeError:
         print("\n[SUMMARY] Top trending stories saved to briefing (console encoding error prevented display)")
 

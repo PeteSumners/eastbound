@@ -52,6 +52,17 @@ desktop.ini
 *.log
 .cache/
 
+# AI Models (too large for git - download separately)
+models/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Backup folders
+backup_*/
+
 # Node (if adding a frontend later)
 node_modules/
 npm-debug.log*

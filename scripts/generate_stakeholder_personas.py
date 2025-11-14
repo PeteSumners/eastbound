@@ -24,7 +24,7 @@ REGIONS = {
     'North America': ['USA', 'Canada', 'Mexico'],
     'Latin America': ['Brazil', 'Argentina', 'Colombia', 'Ecuador', 'Peru', 'Chile', 'Venezuela'],
     'Middle East': ['Turkey', 'Israel', 'UAE', 'Saudi Arabia', 'Iran', 'Syria', 'Iraq', 'Egypt'],
-    'East Asia': ['China', 'Japan', 'South Korea', 'Taiwan', 'Vietnam', 'Philippines'],
+    'East Asia': ['China', 'Japan', 'South Korea', 'North Korea', 'Taiwan', 'Vietnam', 'Philippines'],
     'South Asia': ['India', 'Pakistan', 'Bangladesh', 'Sri Lanka', 'Nepal'],
     'Africa': ['South Africa', 'Nigeria', 'Kenya', 'Ethiopia', 'Egypt', 'Ghana', 'Tanzania'],
     'Russia/CIS': ['Russia', 'Kazakhstan', 'Georgia', 'Armenia', 'Azerbaijan'],
@@ -47,6 +47,10 @@ CITIES = {
     'Turkey': ['Istanbul', 'Ankara', 'Izmir'],
     'South Africa': ['Johannesburg', 'Cape Town', 'Durban'],
     'Nigeria': ['Lagos', 'Abuja', 'Kano', 'Port Harcourt'],
+    'Japan': ['Tokyo', 'Osaka', 'Kyoto', 'Yokohama', 'Sapporo'],
+    'South Korea': ['Seoul', 'Busan', 'Incheon', 'Daegu'],
+    'North Korea': ['Pyongyang', 'Hamhung', 'Chongjin'],
+    'Taiwan': ['Taipei', 'Kaohsiung', 'Taichung', 'Tainan'],
 }
 
 # Demographics
@@ -261,6 +265,10 @@ def _generate_name(country: str) -> str:
         'UK': ['William', 'Emma', 'George', 'Olivia', 'Harry', 'Charlotte'],
         'Turkey': ['Mehmet', 'Ayşe', 'Ali', 'Fatma', 'Mustafa', 'Zeynep'],
         'Nigeria': ['Chioma', 'Oluwaseun', 'Adebayo', 'Ngozi', 'Emeka', 'Amara'],
+        'Japan': ['Hiroshi', 'Yuki', 'Takeshi', 'Sakura', 'Kenji', 'Ayako'],
+        'South Korea': ['Min-jun', 'Seo-yeon', 'Ji-hoon', 'Ha-eun', 'Jae-sung', 'Soo-jin'],
+        'North Korea': ['Kim', 'Park', 'Choi', 'Ri', 'Jong', 'Song'],
+        'Taiwan': ['Wei', 'Lin', 'Chen', 'Huang', 'Wu', 'Tsai'],
     }
 
     if country in names_by_region:

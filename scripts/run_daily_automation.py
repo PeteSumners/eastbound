@@ -4,12 +4,12 @@ Daily Content Automation - Local Edition
 
 Runs the entire content pipeline locally:
 1. Monitor Russian media
-2. Generate SDXL image locally
-3. Generate visualizations
-4. Generate content using Claude Code (free!)
+2. Generate visualizations
+3. Generate content using Claude Code (free!)
+4. Generate SDXL image locally (using article title for better coherence)
 5. Auto-publish
-6. Post to social media
-7. Commit and push to GitHub
+6. Commit and push to GitHub
+7. Post to social media
 
 All for FREE (no GitHub Actions, no API costs)!
 
@@ -26,6 +26,10 @@ import json
 from pathlib import Path
 from datetime import datetime
 import os
+
+# Import LoRA selector for intelligent image generation
+sys.path.insert(0, str(Path(__file__).parent))
+from lora_selector import select_lora_strategy, generate_prompt
 
 # Load environment variables from .env file
 try:
@@ -61,16 +65,18 @@ def run_command(cmd, description, timeout=None, check=True, verbose=False):
                 stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT,
                 text=True,
-                bufsize=1,
+                bufsize=0,  # Unbuffered for real-time output
                 universal_newlines=True
             )
 
             print(f"[VERBOSE] Process PID: {process.pid}")
 
-            # Read output line by line
-            for line in iter(process.stdout.readline, ''):
-                if line:
-                    print(line.rstrip())
+            # Read output character by character to handle progress bars
+            while True:
+                char = process.stdout.read(1)
+                if not char:
+                    break
+                print(char, end='', flush=True)
 
             process.wait(timeout=timeout)
             elapsed = time.time() - start_time
@@ -131,6 +137,8 @@ def main():
                        help='Skip data visualization generation')
     parser.add_argument('--verbose', '-v', action='store_true',
                        help='Enable verbose output with real-time streaming')
+    parser.add_argument('--include-asia', action='store_true',
+                       help='Include East Asian news sources (China, Japan, NK, SK, Taiwan) for broader regional perspectives')
 
     args = parser.parse_args()
 
@@ -144,11 +152,14 @@ def main():
     date = datetime.now().strftime('%Y-%m-%d')
     briefing_path = f"research/{date}-briefing.json"
 
-    # Step 1: Monitor Russian media
+    # Step 1: Monitor Russian media (and optionally East Asian sources)
+    asia_flag = '--include-asia' if args.include_asia else ''
+    monitor_desc = "Monitor Russian and East Asian media sources" if args.include_asia else "Monitor Russian media sources"
+
     success = run_command(
-        f'python scripts/monitor_russian_media.py --output "{briefing_path}" --parallel',
-        "Monitor Russian media sources",
-        timeout=600,  # 10 minutes
+        f'python scripts/monitor_russian_media.py --output "{briefing_path}" --parallel {asia_flag}',
+        monitor_desc,
+        timeout=900 if args.include_asia else 600,  # 15 min with Asia, 10 min without
         verbose=args.verbose
     )
 
@@ -156,21 +167,7 @@ def main():
         print("\n[ERROR] Media monitoring failed. Exiting.")
         return 1
 
-    # Step 2: Generate SDXL image locally
-    if not args.skip_image:
-        success = run_command(
-            f'python scripts/generate_images_local.py --briefing "{briefing_path}" --output "images/" --auto --steps 50',
-            "Generate AI image with SDXL (this takes 15-20 minutes)",
-            timeout=1800,  # 30 minutes
-            verbose=args.verbose
-        )
-
-        if not success:
-            print("\n[WARNING]  Image generation failed, but continuing...")
-    else:
-        print("\n[SKIP]  Skipping image generation (--skip-image)")
-
-    # Step 3: Generate data visualizations
+    # Step 2: Generate data visualizations
     if not args.skip_visuals:
         success = run_command(
             f'python scripts/generate_visuals.py --briefing "{briefing_path}" --output "images/"',
@@ -184,7 +181,7 @@ def main():
     else:
         print("\n[SKIP]  Skipping visualizations (--skip-visuals)")
 
-    # Step 4: Generate content using Claude Code (FREE!)
+    # Step 3: Generate content using Claude Code (FREE!)
     print("\n" + "="*60)
     print("STEP: Generate AI content using Claude Code")
     print("="*60)
@@ -206,8 +203,15 @@ The article should:
    - title, date, author, categories, tags, excerpt
    - **IMPORTANT**: categories must be from [Analysis, News, Translation] and ONE region [Russia, Ukraine, EasternEurope, CentralAsia, Caucasus] - NO SPACES in category names
    - **IMPORTANT**: image: /images/{date}-generated.png (plain path in frontmatter - Jekyll handles baseurl)
-6. **IMPORTANT**: Do NOT include an H1 heading (# Title) after the frontmatter. The Jekyll layout displays the title automatically from the frontmatter. Start the content directly with the first paragraph.
-7. **IMPORTANT**: Before the "## Key Articles Referenced" section, include a "## Data Visualizations" section with smaller embedded images:
+6. **IMPORTANT**: Do NOT include an H1 heading (# Title) after the frontmatter. The Jekyll layout displays the title automatically from the frontmatter.
+7. **IMPORTANT**: Immediately after the frontmatter, before the first paragraph, include this image caption for transparency:
+
+   <p style="text-align: center; font-size: 0.9em; color: #666; font-style: italic; margin-top: -10px; margin-bottom: 20px;">
+   Hero image: AI-generated illustration created with Stable Diffusion XL
+   </p>
+
+   Then start the content with the first paragraph.
+8. **IMPORTANT**: Before the "## Key Articles Referenced" section, include a "## Data Visualizations" section with smaller embedded images:
 
    ---
 
@@ -231,11 +235,38 @@ The article should:
    </div>
 
    ---
-8. **IMPORTANT**: Include a "## Key Articles Referenced" section at the end with links to the original articles from the briefing
+9. **IMPORTANT**: Include a "## Stakeholder Perspectives: Real-World Impact" section before the "Key Articles Referenced" section
+
+   This section demonstrates how abstract geopolitical narratives affect real people around the world. Generate 4 random stakeholder personas using the script at scripts/generate_stakeholder_personas.py with the briefing file.
+
+   **Section Introduction (include this explanation verbatim):**
+   "*The following section presents randomly generated personas from around the world who have material stakes in today's Russian media narratives. These are NOT representative samples or opinion polls—they're concrete examples of how abstract geopolitics affects real people with real interests. Each persona is randomly selected from a global pool representing diverse countries, occupations, and socioeconomic backgrounds. The goal is to humanize complex narratives by showing who is affected and how.*"
+
+   **Format for each persona:**
+   ### Stakeholder [N]: [Name]
+
+   **Profile:**
+   - **Age:** [age]
+   - **Location:** [city, country]
+   - **Occupation:** [occupation]
+   - **Background:** [descriptors]
+
+   **Personal Stakes:**
+   - [stake 1]
+   - [stake 2]
+
+   **Perspective:** [perspective]
+
+   **What Today's Russian Media Means for [Name]:**
+   [Write 2-3 sentences analyzing how today's SPECIFIC trending narratives from the briefing affect this persona's material interests, decisions, or worldview. Reference specific stories from today's coverage.]
+
+   ---
+
+10. **IMPORTANT**: Include a "## Key Articles Referenced" section at the end with links to the original articles from the briefing
    - Extract article URLs from the briefing JSON
    - Format as a bulleted list with article titles and links
    - Group by source (TASS, RT, Kommersant, etc.)
-9. Be saved to content/drafts/{date}-analysis.md
+11. Be saved to content/drafts/{date}-analysis.md
 
 Use the Write tool to create the article file."""
 
@@ -276,6 +307,87 @@ Use the Write tool to create the article file."""
         print(f"[ERROR] Claude Code execution failed: {e}")
         return 1
 
+    # Step 4: Generate SDXL image locally with intelligent LoRA selection (AFTER content, for better coherence)
+    if not args.skip_image:
+        print("\n" + "="*60)
+        print("STEP: Generate AI image with SDXL + Intelligent LoRA Selection")
+        print("="*60)
+        print("Using intelligent LoRA selector for optimal photographic style...")
+
+        # Load briefing data for keyword analysis
+        briefing_data = {}
+        trending_keywords = []
+        try:
+            with open(briefing_path, 'r', encoding='utf-8') as f:
+                briefing_data = json.load(f)
+                trending_keywords = [story['keyword'] for story in briefing_data.get('trending_stories', [])[:5]]
+                print(f"[INFO] Loaded {len(trending_keywords)} trending keywords from briefing")
+        except Exception as e:
+            print(f"[WARNING] Could not load briefing for keywords: {e}")
+
+        # Find the generated draft and extract title
+        drafts = list(Path('content/drafts').glob('*.md'))
+        article_title = None
+
+        if drafts:
+            latest_draft = max(drafts, key=lambda p: p.stat().st_mtime)
+
+            # Extract title from frontmatter
+            try:
+                content = latest_draft.read_text(encoding='utf-8')
+                for line in content.split('\n'):
+                    if line.startswith('title:'):
+                        article_title = line.split('title:', 1)[1].strip().strip('"\'')
+                        print(f"[INFO] Extracted article title: {article_title}")
+                        break
+            except Exception as e:
+                print(f"[WARNING] Could not extract article title: {e}")
+
+        # Use intelligent LoRA selector
+        if article_title or trending_keywords:
+            print("\n[LORA-SELECT] Analyzing content for optimal LoRA combination...")
+
+            strategy = select_lora_strategy(
+                article_title=article_title or "",
+                trending_keywords=trending_keywords,
+                verbose=True
+            )
+
+            print(f"\n[LORA-SELECT] Selected: {strategy['combo_name']}")
+            print(f"[LORA-SELECT] Description: {strategy['description']}")
+            print(f"[LORA-SELECT] Match Score: {strategy['score']:.2f}")
+            print(f"[LORA-SELECT] LoRAs: {len(strategy['loras'])} models")
+
+            # Generate optimized prompt from strategy
+            subject = article_title if article_title else "breaking news from Russia"
+            image_prompt, negative_prompt = generate_prompt(strategy, subject)
+
+            print(f"\n[LORA-SELECT] Generated prompt: {image_prompt[:100]}...")
+
+            # Generate image with intelligent LoRA combo
+            success = run_command(
+                f'python scripts/generate_images_local.py --prompt "{image_prompt}" --negative "{negative_prompt}" --output "images/{date}-generated.png" --lora-combo {strategy["combo_name"]} --steps 50',
+                f"Generate SDXL image with {strategy['combo_name']} LoRA combo (25-30 minutes)",
+                timeout=2400,  # 40 minutes (generous for CPU)
+                verbose=args.verbose
+            )
+        else:
+            # Fallback to default if no title or keywords
+            print("[WARNING] No article title or keywords found, using default photojournalism LoRA...")
+            image_prompt = "Professional news photography: Russian political scene, editorial style, dramatic lighting, photorealistic, 8k quality"
+
+            success = run_command(
+                f'python scripts/generate_images_local.py --prompt "{image_prompt}" --output "images/{date}-generated.png" --lora-combo photojournalism --steps 50',
+                "Generate SDXL image with default LoRA combo (25-30 minutes)",
+                timeout=2400,  # 40 minutes
+                verbose=args.verbose
+            )
+
+        if not success:
+            print("\n[WARNING] Image generation failed, but continuing...")
+    else:
+        print("\n[SKIP] Skipping image generation (--skip-image)")
+
     # Step 5: Auto-publish (if not draft-only)
     if not args.draft_only:
         print("\n" + "="*60)
@@ -303,6 +415,7 @@ Use the Write tool to create the article file."""
         print("\n[SKIP]  Skipping auto-publish (--draft-only)")
 
     # Step 6: Commit and push to GitHub
+    print("\n[INFO] Attempting to commit and push to GitHub...")
     success = run_command(
         f'git add content/ research/ images/ _posts/ && git commit -m "AI content: {date} [automated - local]" && git push',
         "Commit and push to GitHub",
@@ -310,6 +423,14 @@ Use the Write tool to create the article file."""
         check=False,  # Don't fail if nothing to commit
         verbose=args.verbose
     )
+
+    if not success:
+        print("\n[WARNING] ⚠️  Git push may have failed!")
+        print("[WARNING] If running from Task Scheduler, you may need to configure GitHub credentials.")
+        print("[WARNING] See FIX_GIT_CREDENTIALS.md for instructions.")
+        print("[WARNING] Content has been created locally but NOT pushed to GitHub.")
+    else:
+        print("\n[OK] ✓ Successfully pushed to GitHub!")
 
     # Step 7: Post to social media
     if not args.skip_social and not args.draft_only:
@@ -364,14 +485,21 @@ Use the Write tool to create the article file."""
     print(f"""
 Summary:
 - Briefing: {briefing_path}
-- Image: Generated locally with SDXL (FREE)
+- Image: Generated locally with SDXL + Intelligent LoRA Selection (FREE)
+- LoRAs: Automatically selected optimal photographic style based on content
 - Content: Generated with Claude Code (FREE)
-- Cost: $0 (except social media API usage)
+- Cost: $0 (completely free, runs on your laptop)
 
 Next steps:
 - Check _posts/ for published content
 - Review on GitHub Pages
 - Monitor social media engagement
+
+System Status:
+- All processing done locally with cron scheduling
+- No GitHub Actions (removed - using local cron only)
+- Full SDXL at 50 steps (~25-30 minutes per image)
+- 8 intelligent LoRA strategies for optimal visual quality
     """)
 
     return 0
