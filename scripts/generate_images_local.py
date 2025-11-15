@@ -312,7 +312,17 @@ def main():
 
     args = parser.parse_args()
 
-    output_dir = Path(args.output)
+    # Handle output path - if it ends with .png, it's a file path, otherwise it's a directory
+    output_path = Path(args.output)
+    if output_path.suffix == '.png':
+        # It's a file path
+        output_dir = output_path.parent
+        output_file = output_path.name
+    else:
+        # It's a directory
+        output_dir = output_path
+        output_file = None
+
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Build LoRA configuration
@@ -391,7 +401,12 @@ def main():
     elif args.prompt:
         # Custom prompt
         print("[INFO] Generating from custom prompt...", flush=True)
-        output_path = output_dir / f"custom-{datetime.now().strftime('%Y%m%d-%H%M%S')}.png"
+        if output_file:
+            # Use the specified filename
+            output_path = output_dir / output_file
+        else:
+            # Generate a custom filename
+            output_path = output_dir / f"custom-{datetime.now().strftime('%Y%m%d-%H%M%S')}.png"
 
         img = generate_image_cpu(args.prompt, output_path,
                                 num_steps=args.steps,

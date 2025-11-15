@@ -102,6 +102,21 @@ Write-Host "`n[INFO] Continuing with automation pipeline..." -ForegroundColor Cy
 # Run Python automation (which will skip content generation since draft exists)
 python scripts/run_daily_automation.py --skip-visuals
 
-Write-Host "`n============================================================" -ForegroundColor Green
-Write-Host "  AUTOMATION COMPLETE" -ForegroundColor Green
-Write-Host "============================================================`n" -ForegroundColor Green
+# Verify GitHub Pages deployment
+Write-Host "`n============================================================" -ForegroundColor Cyan
+Write-Host "  VERIFYING GITHUB PAGES DEPLOYMENT" -ForegroundColor Cyan
+Write-Host "============================================================`n" -ForegroundColor Cyan
+
+python scripts/verify_publish.py
+
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "`n============================================================" -ForegroundColor Green
+    Write-Host "  AUTOMATION COMPLETE - ARTICLE VERIFIED LIVE" -ForegroundColor Green
+    Write-Host "============================================================`n" -ForegroundColor Green
+} else {
+    Write-Host "`n============================================================" -ForegroundColor Red
+    Write-Host "  AUTOMATION COMPLETE - VERIFICATION FAILED" -ForegroundColor Red
+    Write-Host "  Article may not be accessible on GitHub Pages" -ForegroundColor Red
+    Write-Host "============================================================`n" -ForegroundColor Red
+    exit 1
+}
