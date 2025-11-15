@@ -315,12 +315,12 @@ def main():
     )
 
     if not success:
-        print("\n[WARNING] ⚠️  Git push may have failed!", flush=True)
+        print("\n[WARNING] Git push may have failed!", flush=True)
         print("[WARNING] If running from Task Scheduler, you may need to configure GitHub credentials.", flush=True)
         print("[WARNING] See FIX_GIT_CREDENTIALS.md for instructions.", flush=True)
         print("[WARNING] Content has been created locally but NOT pushed to GitHub.", flush=True)
     else:
-        print("\n[OK] ✓ Successfully pushed to GitHub!", flush=True)
+        print("\n[OK] Successfully pushed to GitHub!", flush=True)
 
     # Step 7: Post to social media
     if not args.skip_social and not args.draft_only:
