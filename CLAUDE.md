@@ -27,18 +27,94 @@ If the automation produces bad output, you MUST:
 
 The system must be 100% reproducible and fully automated.
 
-**TESTING AUTOMATION CHANGES:**
-To test changes, you MUST use Task Scheduler (never run scripts directly):
+## 🔄 DEVELOPMENT WORKFLOW (STEP-BY-STEP)
 
-1. Make changes to automation scripts
-2. Commit changes to git
-3. Run `test_run_soon.ps1` to reschedule task to run in 2 minutes
-4. Wait for Task Scheduler to execute the automation
-5. Review logs and output
-6. If successful, run `setup_daily_task.ps1` to restore 9:50 AM schedule
-7. If failed, fix scripts and repeat
+**Every time you work on this project, follow this exact workflow:**
 
-**Never run automation scripts directly** - always go through Task Scheduler to ensure the system works end-to-end as it will in production.
+### Step 1: Understand Current State
+```bash
+# Check Task Scheduler status
+powershell -Command "Get-ScheduledTask -TaskName 'Eastbound Daily Automation' | Select-Object TaskName, State, @{Name='NextRunTime';Expression={(Get-ScheduledTaskInfo -TaskName 'Eastbound Daily Automation').NextRunTime}}"
+
+# Check for recent runs
+ls -la _posts/*.md | tail -3
+ls -la research/*.json | tail -3
+```
+
+### Step 2: Make Changes
+- Only edit files in the automation pipeline:
+  - `run_automation_with_claude.ps1` (main script)
+  - `scripts/*.py` (pipeline components)
+  - `setup_daily_task.ps1` or `test_run_soon.ps1` (scheduler config)
+
+### Step 3: Commit Changes
+```bash
+git add [files]
+git commit -m "Descriptive message"
+git push
+```
+
+### Step 4: Test via Task Scheduler
+```bash
+# Reschedule to run in 2 minutes
+powershell -ExecutionPolicy Bypass -File "test_run_soon.ps1"
+```
+
+### Step 5: Wait and Monitor
+- **DO NOT run scripts directly**
+- Wait for Task Scheduler to execute (2 minutes)
+- Task Scheduler will run the full pipeline from start to finish
+
+### Step 6: Review Results
+```bash
+# Check if article was published
+ls -la _posts/*.md | tail -1
+
+# Check if it's live (after GitHub Pages builds ~60 seconds)
+curl -I https://petesumners.github.io/eastbound/
+
+# Check latest briefing
+ls -la research/*.json | tail -1
+
+# Review Task Scheduler logs
+# Open Task Scheduler → Eastbound Daily Automation → History tab
+```
+
+### Step 7: Handle Results
+
+**If successful:**
+```bash
+# Restore production schedule (9:50 AM daily)
+powershell -ExecutionPolicy Bypass -File "setup_daily_task.ps1"
+```
+
+**If failed:**
+- Identify the error in Task Scheduler logs or output
+- Fix the automation scripts (NOT the output files)
+- Delete any bad output files that were created
+- Commit fixes
+- Return to Step 4 and test again
+
+### Step 8: Clean Up Failed Runs (if needed)
+```bash
+# Delete failed posts
+git rm _posts/YYYY-MM-DD-*.md
+
+# Delete bad images
+git rm images/YYYY-MM-DD-*.png
+
+# Commit cleanup
+git commit -m "Clean up failed run - retesting automation"
+git push
+```
+
+## ⚠️ CRITICAL RULES
+
+1. **NEVER** run `run_automation_with_claude.ps1` or `scripts/*.py` directly
+2. **ALWAYS** test through Task Scheduler using `test_run_soon.ps1`
+3. **NEVER** manually fix individual posts, images, or content
+4. **ALWAYS** fix the automation script and re-run the full pipeline
+5. **VERIFY** articles are live on GitHub Pages before considering success
 
 ## Project Overview
 
