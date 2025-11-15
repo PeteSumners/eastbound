@@ -238,6 +238,42 @@ RESEARCH_SOURCES = {
         'url': 'https://plato.stanford.edu/new.rss',
         'update_frequency': 'weekly'
     },
+
+    # CHRISTIAN THEOLOGY & BIBLICAL STUDIES
+    'charles_stanley': {
+        'name': 'In Touch Ministries (Charles Stanley)',
+        'type': 'rss',
+        'url': 'https://www.intouch.org/read/magazine/daily-devotions/rss',
+        'update_frequency': 'daily'
+    },
+    'ligonier': {
+        'name': 'Ligonier Ministries',
+        'type': 'rss',
+        'urls': {
+            'articles': 'https://www.ligonier.org/rss/posts',
+            'blog': 'https://www.ligonier.org/rss/blog',
+            'devotionals': 'https://www.ligonier.org/rss/devotionals',
+        },
+        'update_frequency': 'daily'
+    },
+    'gotquestions': {
+        'name': 'GotQuestions.org',
+        'type': 'rss',
+        'url': 'https://www.gotquestions.org/rss-feed.xml',
+        'update_frequency': 'daily'
+    },
+    'desiring_god': {
+        'name': 'Desiring God (John Piper)',
+        'type': 'rss',
+        'url': 'https://www.desiringgod.org/feed',
+        'update_frequency': 'daily'
+    },
+    'the_gospel_coalition': {
+        'name': 'The Gospel Coalition',
+        'type': 'rss',
+        'url': 'https://www.thegospelcoalition.org/rss/feed/',
+        'update_frequency': 'daily'
+    },
 }
 
 # ============================================================================
