@@ -91,17 +91,12 @@ NEWS_SOURCES = {
 # ============================================================================
 
 RESEARCH_SOURCES = {
+    # PHYSICS & QUANTUM
     'arxiv': {
         'name': 'arXiv',
         'type': 'api',
         'base_url': 'http://export.arxiv.org/api/query',
-        'categories': ['quant-ph', 'cond-mat', 'cs.AI', 'cs.CR', 'physics.soc-ph'],
-        'update_frequency': 'daily'
-    },
-    'biorxiv': {
-        'name': 'bioRxiv',
-        'type': 'rss',
-        'url': 'https://connect.biorxiv.org/biorxiv_xml.php?subject=all',
+        'categories': ['quant-ph', 'cond-mat', 'cs.AI', 'cs.CR', 'physics.soc-ph', 'gr-qc', 'hep-th', 'astro-ph'],
         'update_frequency': 'daily'
     },
     'nature': {
@@ -120,11 +115,128 @@ RESEARCH_SOURCES = {
         },
         'update_frequency': 'daily'
     },
+
+    # MEDICAL & BIOLOGY
+    'biorxiv': {
+        'name': 'bioRxiv',
+        'type': 'rss',
+        'url': 'https://connect.biorxiv.org/biorxiv_xml.php?subject=all',
+        'update_frequency': 'daily'
+    },
+    'medrxiv': {
+        'name': 'medRxiv',
+        'type': 'rss',
+        'url': 'https://connect.medrxiv.org/medrxiv_xml.php?subject=all',
+        'update_frequency': 'daily'
+    },
+    'pubmed': {
+        'name': 'PubMed',
+        'type': 'rss',
+        'url': 'https://pubmed.ncbi.nlm.nih.gov/rss/search/1YT3vN8rTYSZJFMxhZgkr_K6wMQVdv6Rj6FXGMqLT5K-y-rADN/?limit=100&utm_campaign=pubmed-2&fc=20230101000000',
+        'update_frequency': 'daily'
+    },
+    'science_daily_health': {
+        'name': 'Science Daily Health',
+        'type': 'rss',
+        'urls': {
+            'neuroscience': 'https://www.sciencedaily.com/rss/mind_brain/neuroscience.xml',
+            'genetics': 'https://www.sciencedaily.com/rss/plants_animals/genetics.xml',
+            'medicine': 'https://www.sciencedaily.com/rss/health_medicine.xml',
+        },
+        'update_frequency': 'daily'
+    },
+
+    # PSYCHOLOGY & NEUROSCIENCE
+    'frontiers_psychology': {
+        'name': 'Frontiers in Psychology',
+        'type': 'rss',
+        'url': 'https://www.frontiersin.org/journals/psychology/rss',
+        'update_frequency': 'daily'
+    },
+    'apa_news': {
+        'name': 'APA Psychology News',
+        'type': 'rss',
+        'url': 'https://www.apa.org/news/rss/index.xml',
+        'update_frequency': 'daily'
+    },
+    'psypost': {
+        'name': 'PsyPost',
+        'type': 'rss',
+        'url': 'https://www.psypost.org/feed/',
+        'update_frequency': 'daily'
+    },
+    'cognitive_neuroscience': {
+        'name': 'Cognitive Neuroscience Society',
+        'type': 'rss',
+        'url': 'https://www.cogneurosociety.org/feed/',
+        'update_frequency': 'daily'
+    },
+
+    # BRAIN-COMPUTER INTERFACES & NEUROTECH
     'mit_tech_review': {
         'name': 'MIT Technology Review',
         'type': 'rss',
         'url': 'https://www.technologyreview.com/feed/',
         'update_frequency': 'daily'
+    },
+    'science_daily_bci': {
+        'name': 'Science Daily Brain-Computer',
+        'type': 'rss',
+        'urls': {
+            'brain_computer': 'https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml',
+            'robotics': 'https://www.sciencedaily.com/rss/computers_math/robotics.xml',
+        },
+        'update_frequency': 'daily'
+    },
+
+    # OPERATIONAL PSYCHOLOGY / INFLUENCE / PSYOPS
+    'rand_behavioral': {
+        'name': 'RAND Behavioral Science',
+        'type': 'rss',
+        'url': 'https://www.rand.org/pubs/research_reports.xml',
+        'update_frequency': 'daily'
+    },
+    'social_psychology_network': {
+        'name': 'Social Psychology Network',
+        'type': 'rss',
+        'url': 'https://www.socialpsychology.org/rss.xml',
+        'update_frequency': 'daily'
+    },
+
+    # PSI RESEARCH / PARAPSYCHOLOGY / CONSCIOUSNESS
+    'institute_noetic_sciences': {
+        'name': 'Institute of Noetic Sciences',
+        'type': 'rss',
+        'url': 'https://noetic.org/feed/',
+        'update_frequency': 'daily'
+    },
+    'journal_parapsychology': {
+        'name': 'Journal of Parapsychology',
+        'type': 'rss',
+        'url': 'https://www.rhine.org/news-and-events/blog.html',  # Manual scraping may be needed
+        'update_frequency': 'weekly'
+    },
+    'consciousness_studies': {
+        'name': 'Journal of Consciousness Studies',
+        'type': 'rss',
+        'url': 'https://www.ingentaconnect.com/content/imp/jcs',  # Manual scraping may be needed
+        'update_frequency': 'weekly'
+    },
+
+    # DARPA/DEFENSE RESEARCH (PUBLIC FACING)
+    'darpa_news': {
+        'name': 'DARPA News',
+        'type': 'rss',
+        'url': 'https://www.darpa.mil/rss/darpa_news_rss.xml',
+        'update_frequency': 'daily'
+    },
+
+    # METAPHYSICS / THEOLOGICAL RESEARCH
+    'stanford_encyclopedia_philosophy': {
+        'name': 'Stanford Encyclopedia of Philosophy',
+        'type': 'rss',
+        'url': 'https://plato.stanford.edu/new.rss',
+        'update_frequency': 'weekly'
     },
 }
 
