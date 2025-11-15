@@ -239,7 +239,13 @@ RESEARCH_SOURCES = {
         'update_frequency': 'weekly'
     },
 
-    # CHRISTIAN THEOLOGY & BIBLICAL STUDIES
+}
+
+# ============================================================================
+# THEOLOGY SOURCES (RSS)
+# ============================================================================
+
+THEOLOGY_SOURCES = {
     'charles_stanley': {
         'name': 'In Touch Ministries (Charles Stanley)',
         'type': 'rss',
@@ -313,6 +319,7 @@ class GlobalKnowledgeCrawler:
         # Create directories
         (self.output_dir / 'news').mkdir(parents=True, exist_ok=True)
         (self.output_dir / 'research').mkdir(parents=True, exist_ok=True)
+        (self.output_dir / 'theology').mkdir(parents=True, exist_ok=True)
         (self.output_dir / 'data').mkdir(parents=True, exist_ok=True)
 
     def fetch_rss_feed(self, name, url, timeout=10):
@@ -440,6 +447,28 @@ class GlobalKnowledgeCrawler:
 
         return results
 
+    def fetch_theology_feeds(self):
+        """Fetch theology RSS feeds."""
+        print(f"\n[THEOLOGY] Fetching theology RSS feeds...")
+
+        results = []
+        for source_id, config in THEOLOGY_SOURCES.items():
+            if config['type'] == 'rss':
+                if 'url' in config:
+                    result = self.fetch_rss_feed(config['name'], config['url'])
+                    if result:
+                        result['category'] = 'theology'
+                        results.append(result)
+                elif 'urls' in config:
+                    for subcategory, url in config['urls'].items():
+                        result = self.fetch_rss_feed(f"{config['name']} ({subcategory})", url)
+                        if result:
+                            result['category'] = 'theology'
+                            result['subcategory'] = subcategory
+                            results.append(result)
+
+        return results
+
     def save_to_knowledge_base(self, data, category, subcategory=None):
         """Save crawled data to knowledge base."""
         timestamp = datetime.now()
@@ -464,7 +493,7 @@ class GlobalKnowledgeCrawler:
         print(f"  [SAVED] {filepath}")
         return filepath
 
-    def run_snapshot(self, regions=['all'], categories=['news', 'research']):
+    def run_snapshot(self, regions=['all'], categories=['news', 'research', 'theology']):
         """Run single snapshot collection."""
         print(f"\n{'='*60}")
         print(f"GLOBAL KNOWLEDGE CRAWLER - SNAPSHOT MODE")
@@ -477,6 +506,7 @@ class GlobalKnowledgeCrawler:
             'timestamp': datetime.now().isoformat(),
             'news': [],
             'research': [],
+            'theology': [],
             'stats': {}
         }
 
@@ -499,6 +529,12 @@ class GlobalKnowledgeCrawler:
             }
             self.save_to_knowledge_base(all_data['research'], 'research')
 
+        # Fetch theology
+        if 'theology' in categories:
+            theology_feeds = self.fetch_theology_feeds()
+            all_data['theology'] = theology_feeds
+            self.save_to_knowledge_base(theology_feeds, 'theology')
+
         # Statistics
         all_data['stats'] = dict(self.stats)
 
@@ -508,6 +544,7 @@ class GlobalKnowledgeCrawler:
         print(f"News sources: {len(all_data['news'])}")
         print(f"Research papers: {len(all_data['research'].get('papers', []))}")
         print(f"Research feeds: {len(all_data['research'].get('feeds', []))}")
+        print(f"Theology feeds: {len(all_data['theology'])}")
 
         return all_data
 
@@ -517,8 +554,8 @@ def main():
     parser = argparse.ArgumentParser(description='Global Knowledge Crawler - Daily Snapshot Mode')
     parser.add_argument('--regions', default='all',
                        help='Comma-separated regions: all, russian, europe, americas, asia, etc.')
-    parser.add_argument('--categories', default='news,research',
-                       help='Comma-separated categories: news, research, data')
+    parser.add_argument('--categories', default='news,research,theology',
+                       help='Comma-separated categories: news, research, theology')
     parser.add_argument('--output', default='knowledge_base',
                        help='Output directory for knowledge base')
     parser.add_argument('--workers', type=int, default=10,

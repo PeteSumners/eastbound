@@ -19,7 +19,7 @@ Write-Host "[INFO] Running media monitoring..." -ForegroundColor Yellow
 
 # Run Steps 1-3: Media monitoring, global knowledge crawling, and visualizations
 python scripts/monitor_russian_media.py --output $BriefingPath --parallel
-python scripts/monitor_global_sources.py --regions all --categories news,research --workers 10 --output knowledge_base
+python scripts/monitor_global_sources.py --regions all --categories news,research,theology --workers 10 --output knowledge_base
 python scripts/generate_visuals.py --briefing $BriefingPath --output images/
 
 # NO CACHING - Always regenerate draft

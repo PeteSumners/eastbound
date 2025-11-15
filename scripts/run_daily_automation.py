@@ -368,22 +368,7 @@ def main():
     else:
         print("\n[SKIP]  Skipping social media posting", flush=True)
 
-    # Step 8: Extract knowledge from published article
-    print("\n" + "="*60, flush=True)
-    print("STEP: Extract knowledge base entry from published article", flush=True)
-    print("="*60, flush=True)
-
-    success = run_command(
-        f'python scripts/extract_knowledge_from_posts.py --recent 1',
-        "Extract knowledge from latest published article",
-        timeout=60,
-        verbose=args.verbose
-    )
-
-    if success:
-        print("[OK] Knowledge base updated with latest analysis", flush=True)
-    else:
-        print("[WARNING] Knowledge extraction failed, but continuing...", flush=True)
+    # Note: Knowledge base extraction removed - we only save raw RSS articles, not Eastbound analysis
 
     # Summary
     print("\n" + "="*60, flush=True)
