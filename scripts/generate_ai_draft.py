@@ -493,6 +493,7 @@ def create_markdown_file(draft_content, story, briefing, output_dir):
     featured_image = generate_image_path(today, 'featured')
 
     frontmatter = f"""---
+layout: post
 title: "{title_base}"
 subtitle: "AI-generated analysis of Russian media coverage"
 date: {today} 12:00:00 +0000

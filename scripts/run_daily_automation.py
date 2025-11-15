@@ -183,29 +183,47 @@ def main():
 
     # Step 3: Generate content using Anthropic API
     print("\n" + "="*60)
-    print("STEP: Generate AI content using Anthropic API")
+    print("STEP: Generate AI content")
     print("="*60)
 
     # Check if API key is set
     api_key = os.getenv('ANTHROPIC_API_KEY')
-    if not api_key:
-        print("[ERROR] ANTHROPIC_API_KEY not set in environment")
-        print("[ERROR] Add your API key to .env file:")
-        print("[ERROR]   ANTHROPIC_API_KEY=your_key_here")
-        print("\n[FALLBACK] Skipping content generation - run manually with Claude Code")
-        return 1
+    if api_key:
+        # Use generate_ai_draft.py script with API
+        print("Using Anthropic API for content generation...")
+        success = run_command(
+            f'python scripts/generate_ai_draft.py --briefing "{briefing_path}" --output "content/drafts/"',
+            "Generate AI content using Anthropic API",
+            timeout=300,  # 5 minutes
+            verbose=args.verbose
+        )
 
-    # Use generate_ai_draft.py script
-    success = run_command(
-        f'python scripts/generate_ai_draft.py --briefing "{briefing_path}" --output "content/drafts/"',
-        "Generate AI content using Anthropic API",
-        timeout=300,  # 5 minutes
-        verbose=args.verbose
-    )
+        if not success:
+            print("\n[ERROR] Content generation failed. Exiting.")
+            return 1
+    else:
+        # Fallback: Manual content generation notice
+        print("[INFO] ANTHROPIC_API_KEY not set")
+        print("[INFO] Content generation must be done manually")
+        print("\n" + "="*60)
+        print("MANUAL CONTENT GENERATION REQUIRED")
+        print("="*60)
+        print(f"\nBriefing available at: {briefing_path}")
+        print("\nTo generate content:")
+        print("1. Open Claude Code")
+        print("2. Ask: 'Read the briefing at {0} and create an analysis article'".format(briefing_path))
+        print("3. Ensure the article includes 'layout: post' in frontmatter")
+        print("4. Save to content/drafts/")
+        print("\nAutomation will resume after you create the draft...")
+        print("\nPress Ctrl+C to cancel automation, or")
+        input("Press Enter when draft is ready to continue...")
 
-    if not success:
-        print("\n[ERROR] Content generation failed. Exiting.")
-        return 1
+        # Verify draft was created
+        drafts = list(Path('content/drafts').glob(f'{date}*.md'))
+        if not drafts:
+            print("\n[ERROR] No draft found. Exiting.")
+            return 1
+        print(f"[OK] Found draft: {drafts[0].name}")
 
     # Step 4: Generate SDXL image locally with intelligent LoRA selection (AFTER content, for better coherence)
     if not args.skip_image:
