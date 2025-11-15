@@ -396,6 +396,23 @@ def main():
     else:
         print("\n[SKIP]  Skipping social media posting")
 
+    # Step 8: Extract knowledge from published article
+    print("\n" + "="*60)
+    print("STEP: Extract knowledge base entry from published article")
+    print("="*60)
+
+    success = run_command(
+        f'python scripts/extract_knowledge_from_posts.py --recent 1',
+        "Extract knowledge from latest published article",
+        timeout=60,
+        verbose=args.verbose
+    )
+
+    if success:
+        print("[OK] Knowledge base updated with latest analysis")
+    else:
+        print("[WARNING] Knowledge extraction failed, but continuing...")
+
     # Summary
     print("\n" + "="*60)
     print("[OK] AUTOMATION COMPLETE!")
@@ -405,19 +422,21 @@ Summary:
 - Briefing: {briefing_path}
 - Image: Generated locally with SDXL + Intelligent LoRA Selection (FREE)
 - LoRAs: Automatically selected optimal photographic style based on content
-- Content: Generated with Claude Code (FREE)
-- Cost: $0 (completely free, runs on your laptop)
+- Content: Generated with Anthropic API or manual
+- Knowledge Base: Auto-extracted from published article
+- Cost: $0 for local processing + API usage (if configured)
 
 Next steps:
 - Check _posts/ for published content
+- Check knowledge_base/analysis/ for extracted knowledge
 - Review on GitHub Pages
 - Monitor social media engagement
 
 System Status:
-- All processing done locally with cron scheduling
-- No GitHub Actions (removed - using local cron only)
+- All processing done locally with Task Scheduler
 - Full SDXL at 50 steps (~25-30 minutes per image)
 - 8 intelligent LoRA strategies for optimal visual quality
+- Knowledge base auto-expands with each publication
     """)
 
     return 0

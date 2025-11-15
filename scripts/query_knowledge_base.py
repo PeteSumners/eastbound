@@ -30,7 +30,7 @@ class KnowledgeBase:
         """Load all knowledge base entries into memory."""
         print("[KB] Loading knowledge base...")
 
-        categories = ['events', 'figures', 'policies', 'narratives', 'context']
+        categories = ['events', 'figures', 'policies', 'narratives', 'context', 'analysis', 'science']
 
         for category in categories:
             category_dir = self.kb_root / category

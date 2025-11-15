@@ -20,9 +20,9 @@ When analyzing current Russian media, the AI can:
 4. **Fact-check claims** against known data
 5. **Identify propaganda techniques** from historical examples
 
-## Current Entries (15 Total)
+## Current Entries (19+ Total, Auto-Expanding)
 
-### Events (6)
+### Events (6) - Manual entries
 - `2022-ukraine-invasion.json` - Full-scale invasion of Ukraine
 - `crimea-annexation-2014.json` - Annexation of Crimea
 - `euromaidan-2014.json` - Ukrainian revolution
@@ -30,29 +30,44 @@ When analyzing current Russian media, the AI can:
 - `donbas-conflict.json` - Donbas war 2014-present
 - `prigozhin-mutiny-2023.json` - Wagner rebellion
 
-### Figures (2)
+### Figures (2) - Manual entries
 - `putin-worldview.json` - Vladimir Putin's ideology and statements
 - `wagner-prigozhin.json` - Wagner Group and Yevgeny Prigozhin
 
-### Policies (2)
+### Policies (2) - Manual entries
 - `western-sanctions-russia.json` - Sanctions timeline and impact
 - `russian-energy-gas-policy.json` - Energy as geopolitical tool
 
-### Narratives (5)
+### Narratives (5) - Manual entries
 - `nato-expansion.json` - NATO expansion narrative
 - `russian-nuclear-rhetoric.json` - Nuclear threat rhetoric
 - `domestic-opposition.json` - Suppression of dissent narrative
 - `soviet-collapse-trauma.json` - USSR collapse as trauma
 - `multipolar-world.json` - Multipolar world order vision
 
+### Analysis (Auto-Generated) - Grows daily
+- `analysis-YYYY-MM-DD.json` - Extracted from each published article
+- Captures Russian media narratives, quotes, sources, framing patterns
+- Enables AI to reference its own previous analysis
+- Auto-updates via `scripts/extract_knowledge_from_posts.py`
+
+### Science (4+ entries) - Research tracking
+- `quantum-computing-2024-2025.json` - DARPA QBI, quantum error correction
+- `psi-research-parapsychology.json` - CIA Stargate, DARPA brain-computer interfaces
+- `crispr-gene-editing-2024-2025.json` - Gene therapy breakthroughs
+- `superconductor-materials-science-2024-2025.json` - Room-temperature superconductor research
+- Expandable with new scientific developments
+
 ## Structure
 
 ```
 knowledge_base/
-├── events/          # 6 major historical events
-├── figures/         # 2 key figures and organizations
-├── policies/        # 2 policy areas
-├── narratives/      # 5 recurring themes
+├── events/          # 6 major historical events (manual)
+├── figures/         # 2 key figures and organizations (manual)
+├── policies/        # 2 policy areas (manual)
+├── narratives/      # 5 recurring themes (manual)
+├── analysis/        # Auto-generated from published articles (grows daily)
+├── science/         # Cutting-edge research tracking (manual + auto)
 └── examples/        # Reference examples
 ```
 
