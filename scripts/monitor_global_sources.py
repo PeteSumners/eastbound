@@ -323,9 +323,15 @@ class GlobalKnowledgeCrawler:
         (self.output_dir / 'data').mkdir(parents=True, exist_ok=True)
 
     def fetch_rss_feed(self, name, url, timeout=10):
-        """Fetch single RSS feed with error handling."""
+        """Fetch single RSS feed with error handling and timeout."""
         try:
-            feed = feedparser.parse(url)
+            # Fetch with timeout using requests first
+            response = requests.get(url, timeout=timeout)
+            response.raise_for_status()
+
+            # Parse the response content
+            feed = feedparser.parse(response.content)
+
             if feed.get('entries'):
                 self.stats[f'success_{name}'] += 1
                 return {
@@ -338,6 +344,10 @@ class GlobalKnowledgeCrawler:
                 self.stats[f'empty_{name}'] += 1
                 print(f"[WARN] {name}: No entries in feed")
                 return None
+        except requests.Timeout:
+            self.stats[f'timeout_{name}'] += 1
+            print(f"[TIMEOUT] {name}: Request timed out after {timeout}s")
+            return None
         except Exception as e:
             self.stats[f'error_{name}'] += 1
             print(f"[ERROR] {name}: {e}")
