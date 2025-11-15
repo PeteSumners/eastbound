@@ -1,17 +1,17 @@
 {
   "date": "2025-11-15",
-  "generated_at": "2025-11-15T08:24:19.835349",
-  "total_articles_scanned": 296,
+  "generated_at": "2025-11-15T09:50:20.642339",
+  "total_articles_scanned": 285,
   "sentiment_analysis": {
     "distribution": {
-      "positive": 17,
-      "negative": 62,
-      "neutral": 217
+      "positive": 14,
+      "negative": 61,
+      "neutral": 210
     },
-    "average_score": -0.152,
-    "positive_percentage": 5.7,
-    "negative_percentage": 20.9,
-    "neutral_percentage": 73.3
+    "average_score": -0.164,
+    "positive_percentage": 4.9,
+    "negative_percentage": 21.4,
+    "neutral_percentage": 73.7
   },
   "trending_stories": [
     {
@@ -46,15 +46,6 @@
           "summary": "Slovakia's Prime Minister Robert Fico emphasized that transferring 140 bln euros to Ukraine \"means two more years of killings\"",
           "sentiment": "negative",
           "sentiment_score": -1.0
-        },
-        {
-          "source": "TASS",
-          "title": "Hungary won’t give Ukraine 1.5 million euros, will instead send it to Lebanon — Szijjarto",
-          "link": "https://tass.com/world/2043989",
-          "published": "Fri, 14 Nov 2025 19:38:56 +0300",
-          "summary": "Hungary’s national security interest is peace in the Middle East, and that Lebanon’s stability is key to that, the Hungarian foreign minister said",
-          "sentiment": "positive",
-          "sentiment_score": 1.0
         },
         {
           "source": "RT Russia",
@@ -109,14 +100,23 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69172b2f85f5401fd656ed94.jpg\" style=\"margin-right: 10px;\" /> An aide to Vladimir Zelensky says Kiev welcomes deportations of Ukrainian citizens by Trump’s administration <br /><a href=\"https://www.rt.com/russia/627796-ukraine-deportations-trump-conscription/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "positive",
           "sentiment_score": 1.0
+        },
+        {
+          "source": "RT Russia",
+          "title": "‘Limited-functionality’ Ukraine not valid party for peace talks – senior Russian diplomat",
+          "link": "https://www.rt.com/russia/627790-miroshnik-istanbul-talks-collapse/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Fri, 14 Nov 2025 11:15:47 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69170b402030271b4e6a8ee5.jpg\" style=\"margin-right: 10px;\" /> Russian diplomat Rodion Miroshnik has responded to Ukrainian complaints about Moscow’s team at Istanbul peace talks <br /><a href=\"https://www.rt.com/russia/627790-miroshnik-istanbul-talks-collapse/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "positive",
+          "sentiment_score": 1.0
         }
       ]
     },
     {
       "keyword": "trump",
       "source_count": 5,
-      "tfidf_score": 0.9311,
-      "combined_score": 4.6557,
+      "tfidf_score": 0.9298,
+      "combined_score": 4.649,
       "articles": [
         {
           "source": "TASS",
@@ -164,24 +164,6 @@
           "sentiment_score": 0.0
         },
         {
-          "source": "TASS",
-          "title": "Republican Trump demands investigation into Epstein's ties to US Democratic Party",
-          "link": "https://tass.com/world/2044003",
-          "published": "Fri, 14 Nov 2025 20:16:55 +0300",
-          "summary": "According to the US president, public attention to the Epstein case in the US is now being artificially fueled by Democrats for political reasons",
-          "sentiment": "neutral",
-          "sentiment_score": 0.0
-        },
-        {
-          "source": "TASS",
-          "title": "Italian official opposes weapons supplies to Kiev amid corruption scandal",
-          "link": "https://tass.com/world/2044001",
-          "published": "Fri, 14 Nov 2025 20:15:20 +0300",
-          "summary": "Matteo Salvini also pointed to Russia’s achievements on the battlefield and the peace efforts of US President Donald Trump and Pope Leo XIV",
-          "sentiment": "positive",
-          "sentiment_score": 1.0
-        },
-        {
           "source": "RT Russia",
           "title": "Kiev eyeing ‘good use’ for Ukrainians deported by Trump – WaPo",
           "link": "https://www.rt.com/russia/627796-ukraine-deportations-trump-conscription/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
@@ -207,14 +189,32 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914636a85f5403c851a5850.jpg\" style=\"margin-right: 10px;\" /> Russian Foreign Minister Sergey Lavrov has accused the Western media of “unprofessional and harmful” coverage of the Ukraine peace process <br /><a href=\"https://www.rt.com/russia/627657-lavrov-western-media-peace-ukraine/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "positive",
           "sentiment_score": 0.333
+        },
+        {
+          "source": "RT Russia",
+          "title": "Attempts to defend BBC are a ‘disgrace’ – Lavrov",
+          "link": "https://www.rt.com/russia/627634-lavrov-british-media-bbc/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 11 Nov 2025 18:14:53 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69144e3185f5401fab12f433.jpg\" style=\"margin-right: 10px;\" /> Russian Foreign Minister Sergey Lavrov has described efforts to defend the BBC over doctored Trump documentary a “disgrace” <br /><a href=\"https://www.rt.com/russia/627634-lavrov-british-media-bbc/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
+        },
+        {
+          "source": "RT",
+          "title": "US approves first arms sale to Taiwan under Trump",
+          "link": "https://www.rt.com/news/627826-us-taiwan-arms-china/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Sat, 15 Nov 2025 12:58:53 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6918605c20302720f65761cc.jpg\" style=\"margin-right: 10px;\" /> Beijing has said that the American weapons supplies to the self-governing island violate China’s sovereignty and security interests <br /><a href=\"https://www.rt.com/news/627826-us-taiwan-arms-china/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
         }
       ]
     },
     {
       "keyword": "ukrainian",
       "source_count": 5,
-      "tfidf_score": 0.783,
-      "combined_score": 3.9149,
+      "tfidf_score": 0.7941,
+      "combined_score": 3.9704,
       "articles": [
         {
           "source": "TASS",
@@ -251,15 +251,6 @@
           "summary": "Five of them were destroyed over the Rostov Region",
           "sentiment": "neutral",
           "sentiment_score": 0.0
-        },
-        {
-          "source": "TASS",
-          "title": "Novovoronezh NPP resumes operations at full capacity after Ukrainian attack — official",
-          "link": "https://tass.com/emergencies/2043993",
-          "published": "Fri, 14 Nov 2025 19:45:44 +0300",
-          "summary": "Alexey Likhachev, CEO of the Rosatom State Atomic Energy Corporation, added that the devices had been quickly and effectively repaired",
-          "sentiment": "negative",
-          "sentiment_score": -1.0
         },
         {
           "source": "RT Russia",
@@ -305,14 +296,23 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916ff7e85f54015ec448153.jpg\" style=\"margin-right: 10px;\" /> The Russian military has conducted its fifth long-range barrage against Ukrainian targets this week, the Defense Ministry has said <br /><a href=\"https://www.rt.com/russia/627787-long-range-strikes-ukraine/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "negative",
           "sentiment_score": -1.0
+        },
+        {
+          "source": "RT Russia",
+          "title": "Moscow mocks Zelensky after Berlin asks Kiev to keep fighting-age males",
+          "link": "https://www.rt.com/russia/627786-zelensky-exodus-males-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Fri, 14 Nov 2025 09:43:04 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916f90685f5403a6f40557b.jpg\" style=\"margin-right: 10px;\" /> Russian Foreign Ministry spokeswoman Maria Zakharova has commented on Germany’s efforts to keep fighting-age Ukrainians at home <br /><a href=\"https://www.rt.com/russia/627786-zelensky-exodus-males-germany/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
         }
       ]
     },
     {
       "keyword": "kiev",
       "source_count": 5,
-      "tfidf_score": 0.7368,
-      "combined_score": 3.6842,
+      "tfidf_score": 0.737,
+      "combined_score": 3.6851,
       "articles": [
         {
           "source": "TASS",
@@ -331,15 +331,6 @@
           "summary": "According to Alexey Likhachev, the growing number of attacks and provocations against such facilities can be seen as the Kiev regime’s reaction to the advance of Russian forces along practically the entire line of combat engagement",
           "sentiment": "negative",
           "sentiment_score": -1.0
-        },
-        {
-          "source": "TASS",
-          "title": "Italian official opposes weapons supplies to Kiev amid corruption scandal",
-          "link": "https://tass.com/world/2044001",
-          "published": "Fri, 14 Nov 2025 20:15:20 +0300",
-          "summary": "Matteo Salvini also pointed to Russia’s achievements on the battlefield and the peace efforts of US President Donald Trump and Pope Leo XIV",
-          "sentiment": "positive",
-          "sentiment_score": 1.0
         },
         {
           "source": "RT Russia",
@@ -403,14 +394,23 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916c7cc20302774df14f272.png\" style=\"margin-right: 10px;\" /> Kiev’s agents planned to assassinate their target during a visit to a cemetery in Moscow, the agency has said <br /><a href=\"https://www.rt.com/russia/627774-ukraine-terror-official-fsb/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "negative",
           "sentiment_score": -1.0
+        },
+        {
+          "source": "RT Russia",
+          "title": "Russia will fight as long as Ukraine rejects peace talks – Kremlin",
+          "link": "https://www.rt.com/russia/627752-ukraine-peace-talks-peskov/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 13 Nov 2025 14:54:08 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6915e3982030273853280dd8.jpg\" style=\"margin-right: 10px;\" /> Kiev will have to negotiate eventually but from a much weaker position than before, Dmitry Peskov has warned <br /><a href=\"https://www.rt.com/russia/627752-ukraine-peace-talks-peskov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
         }
       ]
     },
     {
       "keyword": "sanctions",
       "source_count": 5,
-      "tfidf_score": 0.5773,
-      "combined_score": 2.8867,
+      "tfidf_score": 0.5877,
+      "combined_score": 2.9386,
       "articles": [
         {
           "source": "TASS",
@@ -436,6 +436,24 @@
           "link": "https://www.rt.com/russia/627739-mindich-corruption-personal-sanctions/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
           "published": "Thu, 13 Nov 2025 12:39:12 +0000",
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6915ce2d2030272f8a6779f6.jpg\" style=\"margin-right: 10px;\" /> Vladimir Zelensky has approved sanctions against his former business partner Timur Mindich, who is implicated in a major corruption probe <br /><a href=\"https://www.rt.com/russia/627739-mindich-corruption-personal-sanctions/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "negative",
+          "sentiment_score": -1.0
+        },
+        {
+          "source": "RT",
+          "title": "EU aspirant considers nationalizing Russian-owned refinery",
+          "link": "https://www.rt.com/news/627830-serbia-nationalize-gazprom-refinery-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Sat, 15 Nov 2025 16:08:30 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691898752030272bec54f964.jpg\" style=\"margin-right: 10px;\" /> US sanctions against Russia-owned NIS, Serbia’s only refinery, force Belgrade to make ‘tough’ decisions or risk a national energy crisis <br /><a href=\"https://www.rt.com/news/627830-serbia-nationalize-gazprom-refinery-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "negative",
+          "sentiment_score": -1.0
+        },
+        {
+          "source": "RT",
+          "title": "US sanctions Ukrainian firms for selling drone parts to Iran",
+          "link": "https://www.rt.com/news/627829-us-ukraine-iran-drone/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Sat, 15 Nov 2025 16:07:57 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69188ac785f5405038294a0a.jpg\" style=\"margin-right: 10px;\" /> Kiev has repeatedly accused Tehran of supplying UAVs to Moscow, despite the Russian and Iranian authorities denying those claims <br /><a href=\"https://www.rt.com/news/627829-us-ukraine-iran-drone/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "negative",
           "sentiment_score": -1.0
         },
@@ -483,32 +501,14 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68fbc12b85f54036752b48b6.jpg\" style=\"margin-right: 10px;\" /> The US failed to woo India away from Russian oil, so it reached for its favorite weapon: sanctions. But coercion comes with a price. <br /><a href=\"https://www.rt.com/business/626930-washingtons-crusade-against-russian-oil/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "negative",
           "sentiment_score": -1.0
-        },
-        {
-          "source": "RT Business",
-          "title": "Oil spikes following US sanctions on Russia",
-          "link": "https://www.rt.com/business/626899-oil-spikes-us-sanctions-russia/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Fri, 24 Oct 2025 10:34:32 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68fb54b7203027409523f141.jpg\" style=\"margin-right: 10px;\" /> Global oil prices are on course for their biggest weekly jump in four months amid concerns over new US sanctions on Russian crude <br /><a href=\"https://www.rt.com/business/626899-oil-spikes-us-sanctions-russia/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "negative",
-          "sentiment_score": -1.0
-        },
-        {
-          "source": "RT Business",
-          "title": "UK exempts Russian oil giant’s subsidiaries from sanctions",
-          "link": "https://www.rt.com/business/626826-uk-exempts-german-rosneft-sanctions/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Wed, 22 Oct 2025 16:14:34 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f8eb7620302774a82dac90.jpg\" style=\"margin-right: 10px;\" /> The UK has lifted sanctions on Rosneft’s subsidiaries in Germany, saying the assets are under Berlin’s control <br /><a href=\"https://www.rt.com/business/626826-uk-exempts-german-rosneft-sanctions/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "negative",
-          "sentiment_score": -1.0
         }
       ]
     },
     {
       "keyword": "corruption",
       "source_count": 4,
-      "tfidf_score": 0.6926,
-      "combined_score": 2.7705,
+      "tfidf_score": 0.6922,
+      "combined_score": 2.769,
       "articles": [
         {
           "source": "TASS",
@@ -518,15 +518,6 @@
           "summary": "\"The best and only way for the Zelensky administration to surmount these challenges is to fully commit itself to getting a negotiated settlement across the finish line,\" Mark Episkopos said",
           "sentiment": "negative",
           "sentiment_score": -1.0
-        },
-        {
-          "source": "TASS",
-          "title": "Italian official opposes weapons supplies to Kiev amid corruption scandal",
-          "link": "https://tass.com/world/2044001",
-          "published": "Fri, 14 Nov 2025 20:15:20 +0300",
-          "summary": "Matteo Salvini also pointed to Russia’s achievements on the battlefield and the peace efforts of US President Donald Trump and Pope Leo XIV",
-          "sentiment": "positive",
-          "sentiment_score": 1.0
         },
         {
           "source": "RT Russia",
@@ -599,14 +590,23 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69159fc420302719ae511805.jpg\" style=\"margin-right: 10px;\" /> The rampant corruption in Ukraine is becoming “obvious” even to Kiev’s Western backers, Kremlin spokesman Dmitry Peskov has said <br /><a href=\"https://www.rt.com/russia/627706-ukrainian-corruption-scandal-peskov/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "neutral",
           "sentiment_score": 0.0
+        },
+        {
+          "source": "RT Russia",
+          "title": "WATCH: Rick Sanchez on what Ukraine’s latest corruption scandal means for Zelensky",
+          "link": "https://www.rt.com/russia/627684-rick-sanchez-ukraine-corruption/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 12 Nov 2025 18:07:08 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914cc4d2030275cd217f51f.jpg\" style=\"margin-right: 10px;\" /> A close ally of the Ukrainian leader is the target of a major graft probe that reportedly involves the FBI <br /><a href=\"https://www.rt.com/russia/627684-rick-sanchez-ukraine-corruption/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
         }
       ]
     },
     {
       "keyword": "against",
       "source_count": 5,
-      "tfidf_score": 0.5185,
-      "combined_score": 2.5927,
+      "tfidf_score": 0.5273,
+      "combined_score": 2.6363,
       "articles": [
         {
           "source": "TASS",
@@ -703,8 +703,8 @@
     {
       "keyword": "donald trump",
       "source_count": 5,
-      "tfidf_score": 0.4743,
-      "combined_score": 2.3717,
+      "tfidf_score": 0.4644,
+      "combined_score": 2.322,
       "articles": [
         {
           "source": "TASS",
@@ -725,15 +725,6 @@
           "sentiment_score": 0.0
         },
         {
-          "source": "TASS",
-          "title": "Italian official opposes weapons supplies to Kiev amid corruption scandal",
-          "link": "https://tass.com/world/2044001",
-          "published": "Fri, 14 Nov 2025 20:15:20 +0300",
-          "summary": "Matteo Salvini also pointed to Russia’s achievements on the battlefield and the peace efforts of US President Donald Trump and Pope Leo XIV",
-          "sentiment": "positive",
-          "sentiment_score": 1.0
-        },
-        {
           "source": "RT Russia",
           "title": "Censored Lavrov interview with Italian media (FULL TEXT)",
           "link": "https://www.rt.com/russia/627767-censored-lavrov-interview-with-italian-liberal-newspaper/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
@@ -741,24 +732,6 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916f1d585f5403a990f4473.jpg\" style=\"margin-right: 10px;\" /> Lavrov has commented on the aborted meeting between Russian President Vladimir Putin and his US counterpart Donald Trump in Budapest <br /><a href=\"https://www.rt.com/russia/627767-censored-lavrov-interview-with-italian-liberal-newspaper/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "neutral",
           "sentiment_score": 0.0
-        },
-        {
-          "source": "RT Business",
-          "title": "China overtakes US as Germany’s top trading partner – Reuters",
-          "link": "https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Thu, 23 Oct 2025 11:09:48 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f9f78d85f54017c07030c2.jpg\" style=\"margin-right: 10px;\" /> US tariffs under President Donald Trump have weighed on German exports to the US <br /><a href=\"https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "neutral",
-          "sentiment_score": 0.0
-        },
-        {
-          "source": "RT Business",
-          "title": "Beijing vows to ‘fight to the end’ in trade war with US",
-          "link": "https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 14 Oct 2025 14:52:14 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68ee64fb85f540698a1b21cc.jpg\" style=\"margin-right: 10px;\" /> Donald Trump has threatened to impose extra 100% tariffs on all Chinese goods <br /><a href=\"https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "negative",
-          "sentiment_score": -0.556
         },
         {
           "source": "RT",
@@ -795,14 +768,41 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691660482030276b262568ff.jpg\" style=\"margin-right: 10px;\" /> The BBC has apologized to US President Donald Trump for showing a deceptive edit of his speech <br /><a href=\"https://www.rt.com/news/627770-bbc-apology-letter-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "neutral",
           "sentiment_score": 0.0
+        },
+        {
+          "source": "RT Business",
+          "title": "China overtakes US as Germany’s top trading partner – Reuters",
+          "link": "https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 23 Oct 2025 11:09:48 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f9f78d85f54017c07030c2.jpg\" style=\"margin-right: 10px;\" /> US tariffs under President Donald Trump have weighed on German exports to the US <br /><a href=\"https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
+        },
+        {
+          "source": "RT Business",
+          "title": "Beijing vows to ‘fight to the end’ in trade war with US",
+          "link": "https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 14 Oct 2025 14:52:14 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68ee64fb85f540698a1b21cc.jpg\" style=\"margin-right: 10px;\" /> Donald Trump has threatened to impose extra 100% tariffs on all Chinese goods <br /><a href=\"https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "negative",
+          "sentiment_score": -0.556
+        },
+        {
+          "source": "RT News",
+          "title": "BBC ready to apologize to Trump – media",
+          "link": "https://www.rt.com/news/627734-trump-bbc-lawsuit/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 13 Nov 2025 13:25:49 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6915db972030274001268caf.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has threatened the BBC with a $1 billion lawsuit over a misleading edit of his speech   \n\n  <br /><a href=\"https://www.rt.com/news/627734-trump-bbc-lawsuit/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "negative",
+          "sentiment_score": -1.0
         }
       ]
     },
     {
       "keyword": "donald",
       "source_count": 5,
-      "tfidf_score": 0.4632,
-      "combined_score": 2.316,
+      "tfidf_score": 0.4545,
+      "combined_score": 2.2723,
       "articles": [
         {
           "source": "TASS",
@@ -823,15 +823,6 @@
           "sentiment_score": 0.0
         },
         {
-          "source": "TASS",
-          "title": "Italian official opposes weapons supplies to Kiev amid corruption scandal",
-          "link": "https://tass.com/world/2044001",
-          "published": "Fri, 14 Nov 2025 20:15:20 +0300",
-          "summary": "Matteo Salvini also pointed to Russia’s achievements on the battlefield and the peace efforts of US President Donald Trump and Pope Leo XIV",
-          "sentiment": "positive",
-          "sentiment_score": 1.0
-        },
-        {
           "source": "RT Russia",
           "title": "Censored Lavrov interview with Italian media (FULL TEXT)",
           "link": "https://www.rt.com/russia/627767-censored-lavrov-interview-with-italian-liberal-newspaper/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
@@ -839,24 +830,6 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916f1d585f5403a990f4473.jpg\" style=\"margin-right: 10px;\" /> Lavrov has commented on the aborted meeting between Russian President Vladimir Putin and his US counterpart Donald Trump in Budapest <br /><a href=\"https://www.rt.com/russia/627767-censored-lavrov-interview-with-italian-liberal-newspaper/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "neutral",
           "sentiment_score": 0.0
-        },
-        {
-          "source": "RT Business",
-          "title": "China overtakes US as Germany’s top trading partner – Reuters",
-          "link": "https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Thu, 23 Oct 2025 11:09:48 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f9f78d85f54017c07030c2.jpg\" style=\"margin-right: 10px;\" /> US tariffs under President Donald Trump have weighed on German exports to the US <br /><a href=\"https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "neutral",
-          "sentiment_score": 0.0
-        },
-        {
-          "source": "RT Business",
-          "title": "Beijing vows to ‘fight to the end’ in trade war with US",
-          "link": "https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 14 Oct 2025 14:52:14 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68ee64fb85f540698a1b21cc.jpg\" style=\"margin-right: 10px;\" /> Donald Trump has threatened to impose extra 100% tariffs on all Chinese goods <br /><a href=\"https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "negative",
-          "sentiment_score": -0.556
         },
         {
           "source": "RT",
@@ -893,95 +866,68 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691660482030276b262568ff.jpg\" style=\"margin-right: 10px;\" /> The BBC has apologized to US President Donald Trump for showing a deceptive edit of his speech <br /><a href=\"https://www.rt.com/news/627770-bbc-apology-letter-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "neutral",
           "sentiment_score": 0.0
+        },
+        {
+          "source": "RT",
+          "title": "Polish president slams Tusk as worst PM since communist era",
+          "link": "https://www.rt.com/news/627764-tusk-worst-pm-since-communist-era/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 13 Nov 2025 21:07:25 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691626602030274001268ced.jpg\" style=\"margin-right: 10px;\" /> Polish President Karol Nawrocki has described Donald Tusk as the worst prime minister since the communist era amid an escalating feud <br /><a href=\"https://www.rt.com/news/627764-tusk-worst-pm-since-communist-era/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
+        },
+        {
+          "source": "RT Business",
+          "title": "China overtakes US as Germany’s top trading partner – Reuters",
+          "link": "https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 23 Oct 2025 11:09:48 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f9f78d85f54017c07030c2.jpg\" style=\"margin-right: 10px;\" /> US tariffs under President Donald Trump have weighed on German exports to the US <br /><a href=\"https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
+        },
+        {
+          "source": "RT Business",
+          "title": "Beijing vows to ‘fight to the end’ in trade war with US",
+          "link": "https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Tue, 14 Oct 2025 14:52:14 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68ee64fb85f540698a1b21cc.jpg\" style=\"margin-right: 10px;\" /> Donald Trump has threatened to impose extra 100% tariffs on all Chinese goods <br /><a href=\"https://www.rt.com/business/626427-china-fight-us-tariff-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "negative",
+          "sentiment_score": -0.556
         }
       ]
     },
     {
-      "keyword": "amid",
-      "source_count": 5,
-      "tfidf_score": 0.4305,
-      "combined_score": 2.1524,
+      "keyword": "china",
+      "source_count": 4,
+      "tfidf_score": 0.5088,
+      "combined_score": 2.0353,
       "articles": [
         {
           "source": "TASS",
-          "title": "Italian official opposes weapons supplies to Kiev amid corruption scandal",
-          "link": "https://tass.com/world/2044001",
-          "published": "Fri, 14 Nov 2025 20:15:20 +0300",
-          "summary": "Matteo Salvini also pointed to Russia’s achievements on the battlefield and the peace efforts of US President Donald Trump and Pope Leo XIV",
-          "sentiment": "positive",
-          "sentiment_score": 1.0
-        },
-        {
-          "source": "RT Russia",
-          "title": "Ukraine targeting Russian nuclear power plants amid frontline losses – Rosatom head",
-          "link": "https://www.rt.com/russia/627793-ukraine-russian-nuclear-plants-attacks/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Fri, 14 Nov 2025 15:48:45 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69174b0820302737413d9f27.jpg\" style=\"margin-right: 10px;\" /> Ukraine is targeting Russian nuclear facilities in retaliation for battlefield defeats, Rosatom chief Aleksey Likhachev has said <br /><a href=\"https://www.rt.com/russia/627793-ukraine-russian-nuclear-plants-attacks/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "negative",
-          "sentiment_score": -1.0
-        },
-        {
-          "source": "RT Russia",
-          "title": "Ukrainian MPs demand new cabinet after Zelensky ally embroiled in graft scandal",
-          "link": "https://www.rt.com/russia/627610-ukraine-cabinet-recall-mindich/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 11 Nov 2025 09:28:16 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6912fdf585f5403d5b4ddf63.jpg\" style=\"margin-right: 10px;\" /> The party of former Ukrainian President Pyotr Poroshenko has called for the replacement of the cabinet amid a major graft probe <br /><a href=\"https://www.rt.com/russia/627610-ukraine-cabinet-recall-mindich/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "neutral",
-          "sentiment_score": 0.0
-        },
-        {
-          "source": "RT Business",
-          "title": "Foreign investment in EU ‘frighteningly’ low – Euractiv",
-          "link": "https://www.rt.com/business/627293-euractiv-eu-foreign-investment-low/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Mon, 03 Nov 2025 20:37:17 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6908f94520302706a8266b7e.jpg\" style=\"margin-right: 10px;\" /> Foreign investment in the EU is at an alarmingly low level amid a combination of adverse factors, Euractiv reports <br /><a href=\"https://www.rt.com/business/627293-euractiv-eu-foreign-investment-low/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "neutral",
-          "sentiment_score": 0.0
-        },
-        {
-          "source": "RT Business",
-          "title": "EU nation limits fuel exports to bloc members amid Lukoil sanctions",
-          "link": "https://www.rt.com/business/627229-bulgaria-lukoil-restriction-fuel-exports/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Sat, 01 Nov 2025 15:44:47 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690605e72030272fc421e577.jpg\" style=\"margin-right: 10px;\" /> Bulgaria has partly restricted fuel exports to EU states after US sanctions on Russia’s Lukoil triggered security and supply concerns <br /><a href=\"https://www.rt.com/business/627229-bulgaria-lukoil-restriction-fuel-exports/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "negative",
-          "sentiment_score": -1.0
-        },
-        {
-          "source": "RT Business",
-          "title": "Amazon announces mass layoffs amid AI push",
-          "link": "https://www.rt.com/business/627074-amazon-mass-layoffs-ai/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Tue, 28 Oct 2025 18:30:20 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/6900f17e203027580e120fc1.jpg\" style=\"margin-right: 10px;\" /> US tech giant Amazon is cutting 14,000 corporate jobs, citing AI development <br /><a href=\"https://www.rt.com/business/627074-amazon-mass-layoffs-ai/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "positive",
-          "sentiment_score": 1.0
-        },
-        {
-          "source": "RT Business",
-          "title": "Oil spikes following US sanctions on Russia",
-          "link": "https://www.rt.com/business/626899-oil-spikes-us-sanctions-russia/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Fri, 24 Oct 2025 10:34:32 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68fb54b7203027409523f141.jpg\" style=\"margin-right: 10px;\" /> Global oil prices are on course for their biggest weekly jump in four months amid concerns over new US sanctions on Russian crude <br /><a href=\"https://www.rt.com/business/626899-oil-spikes-us-sanctions-russia/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-          "sentiment": "negative",
-          "sentiment_score": -1.0
-        },
-        {
-          "source": "RT Business",
-          "title": "Gold could hit $10,000 – JPMorgan boss",
-          "link": "https://www.rt.com/business/626533-gold-could-hit-10000/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Thu, 16 Oct 2025 13:01:25 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f0dfe020302726e545e48a.jpg\" style=\"margin-right: 10px;\" /> JPMorgan boss Jamie Dimon has said gold could more than double in price, amid rising inflation and geopolitical tensions <br /><a href=\"https://www.rt.com/business/626533-gold-could-hit-10000/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "title": "Trump says he would like to discuss cutting back on nuclear weapons with Russia, China",
+          "link": "https://tass.com/world/2044093",
+          "published": "Sat, 15 Nov 2025 05:42:01 +0300",
+          "summary": "Donald Trump noted that the US has \"more nuclear weapons than any other country\"",
           "sentiment": "neutral",
           "sentiment_score": 0.0
         },
         {
           "source": "RT",
-          "title": "IMF to pressure Ukraine amid corruption scandal",
-          "link": "https://www.rt.com/news/627794-imf-ukraine-corruption/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-          "published": "Fri, 14 Nov 2025 14:47:25 +0000",
-          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691737db85f5403b1e313c6e.jpg\" style=\"margin-right: 10px;\" /> The IMF will dispatch a team to discuss the terms of a potential new lending program following reports of embezzlement <br /><a href=\"https://www.rt.com/news/627794-imf-ukraine-corruption/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "title": "US approves first arms sale to Taiwan under Trump",
+          "link": "https://www.rt.com/news/627826-us-taiwan-arms-china/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Sat, 15 Nov 2025 12:58:53 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6918605c20302720f65761cc.jpg\" style=\"margin-right: 10px;\" /> Beijing has said that the American weapons supplies to the self-governing island violate China’s sovereignty and security interests <br /><a href=\"https://www.rt.com/news/627826-us-taiwan-arms-china/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "neutral",
           "sentiment_score": 0.0
+        },
+        {
+          "source": "RT",
+          "title": "China threatens Japan over PM’s Taiwan comments",
+          "link": "https://www.rt.com/news/627791-china-threatens-japan-taiwan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Fri, 14 Nov 2025 11:46:46 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691715882030273de93796fc.jpg\" style=\"margin-right: 10px;\" /> Beijing has vowed to “retaliate forcefully” if Tokyo chooses to militarily interfere in the Taiwan strait issue <br /><a href=\"https://www.rt.com/news/627791-china-threatens-japan-taiwan/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "negative",
+          "sentiment_score": -1.0
         },
         {
           "source": "RT",
@@ -991,239 +937,293 @@
           "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916e1cd2030272ccf5a1d99.jpg\" style=\"margin-right: 10px;\" /> The move comes amid a diplomatic thaw in Indo-Chinese relations following a pact in 2024 to ease border tensions <br /><a href=\"https://www.rt.com/india/627780-india-launch-ladakh-airbase/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
           "sentiment": "neutral",
           "sentiment_score": 0.0
+        },
+        {
+          "source": "RT",
+          "title": "China announces Xi won’t attend G20",
+          "link": "https://www.rt.com/news/627765-china-g20-xi-jinping/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 13 Nov 2025 20:56:47 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916410685f5403a990f4451.jpg\" style=\"margin-right: 10px;\" /> President Xi Jinping will not attend the upcoming G20 Summit in South Africa, the Chinese Foreign Ministry has announced <br /><a href=\"https://www.rt.com/news/627765-china-g20-xi-jinping/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
+        },
+        {
+          "source": "RT Business",
+          "title": "Dutch may loosen grip on Chinese chipmaker – Bloomberg",
+          "link": "https://www.rt.com/business/627483-dutch-seizure-nexperia-china-chips/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Fri, 07 Nov 2025 21:00:17 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/690e448420302730f24e0873.jpg\" style=\"margin-right: 10px;\" /> The Netherlands could reportedly hand back control of Chinese-owned chipmaker Nexperia after Beijing lifted export curbs <br /><a href=\"https://www.rt.com/business/627483-dutch-seizure-nexperia-china-chips/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
+        },
+        {
+          "source": "RT Business",
+          "title": "China reveals outcome of key US trade talks",
+          "link": "https://www.rt.com/business/627160-china-outcome-us-trade-deal/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 30 Oct 2025 17:39:47 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/6903a15885f54047bc0808a8.jpg\" style=\"margin-right: 10px;\" /> Beijing has agreed to ease rare earth export controls in exchange for lowered tariffs and restrictions from Washington <br /><a href=\"https://www.rt.com/business/627160-china-outcome-us-trade-deal/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
+        },
+        {
+          "source": "RT Business",
+          "title": "West a decade behind China on rare earths – Goldman Sachs",
+          "link": "https://www.rt.com/business/627116-west-behind-china-rare-earths/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Wed, 29 Oct 2025 16:34:51 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/69023fce20302740e7757f05.jpg\" style=\"margin-right: 10px;\" /> It could take Western producers up to ten years to develop rare earth processing and manufacturing capacity, Goldman Sachs has said <br /><a href=\"https://www.rt.com/business/627116-west-behind-china-rare-earths/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
+        },
+        {
+          "source": "RT Business",
+          "title": "US could ditch 100% China tariff threat – Treasury chief",
+          "link": "https://www.rt.com/business/627027-us-china-tariffs-framework/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Mon, 27 Oct 2025 16:47:13 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68ff9e8e85f54040c3376b2d.jpg\" style=\"margin-right: 10px;\" /> US and China have agreed on a framework of a trade deal ahead of meeting between Trump and Xi, Treasury Secretary Scott Bessent has said <br /><a href=\"https://www.rt.com/business/627027-us-china-tariffs-framework/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "negative",
+          "sentiment_score": -1.0
+        },
+        {
+          "source": "RT Business",
+          "title": "China overtakes US as Germany’s top trading partner – Reuters",
+          "link": "https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+          "published": "Thu, 23 Oct 2025 11:09:48 +0000",
+          "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.10/thumbnail/68f9f78d85f54017c07030c2.jpg\" style=\"margin-right: 10px;\" /> US tariffs under President Donald Trump have weighed on German exports to the US <br /><a href=\"https://www.rt.com/business/626853-china-overtakes-us-trade-germany/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+          "sentiment": "neutral",
+          "sentiment_score": 0.0
         }
       ]
     }
   ],
   "top_headlines": [
     {
-      "source": "Interfax",
-      "title": "Трамп доволен победой партии Милея на выборах в Аргентине",
-      "link": "https://www.interfax.ru/world/1054876",
-      "published": "Mon, 27 Oct 2025 10:23:00 +0300",
-      "summary": "Президент США Дональд Трамп поздравил президента Аргентины Хавьера Милея с победой его партии на выборах, отметив заслуги американской администрации в оказании ему поддержки.\"Это была крупная победа в Аргентине, и я хочу поздравить победителя.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Число погибших при взрыве на предприятии в Копейске увеличилось до 13 человек",
-      "link": "https://www.interfax.ru/russia/1054877",
-      "published": "Mon, 27 Oct 2025 10:20:00 +0300",
-      "summary": "Число погибших на заводе в Копейске Челябинской области, где вечером 22 октября произошел взрыв, увеличилось до 13 человек, сообщает пресс-служба правительства Челябинской области в понедельник.\"По итогам сверки сформирован список жертв трагедии.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Беспилотники в ночь на понедельник атаковали две нефтебазы в ЛНР",
-      "link": "https://www.interfax.ru/russia/1054874",
-      "published": "Mon, 27 Oct 2025 10:13:00 +0300",
-      "summary": "Вооруженные силы Украины в ночь на понедельник атаковали с применением ударных беспилотников две нефтебазы в Луганской Народной Республике, сообщили в министерстве топлива, энергетики и угольной промышленности региона.\"Минувшей ночью две нефтебазы в Республике подверглись атаке БПЛА.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Трамп заявил, что не участвует в обсуждении будущего замороженных активов РФ",
-      "link": "https://www.interfax.ru/world/1054875",
-      "published": "Mon, 27 Oct 2025 10:12:00 +0300",
-      "summary": "Президент США Дональд Трамп заявил, что не участвует в обсуждении возможного использования замороженных российских активов в ЕС для предоставления кредита Украине.\"Вы должны спросить об этом ЕС, я в это не вовлечен\", - заявил он журналистам на борту самолета в понедельник, говоря об инициативе Евросоюза.Ранее сообщалось, что Еврокомиссия рассматривает возможность использования российских замороженных активов в размере около 170 млрд евро, которые в настоящее время хранятся в финансовом депозитарии Euroclear в Брюсселе.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Индексы МосБиржи и РТС начали основную сессию снижением на 1,9%",
-      "link": "https://www.interfax.ru/business/1054873",
-      "published": "Mon, 27 Oct 2025 10:10:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - Российский рынок акций на старте торгов основной сессии на \"Мосбирже\" в понедельник продолжил снижение из-за распродаж на фоне геополитической неопределенности и ухудшения прогнозов Банка России на 2026 год после снижения ключевой ставки на 0,5 процентного пункта (до 16,5% годовых); фактором поддержки выступает дорожающая нефть.Индексы МосБиржи и РТС за минуту торгов упали на 1,9%, причем индекс МосБиржи пробил рубеж 2500 пунктов, обновив минимум с 20 декабря 2024 года.К 10:01 МСК индекс снизился на 1,9% до 2495,2 пункта, индекс РТС снизился на 1,9% до 970,81 пункта; лидируют в откате акции \"Эн+ груп\" (-3,8%), \"Ростелекома\" (-3,4%), \"ЛУКОЙЛа\" (-3%), ПАО \"Группа Позитив\" (-3%).Официальный курс доллара США, установленный Банком России с 25 октября, составляет 80,9713 рубля (-29,77 копейки).",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Рубль утром растет в паре с юанем перед основными налоговыми выплатами месяца",
-      "link": "https://www.interfax.ru/business/1054872",
-      "published": "Mon, 27 Oct 2025 10:06:00 +0300",
-      "summary": "Китайский юань снижается на Московской бирже утром в понедельник.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Ритейлер X5 в III квартале увеличил EBITDA на 0,6% при снижении чистой прибыли на 19,9%",
-      "link": "https://www.interfax.ru/business/1054871",
-      "published": "Mon, 27 Oct 2025 10:02:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - ПАО \"Корпоративный центр ИКС 5\" (X5) в III квартале увеличило EBITDA по МСФО 17 на 0,6%, до 71,7 млрд рублей, сообщила компания.Чистая прибыль снизилась на 19,9%, до 28,3 млрд рублей.Показатели оказались лучше консенсус-прогноза: опрошенные \"Интерфаксом\" аналитики ожидали EBITDA на уровне 70,44 млрд рублей, чистую прибыль - 24,9 млрд рублей.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Полугодовые продажи Toyota выросли на 5%, до рекорда за этот период",
-      "link": "https://www.interfax.ru/business/1054869",
-      "published": "Mon, 27 Oct 2025 10:01:00 +0300",
-      "summary": "Японский автопроизводитель Toyota Motor увеличил продажи в первом полугодии 2026 финансового года на 5%, до рекордного за этот период уровня.В апреле-сентябре глобальные продажи компании с учетом дочерних брендов Daihatsu Motor и Hino Motors составили 5,643 млн автомобилей.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "ЦБ снизил прогноз дефицита ликвидности банковского сектора на 2025 г. до 0,5-1,3 трлн руб.",
-      "link": "https://www.interfax.ru/business/1054870",
-      "published": "Mon, 27 Oct 2025 09:58:00 +0300",
-      "summary": "Банк России снизил прогноз структурного дефицита ликвидности банковского сектора на 2025 год до 0,5-1,3 трлн рублей с 1,1-1,9 трлн рублей, следует из основных направлений единой государственной денежно-кредитной политики на 2026-2028 годы, опубликованных на сайте ЦБ РФ.Банк России по-прежнему прогнозирует рост объема наличных денег в обращении в 2025 году в диапазоне 0,1-0,5 трлн рублей, что немного меньше средних исторических уровней.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "\"АЛРОСА\" обдумывает извлечение попутного золота на россыпях в Мирнинском районе",
-      "link": "https://www.interfax.ru/business/1054867",
-      "published": "Mon, 27 Oct 2025 09:53:00 +0300",
-      "summary": "\"АЛРОСА\" рассматривает возможность извлечения попутного золота при добыче алмазов на россыпных месторождениях Мирнинско-Нюрбинского ГОКа, сообщила компания.Вилюйская геологоразведочная экспедиция \"АЛРОСА\" получила положительное заключение Росгеоэкспертизы на проведение геологоразведочных работ в Мирном.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "ФСБ сообщила о задержании жителя Запорожской области по подозрению в госизмене",
-      "link": "https://www.interfax.ru/russia/1054868",
-      "published": "Mon, 27 Oct 2025 09:48:00 +0300",
-      "summary": "Житель Запорожской области задержан по подозрению в переводах денег украинским спецслужбам и Вооруженным силам Украины, сообщил Центр общественных связей (ЦОС) ФСБ.\"Федеральной службой безопасности Российской Федерации задержан житель Васильевского района Запорожской области по подозрению в совершении государственной измены\", - сказали в ЦОС.По данным спецслужбы, в течение 2023-2025 гг.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Индекс IMOEX2 упал ниже 2500 пунктов впервые с 20 декабря 2024 года",
-      "link": "https://www.interfax.ru/business/1054866",
-      "published": "Mon, 27 Oct 2025 09:44:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - Индекс МосБиржи (IMOEX2) на утренней сессии в понедельник упал ниже 2500 пунктов впервые с 20 декабря 2024 года на фоне распродаж из-за геополитической неопределенности, ухудшения прогнозов ЦБ РФ на 2026 год после снижения ключевой ставки на 0,5 процентного пункта (до 16,5% годовых), а также санкционного давления Запада.К 9:36 по московскому времени индекс МосБиржи составил 2499,72 пункта (-1,7%); цены большинства \"голубых фишек\" на бирже демонстрируют негативную динамику в пределах 3%.Лидируют в снижении акции АФК \"Система\" (-3%), \"ЛУКОЙЛа\" (-2,7%), \"Роснефти\" (-2,7%), \"Группы компаний ПИК\" (-2,7%), \"Татнефти\" (-2,5%), \"ВК\" (-2,4%), \"Яндекса\" (-2,3%), \"Норникеля\" (-2,2%), \"префы\" \"Сургутнефтегаза\" (-2,1%), бумаги \"Т-Технологии\" (-2%).",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Трамп заявил, что не против провести встречу с Ким Чен Ыном",
-      "link": "https://www.interfax.ru/world/1054865",
-      "published": "Mon, 27 Oct 2025 09:42:00 +0300",
-      "summary": "Президент США Дональд Трамп заявил, что будет готов встретиться с председателем госсовета КНДР Ким Чен Ыном в ходе нынешней поездки по странам Азии, если северокорейский лидер этого захочет.\"Я ничего не говорил про это, но я хотел бы с ним встретиться, если он тоже этого хочет.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Прокуроры требует изъять у \"Махонинских\" активы в Челябинске на 2,5 млрд рублей",
-      "link": "https://www.interfax.ru/business/1054863",
-      "published": "Mon, 27 Oct 2025 09:25:00 +0300",
-      "summary": "Генеральная прокуратура РФ обратилась в Советский районный суд Челябинска с административным исковым заявлением об изъятии в доход государства имущества и долей общей стоимостью 2,5 млрд рублей, принадлежащих братьям Махониным и связанным с ними юридическим и физическим лицам, сообщили \"Интерфаксу\" в правоохранительных органах.Ответчиками по иску названы 16 физических лиц, входящих в объединение \"Махонинские\", в том числе братья Александр и Андрей Махонины, их родственники и знакомые, а также семь фирм.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "\"Софтлайн\" продлевает buyback еще на год",
-      "link": "https://www.interfax.ru/business/1054864",
-      "published": "Mon, 27 Oct 2025 09:23:00 +0300",
-      "summary": "Совет директоров ПАО \"Софтлайн\" решил продлить программу обратного выкупа акций еще на 12 месяцев, сообщила компания.Объем buyback сохраняется и составит до 5% УК.\"Данное решение связано, прежде всего, с уверенностью менеджмента группы в рыночной недооцененности ПАО \"Софтлайн\", а также убежденностью в росте капитализации холдинга в обозримой перспективе\", - говорится в сообщении.В октябре 2024 года совет директоров компании утвердил buyback до 5% УК в течение года.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Армения готова обеспечить проезд грузовых машин из Турции в Азербайджан",
-      "link": "https://www.interfax.ru/business/1054862",
-      "published": "Mon, 27 Oct 2025 09:22:00 +0300",
-      "summary": "Армения готова предоставить автодорогу по своей территории для проезда грузовых автомобилей из Турции в Азербайджан, заявил в парламенте Армении премьер-министр Никол Пашинян.\"С этого момента мы готовы обеспечить проезд по территории Армении грузовых автомобилей из Турции в Азербайджан и в обратном направлении.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Футболиста Мостового пытались похитить в Петербурге",
-      "link": "https://www.sport-interfax.ru/1054860",
-      "published": "Mon, 27 Oct 2025 09:20:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - Подозреваемых в попытке похищения футболиста задержали в Петербурге, сообщила журналистам в понедельник официальный представитель МВД России Ирина Волк.\"В городе Санкт-Петербурге моими коллегами из уголовного розыска задержаны подозреваемые в похищении предпринимателя и в попытке похищения известного футболиста\", - сообщила Волк в своем телеграм-канале.Имен и подробностей преступлений она не привела.В правоохранительных органах \"Интерфаксу\" уточнили, что задержанные, по предварительным данным, пытались похитить полузащитника \"Зенита\" и сборной России Андрея Мостового, а также похитили бизнесмена Сергея Селегеня.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Прямые иностранные инвестиции в Китай в январе-сентябре снизились на 10,4%",
-      "link": "https://www.interfax.ru/business/1054861",
-      "published": "Mon, 27 Oct 2025 09:13:00 +0300",
-      "summary": "Объем прямых иностранных инвестиций (ПИИ, FDI) в экономику материкового Китая в январе-сентябре 2025 года уменьшился на 10,4% относительно того же периода прошлого года - до 573,75 млрд юаней ($80,9 млрд), по данным министерства торговли.Производственный сектор привлек 150,09 млрд юаней, сектор услуг - 410,93 млрд юаней.При этом ПИИ Японии выросли на 55,5%, ОАЭ - на 48,7%, Великобритании - на 21,1%, Швейцарии - на 19,7%.За три квартала в стране было зарегистрировано 48,92 тыс.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Литва снова закрыла границу с Белоруссией",
-      "link": "https://www.interfax.ru/world/1054859",
-      "published": "Mon, 27 Oct 2025 09:02:00 +0300",
-      "summary": "Литва на неопределенный срок закрыла пункты пропуска на границе с Белоруссией, сообщила Служба охраны государственной границы при литовском МВД.\"В воскресенье примерно с 22:10 временно остановлен пропуск транспортных средств и лиц через пограничные пункты пропуска Мядининкай и Шальчининкай в связи с залетом метеозондов в Литву из Беларуси\", - говорится в сообщении.На утро понедельника литовско-белорусская граница остается закрытой.Литва на минувшей неделе трижды временно останавливала оформление в пунктах пропуска на границе с Белоруссией, в связи с тем, что службы фиксировали прилет с белорусской территории метеозондов с контрабандой.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "В Донецке в результате атаки БПЛА погибли два человека",
-      "link": "https://www.interfax.ru/russia/1054858",
-      "published": "Mon, 27 Oct 2025 08:51:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - В Ленинском районе Донецка в результате атаки БПЛА погибли две женщины 1927 и 1953 годов рождения, сообщил глава ДНР Денис Пушилин.Ранена девушка 2006 года рождения, она госпитализирована.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Brent подорожала до $66,18 за баррель",
-      "link": "https://www.interfax.ru/business/1054857",
-      "published": "Mon, 27 Oct 2025 08:39:00 +0300",
-      "summary": "Цены на нефть растут на фоне продвижения торговых переговоров США и Китая.Министр финансов США Скотт Бессент заявил накануне, что американская и китайская стороны согласовали основные положения торгового соглашения.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "В Москве логотип \"ЛУКОЙЛа\" появился на БЦ рядом с Белорусским вокзалом",
-      "link": "https://www.interfax.ru/moscow/1054856",
-      "published": "Mon, 27 Oct 2025 08:34:00 +0300",
-      "summary": "Нефтяная компания \"ЛУКОЙЛ\", штаб-квартира которой находится на Сретенском бульваре, дом 11, установила табличку с названием компании на еще одно в здание в Москве.Логотип НК появился на бизнес-центре премиум-класса в Белорусском деловом районе.В начале года этот БЦ сменил владельца.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "В Башкирии объявлена беспилотная опасность",
-      "link": "https://www.interfax.ru/russia/1054855",
-      "published": "Mon, 27 Oct 2025 08:17:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - В Башкирии утром объявили режим беспилотной опасности, сообщило региональное управление МЧС.\"Объявлена беспилотная опасность на территории Республики Башкортостан\", - говорится в сообщении.Оперативные службы рекомендуют людям покинуть открытые участки, не подходить к окнам в помещениях.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "В Калужской области обломками БПЛА повреждены пять зданий",
-      "link": "https://www.interfax.ru/russia/1054854",
-      "published": "Mon, 27 Oct 2025 08:11:00 +0300",
-      "summary": "Губернатор Калужской области Владислав Шапша сообщил об отражении атаки беспилотников в девяти округах и двух городах региона, пострадавших нет, повреждены несколько зданий.\"Сегодня ночью силами ПВО уничтожен 41 БПЛА.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Вице-премьер Оверчук заявил о возможности нарастить поставки энергоресурсов в Малайзию",
-      "link": "https://www.interfax.ru/russia/1054853",
-      "published": "Mon, 27 Oct 2025 08:07:00 +0300",
-      "summary": "Россия могла бы нарастить поставки в Малайзию энергоресурсов, промышленного оборудования и продукции агропромышленного комплекса, а также рассмотреть строительство в стране АЭС большой и малой мощности, сообщила пресс-служба вице-премьера Алексея Оверчука.Оверчук обсудил вопросы двустороннего сотрудничества с вице-премьером, министром энергетического перехода и водных ресурсов Малайзии Фадиллой Юсуфом.\"Российская сторона видит хорошие возможности для наращивания поставок в Малайзию энергоресурсов, фармацевтических препаратов, промышленного оборудования, включая медицинское.",
+      "source": "RIA Novosti",
+      "title": "МВД получит 2,5 миллиарда рублей на жилье для семей сотрудников",
+      "link": "https://ria.ru/20251115/mvd-2055218438.html",
+      "published": "Sat, 15 Nov 2025 20:47:53 +0300",
+      "summary": "",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
       "source": "RIA Novosti",
-      "title": "В Италии за четыре года продукты подорожали не четверть",
+      "title": "Российские силовики рассказали о мародерстве ВСУшников",
+      "link": "https://ria.ru/20251115/vsu-2055217885.html",
+      "published": "Sat, 15 Nov 2025 20:39:27 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Медведчук заявил об исчерпании энергетических источников на Украине",
+      "link": "https://ria.ru/20251115/ukraina-2055217176.html",
+      "published": "Sat, 15 Nov 2025 20:36:18 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Сумской области ликвидировали замкомандира роты ВСУ",
+      "link": "https://ria.ru/20251115/vsu-2055216945.html",
+      "published": "Sat, 15 Nov 2025 20:34:49 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Тело украинского мобилизованного нашли возле учебного центра",
+      "link": "https://ria.ru/20251115/ukraina-2055216544.html",
+      "published": "Sat, 15 Nov 2025 20:32:18 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Прикамье пострадавший остается в крайне тяжелом состоянии после ДТП",
+      "link": "https://ria.ru/20251115/dtp-2055216335.html",
+      "published": "Sat, 15 Nov 2025 20:32:13 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Названы темы телефонных переговоров Путина и Лукашенко",
+      "link": "https://ria.ru/20251115/peregovory-2055216092.html",
+      "published": "Sat, 15 Nov 2025 20:31:12 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Мадриде врачи прошли маршем по центру",
+      "link": "https://ria.ru/20251115/ispaniya-2055215860.html",
+      "published": "Sat, 15 Nov 2025 20:28:01 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Путин и Лукашенко договорились о дальнейших контактах",
+      "link": "https://ria.ru/20251115/putin-2055215672.html",
+      "published": "Sat, 15 Nov 2025 20:26:59 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Врио экзарха РПЦ в Западной Европе провел богослужение в новом статусе",
+      "link": "https://ria.ru/20251115/religiya-2055215071.html",
+      "published": "Sat, 15 Nov 2025 20:22:50 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Во Франции началась многотысячная манифестация виноградарей",
+      "link": "https://ria.ru/20251115/frantsija-2055214857.html",
+      "published": "Sat, 15 Nov 2025 20:22:05 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Пензенской области объявлена угроза атаки БПЛА",
+      "link": "https://ria.ru/20251115/svo-2055214422.html",
+      "published": "Sat, 15 Nov 2025 20:16:53 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Эксперт заявил о системном кризисе в экономике Молдавии",
+      "link": "https://ria.ru/20251115/moldaviya-2055213380.html",
+      "published": "Sat, 15 Nov 2025 20:10:57 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "\"Стыдятся признать\". На Западе рассказали о бизнесе на умерших на Украине",
+      "link": "https://ria.ru/20251115/ukraina-2055213036.html",
+      "published": "Sat, 15 Nov 2025 20:09:17 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Трамп не сможет закончить войну на Украине, заявил Медведчук",
+      "link": "https://ria.ru/20251115/tramp-2055212448.html",
+      "published": "Sat, 15 Nov 2025 20:05:32 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Телеканал BFMTV прервал вещание из-за угрозы взрыва",
+      "link": "https://ria.ru/20251115/es-2055211490.html",
+      "published": "Sat, 15 Nov 2025 19:57:20 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Саратове из-за ограничений задержали четыре авиарейса",
+      "link": "https://ria.ru/20251115/saratov-2055211333.html",
+      "published": "Sat, 15 Nov 2025 19:54:25 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Telegram начнет тестировать прямые трансляции в историях, заявил Дуров",
+      "link": "https://ria.ru/20251115/durov-2055211220.html",
+      "published": "Sat, 15 Nov 2025 19:53:57 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Депутат АдГ рассказал о давлении из-за визита в Россию",
+      "link": "https://ria.ru/20251115/rossiya-2055211056.html",
+      "published": "Sat, 15 Nov 2025 19:50:35 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Сочи открылся построенный с нуля футуристичный санаторий",
+      "link": "https://ria.ru/20251115/sochi-2055210737.html",
+      "published": "Sat, 15 Nov 2025 19:47:44 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Литве задержали мужчину, поднявшего у аэропорта в воздух беспилотник",
+      "link": "https://ria.ru/20251115/es-2055210589.html",
+      "published": "Sat, 15 Nov 2025 19:47:21 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Армении освободили журналиста оппозиционного издания \"Антифейк\"",
+      "link": "https://ria.ru/20251115/armenija-2055210174.html",
+      "published": "Sat, 15 Nov 2025 19:43:04 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Прибывшие в Белоруссию из России литовские фуры разместили на спецстоянках",
+      "link": "https://ria.ru/20251115/litva-2055208473.html",
+      "published": "Sat, 15 Nov 2025 19:30:41 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Кабардино-Балкарии орел клюнул туристку в лицо",
+      "link": "https://ria.ru/20251115/chp-2055208178.html",
+      "published": "Sat, 15 Nov 2025 19:27:58 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Орбан заявил о потере Украиной суверенитета",
+      "link": "https://ria.ru/20251115/orban-2055207890.html",
+      "published": "Sat, 15 Nov 2025 19:24:20 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Италии за четыре года продукты подорожали на четверть",
       "link": "https://ria.ru/20251115/tseny-2055207226.html",
       "published": "Sat, 15 Nov 2025 19:18:01 +0300",
       "summary": "",
@@ -1235,15 +1235,6 @@
       "title": "АдГ рассмотрит возможность сотрудничества с БРИКС в энергетике",
       "link": "https://ria.ru/20251115/germanija-2055207005.html",
       "published": "Sat, 15 Nov 2025 19:14:21 +0300",
-      "summary": "",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Москве на Международном шоссе произошло массовое ДТП",
-      "link": "https://ria.ru/20251115/dtp-2055206691.html",
-      "published": "Sat, 15 Nov 2025 19:12:17 +0300",
       "summary": "",
       "sentiment": "neutral",
       "sentiment_score": 0.0
@@ -1445,237 +1436,246 @@
       "summary": "",
       "sentiment": "neutral",
       "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Воронежской области объявили опасность атаки БПЛА",
+      "link": "https://ria.ru/20251115/svo-2055194589.html",
+      "published": "Sat, 15 Nov 2025 17:15:44 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
     }
   ],
   "all_articles": [
     {
-      "source": "Interfax",
-      "title": "Трамп доволен победой партии Милея на выборах в Аргентине",
-      "link": "https://www.interfax.ru/world/1054876",
-      "published": "Mon, 27 Oct 2025 10:23:00 +0300",
-      "summary": "Президент США Дональд Трамп поздравил президента Аргентины Хавьера Милея с победой его партии на выборах, отметив заслуги американской администрации в оказании ему поддержки.\"Это была крупная победа в Аргентине, и я хочу поздравить победителя.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Число погибших при взрыве на предприятии в Копейске увеличилось до 13 человек",
-      "link": "https://www.interfax.ru/russia/1054877",
-      "published": "Mon, 27 Oct 2025 10:20:00 +0300",
-      "summary": "Число погибших на заводе в Копейске Челябинской области, где вечером 22 октября произошел взрыв, увеличилось до 13 человек, сообщает пресс-служба правительства Челябинской области в понедельник.\"По итогам сверки сформирован список жертв трагедии.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Беспилотники в ночь на понедельник атаковали две нефтебазы в ЛНР",
-      "link": "https://www.interfax.ru/russia/1054874",
-      "published": "Mon, 27 Oct 2025 10:13:00 +0300",
-      "summary": "Вооруженные силы Украины в ночь на понедельник атаковали с применением ударных беспилотников две нефтебазы в Луганской Народной Республике, сообщили в министерстве топлива, энергетики и угольной промышленности региона.\"Минувшей ночью две нефтебазы в Республике подверглись атаке БПЛА.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Трамп заявил, что не участвует в обсуждении будущего замороженных активов РФ",
-      "link": "https://www.interfax.ru/world/1054875",
-      "published": "Mon, 27 Oct 2025 10:12:00 +0300",
-      "summary": "Президент США Дональд Трамп заявил, что не участвует в обсуждении возможного использования замороженных российских активов в ЕС для предоставления кредита Украине.\"Вы должны спросить об этом ЕС, я в это не вовлечен\", - заявил он журналистам на борту самолета в понедельник, говоря об инициативе Евросоюза.Ранее сообщалось, что Еврокомиссия рассматривает возможность использования российских замороженных активов в размере около 170 млрд евро, которые в настоящее время хранятся в финансовом депозитарии Euroclear в Брюсселе.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Индексы МосБиржи и РТС начали основную сессию снижением на 1,9%",
-      "link": "https://www.interfax.ru/business/1054873",
-      "published": "Mon, 27 Oct 2025 10:10:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - Российский рынок акций на старте торгов основной сессии на \"Мосбирже\" в понедельник продолжил снижение из-за распродаж на фоне геополитической неопределенности и ухудшения прогнозов Банка России на 2026 год после снижения ключевой ставки на 0,5 процентного пункта (до 16,5% годовых); фактором поддержки выступает дорожающая нефть.Индексы МосБиржи и РТС за минуту торгов упали на 1,9%, причем индекс МосБиржи пробил рубеж 2500 пунктов, обновив минимум с 20 декабря 2024 года.К 10:01 МСК индекс снизился на 1,9% до 2495,2 пункта, индекс РТС снизился на 1,9% до 970,81 пункта; лидируют в откате акции \"Эн+ груп\" (-3,8%), \"Ростелекома\" (-3,4%), \"ЛУКОЙЛа\" (-3%), ПАО \"Группа Позитив\" (-3%).Официальный курс доллара США, установленный Банком России с 25 октября, составляет 80,9713 рубля (-29,77 копейки).",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Рубль утром растет в паре с юанем перед основными налоговыми выплатами месяца",
-      "link": "https://www.interfax.ru/business/1054872",
-      "published": "Mon, 27 Oct 2025 10:06:00 +0300",
-      "summary": "Китайский юань снижается на Московской бирже утром в понедельник.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Ритейлер X5 в III квартале увеличил EBITDA на 0,6% при снижении чистой прибыли на 19,9%",
-      "link": "https://www.interfax.ru/business/1054871",
-      "published": "Mon, 27 Oct 2025 10:02:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - ПАО \"Корпоративный центр ИКС 5\" (X5) в III квартале увеличило EBITDA по МСФО 17 на 0,6%, до 71,7 млрд рублей, сообщила компания.Чистая прибыль снизилась на 19,9%, до 28,3 млрд рублей.Показатели оказались лучше консенсус-прогноза: опрошенные \"Интерфаксом\" аналитики ожидали EBITDA на уровне 70,44 млрд рублей, чистую прибыль - 24,9 млрд рублей.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Полугодовые продажи Toyota выросли на 5%, до рекорда за этот период",
-      "link": "https://www.interfax.ru/business/1054869",
-      "published": "Mon, 27 Oct 2025 10:01:00 +0300",
-      "summary": "Японский автопроизводитель Toyota Motor увеличил продажи в первом полугодии 2026 финансового года на 5%, до рекордного за этот период уровня.В апреле-сентябре глобальные продажи компании с учетом дочерних брендов Daihatsu Motor и Hino Motors составили 5,643 млн автомобилей.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "ЦБ снизил прогноз дефицита ликвидности банковского сектора на 2025 г. до 0,5-1,3 трлн руб.",
-      "link": "https://www.interfax.ru/business/1054870",
-      "published": "Mon, 27 Oct 2025 09:58:00 +0300",
-      "summary": "Банк России снизил прогноз структурного дефицита ликвидности банковского сектора на 2025 год до 0,5-1,3 трлн рублей с 1,1-1,9 трлн рублей, следует из основных направлений единой государственной денежно-кредитной политики на 2026-2028 годы, опубликованных на сайте ЦБ РФ.Банк России по-прежнему прогнозирует рост объема наличных денег в обращении в 2025 году в диапазоне 0,1-0,5 трлн рублей, что немного меньше средних исторических уровней.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "\"АЛРОСА\" обдумывает извлечение попутного золота на россыпях в Мирнинском районе",
-      "link": "https://www.interfax.ru/business/1054867",
-      "published": "Mon, 27 Oct 2025 09:53:00 +0300",
-      "summary": "\"АЛРОСА\" рассматривает возможность извлечения попутного золота при добыче алмазов на россыпных месторождениях Мирнинско-Нюрбинского ГОКа, сообщила компания.Вилюйская геологоразведочная экспедиция \"АЛРОСА\" получила положительное заключение Росгеоэкспертизы на проведение геологоразведочных работ в Мирном.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "ФСБ сообщила о задержании жителя Запорожской области по подозрению в госизмене",
-      "link": "https://www.interfax.ru/russia/1054868",
-      "published": "Mon, 27 Oct 2025 09:48:00 +0300",
-      "summary": "Житель Запорожской области задержан по подозрению в переводах денег украинским спецслужбам и Вооруженным силам Украины, сообщил Центр общественных связей (ЦОС) ФСБ.\"Федеральной службой безопасности Российской Федерации задержан житель Васильевского района Запорожской области по подозрению в совершении государственной измены\", - сказали в ЦОС.По данным спецслужбы, в течение 2023-2025 гг.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Индекс IMOEX2 упал ниже 2500 пунктов впервые с 20 декабря 2024 года",
-      "link": "https://www.interfax.ru/business/1054866",
-      "published": "Mon, 27 Oct 2025 09:44:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - Индекс МосБиржи (IMOEX2) на утренней сессии в понедельник упал ниже 2500 пунктов впервые с 20 декабря 2024 года на фоне распродаж из-за геополитической неопределенности, ухудшения прогнозов ЦБ РФ на 2026 год после снижения ключевой ставки на 0,5 процентного пункта (до 16,5% годовых), а также санкционного давления Запада.К 9:36 по московскому времени индекс МосБиржи составил 2499,72 пункта (-1,7%); цены большинства \"голубых фишек\" на бирже демонстрируют негативную динамику в пределах 3%.Лидируют в снижении акции АФК \"Система\" (-3%), \"ЛУКОЙЛа\" (-2,7%), \"Роснефти\" (-2,7%), \"Группы компаний ПИК\" (-2,7%), \"Татнефти\" (-2,5%), \"ВК\" (-2,4%), \"Яндекса\" (-2,3%), \"Норникеля\" (-2,2%), \"префы\" \"Сургутнефтегаза\" (-2,1%), бумаги \"Т-Технологии\" (-2%).",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Трамп заявил, что не против провести встречу с Ким Чен Ыном",
-      "link": "https://www.interfax.ru/world/1054865",
-      "published": "Mon, 27 Oct 2025 09:42:00 +0300",
-      "summary": "Президент США Дональд Трамп заявил, что будет готов встретиться с председателем госсовета КНДР Ким Чен Ыном в ходе нынешней поездки по странам Азии, если северокорейский лидер этого захочет.\"Я ничего не говорил про это, но я хотел бы с ним встретиться, если он тоже этого хочет.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Прокуроры требует изъять у \"Махонинских\" активы в Челябинске на 2,5 млрд рублей",
-      "link": "https://www.interfax.ru/business/1054863",
-      "published": "Mon, 27 Oct 2025 09:25:00 +0300",
-      "summary": "Генеральная прокуратура РФ обратилась в Советский районный суд Челябинска с административным исковым заявлением об изъятии в доход государства имущества и долей общей стоимостью 2,5 млрд рублей, принадлежащих братьям Махониным и связанным с ними юридическим и физическим лицам, сообщили \"Интерфаксу\" в правоохранительных органах.Ответчиками по иску названы 16 физических лиц, входящих в объединение \"Махонинские\", в том числе братья Александр и Андрей Махонины, их родственники и знакомые, а также семь фирм.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "\"Софтлайн\" продлевает buyback еще на год",
-      "link": "https://www.interfax.ru/business/1054864",
-      "published": "Mon, 27 Oct 2025 09:23:00 +0300",
-      "summary": "Совет директоров ПАО \"Софтлайн\" решил продлить программу обратного выкупа акций еще на 12 месяцев, сообщила компания.Объем buyback сохраняется и составит до 5% УК.\"Данное решение связано, прежде всего, с уверенностью менеджмента группы в рыночной недооцененности ПАО \"Софтлайн\", а также убежденностью в росте капитализации холдинга в обозримой перспективе\", - говорится в сообщении.В октябре 2024 года совет директоров компании утвердил buyback до 5% УК в течение года.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Армения готова обеспечить проезд грузовых машин из Турции в Азербайджан",
-      "link": "https://www.interfax.ru/business/1054862",
-      "published": "Mon, 27 Oct 2025 09:22:00 +0300",
-      "summary": "Армения готова предоставить автодорогу по своей территории для проезда грузовых автомобилей из Турции в Азербайджан, заявил в парламенте Армении премьер-министр Никол Пашинян.\"С этого момента мы готовы обеспечить проезд по территории Армении грузовых автомобилей из Турции в Азербайджан и в обратном направлении.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Футболиста Мостового пытались похитить в Петербурге",
-      "link": "https://www.sport-interfax.ru/1054860",
-      "published": "Mon, 27 Oct 2025 09:20:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - Подозреваемых в попытке похищения футболиста задержали в Петербурге, сообщила журналистам в понедельник официальный представитель МВД России Ирина Волк.\"В городе Санкт-Петербурге моими коллегами из уголовного розыска задержаны подозреваемые в похищении предпринимателя и в попытке похищения известного футболиста\", - сообщила Волк в своем телеграм-канале.Имен и подробностей преступлений она не привела.В правоохранительных органах \"Интерфаксу\" уточнили, что задержанные, по предварительным данным, пытались похитить полузащитника \"Зенита\" и сборной России Андрея Мостового, а также похитили бизнесмена Сергея Селегеня.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Прямые иностранные инвестиции в Китай в январе-сентябре снизились на 10,4%",
-      "link": "https://www.interfax.ru/business/1054861",
-      "published": "Mon, 27 Oct 2025 09:13:00 +0300",
-      "summary": "Объем прямых иностранных инвестиций (ПИИ, FDI) в экономику материкового Китая в январе-сентябре 2025 года уменьшился на 10,4% относительно того же периода прошлого года - до 573,75 млрд юаней ($80,9 млрд), по данным министерства торговли.Производственный сектор привлек 150,09 млрд юаней, сектор услуг - 410,93 млрд юаней.При этом ПИИ Японии выросли на 55,5%, ОАЭ - на 48,7%, Великобритании - на 21,1%, Швейцарии - на 19,7%.За три квартала в стране было зарегистрировано 48,92 тыс.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Литва снова закрыла границу с Белоруссией",
-      "link": "https://www.interfax.ru/world/1054859",
-      "published": "Mon, 27 Oct 2025 09:02:00 +0300",
-      "summary": "Литва на неопределенный срок закрыла пункты пропуска на границе с Белоруссией, сообщила Служба охраны государственной границы при литовском МВД.\"В воскресенье примерно с 22:10 временно остановлен пропуск транспортных средств и лиц через пограничные пункты пропуска Мядининкай и Шальчининкай в связи с залетом метеозондов в Литву из Беларуси\", - говорится в сообщении.На утро понедельника литовско-белорусская граница остается закрытой.Литва на минувшей неделе трижды временно останавливала оформление в пунктах пропуска на границе с Белоруссией, в связи с тем, что службы фиксировали прилет с белорусской территории метеозондов с контрабандой.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "В Донецке в результате атаки БПЛА погибли два человека",
-      "link": "https://www.interfax.ru/russia/1054858",
-      "published": "Mon, 27 Oct 2025 08:51:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - В Ленинском районе Донецка в результате атаки БПЛА погибли две женщины 1927 и 1953 годов рождения, сообщил глава ДНР Денис Пушилин.Ранена девушка 2006 года рождения, она госпитализирована.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Brent подорожала до $66,18 за баррель",
-      "link": "https://www.interfax.ru/business/1054857",
-      "published": "Mon, 27 Oct 2025 08:39:00 +0300",
-      "summary": "Цены на нефть растут на фоне продвижения торговых переговоров США и Китая.Министр финансов США Скотт Бессент заявил накануне, что американская и китайская стороны согласовали основные положения торгового соглашения.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "В Москве логотип \"ЛУКОЙЛа\" появился на БЦ рядом с Белорусским вокзалом",
-      "link": "https://www.interfax.ru/moscow/1054856",
-      "published": "Mon, 27 Oct 2025 08:34:00 +0300",
-      "summary": "Нефтяная компания \"ЛУКОЙЛ\", штаб-квартира которой находится на Сретенском бульваре, дом 11, установила табличку с названием компании на еще одно в здание в Москве.Логотип НК появился на бизнес-центре премиум-класса в Белорусском деловом районе.В начале года этот БЦ сменил владельца.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "В Башкирии объявлена беспилотная опасность",
-      "link": "https://www.interfax.ru/russia/1054855",
-      "published": "Mon, 27 Oct 2025 08:17:00 +0300",
-      "summary": "Москва. 27 октября. INTERFAX.RU - В Башкирии утром объявили режим беспилотной опасности, сообщило региональное управление МЧС.\"Объявлена беспилотная опасность на территории Республики Башкортостан\", - говорится в сообщении.Оперативные службы рекомендуют людям покинуть открытые участки, не подходить к окнам в помещениях.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "В Калужской области обломками БПЛА повреждены пять зданий",
-      "link": "https://www.interfax.ru/russia/1054854",
-      "published": "Mon, 27 Oct 2025 08:11:00 +0300",
-      "summary": "Губернатор Калужской области Владислав Шапша сообщил об отражении атаки беспилотников в девяти округах и двух городах региона, пострадавших нет, повреждены несколько зданий.\"Сегодня ночью силами ПВО уничтожен 41 БПЛА.",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "Interfax",
-      "title": "Вице-премьер Оверчук заявил о возможности нарастить поставки энергоресурсов в Малайзию",
-      "link": "https://www.interfax.ru/russia/1054853",
-      "published": "Mon, 27 Oct 2025 08:07:00 +0300",
-      "summary": "Россия могла бы нарастить поставки в Малайзию энергоресурсов, промышленного оборудования и продукции агропромышленного комплекса, а также рассмотреть строительство в стране АЭС большой и малой мощности, сообщила пресс-служба вице-премьера Алексея Оверчука.Оверчук обсудил вопросы двустороннего сотрудничества с вице-премьером, министром энергетического перехода и водных ресурсов Малайзии Фадиллой Юсуфом.\"Российская сторона видит хорошие возможности для наращивания поставок в Малайзию энергоресурсов, фармацевтических препаратов, промышленного оборудования, включая медицинское.",
+      "source": "RIA Novosti",
+      "title": "МВД получит 2,5 миллиарда рублей на жилье для семей сотрудников",
+      "link": "https://ria.ru/20251115/mvd-2055218438.html",
+      "published": "Sat, 15 Nov 2025 20:47:53 +0300",
+      "summary": "",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
       "source": "RIA Novosti",
-      "title": "В Италии за четыре года продукты подорожали не четверть",
+      "title": "Российские силовики рассказали о мародерстве ВСУшников",
+      "link": "https://ria.ru/20251115/vsu-2055217885.html",
+      "published": "Sat, 15 Nov 2025 20:39:27 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Медведчук заявил об исчерпании энергетических источников на Украине",
+      "link": "https://ria.ru/20251115/ukraina-2055217176.html",
+      "published": "Sat, 15 Nov 2025 20:36:18 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Сумской области ликвидировали замкомандира роты ВСУ",
+      "link": "https://ria.ru/20251115/vsu-2055216945.html",
+      "published": "Sat, 15 Nov 2025 20:34:49 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Тело украинского мобилизованного нашли возле учебного центра",
+      "link": "https://ria.ru/20251115/ukraina-2055216544.html",
+      "published": "Sat, 15 Nov 2025 20:32:18 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Прикамье пострадавший остается в крайне тяжелом состоянии после ДТП",
+      "link": "https://ria.ru/20251115/dtp-2055216335.html",
+      "published": "Sat, 15 Nov 2025 20:32:13 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Названы темы телефонных переговоров Путина и Лукашенко",
+      "link": "https://ria.ru/20251115/peregovory-2055216092.html",
+      "published": "Sat, 15 Nov 2025 20:31:12 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Мадриде врачи прошли маршем по центру",
+      "link": "https://ria.ru/20251115/ispaniya-2055215860.html",
+      "published": "Sat, 15 Nov 2025 20:28:01 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Путин и Лукашенко договорились о дальнейших контактах",
+      "link": "https://ria.ru/20251115/putin-2055215672.html",
+      "published": "Sat, 15 Nov 2025 20:26:59 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Врио экзарха РПЦ в Западной Европе провел богослужение в новом статусе",
+      "link": "https://ria.ru/20251115/religiya-2055215071.html",
+      "published": "Sat, 15 Nov 2025 20:22:50 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Во Франции началась многотысячная манифестация виноградарей",
+      "link": "https://ria.ru/20251115/frantsija-2055214857.html",
+      "published": "Sat, 15 Nov 2025 20:22:05 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Пензенской области объявлена угроза атаки БПЛА",
+      "link": "https://ria.ru/20251115/svo-2055214422.html",
+      "published": "Sat, 15 Nov 2025 20:16:53 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Эксперт заявил о системном кризисе в экономике Молдавии",
+      "link": "https://ria.ru/20251115/moldaviya-2055213380.html",
+      "published": "Sat, 15 Nov 2025 20:10:57 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "\"Стыдятся признать\". На Западе рассказали о бизнесе на умерших на Украине",
+      "link": "https://ria.ru/20251115/ukraina-2055213036.html",
+      "published": "Sat, 15 Nov 2025 20:09:17 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Трамп не сможет закончить войну на Украине, заявил Медведчук",
+      "link": "https://ria.ru/20251115/tramp-2055212448.html",
+      "published": "Sat, 15 Nov 2025 20:05:32 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Телеканал BFMTV прервал вещание из-за угрозы взрыва",
+      "link": "https://ria.ru/20251115/es-2055211490.html",
+      "published": "Sat, 15 Nov 2025 19:57:20 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Саратове из-за ограничений задержали четыре авиарейса",
+      "link": "https://ria.ru/20251115/saratov-2055211333.html",
+      "published": "Sat, 15 Nov 2025 19:54:25 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Telegram начнет тестировать прямые трансляции в историях, заявил Дуров",
+      "link": "https://ria.ru/20251115/durov-2055211220.html",
+      "published": "Sat, 15 Nov 2025 19:53:57 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Депутат АдГ рассказал о давлении из-за визита в Россию",
+      "link": "https://ria.ru/20251115/rossiya-2055211056.html",
+      "published": "Sat, 15 Nov 2025 19:50:35 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Сочи открылся построенный с нуля футуристичный санаторий",
+      "link": "https://ria.ru/20251115/sochi-2055210737.html",
+      "published": "Sat, 15 Nov 2025 19:47:44 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Литве задержали мужчину, поднявшего у аэропорта в воздух беспилотник",
+      "link": "https://ria.ru/20251115/es-2055210589.html",
+      "published": "Sat, 15 Nov 2025 19:47:21 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Армении освободили журналиста оппозиционного издания \"Антифейк\"",
+      "link": "https://ria.ru/20251115/armenija-2055210174.html",
+      "published": "Sat, 15 Nov 2025 19:43:04 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Прибывшие в Белоруссию из России литовские фуры разместили на спецстоянках",
+      "link": "https://ria.ru/20251115/litva-2055208473.html",
+      "published": "Sat, 15 Nov 2025 19:30:41 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Кабардино-Балкарии орел клюнул туристку в лицо",
+      "link": "https://ria.ru/20251115/chp-2055208178.html",
+      "published": "Sat, 15 Nov 2025 19:27:58 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "Орбан заявил о потере Украиной суверенитета",
+      "link": "https://ria.ru/20251115/orban-2055207890.html",
+      "published": "Sat, 15 Nov 2025 19:24:20 +0300",
+      "summary": "",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RIA Novosti",
+      "title": "В Италии за четыре года продукты подорожали на четверть",
       "link": "https://ria.ru/20251115/tseny-2055207226.html",
       "published": "Sat, 15 Nov 2025 19:18:01 +0300",
       "summary": "",
@@ -1687,15 +1687,6 @@
       "title": "АдГ рассмотрит возможность сотрудничества с БРИКС в энергетике",
       "link": "https://ria.ru/20251115/germanija-2055207005.html",
       "published": "Sat, 15 Nov 2025 19:14:21 +0300",
-      "summary": "",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RIA Novosti",
-      "title": "В Москве на Международном шоссе произошло массовое ДТП",
-      "link": "https://ria.ru/20251115/dtp-2055206691.html",
-      "published": "Sat, 15 Nov 2025 19:12:17 +0300",
       "summary": "",
       "sentiment": "neutral",
       "sentiment_score": 0.0
@@ -1908,218 +1899,227 @@
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "В Крыму заявили, что конфликт на Украине объединил \"мертвый проект\" ЕС",
-      "link": "https://ria.ru/20251115/es-2055194422.html",
-      "published": "Sat, 15 Nov 2025 17:12:31 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Трамп доволен победой партии Милея на выборах в Аргентине",
+      "link": "https://www.interfax.ru/world/1054876",
+      "published": "Mon, 27 Oct 2025 10:23:00 +0300",
+      "summary": "Президент США Дональд Трамп поздравил президента Аргентины Хавьера Милея с победой его партии на выборах, отметив заслуги американской администрации в оказании ему поддержки.\"Это была крупная победа в Аргентине, и я хочу поздравить победителя.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Электронная очередь на КПП между Белоруссией и Польшей заработает завтра",
-      "link": "https://ria.ru/20251115/kpp-2055194196.html",
-      "published": "Sat, 15 Nov 2025 17:10:53 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Число погибших при взрыве на предприятии в Копейске увеличилось до 13 человек",
+      "link": "https://www.interfax.ru/russia/1054877",
+      "published": "Mon, 27 Oct 2025 10:20:00 +0300",
+      "summary": "Число погибших на заводе в Копейске Челябинской области, где вечером 22 октября произошел взрыв, увеличилось до 13 человек, сообщает пресс-служба правительства Челябинской области в понедельник.\"По итогам сверки сформирован список жертв трагедии.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "АвтоВАЗ продал более 1000 машин Lada Aura в 2025 году",
-      "link": "https://ria.ru/20251115/avto-2055193985.html",
-      "published": "Sat, 15 Nov 2025 17:07:54 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Беспилотники в ночь на понедельник атаковали две нефтебазы в ЛНР",
+      "link": "https://www.interfax.ru/russia/1054874",
+      "published": "Mon, 27 Oct 2025 10:13:00 +0300",
+      "summary": "Вооруженные силы Украины в ночь на понедельник атаковали с применением ударных беспилотников две нефтебазы в Луганской Народной Республике, сообщили в министерстве топлива, энергетики и угольной промышленности региона.\"Минувшей ночью две нефтебазы в Республике подверглись атаке БПЛА.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Премьер Баварии выступил за отмену упрощенного выезда мужчин с Украины",
-      "link": "https://ria.ru/20251115/es-2055193339.html",
-      "published": "Sat, 15 Nov 2025 16:57:24 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Трамп заявил, что не участвует в обсуждении будущего замороженных активов РФ",
+      "link": "https://www.interfax.ru/world/1054875",
+      "published": "Mon, 27 Oct 2025 10:12:00 +0300",
+      "summary": "Президент США Дональд Трамп заявил, что не участвует в обсуждении возможного использования замороженных российских активов в ЕС для предоставления кредита Украине.\"Вы должны спросить об этом ЕС, я в это не вовлечен\", - заявил он журналистам на борту самолета в понедельник, говоря об инициативе Евросоюза.Ранее сообщалось, что Еврокомиссия рассматривает возможность использования российских замороженных активов в размере около 170 млрд евро, которые в настоящее время хранятся в финансовом депозитарии Euroclear в Брюсселе.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Захарова высмеяла слова депутата из Молдавии о Пушкине и геях*",
-      "link": "https://ria.ru/20251115/zakharova-2055192916.html",
-      "published": "Sat, 15 Nov 2025 16:49:43 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Индексы МосБиржи и РТС начали основную сессию снижением на 1,9%",
+      "link": "https://www.interfax.ru/business/1054873",
+      "published": "Mon, 27 Oct 2025 10:10:00 +0300",
+      "summary": "Москва. 27 октября. INTERFAX.RU - Российский рынок акций на старте торгов основной сессии на \"Мосбирже\" в понедельник продолжил снижение из-за распродаж на фоне геополитической неопределенности и ухудшения прогнозов Банка России на 2026 год после снижения ключевой ставки на 0,5 процентного пункта (до 16,5% годовых); фактором поддержки выступает дорожающая нефть.Индексы МосБиржи и РТС за минуту торгов упали на 1,9%, причем индекс МосБиржи пробил рубеж 2500 пунктов, обновив минимум с 20 декабря 2024 года.К 10:01 МСК индекс снизился на 1,9% до 2495,2 пункта, индекс РТС снизился на 1,9% до 970,81 пункта; лидируют в откате акции \"Эн+ груп\" (-3,8%), \"Ростелекома\" (-3,4%), \"ЛУКОЙЛа\" (-3%), ПАО \"Группа Позитив\" (-3%).Официальный курс доллара США, установленный Банком России с 25 октября, составляет 80,9713 рубля (-29,77 копейки).",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Снежная крупа накрыла восток Москвы",
-      "link": "https://ria.ru/20251115/pogoda-2055192606.html",
-      "published": "Sat, 15 Nov 2025 16:49:10 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Рубль утром растет в паре с юанем перед основными налоговыми выплатами месяца",
+      "link": "https://www.interfax.ru/business/1054872",
+      "published": "Mon, 27 Oct 2025 10:06:00 +0300",
+      "summary": "Китайский юань снижается на Московской бирже утром в понедельник.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "В Краснодаре подросток пострадал во время стрельбы в школе",
-      "link": "https://ria.ru/20251115/krasnodar-2055192316.html",
-      "published": "Sat, 15 Nov 2025 16:45:52 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Ритейлер X5 в III квартале увеличил EBITDA на 0,6% при снижении чистой прибыли на 19,9%",
+      "link": "https://www.interfax.ru/business/1054871",
+      "published": "Mon, 27 Oct 2025 10:02:00 +0300",
+      "summary": "Москва. 27 октября. INTERFAX.RU - ПАО \"Корпоративный центр ИКС 5\" (X5) в III квартале увеличило EBITDA по МСФО 17 на 0,6%, до 71,7 млрд рублей, сообщила компания.Чистая прибыль снизилась на 19,9%, до 28,3 млрд рублей.Показатели оказались лучше консенсус-прогноза: опрошенные \"Интерфаксом\" аналитики ожидали EBITDA на уровне 70,44 млрд рублей, чистую прибыль - 24,9 млрд рублей.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Мурашко рассказал о борьбе с диабетом в России",
-      "link": "https://ria.ru/20251115/rossiya-2055192164.html",
-      "published": "Sat, 15 Nov 2025 16:45:25 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Полугодовые продажи Toyota выросли на 5%, до рекорда за этот период",
+      "link": "https://www.interfax.ru/business/1054869",
+      "published": "Mon, 27 Oct 2025 10:01:00 +0300",
+      "summary": "Японский автопроизводитель Toyota Motor увеличил продажи в первом полугодии 2026 финансового года на 5%, до рекордного за этот период уровня.В апреле-сентябре глобальные продажи компании с учетом дочерних брендов Daihatsu Motor и Hino Motors составили 5,643 млн автомобилей.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Комитет Госдумы поддержал смягчение налогообложения для букмекеров",
-      "link": "https://ria.ru/20251115/gosudma-2055191466.html",
-      "published": "Sat, 15 Nov 2025 16:40:24 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "ЦБ снизил прогноз дефицита ликвидности банковского сектора на 2025 г. до 0,5-1,3 трлн руб.",
+      "link": "https://www.interfax.ru/business/1054870",
+      "published": "Mon, 27 Oct 2025 09:58:00 +0300",
+      "summary": "Банк России снизил прогноз структурного дефицита ликвидности банковского сектора на 2025 год до 0,5-1,3 трлн рублей с 1,1-1,9 трлн рублей, следует из основных направлений единой государственной денежно-кредитной политики на 2026-2028 годы, опубликованных на сайте ЦБ РФ.Банк России по-прежнему прогнозирует рост объема наличных денег в обращении в 2025 году в диапазоне 0,1-0,5 трлн рублей, что немного меньше средних исторических уровней.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Памятные доски выдающимся разведчикам откроют в Москве, сообщил Мединский",
-      "link": "https://ria.ru/20251115/moskva-2055190619.html",
-      "published": "Sat, 15 Nov 2025 16:31:26 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "\"АЛРОСА\" обдумывает извлечение попутного золота на россыпях в Мирнинском районе",
+      "link": "https://www.interfax.ru/business/1054867",
+      "published": "Mon, 27 Oct 2025 09:53:00 +0300",
+      "summary": "\"АЛРОСА\" рассматривает возможность извлечения попутного золота при добыче алмазов на россыпных месторождениях Мирнинско-Нюрбинского ГОКа, сообщила компания.Вилюйская геологоразведочная экспедиция \"АЛРОСА\" получила положительное заключение Росгеоэкспертизы на проведение геологоразведочных работ в Мирном.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "В Париже вооруженные люди попытались ограбить бутик Chanel",
-      "link": "https://ria.ru/20251115/parizh-2055189944.html",
-      "published": "Sat, 15 Nov 2025 16:28:48 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "ФСБ сообщила о задержании жителя Запорожской области по подозрению в госизмене",
+      "link": "https://www.interfax.ru/russia/1054868",
+      "published": "Mon, 27 Oct 2025 09:48:00 +0300",
+      "summary": "Житель Запорожской области задержан по подозрению в переводах денег украинским спецслужбам и Вооруженным силам Украины, сообщил Центр общественных связей (ЦОС) ФСБ.\"Федеральной службой безопасности Российской Федерации задержан житель Васильевского района Запорожской области по подозрению в совершении государственной измены\", - сказали в ЦОС.По данным спецслужбы, в течение 2023-2025 гг.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Комитет Госдумы согласился уравнять НДФЛ для резидентов ЕАЭС и России",
-      "link": "https://ria.ru/20251115/duma-2055189391.html",
-      "published": "Sat, 15 Nov 2025 16:25:08 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Индекс IMOEX2 упал ниже 2500 пунктов впервые с 20 декабря 2024 года",
+      "link": "https://www.interfax.ru/business/1054866",
+      "published": "Mon, 27 Oct 2025 09:44:00 +0300",
+      "summary": "Москва. 27 октября. INTERFAX.RU - Индекс МосБиржи (IMOEX2) на утренней сессии в понедельник упал ниже 2500 пунктов впервые с 20 декабря 2024 года на фоне распродаж из-за геополитической неопределенности, ухудшения прогнозов ЦБ РФ на 2026 год после снижения ключевой ставки на 0,5 процентного пункта (до 16,5% годовых), а также санкционного давления Запада.К 9:36 по московскому времени индекс МосБиржи составил 2499,72 пункта (-1,7%); цены большинства \"голубых фишек\" на бирже демонстрируют негативную динамику в пределах 3%.Лидируют в снижении акции АФК \"Система\" (-3%), \"ЛУКОЙЛа\" (-2,7%), \"Роснефти\" (-2,7%), \"Группы компаний ПИК\" (-2,7%), \"Татнефти\" (-2,5%), \"ВК\" (-2,4%), \"Яндекса\" (-2,3%), \"Норникеля\" (-2,2%), \"префы\" \"Сургутнефтегаза\" (-2,1%), бумаги \"Т-Технологии\" (-2%).",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "В Киеве потребовали объявить Зеленскому народный импичмент",
-      "link": "https://ria.ru/20251115/kiev-2055188348.html",
-      "published": "Sat, 15 Nov 2025 16:18:20 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Трамп заявил, что не против провести встречу с Ким Чен Ыном",
+      "link": "https://www.interfax.ru/world/1054865",
+      "published": "Mon, 27 Oct 2025 09:42:00 +0300",
+      "summary": "Президент США Дональд Трамп заявил, что будет готов встретиться с председателем госсовета КНДР Ким Чен Ыном в ходе нынешней поездки по странам Азии, если северокорейский лидер этого захочет.\"Я ничего не говорил про это, но я хотел бы с ним встретиться, если он тоже этого хочет.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "В Забайкалье автобус с вахтовиками попал в ДТП, есть пострадавшие",
-      "link": "https://ria.ru/20251115/dtp-2055187822.html",
-      "published": "Sat, 15 Nov 2025 16:15:10 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Прокуроры требует изъять у \"Махонинских\" активы в Челябинске на 2,5 млрд рублей",
+      "link": "https://www.interfax.ru/business/1054863",
+      "published": "Mon, 27 Oct 2025 09:25:00 +0300",
+      "summary": "Генеральная прокуратура РФ обратилась в Советский районный суд Челябинска с административным исковым заявлением об изъятии в доход государства имущества и долей общей стоимостью 2,5 млрд рублей, принадлежащих братьям Махониным и связанным с ними юридическим и физическим лицам, сообщили \"Интерфаксу\" в правоохранительных органах.Ответчиками по иску названы 16 физических лиц, входящих в объединение \"Махонинские\", в том числе братья Александр и Андрей Махонины, их родственники и знакомые, а также семь фирм.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Лондон слепо следует пути Байдена, заявил глава РФПИ",
-      "link": "https://ria.ru/20251115/britaniya-2055187560.html",
-      "published": "Sat, 15 Nov 2025 16:12:15 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "\"Софтлайн\" продлевает buyback еще на год",
+      "link": "https://www.interfax.ru/business/1054864",
+      "published": "Mon, 27 Oct 2025 09:23:00 +0300",
+      "summary": "Совет директоров ПАО \"Софтлайн\" решил продлить программу обратного выкупа акций еще на 12 месяцев, сообщила компания.Объем buyback сохраняется и составит до 5% УК.\"Данное решение связано, прежде всего, с уверенностью менеджмента группы в рыночной недооцененности ПАО \"Софтлайн\", а также убежденностью в росте капитализации холдинга в обозримой перспективе\", - говорится в сообщении.В октябре 2024 года совет директоров компании утвердил buyback до 5% УК в течение года.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "В Сирии рассказали, что мешает интеграции курдов",
-      "link": "https://ria.ru/20251115/akhmad-2055187271.html",
-      "published": "Sat, 15 Nov 2025 16:09:30 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Армения готова обеспечить проезд грузовых машин из Турции в Азербайджан",
+      "link": "https://www.interfax.ru/business/1054862",
+      "published": "Mon, 27 Oct 2025 09:22:00 +0300",
+      "summary": "Армения готова предоставить автодорогу по своей территории для проезда грузовых автомобилей из Турции в Азербайджан, заявил в парламенте Армении премьер-министр Никол Пашинян.\"С этого момента мы готовы обеспечить проезд по территории Армении грузовых автомобилей из Турции в Азербайджан и в обратном направлении.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Число пострадавших при пожаре в Эсейса выросло до 25",
-      "link": "https://ria.ru/20251115/chislo-2055187122.html",
-      "published": "Sat, 15 Nov 2025 16:09:23 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Футболиста Мостового пытались похитить в Петербурге",
+      "link": "https://www.sport-interfax.ru/1054860",
+      "published": "Mon, 27 Oct 2025 09:20:00 +0300",
+      "summary": "Москва. 27 октября. INTERFAX.RU - Подозреваемых в попытке похищения футболиста задержали в Петербурге, сообщила журналистам в понедельник официальный представитель МВД России Ирина Волк.\"В городе Санкт-Петербурге моими коллегами из уголовного розыска задержаны подозреваемые в похищении предпринимателя и в попытке похищения известного футболиста\", - сообщила Волк в своем телеграм-канале.Имен и подробностей преступлений она не привела.В правоохранительных органах \"Интерфаксу\" уточнили, что задержанные, по предварительным данным, пытались похитить полузащитника \"Зенита\" и сборной России Андрея Мостового, а также похитили бизнесмена Сергея Селегеня.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Ангола планирует открыть в Москве культурно-образовательный центр",
-      "link": "https://ria.ru/20251115/angola-2055185598.html",
-      "published": "Sat, 15 Nov 2025 16:04:47 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Прямые иностранные инвестиции в Китай в январе-сентябре снизились на 10,4%",
+      "link": "https://www.interfax.ru/business/1054861",
+      "published": "Mon, 27 Oct 2025 09:13:00 +0300",
+      "summary": "Объем прямых иностранных инвестиций (ПИИ, FDI) в экономику материкового Китая в январе-сентябре 2025 года уменьшился на 10,4% относительно того же периода прошлого года - до 573,75 млрд юаней ($80,9 млрд), по данным министерства торговли.Производственный сектор привлек 150,09 млрд юаней, сектор услуг - 410,93 млрд юаней.При этом ПИИ Японии выросли на 55,5%, ОАЭ - на 48,7%, Великобритании - на 21,1%, Швейцарии - на 19,7%.За три квартала в стране было зарегистрировано 48,92 тыс.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "В Орске расследуют дело о насилии над детьми в образовательном учреждении",
-      "link": "https://ria.ru/20251115/kriminal-2055185198.html",
-      "published": "Sat, 15 Nov 2025 16:00:25 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Литва снова закрыла границу с Белоруссией",
+      "link": "https://www.interfax.ru/world/1054859",
+      "published": "Mon, 27 Oct 2025 09:02:00 +0300",
+      "summary": "Литва на неопределенный срок закрыла пункты пропуска на границе с Белоруссией, сообщила Служба охраны государственной границы при литовском МВД.\"В воскресенье примерно с 22:10 временно остановлен пропуск транспортных средств и лиц через пограничные пункты пропуска Мядининкай и Шальчининкай в связи с залетом метеозондов в Литву из Беларуси\", - говорится в сообщении.На утро понедельника литовско-белорусская граница остается закрытой.Литва на минувшей неделе трижды временно останавливала оформление в пунктах пропуска на границе с Белоруссией, в связи с тем, что службы фиксировали прилет с белорусской территории метеозондов с контрабандой.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Премьер Баварии выступил за пересмотр энергетической политики Германии",
-      "link": "https://ria.ru/20251115/germaniya-2055184649.html",
-      "published": "Sat, 15 Nov 2025 15:57:19 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "В Донецке в результате атаки БПЛА погибли два человека",
+      "link": "https://www.interfax.ru/russia/1054858",
+      "published": "Mon, 27 Oct 2025 08:51:00 +0300",
+      "summary": "Москва. 27 октября. INTERFAX.RU - В Ленинском районе Донецка в результате атаки БПЛА погибли две женщины 1927 и 1953 годов рождения, сообщил глава ДНР Денис Пушилин.Ранена девушка 2006 года рождения, она госпитализирована.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "Вучич против национализации NIS, сообщила министр энергетики Сербии",
-      "link": "https://ria.ru/20251115/serbiya-2055184294.html",
-      "published": "Sat, 15 Nov 2025 15:52:10 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "Brent подорожала до $66,18 за баррель",
+      "link": "https://www.interfax.ru/business/1054857",
+      "published": "Mon, 27 Oct 2025 08:39:00 +0300",
+      "summary": "Цены на нефть растут на фоне продвижения торговых переговоров США и Китая.Министр финансов США Скотт Бессент заявил накануне, что американская и китайская стороны согласовали основные положения торгового соглашения.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "В Улан-Удэ построят девять путепроводов",
-      "link": "https://ria.ru/20251115/buryatiya-2055183740.html",
-      "published": "Sat, 15 Nov 2025 15:44:46 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "В Москве логотип \"ЛУКОЙЛа\" появился на БЦ рядом с Белорусским вокзалом",
+      "link": "https://www.interfax.ru/moscow/1054856",
+      "published": "Mon, 27 Oct 2025 08:34:00 +0300",
+      "summary": "Нефтяная компания \"ЛУКОЙЛ\", штаб-квартира которой находится на Сретенском бульваре, дом 11, установила табличку с названием компании на еще одно в здание в Москве.Логотип НК появился на бизнес-центре премиум-класса в Белорусском деловом районе.В начале года этот БЦ сменил владельца.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "В Киеве прошел митинг против Зеленского и коррупции",
-      "link": "https://ria.ru/20251115/ukraina-2055183501.html",
-      "published": "Sat, 15 Nov 2025 15:42:04 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "В Башкирии объявлена беспилотная опасность",
+      "link": "https://www.interfax.ru/russia/1054855",
+      "published": "Mon, 27 Oct 2025 08:17:00 +0300",
+      "summary": "Москва. 27 октября. INTERFAX.RU - В Башкирии утром объявили режим беспилотной опасности, сообщило региональное управление МЧС.\"Объявлена беспилотная опасность на территории Республики Башкортостан\", - говорится в сообщении.Оперативные службы рекомендуют людям покинуть открытые участки, не подходить к окнам в помещениях.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "source": "RIA Novosti",
-      "title": "На Украине сообщили о готовящемся ударе по Зеленскому",
-      "link": "https://ria.ru/20251115/zelenskiy-2055183292.html",
-      "published": "Sat, 15 Nov 2025 15:41:39 +0300",
-      "summary": "",
+      "source": "Interfax",
+      "title": "В Калужской области обломками БПЛА повреждены пять зданий",
+      "link": "https://www.interfax.ru/russia/1054854",
+      "published": "Mon, 27 Oct 2025 08:11:00 +0300",
+      "summary": "Губернатор Калужской области Владислав Шапша сообщил об отражении атаки беспилотников в девяти округах и двух городах региона, пострадавших нет, повреждены несколько зданий.\"Сегодня ночью силами ПВО уничтожен 41 БПЛА.",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "Interfax",
+      "title": "Вице-премьер Оверчук заявил о возможности нарастить поставки энергоресурсов в Малайзию",
+      "link": "https://www.interfax.ru/russia/1054853",
+      "published": "Mon, 27 Oct 2025 08:07:00 +0300",
+      "summary": "Россия могла бы нарастить поставки в Малайзию энергоресурсов, промышленного оборудования и продукции агропромышленного комплекса, а также рассмотреть строительство в стране АЭС большой и малой мощности, сообщила пресс-служба вице-премьера Алексея Оверчука.Оверчук обсудил вопросы двустороннего сотрудничества с вице-премьером, министром энергетического перехода и водных ресурсов Малайзии Фадиллой Юсуфом.\"Российская сторона видит хорошие возможности для наращивания поставок в Малайзию энергоресурсов, фармацевтических препаратов, промышленного оборудования, включая медицинское.",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
@@ -2462,105 +2462,6 @@
       "link": "https://tass.com/economy/2044017",
       "published": "Fri, 14 Nov 2025 20:58:18 +0300",
       "summary": "In monthly terms, consumer prices gained 0.5%",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "TASS",
-      "title": "Annual inflation in Russia slowing down to 7.37% as of November 10 — Economy Ministry",
-      "link": "https://tass.com/economy/2044007",
-      "published": "Fri, 14 Nov 2025 20:20:48 +0300",
-      "summary": "Annual inflation in Russia stood at 7.71% as of the end of October, according to Rosstat, the Russian Federal Statistics Service",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "TASS",
-      "title": "Former colonial powers still see the world as their backyard — Medvedev",
-      "link": "https://tass.com/politics/2044005",
-      "published": "Fri, 14 Nov 2025 20:19:58 +0300",
-      "summary": "Former colonial powers continue to interfere in the domestic processes of other counties, Russian Security Council Deputy Chairman Dmitry Medvedev said",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "TASS",
-      "title": "Republican Trump demands investigation into Epstein's ties to US Democratic Party",
-      "link": "https://tass.com/world/2044003",
-      "published": "Fri, 14 Nov 2025 20:16:55 +0300",
-      "summary": "According to the US president, public attention to the Epstein case in the US is now being artificially fueled by Democrats for political reasons",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "TASS",
-      "title": "Italian official opposes weapons supplies to Kiev amid corruption scandal",
-      "link": "https://tass.com/world/2044001",
-      "published": "Fri, 14 Nov 2025 20:15:20 +0300",
-      "summary": "Matteo Salvini also pointed to Russia’s achievements on the battlefield and the peace efforts of US President Donald Trump and Pope Leo XIV",
-      "sentiment": "positive",
-      "sentiment_score": 1.0
-    },
-    {
-      "source": "TASS",
-      "title": "Propaganda campaign sweeps Sahel in effort to destabilize region — Russian diplomat",
-      "link": "https://tass.com/politics/2043999",
-      "published": "Fri, 14 Nov 2025 20:04:08 +0300",
-      "summary": "\"Islamist terrorist groups are reportedly invigorating their activities across the space of the Confederation of Sahel States formed between Mali, Burkina Faso, and Niger,\" Maria Zakharova said",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "TASS",
-      "title": "Hamas re-establishes control over Gaza after withdrawal of Israeli troops — agency",
-      "link": "https://tass.com/world/2043997",
-      "published": "Fri, 14 Nov 2025 20:02:35 +0300",
-      "summary": "According to the report, over the period of the ceasefire, radicals have reportedly executed several dozen Palestinians for allegedly collaborating with Israel",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "TASS",
-      "title": "Team of six Russian fighters to take part in 2025 World Karate Championship in Cairo",
-      "link": "https://tass.com/sports/2043995",
-      "published": "Fri, 14 Nov 2025 19:59:27 +0300",
-      "summary": "\"According to the agreements in place, Russian athletes will be competing at the World Championships under a neutral status, flying the banner of the World Karate Federation,\" the RKF stated",
-      "sentiment": "positive",
-      "sentiment_score": 1.0
-    },
-    {
-      "source": "TASS",
-      "title": "Novovoronezh NPP resumes operations at full capacity after Ukrainian attack — official",
-      "link": "https://tass.com/emergencies/2043993",
-      "published": "Fri, 14 Nov 2025 19:45:44 +0300",
-      "summary": "Alexey Likhachev, CEO of the Rosatom State Atomic Energy Corporation, added that the devices had been quickly and effectively repaired",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
-    },
-    {
-      "source": "TASS",
-      "title": "Russia’s electricity exports to China total 300 mln kWh in first 9 months of 2025",
-      "link": "https://tass.com/economy/2043991",
-      "published": "Fri, 14 Nov 2025 19:40:30 +0300",
-      "summary": "Electricity exports to Mongolia reached 13% of Inter RAO’s total volume, amounting to 700 mln kWh",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "TASS",
-      "title": "Hungary won’t give Ukraine 1.5 million euros, will instead send it to Lebanon — Szijjarto",
-      "link": "https://tass.com/world/2043989",
-      "published": "Fri, 14 Nov 2025 19:38:56 +0300",
-      "summary": "Hungary’s national security interest is peace in the Middle East, and that Lebanon’s stability is key to that, the Hungarian foreign minister said",
-      "sentiment": "positive",
-      "sentiment_score": 1.0
-    },
-    {
-      "source": "TASS",
-      "title": "Global demand for Russian combat aircraft remains high — United Aircraft Corporation",
-      "link": "https://tass.com/economy/2043987",
-      "published": "Fri, 14 Nov 2025 19:24:29 +0300",
-      "summary": "The company’s CEO Vadim Badekha emphasized that the Middle East is an important region for promoting products",
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
@@ -3150,6 +3051,339 @@
       "sentiment_score": 0.0
     },
     {
+      "source": "RT",
+      "title": "Europe forum in Sochi highlights shift toward Eurasia",
+      "link": "https://www.rt.com/news/627828-europe-forum-sochi-eurasia-shift/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sun, 16 Nov 2025 13:40:10 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691881d385f540246a17c8ac.jpg\" style=\"margin-right: 10px;\" /> Officials from around the world have gathered for a two-day symposium at the Black Sea resort <br /><a href=\"https://www.rt.com/news/627828-europe-forum-sochi-eurasia-shift/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "negative",
+      "sentiment_score": -1.0
+    },
+    {
+      "source": "RT",
+      "title": "US officials working to corner EU energy market — FT",
+      "link": "https://www.rt.com/news/627839-us-corner-eu-enery-market/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 15 Nov 2025 17:14:29 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6918b4a485f5401fd656ede3.jpg\" style=\"margin-right: 10px;\" /> A US firm is reportedly considering buying Lukoil’s foreign assets after its deal with a Swedish buyer was tanked by Washington <br /><a href=\"https://www.rt.com/news/627839-us-corner-eu-enery-market/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Polish president puts Ukrainian migrants on notice",
+      "link": "https://www.rt.com/news/627831-polish-president-puts-ukrainian-migrants/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 15 Nov 2025 16:34:05 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691896c685f540468c1f941d.jpg\" style=\"margin-right: 10px;\" /> Warsaw has steadily tightened benefit payouts to Ukrainians since Karol Nawrocki took office in June <br /><a href=\"https://www.rt.com/news/627831-polish-president-puts-ukrainian-migrants/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "negative",
+      "sentiment_score": -1.0
+    },
+    {
+      "source": "RT",
+      "title": "EU aspirant considers nationalizing Russian-owned refinery",
+      "link": "https://www.rt.com/news/627830-serbia-nationalize-gazprom-refinery-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 15 Nov 2025 16:08:30 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691898752030272bec54f964.jpg\" style=\"margin-right: 10px;\" /> US sanctions against Russia-owned NIS, Serbia’s only refinery, force Belgrade to make ‘tough’ decisions or risk a national energy crisis <br /><a href=\"https://www.rt.com/news/627830-serbia-nationalize-gazprom-refinery-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "negative",
+      "sentiment_score": -1.0
+    },
+    {
+      "source": "RT",
+      "title": "US sanctions Ukrainian firms for selling drone parts to Iran",
+      "link": "https://www.rt.com/news/627829-us-ukraine-iran-drone/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 15 Nov 2025 16:07:57 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69188ac785f5405038294a0a.jpg\" style=\"margin-right: 10px;\" /> Kiev has repeatedly accused Tehran of supplying UAVs to Moscow, despite the Russian and Iranian authorities denying those claims <br /><a href=\"https://www.rt.com/news/627829-us-ukraine-iran-drone/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "negative",
+      "sentiment_score": -1.0
+    },
+    {
+      "source": "RT",
+      "title": "‘Go fight for Ukraine,’ EU country’s PM tells pro-Kiev students",
+      "link": "https://www.rt.com/news/627827-go-fight-ukraine-fico-students/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 15 Nov 2025 14:29:41 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6918890b85f54047fe007d3f.jpg\" style=\"margin-right: 10px;\" /> Slovak Prime Minister Robert Fico repeatedly called for a peaceful resolution to the Ukraine conflict instead of supplying Kiev with weapons <br /><a href=\"https://www.rt.com/news/627827-go-fight-ukraine-fico-students/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "US approves first arms sale to Taiwan under Trump",
+      "link": "https://www.rt.com/news/627826-us-taiwan-arms-china/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 15 Nov 2025 12:58:53 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6918605c20302720f65761cc.jpg\" style=\"margin-right: 10px;\" /> Beijing has said that the American weapons supplies to the self-governing island violate China’s sovereignty and security interests <br /><a href=\"https://www.rt.com/news/627826-us-taiwan-arms-china/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Massive blast rocks India’s border state with Pakistan (VIDEO)",
+      "link": "https://www.rt.com/india/627822-massive-blast-rocks-indias-border/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 15 Nov 2025 10:06:22 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69184fe985f5403e8e33eb5d.jpg\" style=\"margin-right: 10px;\" /> A major explosion has occurred at a police station in Jammu and Kashmir territory, killing nine and injuring 32 <br /><a href=\"https://www.rt.com/india/627822-massive-blast-rocks-indias-border/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Almost half in the West think democracy is ‘broken’ – poll",
+      "link": "https://www.rt.com/news/627821-democracy-us-uk-eu/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 15 Nov 2025 09:20:37 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69183f0a85f540468c1f9403.jpg\" style=\"margin-right: 10px;\" /> Voters are concerned about corruption undermining elections, fake news, and extremist parties, a study has found <br /><a href=\"https://www.rt.com/news/627821-democracy-us-uk-eu/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "negative",
+      "sentiment_score": -1.0
+    },
+    {
+      "source": "RT",
+      "title": "Direct talks with Putin are part of ‘Trump Doctrine’ – Vance",
+      "link": "https://www.rt.com/news/627813-vance-defends-trump-putin-talks/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Sat, 15 Nov 2025 04:26:10 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691800a020302779a0145534.jpg\" style=\"margin-right: 10px;\" /> US Vice President J.D. Vance has defended direct negotiations with Putin as an essential part of Donald Trump’s doctrine <br /><a href=\"https://www.rt.com/news/627813-vance-defends-trump-putin-talks/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Trump orders probe into Epstein’s ties to Bill Clinton",
+      "link": "https://www.rt.com/news/627811-trump-investigate-epstein-clinton/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 23:58:20 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6917c1bd85f54047e563e0f4.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has ordered to investigate the ties between Jeffrey Epstein and Bill Clinton <br /><a href=\"https://www.rt.com/news/627811-trump-investigate-epstein-clinton/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "‘Operation Dirtbag’: US arrests 150 ‘illegal alien sex predators’",
+      "link": "https://www.rt.com/news/627810-us-sex-predator-raids-immigration/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 22:11:05 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6917a8db20302757874e94d5.jpg\" style=\"margin-right: 10px;\" /> US federal agents have arrested around 150 illegal immigrants who have committed sex crimes, the DHS chief said <br /><a href=\"https://www.rt.com/news/627810-us-sex-predator-raids-immigration/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Will we the people tolerate a brave new world of trillionaires?",
+      "link": "https://www.rt.com/news/627792-brave-new-world-trillionaires/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 20:34:08 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69171f3b85f5403b1e313c61.jpg\" style=\"margin-right: 10px;\" /> Tech mogul Elon Musk is on course to be worth over a trillion dollars, while billions struggle to survive at the poverty line <br /><a href=\"https://www.rt.com/news/627792-brave-new-world-trillionaires/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Orban vowing to sue EU over Russian gas ban",
+      "link": "https://www.rt.com/news/627802-hungary-eu-lawsuit-russian-gas/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 20:06:40 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691788a4203027416043c032.jpg\" style=\"margin-right: 10px;\" /> Hungarian Prime Minister Viktor Orban has said Budapest will sue the EU over its decision to end Russian gas imports <br /><a href=\"https://www.rt.com/news/627802-hungary-eu-lawsuit-russian-gas/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Chatham House hosts notorious Ukrainian neo-Nazi mob leader",
+      "link": "https://www.rt.com/news/627809-chatham-house-ukrainian-nazi/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 19:08:31 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69177c7785f54010da7b0bbb.jpg\" style=\"margin-right: 10px;\" /> A London-based think tank has hosted a prominent Ukrainian neo-Nazi Yevhen Karas to discuss the “future of Europe” <br /><a href=\"https://www.rt.com/news/627809-chatham-house-ukrainian-nazi/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "India’s Modi hails landslide victory in crucial election",
+      "link": "https://www.rt.com/india/627804-indias-modi-hails-landslide-victory/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 16:31:48 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6917591b85f5403a6f4055c3.jpg\" style=\"margin-right: 10px;\" /> The coalition led by Indian Prime Minister has secured an overwhelming majority of votes in the Bihar state elections <br /><a href=\"https://www.rt.com/india/627804-indias-modi-hails-landslide-victory/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "positive",
+      "sentiment_score": 1.0
+    },
+    {
+      "source": "RT",
+      "title": "US designates European Antifa groups as terrorists",
+      "link": "https://www.rt.com/news/627801-us-europe-antifa-terrorists/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 16:29:07 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69174d5e85f5403a6f4055ae.jpg\" style=\"margin-right: 10px;\" /> The US State Department has designated four European Antifa groups as global terrorist organizations and linked them to political violence <br /><a href=\"https://www.rt.com/news/627801-us-europe-antifa-terrorists/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Can a second Ukraine on Taiwan be prevented?",
+      "link": "https://www.rt.com/news/627799-taiwan-second-ukraine-prevented/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 16:18:59 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69173b3185f5403bb3104098.jpg\" style=\"margin-right: 10px;\" /> A new political voice in Taipei challenges the island’s march toward militarization, urging a return to dialogue with Beijing <br /><a href=\"https://www.rt.com/news/627799-taiwan-second-ukraine-prevented/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "negative",
+      "sentiment_score": -1.0
+    },
+    {
+      "source": "RT",
+      "title": "Record solar storm hits Earth (VIDEOS)",
+      "link": "https://www.rt.com/news/627800-massive-solar-storm-hits-earth/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 15:51:15 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69173cc285f54033d63c295d.png\" style=\"margin-right: 10px;\" /> A major solar storm, the second most powerful in five years, has colored the skies over the Northern Hemisphere with the Aurora Borealis <br /><a href=\"https://www.rt.com/news/627800-massive-solar-storm-hits-earth/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "IMF to pressure Ukraine amid corruption scandal",
+      "link": "https://www.rt.com/news/627794-imf-ukraine-corruption/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 14:47:25 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691737db85f5403b1e313c6e.jpg\" style=\"margin-right: 10px;\" /> The IMF will dispatch a team to discuss the terms of a potential new lending program following reports of embezzlement <br /><a href=\"https://www.rt.com/news/627794-imf-ukraine-corruption/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "South Africa hits out at global credit rating ‘bias’ – Bloomberg",
+      "link": "https://www.rt.com/africa/627798-south-africa-accusses-global-credit-rating-agencies-bias/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 14:14:21 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6917380d85f5401fd656eda3.jpg\" style=\"margin-right: 10px;\" /> Pretoria’s finance minister has said global rating agencies show bias when assessing credit scores for African countries <br /><a href=\"https://www.rt.com/africa/627798-south-africa-accusses-global-credit-rating-agencies-bias/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Vance trolls Biden over waiting ‘to croak’ (VIDEO)",
+      "link": "https://www.rt.com/news/627797-vance-biden-croack-hannity/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 13:30:24 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69172d3485f5403a6f40559e.jpg\" style=\"margin-right: 10px;\" /> US Vice President J.D. Vance joked with Fox News about the stress of being in line to succeed an ailing president <br /><a href=\"https://www.rt.com/news/627797-vance-biden-croack-hannity/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "France fully lifts travel ban on Telegram founder – media",
+      "link": "https://www.rt.com/news/627785-durov-travel-ban-lifted/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 12:51:08 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69170e4385f5403be4323d8d.jpg\" style=\"margin-right: 10px;\" /> A French judge had barred Telegram CEO Pavel Durov from leaving the country as part of a criminal probe   \n\n  <br /><a href=\"https://www.rt.com/news/627785-durov-travel-ban-lifted/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Fyodor Lukyanov: Trump isn’t a warmonger, however...",
+      "link": "https://www.rt.com/news/627788-fyodor-lukyanov-trump-isnt-warmonger/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 11:57:56 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691703502030273c4719eef1.jpg\" style=\"margin-right: 10px;\" /> The US can’t retreat, its entire prosperity depends on global power <br /><a href=\"https://www.rt.com/news/627788-fyodor-lukyanov-trump-isnt-warmonger/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": -0.143
+    },
+    {
+      "source": "RT",
+      "title": "China threatens Japan over PM’s Taiwan comments",
+      "link": "https://www.rt.com/news/627791-china-threatens-japan-taiwan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 11:46:46 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691715882030273de93796fc.jpg\" style=\"margin-right: 10px;\" /> Beijing has vowed to “retaliate forcefully” if Tokyo chooses to militarily interfere in the Taiwan strait issue <br /><a href=\"https://www.rt.com/news/627791-china-threatens-japan-taiwan/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "negative",
+      "sentiment_score": -1.0
+    },
+    {
+      "source": "RT",
+      "title": "Africa faces worst cholera outbreak in 25 years – officials",
+      "link": "https://www.rt.com/africa/627789-africa-faces-worst-cholera-outbreak/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 10:45:05 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691706ce85f5404a6d227c51.jpg\" style=\"margin-right: 10px;\" /> Africa CDC has warned of a dramatic spike in cholera infections across the continent <br /><a href=\"https://www.rt.com/africa/627789-africa-faces-worst-cholera-outbreak/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "negative",
+      "sentiment_score": -1.0
+    },
+    {
+      "source": "RT",
+      "title": "Militia accuses Rubio of undermining truce",
+      "link": "https://www.rt.com/africa/627784-militia-accuses-rubio-undermining-sudan-ceasefire/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 10:19:40 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916fe782030273c4719eee7.jpg\" style=\"margin-right: 10px;\" /> An adviser to the Rapid Support Forces has said that emotions or “narrow political calculations” will not end the war in Sudan <br /><a href=\"https://www.rt.com/africa/627784-militia-accuses-rubio-undermining-sudan-ceasefire/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "negative",
+      "sentiment_score": -1.0
+    },
+    {
+      "source": "RT",
+      "title": "India opens airbase near China – media",
+      "link": "https://www.rt.com/india/627780-india-launch-ladakh-airbase/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 09:04:10 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916e1cd2030272ccf5a1d99.jpg\" style=\"margin-right: 10px;\" /> The move comes amid a diplomatic thaw in Indo-Chinese relations following a pact in 2024 to ease border tensions <br /><a href=\"https://www.rt.com/india/627780-india-launch-ladakh-airbase/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "India’s economy to grow by 7% in 2025 – Moody’s",
+      "link": "https://www.rt.com/india/627778-india-econpmy-grow-ratings/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 07:35:08 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916f2c285f54033d63c294a.jpg\" style=\"margin-right: 10px;\" /> The rating agency says US tariffs are unlikely to have a major impact on India’s growth <br /><a href=\"https://www.rt.com/india/627778-india-econpmy-grow-ratings/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "positive",
+      "sentiment_score": 1.0
+    },
+    {
+      "source": "RT",
+      "title": "Rights court rules against Poland in abortion case",
+      "link": "https://www.rt.com/news/627777-rights-court-rules-against-poland/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 07:15:26 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916f25685f54015ec448147.jpg\" style=\"margin-right: 10px;\" /> Europe’s human rights court says Poland violated a woman’s privacy after a 2020 ruling compelled her to get an abortion abroad <br /><a href=\"https://www.rt.com/news/627777-rights-court-rules-against-poland/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Colombian leader labels Trump ‘barbarian’ over Caribbean strikes",
+      "link": "https://www.rt.com/news/627772-petro-calls-trump-barbarian/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Fri, 14 Nov 2025 02:51:44 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916f1562030272b11344702.jpg\" style=\"margin-right: 10px;\" /> Colombian President Gustavo Petro has condemned Donald Trump as a “barbarian” for striking alleged drug boats <br /><a href=\"https://www.rt.com/news/627772-petro-calls-trump-barbarian/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "negative",
+      "sentiment_score": -1.0
+    },
+    {
+      "source": "RT",
+      "title": "US launches new military operation",
+      "link": "https://www.rt.com/news/627771-us-operation-against-narcoterrorists/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 13 Nov 2025 23:11:47 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691672ea85f5403a6f405565.jpg\" style=\"margin-right: 10px;\" /> The US has announced a new military taskforce to combat drug cartels amid tensions with Venezuela <br /><a href=\"https://www.rt.com/news/627771-us-operation-against-narcoterrorists/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "BBC apologizes to Trump",
+      "link": "https://www.rt.com/news/627770-bbc-apology-letter-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 13 Nov 2025 21:56:43 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691660482030276b262568ff.jpg\" style=\"margin-right: 10px;\" /> The BBC has apologized to US President Donald Trump for showing a deceptive edit of his speech <br /><a href=\"https://www.rt.com/news/627770-bbc-apology-letter-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Germany to end preferential treatment of Ukrainians - Bild",
+      "link": "https://www.rt.com/news/627768-germany-ukrainian-benefits-cut/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 13 Nov 2025 21:51:28 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916528e20302763ea5c30d2.jpg\" style=\"margin-right: 10px;\" /> Berlin is set to treat new Ukrainian arrivals as regular refugees, ending their preferential status, Bild has reported <br /><a href=\"https://www.rt.com/news/627768-germany-ukrainian-benefits-cut/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Can the new Syria be friends with both Russia and the US?",
+      "link": "https://www.rt.com/news/627747-new-syria-russia-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 13 Nov 2025 21:23:17 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6915df7885f540375a78bee3.jpg\" style=\"margin-right: 10px;\" /> President Ahmad al-Sharaa is playing “basketball diplomacy” with his Washington and Moscow visits <br /><a href=\"https://www.rt.com/news/627747-new-syria-russia-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "Polish president slams Tusk as worst PM since communist era",
+      "link": "https://www.rt.com/news/627764-tusk-worst-pm-since-communist-era/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 13 Nov 2025 21:07:25 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691626602030274001268ced.jpg\" style=\"margin-right: 10px;\" /> Polish President Karol Nawrocki has described Donald Tusk as the worst prime minister since the communist era amid an escalating feud <br /><a href=\"https://www.rt.com/news/627764-tusk-worst-pm-since-communist-era/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "source": "RT",
+      "title": "China announces Xi won’t attend G20",
+      "link": "https://www.rt.com/news/627765-china-g20-xi-jinping/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
+      "published": "Thu, 13 Nov 2025 20:56:47 +0000",
+      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916410685f5403a990f4451.jpg\" style=\"margin-right: 10px;\" /> President Xi Jinping will not attend the upcoming G20 Summit in South Africa, the Chinese Foreign Ministry has announced <br /><a href=\"https://www.rt.com/news/627765-china-g20-xi-jinping/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
       "source": "RT Business",
       "title": "Google sued for using AI to snoop on users",
       "link": "https://www.rt.com/business/627746-google-privacy-lawsuit-ai/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
@@ -3600,322 +3834,7 @@
       "sentiment_score": 0.0
     },
     {
-      "source": "RT",
-      "title": "Europe forum in Sochi highlights shift toward Eurasia",
-      "link": "https://www.rt.com/news/627828-europe-forum-sochi-eurasia-shift/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sun, 16 Nov 2025 13:40:10 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691881d385f540246a17c8ac.jpg\" style=\"margin-right: 10px;\" /> Officials from around the world have gathered for a two-day symposium at the Black Sea resort <br /><a href=\"https://www.rt.com/news/627828-europe-forum-sochi-eurasia-shift/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
-    },
-    {
-      "source": "RT",
-      "title": "EU aspirant considers nationalizing Russian-owned refinery",
-      "link": "https://www.rt.com/news/627830-serbia-nationalize-gazprom-refinery-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 15 Nov 2025 16:08:30 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691898752030272bec54f964.jpg\" style=\"margin-right: 10px;\" /> US sanctions against Russia-owned NIS, Serbia’s only refinery, force Belgrade to make ‘tough’ decisions or risk a national energy crisis <br /><a href=\"https://www.rt.com/news/627830-serbia-nationalize-gazprom-refinery-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
-    },
-    {
-      "source": "RT",
-      "title": "US sanctions Ukrainian firms for selling drone parts to Iran",
-      "link": "https://www.rt.com/news/627829-us-ukraine-iran-drone/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 15 Nov 2025 16:07:57 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69188ac785f5405038294a0a.jpg\" style=\"margin-right: 10px;\" /> Kiev has repeatedly accused Tehran of supplying UAVs to Moscow, despite the Russian and Iranian authorities denying those claims <br /><a href=\"https://www.rt.com/news/627829-us-ukraine-iran-drone/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
-    },
-    {
-      "source": "RT",
-      "title": "‘Go fight for Ukraine,’ EU country’s PM tells pro-Kiev students",
-      "link": "https://www.rt.com/news/627827-go-fight-ukraine-fico-students/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 15 Nov 2025 14:29:41 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6918890b85f54047fe007d3f.jpg\" style=\"margin-right: 10px;\" /> Slovak Prime Minister Robert Fico repeatedly called for a peaceful resolution to the Ukraine conflict instead of supplying Kiev with weapons <br /><a href=\"https://www.rt.com/news/627827-go-fight-ukraine-fico-students/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "US approves first arms sale to Taiwan under Trump",
-      "link": "https://www.rt.com/news/627826-us-taiwan-arms-china/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 15 Nov 2025 12:58:53 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6918605c20302720f65761cc.jpg\" style=\"margin-right: 10px;\" /> Beijing has said that the American weapons supplies to the self-governing island violate China’s sovereignty and security interests <br /><a href=\"https://www.rt.com/news/627826-us-taiwan-arms-china/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Massive blast rocks India’s border state with Pakistan (VIDEO)",
-      "link": "https://www.rt.com/india/627822-massive-blast-rocks-indias-border/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 15 Nov 2025 10:06:22 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69184fe985f5403e8e33eb5d.jpg\" style=\"margin-right: 10px;\" /> A major explosion has occurred at a police station in Jammu and Kashmir territory, killing nine and injuring 32 <br /><a href=\"https://www.rt.com/india/627822-massive-blast-rocks-indias-border/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Almost half in the West think democracy is ‘broken’ – poll",
-      "link": "https://www.rt.com/news/627821-democracy-us-uk-eu/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 15 Nov 2025 09:20:37 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69183f0a85f540468c1f9403.jpg\" style=\"margin-right: 10px;\" /> Voters are concerned about corruption undermining elections, fake news, and extremist parties, a study has found <br /><a href=\"https://www.rt.com/news/627821-democracy-us-uk-eu/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
-    },
-    {
-      "source": "RT",
-      "title": "Direct talks with Putin are part of ‘Trump Doctrine’ – Vance",
-      "link": "https://www.rt.com/news/627813-vance-defends-trump-putin-talks/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Sat, 15 Nov 2025 04:26:10 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691800a020302779a0145534.jpg\" style=\"margin-right: 10px;\" /> US Vice President J.D. Vance has defended direct negotiations with Putin as an essential part of Donald Trump’s doctrine <br /><a href=\"https://www.rt.com/news/627813-vance-defends-trump-putin-talks/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Trump orders probe into Epstein’s ties to Bill Clinton",
-      "link": "https://www.rt.com/news/627811-trump-investigate-epstein-clinton/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 23:58:20 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6917c1bd85f54047e563e0f4.jpg\" style=\"margin-right: 10px;\" /> US President Donald Trump has ordered to investigate the ties between Jeffrey Epstein and Bill Clinton <br /><a href=\"https://www.rt.com/news/627811-trump-investigate-epstein-clinton/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "‘Operation Dirtbag’: US arrests 150 ‘illegal alien sex predators’",
-      "link": "https://www.rt.com/news/627810-us-sex-predator-raids-immigration/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 22:11:05 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6917a8db20302757874e94d5.jpg\" style=\"margin-right: 10px;\" /> US federal agents have arrested around 150 illegal immigrants who have committed sex crimes, the DHS chief said <br /><a href=\"https://www.rt.com/news/627810-us-sex-predator-raids-immigration/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Will we the people tolerate a brave new world of trillionaires?",
-      "link": "https://www.rt.com/news/627792-brave-new-world-trillionaires/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 20:34:08 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69171f3b85f5403b1e313c61.jpg\" style=\"margin-right: 10px;\" /> Tech mogul Elon Musk is on course to be worth over a trillion dollars, while billions struggle to survive at the poverty line <br /><a href=\"https://www.rt.com/news/627792-brave-new-world-trillionaires/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Orban vowing to sue EU over Russian gas ban",
-      "link": "https://www.rt.com/news/627802-hungary-eu-lawsuit-russian-gas/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 20:06:40 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691788a4203027416043c032.jpg\" style=\"margin-right: 10px;\" /> Hungarian Prime Minister Viktor Orban has said Budapest will sue the EU over its decision to end Russian gas imports <br /><a href=\"https://www.rt.com/news/627802-hungary-eu-lawsuit-russian-gas/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Chatham House hosts notorious Ukrainian neo-Nazi mob leader",
-      "link": "https://www.rt.com/news/627809-chatham-house-ukrainian-nazi/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 19:08:31 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69177c7785f54010da7b0bbb.jpg\" style=\"margin-right: 10px;\" /> A London-based think tank has hosted a prominent Ukrainian neo-Nazi Yevhen Karas to discuss the “future of Europe” <br /><a href=\"https://www.rt.com/news/627809-chatham-house-ukrainian-nazi/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "India’s Modi hails landslide victory in crucial election",
-      "link": "https://www.rt.com/india/627804-indias-modi-hails-landslide-victory/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 16:31:48 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6917591b85f5403a6f4055c3.jpg\" style=\"margin-right: 10px;\" /> The coalition led by Indian Prime Minister has secured an overwhelming majority of votes in the Bihar state elections <br /><a href=\"https://www.rt.com/india/627804-indias-modi-hails-landslide-victory/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "positive",
-      "sentiment_score": 1.0
-    },
-    {
-      "source": "RT",
-      "title": "US designates European Antifa groups as terrorists",
-      "link": "https://www.rt.com/news/627801-us-europe-antifa-terrorists/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 16:29:07 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69174d5e85f5403a6f4055ae.jpg\" style=\"margin-right: 10px;\" /> The US State Department has designated four European Antifa groups as global terrorist organizations and linked them to political violence <br /><a href=\"https://www.rt.com/news/627801-us-europe-antifa-terrorists/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Can a second Ukraine on Taiwan be prevented?",
-      "link": "https://www.rt.com/news/627799-taiwan-second-ukraine-prevented/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 16:18:59 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69173b3185f5403bb3104098.jpg\" style=\"margin-right: 10px;\" /> A new political voice in Taipei challenges the island’s march toward militarization, urging a return to dialogue with Beijing <br /><a href=\"https://www.rt.com/news/627799-taiwan-second-ukraine-prevented/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
-    },
-    {
-      "source": "RT",
-      "title": "Record solar storm hits Earth (VIDEOS)",
-      "link": "https://www.rt.com/news/627800-massive-solar-storm-hits-earth/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 15:51:15 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69173cc285f54033d63c295d.png\" style=\"margin-right: 10px;\" /> A major solar storm, the second most powerful in five years, has colored the skies over the Northern Hemisphere with the Aurora Borealis <br /><a href=\"https://www.rt.com/news/627800-massive-solar-storm-hits-earth/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "IMF to pressure Ukraine amid corruption scandal",
-      "link": "https://www.rt.com/news/627794-imf-ukraine-corruption/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 14:47:25 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691737db85f5403b1e313c6e.jpg\" style=\"margin-right: 10px;\" /> The IMF will dispatch a team to discuss the terms of a potential new lending program following reports of embezzlement <br /><a href=\"https://www.rt.com/news/627794-imf-ukraine-corruption/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "South Africa hits out at global credit rating ‘bias’ – Bloomberg",
-      "link": "https://www.rt.com/africa/627798-south-africa-accusses-global-credit-rating-agencies-bias/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 14:14:21 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6917380d85f5401fd656eda3.jpg\" style=\"margin-right: 10px;\" /> Pretoria’s finance minister has said global rating agencies show bias when assessing credit scores for African countries <br /><a href=\"https://www.rt.com/africa/627798-south-africa-accusses-global-credit-rating-agencies-bias/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Vance trolls Biden over waiting ‘to croak’ (VIDEO)",
-      "link": "https://www.rt.com/news/627797-vance-biden-croack-hannity/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 13:30:24 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69172d3485f5403a6f40559e.jpg\" style=\"margin-right: 10px;\" /> US Vice President J.D. Vance joked with Fox News about the stress of being in line to succeed an ailing president <br /><a href=\"https://www.rt.com/news/627797-vance-biden-croack-hannity/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "France fully lifts travel ban on Telegram founder – media",
-      "link": "https://www.rt.com/news/627785-durov-travel-ban-lifted/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 12:51:08 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/69170e4385f5403be4323d8d.jpg\" style=\"margin-right: 10px;\" /> A French judge had barred Telegram CEO Pavel Durov from leaving the country as part of a criminal probe   \n\n  <br /><a href=\"https://www.rt.com/news/627785-durov-travel-ban-lifted/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Fyodor Lukyanov: Trump isn’t a warmonger, however...",
-      "link": "https://www.rt.com/news/627788-fyodor-lukyanov-trump-isnt-warmonger/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 11:57:56 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691703502030273c4719eef1.jpg\" style=\"margin-right: 10px;\" /> The US can’t retreat, its entire prosperity depends on global power <br /><a href=\"https://www.rt.com/news/627788-fyodor-lukyanov-trump-isnt-warmonger/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": -0.143
-    },
-    {
-      "source": "RT",
-      "title": "China threatens Japan over PM’s Taiwan comments",
-      "link": "https://www.rt.com/news/627791-china-threatens-japan-taiwan/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 11:46:46 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691715882030273de93796fc.jpg\" style=\"margin-right: 10px;\" /> Beijing has vowed to “retaliate forcefully” if Tokyo chooses to militarily interfere in the Taiwan strait issue <br /><a href=\"https://www.rt.com/news/627791-china-threatens-japan-taiwan/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
-    },
-    {
-      "source": "RT",
-      "title": "Africa faces worst cholera outbreak in 25 years – officials",
-      "link": "https://www.rt.com/africa/627789-africa-faces-worst-cholera-outbreak/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 10:45:05 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691706ce85f5404a6d227c51.jpg\" style=\"margin-right: 10px;\" /> Africa CDC has warned of a dramatic spike in cholera infections across the continent <br /><a href=\"https://www.rt.com/africa/627789-africa-faces-worst-cholera-outbreak/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
-    },
-    {
-      "source": "RT",
-      "title": "Militia accuses Rubio of undermining truce",
-      "link": "https://www.rt.com/africa/627784-militia-accuses-rubio-undermining-sudan-ceasefire/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 10:19:40 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916fe782030273c4719eee7.jpg\" style=\"margin-right: 10px;\" /> An adviser to the Rapid Support Forces has said that emotions or “narrow political calculations” will not end the war in Sudan <br /><a href=\"https://www.rt.com/africa/627784-militia-accuses-rubio-undermining-sudan-ceasefire/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
-    },
-    {
-      "source": "RT",
-      "title": "India opens airbase near China – media",
-      "link": "https://www.rt.com/india/627780-india-launch-ladakh-airbase/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 09:04:10 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916e1cd2030272ccf5a1d99.jpg\" style=\"margin-right: 10px;\" /> The move comes amid a diplomatic thaw in Indo-Chinese relations following a pact in 2024 to ease border tensions <br /><a href=\"https://www.rt.com/india/627780-india-launch-ladakh-airbase/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "India’s economy to grow by 7% in 2025 – Moody’s",
-      "link": "https://www.rt.com/india/627778-india-econpmy-grow-ratings/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 07:35:08 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916f2c285f54033d63c294a.jpg\" style=\"margin-right: 10px;\" /> The rating agency says US tariffs are unlikely to have a major impact on India’s growth <br /><a href=\"https://www.rt.com/india/627778-india-econpmy-grow-ratings/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "positive",
-      "sentiment_score": 1.0
-    },
-    {
-      "source": "RT",
-      "title": "Rights court rules against Poland in abortion case",
-      "link": "https://www.rt.com/news/627777-rights-court-rules-against-poland/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 07:15:26 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916f25685f54015ec448147.jpg\" style=\"margin-right: 10px;\" /> Europe’s human rights court says Poland violated a woman’s privacy after a 2020 ruling compelled her to get an abortion abroad <br /><a href=\"https://www.rt.com/news/627777-rights-court-rules-against-poland/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Colombian leader labels Trump ‘barbarian’ over Caribbean strikes",
-      "link": "https://www.rt.com/news/627772-petro-calls-trump-barbarian/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Fri, 14 Nov 2025 02:51:44 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916f1562030272b11344702.jpg\" style=\"margin-right: 10px;\" /> Colombian President Gustavo Petro has condemned Donald Trump as a “barbarian” for striking alleged drug boats <br /><a href=\"https://www.rt.com/news/627772-petro-calls-trump-barbarian/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
-    },
-    {
-      "source": "RT",
-      "title": "US launches new military operation",
-      "link": "https://www.rt.com/news/627771-us-operation-against-narcoterrorists/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 13 Nov 2025 23:11:47 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691672ea85f5403a6f405565.jpg\" style=\"margin-right: 10px;\" /> The US has announced a new military taskforce to combat drug cartels amid tensions with Venezuela <br /><a href=\"https://www.rt.com/news/627771-us-operation-against-narcoterrorists/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "BBC apologizes to Trump",
-      "link": "https://www.rt.com/news/627770-bbc-apology-letter-trump/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 13 Nov 2025 21:56:43 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691660482030276b262568ff.jpg\" style=\"margin-right: 10px;\" /> The BBC has apologized to US President Donald Trump for showing a deceptive edit of his speech <br /><a href=\"https://www.rt.com/news/627770-bbc-apology-letter-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Germany to end preferential treatment of Ukrainians - Bild",
-      "link": "https://www.rt.com/news/627768-germany-ukrainian-benefits-cut/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 13 Nov 2025 21:51:28 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916528e20302763ea5c30d2.jpg\" style=\"margin-right: 10px;\" /> Berlin is set to treat new Ukrainian arrivals as regular refugees, ending their preferential status, Bild has reported <br /><a href=\"https://www.rt.com/news/627768-germany-ukrainian-benefits-cut/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Can the new Syria be friends with both Russia and the US?",
-      "link": "https://www.rt.com/news/627747-new-syria-russia-us/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 13 Nov 2025 21:23:17 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6915df7885f540375a78bee3.jpg\" style=\"margin-right: 10px;\" /> President Ahmad al-Sharaa is playing “basketball diplomacy” with his Washington and Moscow visits <br /><a href=\"https://www.rt.com/news/627747-new-syria-russia-us/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "Polish president slams Tusk as worst PM since communist era",
-      "link": "https://www.rt.com/news/627764-tusk-worst-pm-since-communist-era/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 13 Nov 2025 21:07:25 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691626602030274001268ced.jpg\" style=\"margin-right: 10px;\" /> Polish President Karol Nawrocki has described Donald Tusk as the worst prime minister since the communist era amid an escalating feud <br /><a href=\"https://www.rt.com/news/627764-tusk-worst-pm-since-communist-era/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
-      "title": "China announces Xi won’t attend G20",
-      "link": "https://www.rt.com/news/627765-china-g20-xi-jinping/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Thu, 13 Nov 2025 20:56:47 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6916410685f5403a990f4451.jpg\" style=\"margin-right: 10px;\" /> President Xi Jinping will not attend the upcoming G20 Summit in South Africa, the Chinese Foreign Ministry has announced <br /><a href=\"https://www.rt.com/news/627765-china-g20-xi-jinping/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT",
+      "source": "RT News",
       "title": "NATO state accuses China of ‘massively’ financing Russia",
       "link": "https://www.rt.com/news/627760-china-russia-finland-nato/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
       "published": "Thu, 13 Nov 2025 20:32:40 +0000",
@@ -4093,24 +4012,6 @@
       "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/691502db85f5403dbf24838b.jpg\" style=\"margin-right: 10px;\" /> US Democrats released an email in which Jeffrey Epstein claimed President Donald Trump “knew about the girls” <br /><a href=\"https://www.rt.com/news/627714-new-epstein-email-trump/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
       "sentiment": "neutral",
       "sentiment_score": 0.0
-    },
-    {
-      "source": "RT News",
-      "title": "Venezuela puts military on high alert in response to US buildup in Caribbean",
-      "link": "https://www.rt.com/news/627691-venezuela-military-us-buildup/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Wed, 12 Nov 2025 19:27:46 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914de2120302779f137b2e6.jpg\" style=\"margin-right: 10px;\" /> Venezuela has announced a “massive deployment” of troops in response to the US naval armada approaching its waters <br /><a href=\"https://www.rt.com/news/627691-venezuela-military-us-buildup/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "source": "RT News",
-      "title": "Kremlin explains why British attempt to establish ‘backchannel’ failed",
-      "link": "https://www.rt.com/news/627687-uk-russia-contact-failed-kremlin/?utm_source=rss&utm_medium=rss&utm_campaign=RSS",
-      "published": "Wed, 12 Nov 2025 18:26:01 +0000",
-      "summary": "<img align=\"left\" alt=\"Preview\" src=\"https://mf.b37mrtl.ru/files/2025.11/thumbnail/6914c9d020302772a64ddbe6.jpg\" style=\"margin-right: 10px;\" /> London ignored Moscow’s position on Ukraine during an attempt to reopen dialogue earlier this year, spokesman Dmitry Peskov has said <br /><a href=\"https://www.rt.com/news/627687-uk-russia-contact-failed-kremlin/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=RSS\">Read Full Article at RT.com</a>",
-      "sentiment": "negative",
-      "sentiment_score": -1.0
     }
   ]
 }
