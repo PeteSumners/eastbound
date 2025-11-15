@@ -6,8 +6,8 @@ $TaskDescription = "Runs daily content generation for Eastbound using local SDXL
 $ScriptPath = Join-Path $PSScriptRoot "run_automation_with_claude.ps1"
 $WorkingDirectory = $PSScriptRoot
 
-# Set the time to run (8 AM daily)
-$TriggerTime = "08:00"
+# Set the time to run (9:50 AM daily)
+$TriggerTime = "09:50"
 
 Write-Host "Setting up Windows Task Scheduler..." -ForegroundColor Green
 Write-Host "Task Name: $TaskName"
