@@ -2,6 +2,31 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## ⚠️ CRITICAL: AUTOMATION-ONLY DEVELOPMENT ⚠️
+
+**ZERO MANUAL INTERVENTION POLICY:**
+
+You are ONLY allowed to modify:
+1. `run_automation_with_claude.ps1` (main automation script executed by Task Scheduler)
+2. Any Python scripts called by the automation pipeline (e.g., `scripts/monitor_russian_media.py`, `scripts/generate_images_local.py`)
+3. Task Scheduler configuration (via `setup_daily_task.ps1`)
+
+**ABSOLUTELY FORBIDDEN:**
+- ❌ Manual fixes to posts, images, or content
+- ❌ Manual deletion or moving of files
+- ❌ Running one-off commands outside the pipeline
+- ❌ Individual article fixes or patches
+- ❌ Manual git operations for content (only for code changes)
+
+**CORE PHILOSOPHY:**
+If the automation produces bad output, you MUST:
+1. Fix the automation script
+2. Delete the bad output (via automation if needed)
+3. Re-run the FULL pipeline from start to finish
+4. Verify the output is correct
+
+The system must be 100% reproducible and fully automated.
+
 ## Project Overview
 
 Eastbound is a Russian media analysis and translation service providing English-speaking audiences with accurate translations, context, and analysis of Russian media sources. This is a business/media project, NOT an intelligence operation.
