@@ -14,16 +14,13 @@ $Date = Get-Date -Format "yyyy-MM-dd"
 $BriefingPath = "research/$Date-briefing.json"
 $DraftPath = "content/drafts/$Date-analysis.md"
 
-# Check if briefing exists
-if (-not (Test-Path $BriefingPath)) {
-    Write-Host "[ERROR] Briefing not found: $BriefingPath" -ForegroundColor Red
-    Write-Host "[INFO] Running media monitoring first..." -ForegroundColor Yellow
+# NO CACHING - Always run full pipeline
+Write-Host "[INFO] Running media monitoring..." -ForegroundColor Yellow
 
-    # Run Steps 1-3: Media monitoring, global knowledge crawling, and visualizations
-    python scripts/monitor_russian_media.py --output $BriefingPath --parallel
-    python scripts/monitor_global_sources.py --regions all --categories news,research --workers 10 --output knowledge_base
-    python scripts/generate_visuals.py --briefing $BriefingPath --output images/
-}
+# Run Steps 1-3: Media monitoring, global knowledge crawling, and visualizations
+python scripts/monitor_russian_media.py --output $BriefingPath --parallel
+python scripts/monitor_global_sources.py --regions all --categories news,research --workers 10 --output knowledge_base
+python scripts/generate_visuals.py --briefing $BriefingPath --output images/
 
 # NO CACHING - Always regenerate draft
 Write-Host "[INFO] Generating content using Claude Code..." -ForegroundColor Cyan
