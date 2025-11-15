@@ -85,8 +85,8 @@ Use the Write tool to create the file at $DraftPath
 $PromptFile = "temp_prompt_$Date.txt"
 $Prompt | Out-File -FilePath $PromptFile -Encoding UTF8
 
-# Run Claude Code
-echo $Prompt | claude --dangerously-skip-system-prompt
+# Run Claude Code with the prompt from file
+Get-Content $PromptFile | claude
 
 # Clean up
 Remove-Item $PromptFile -ErrorAction SilentlyContinue
