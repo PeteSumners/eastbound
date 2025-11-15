@@ -27,6 +27,19 @@ If the automation produces bad output, you MUST:
 
 The system must be 100% reproducible and fully automated.
 
+**TESTING AUTOMATION CHANGES:**
+To test changes, you MUST use Task Scheduler (never run scripts directly):
+
+1. Make changes to automation scripts
+2. Commit changes to git
+3. Run `test_run_soon.ps1` to reschedule task to run in 2 minutes
+4. Wait for Task Scheduler to execute the automation
+5. Review logs and output
+6. If successful, run `setup_daily_task.ps1` to restore 9:50 AM schedule
+7. If failed, fix scripts and repeat
+
+**Never run automation scripts directly** - always go through Task Scheduler to ensure the system works end-to-end as it will in production.
+
 ## Project Overview
 
 Eastbound is a Russian media analysis and translation service providing English-speaking audiences with accurate translations, context, and analysis of Russian media sources. This is a business/media project, NOT an intelligence operation.
