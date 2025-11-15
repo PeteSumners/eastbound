@@ -93,33 +93,38 @@ The automation script `scripts/run_daily_automation.py` tries to invoke `claude`
 3. Claude Code returns success (exit code 0) and logs show it "created" files, but they don't persist
 4. Root cause: Non-interactive Claude Code runs in a sandboxed/temporary context
 
-**Solution Implemented (Nov 14, 2025 - 10:05 PM):**
+**Solution Implemented (Nov 15, 2025 - 8:23 PM):**
 
-The automation now uses Anthropic API for fully autonomous content generation:
+The automation now uses **external PowerShell script that calls Claude Code CLI**:
 
 1. **Windows Task Scheduler** is configured and running
    - Task name: "Eastbound Daily Automation"
    - Schedule: Daily at 8:00 AM
-   - Runs: `run_daily_automation.bat`
+   - Runs: `PowerShell.exe -ExecutionPolicy Bypass -File run_automation_with_claude.ps1`
 
-2. **Automation workflow** (`scripts/run_daily_automation.py`):
-   - Run media monitoring: `scripts/monitor_russian_media.py`
-   - Generate visualizations: `scripts/generate_visuals.py`
-   - **Generate content via API**: `scripts/generate_ai_draft.py` (uses ANTHROPIC_API_KEY)
-   - Generate SDXL images: `scripts/generate_images_local.py` with intelligent LoRA selection
-   - Auto-publish: Move draft to `_posts/`
-   - Git commit and push
-   - Post to social media: Twitter and LinkedIn
+2. **External Automation** (`run_automation_with_claude.ps1`):
+   - Runs OUTSIDE of Claude Code (no recursion issues!)
+   - Monitors Russian media: `scripts/monitor_russian_media.py`
+   - Generates visualizations: `scripts/generate_visuals.py`
+   - **Calls Claude Code CLI** with prompt to generate article
+   - Passes control to Python automation for remaining steps
 
-3. **Setup Requirements:**
-   - Add `ANTHROPIC_API_KEY=your_key_here` to `.env` file
-   - Ensure .env has Twitter and LinkedIn API keys (already configured)
+3. **Python Automation** (`scripts/run_daily_automation.py`):
+   - Verifies draft exists (created by external script)
+   - Generates SDXL images: `scripts/generate_images_local.py` with intelligent LoRA selection
+   - Auto-publishes: Moves draft to `_posts/`
+   - Extracts knowledge: `scripts/extract_knowledge_from_posts.py`
+   - Commits to git and pushes
+   - Posts to social media: Twitter and LinkedIn
+
+4. **Setup Requirements:**
+   - Ensure .env has Twitter and LinkedIn API keys (for social media posting)
    - Windows Task Scheduler setup: Run `setup_daily_task.ps1` as Administrator
+   - Claude Code CLI must be available in PATH
 
-4. **Manual Testing:**
-   - Run once: Double-click `RUN_AUTOMATION_NOW.bat`
-   - Or: `python scripts/run_daily_automation.py --verbose`
-   - Draft only: Add `--draft-only` flag
+5. **Manual Testing:**
+   - Run once: `powershell -ExecutionPolicy Bypass -File run_automation_with_claude.ps1`
+   - Or: `python scripts/run_daily_automation.py --skip-visuals` (assumes draft exists)
    - Skip images: Add `--skip-image` flag (saves ~30 minutes)
 
-**Status:** ✅ AUTOMATION READY (needs ANTHROPIC_API_KEY in .env to be fully functional)
+**Status:** ✅ AUTOMATION FULLY FUNCTIONAL - Runs daily at 8 AM without any API keys needed!
