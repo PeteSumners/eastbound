@@ -83,3 +83,43 @@ When implementing features, prioritize:
 3. Source citation management
 4. AI safety and anti-hallucination measures
 5. Analytics and metrics tracking
+
+## CRITICAL: Automation Setup (REQUIRES ADMIN ACCESS)
+
+**Problem Identified (Nov 14, 2025):**
+The automation script `scripts/run_daily_automation.py` tries to invoke `claude` CLI command for content generation, but this PARTIALLY WORKS when run from Task Scheduler:
+1. Claude Code CLI CAN be called from external automation (Task Scheduler works!)
+2. BUT: When called non-interactively via stdin redirect, Claude Code executes but files aren't created in the expected location
+3. Claude Code returns success (exit code 0) and logs show it "created" files, but they don't persist
+4. Root cause: Non-interactive Claude Code runs in a sandboxed/temporary context
+
+**Solution Implemented (Nov 14, 2025 - 10:05 PM):**
+
+The automation now uses Anthropic API for fully autonomous content generation:
+
+1. **Windows Task Scheduler** is configured and running
+   - Task name: "Eastbound Daily Automation"
+   - Schedule: Daily at 8:00 AM
+   - Runs: `run_daily_automation.bat`
+
+2. **Automation workflow** (`scripts/run_daily_automation.py`):
+   - Run media monitoring: `scripts/monitor_russian_media.py`
+   - Generate visualizations: `scripts/generate_visuals.py`
+   - **Generate content via API**: `scripts/generate_ai_draft.py` (uses ANTHROPIC_API_KEY)
+   - Generate SDXL images: `scripts/generate_images_local.py` with intelligent LoRA selection
+   - Auto-publish: Move draft to `_posts/`
+   - Git commit and push
+   - Post to social media: Twitter and LinkedIn
+
+3. **Setup Requirements:**
+   - Add `ANTHROPIC_API_KEY=your_key_here` to `.env` file
+   - Ensure .env has Twitter and LinkedIn API keys (already configured)
+   - Windows Task Scheduler setup: Run `setup_daily_task.ps1` as Administrator
+
+4. **Manual Testing:**
+   - Run once: Double-click `RUN_AUTOMATION_NOW.bat`
+   - Or: `python scripts/run_daily_automation.py --verbose`
+   - Draft only: Add `--draft-only` flag
+   - Skip images: Add `--skip-image` flag (saves ~30 minutes)
+
+**Status:** ✅ AUTOMATION READY (needs ANTHROPIC_API_KEY in .env to be fully functional)

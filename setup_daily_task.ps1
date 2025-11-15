@@ -46,7 +46,7 @@ try {
         -Principal $Principal `
         -Settings $Settings
 
-    Write-Host "✓ Task created successfully!" -ForegroundColor Green
+    Write-Host "Task created successfully!" -ForegroundColor Green
     Write-Host ""
     Write-Host "The automation will run daily at $TriggerTime" -ForegroundColor Cyan
     Write-Host ""
@@ -63,7 +63,7 @@ try {
     Write-Host ""
 
 } catch {
-    Write-Host "✗ Error creating task: $_" -ForegroundColor Red
+    Write-Host "Error creating task: $_" -ForegroundColor Red
     Write-Host ""
     Write-Host "Make sure you run this script as Administrator!" -ForegroundColor Yellow
 }

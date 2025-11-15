@@ -181,130 +181,30 @@ def main():
     else:
         print("\n[SKIP]  Skipping visualizations (--skip-visuals)")
 
-    # Step 3: Generate content using Claude Code (FREE!)
+    # Step 3: Generate content using Anthropic API
     print("\n" + "="*60)
-    print("STEP: Generate AI content using Claude Code")
+    print("STEP: Generate AI content using Anthropic API")
     print("="*60)
-    print("Using Claude Code CLI for FREE content generation...")
 
-    # Create the prompt for Claude Code
-    claude_prompt = f"""You are a content writer for Eastbound, a Russian media analysis service.
+    # Check if API key is set
+    api_key = os.getenv('ANTHROPIC_API_KEY')
+    if not api_key:
+        print("[ERROR] ANTHROPIC_API_KEY not set in environment")
+        print("[ERROR] Add your API key to .env file:")
+        print("[ERROR]   ANTHROPIC_API_KEY=your_key_here")
+        print("\n[FALLBACK] Skipping content generation - run manually with Claude Code")
+        return 1
 
-Read the briefing file at: {briefing_path}
+    # Use generate_ai_draft.py script
+    success = run_command(
+        f'python scripts/generate_ai_draft.py --briefing "{briefing_path}" --output "content/drafts/"',
+        "Generate AI content using Anthropic API",
+        timeout=300,  # 5 minutes
+        verbose=args.verbose
+    )
 
-Generate a high-quality analysis article following our content guidelines in CLAUDE.md.
-
-The article should:
-1. Analyze the top trending stories from Russian media
-2. Provide cultural and political context for English-speaking audiences
-3. Compare with Western media coverage
-4. Be 1000-1500 words
-5. Include proper frontmatter in Jekyll format with these required fields:
-   - title, date, author, categories, tags, excerpt
-   - **IMPORTANT**: categories must be from [Analysis, News, Translation] and ONE region [Russia, Ukraine, EasternEurope, CentralAsia, Caucasus] - NO SPACES in category names
-   - **IMPORTANT**: image: /images/{date}-generated.png (plain path in frontmatter - Jekyll handles baseurl)
-6. **IMPORTANT**: Do NOT include an H1 heading (# Title) after the frontmatter. The Jekyll layout displays the title automatically from the frontmatter.
-7. **IMPORTANT**: Immediately after the frontmatter, before the first paragraph, include this image caption for transparency:
-
-   <p style="text-align: center; font-size: 0.9em; color: #666; font-style: italic; margin-top: -10px; margin-bottom: 20px;">
-   Hero image: AI-generated illustration created with Stable Diffusion XL
-   </p>
-
-   Then start the content with the first paragraph.
-8. **IMPORTANT**: Before the "## Key Articles Referenced" section, include a "## Data Visualizations" section with smaller embedded images:
-
-   ---
-
-   ## Data Visualizations
-
-   <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
-     <div style="flex: 1; min-width: 300px;">
-       <h3>Trending Topics</h3>
-       <img src="{{{{site.baseurl}}}}/images/{date}-keywords.png" alt="Keyword Trends" style="width: 100%; max-width: 500px;">
-     </div>
-
-     <div style="flex: 1; min-width: 300px;">
-       <h3>Source Distribution</h3>
-       <img src="{{{{site.baseurl}}}}/images/{date}-sources.png" alt="Source Distribution" style="width: 100%; max-width: 500px;">
-     </div>
-   </div>
-
-   <div style="margin-top: 20px;">
-     <h3>By The Numbers</h3>
-     <img src="{{{{site.baseurl}}}}/images/{date}-stats.png" alt="Statistics" style="width: 100%; max-width: 600px;">
-   </div>
-
-   ---
-9. **IMPORTANT**: Include a "## Stakeholder Perspectives: Real-World Impact" section before the "Key Articles Referenced" section
-
-   This section demonstrates how abstract geopolitical narratives affect real people around the world. Generate 4 random stakeholder personas using the script at scripts/generate_stakeholder_personas.py with the briefing file.
-
-   **Section Introduction (include this explanation verbatim):**
-   "*The following section presents randomly generated personas from around the world who have material stakes in today's Russian media narratives. These are NOT representative samples or opinion polls—they're concrete examples of how abstract geopolitics affects real people with real interests. Each persona is randomly selected from a global pool representing diverse countries, occupations, and socioeconomic backgrounds. The goal is to humanize complex narratives by showing who is affected and how.*"
-
-   **Format for each persona:**
-   ### Stakeholder [N]: [Name]
-
-   **Profile:**
-   - **Age:** [age]
-   - **Location:** [city, country]
-   - **Occupation:** [occupation]
-   - **Background:** [descriptors]
-
-   **Personal Stakes:**
-   - [stake 1]
-   - [stake 2]
-
-   **Perspective:** [perspective]
-
-   **What Today's Russian Media Means for [Name]:**
-   [Write 2-3 sentences analyzing how today's SPECIFIC trending narratives from the briefing affect this persona's material interests, decisions, or worldview. Reference specific stories from today's coverage.]
-
-   ---
-
-10. **IMPORTANT**: Include a "## Key Articles Referenced" section at the end with links to the original articles from the briefing
-   - Extract article URLs from the briefing JSON
-   - Format as a bulleted list with article titles and links
-   - Group by source (TASS, RT, Kommersant, etc.)
-11. Be saved to content/drafts/{date}-analysis.md
-
-Use the Write tool to create the article file."""
-
-    # Save prompt to temp file to avoid shell escaping issues
-    prompt_file = Path('temp_prompt.txt')
-    prompt_file.write_text(claude_prompt, encoding='utf-8')
-
-    # Run Claude Code in non-interactive mode
-    try:
-        result = subprocess.run(
-            'claude --print --output-format text --tools Read,Write,Glob < temp_prompt.txt',
-            shell=True,
-            capture_output=True,
-            text=True,
-            timeout=300  # 5 minutes
-        )
-
-        # Clean up temp file
-        prompt_file.unlink(missing_ok=True)
-
-        if result.returncode == 0:
-            print("[OK] Content generation completed successfully")
-            if result.stdout:
-                print("[STDOUT]", result.stdout[:500])  # First 500 chars
-        else:
-            print("[FAILED] Content generation failed")
-            print(f"[DEBUG] Return code: {result.returncode}")
-            if result.stdout:
-                print(f"[DEBUG] Stdout: {result.stdout}")
-            if result.stderr:
-                print(f"[DEBUG] Stderr: {result.stderr}")
-            else:
-                print("[DEBUG] Stderr was empty")
-            print("\n[ERROR] Content generation failed. Exiting.")
-            return 1
-    except Exception as e:
-        prompt_file.unlink(missing_ok=True)
-        print(f"[ERROR] Claude Code execution failed: {e}")
+    if not success:
+        print("\n[ERROR] Content generation failed. Exiting.")
         return 1
 
     # Step 4: Generate SDXL image locally with intelligent LoRA selection (AFTER content, for better coherence)
