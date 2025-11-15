@@ -6,14 +6,11 @@ Continuously monitors worldwide news, research papers, and databases.
 Hybrid system that runs both scheduled and real-time monitoring.
 
 Usage:
-    # Real-time continuous monitoring (runs forever, checks every 5 minutes)
-    python monitor_global_sources.py --mode realtime
-
-    # Single snapshot (for scheduled runs)
-    python monitor_global_sources.py --mode snapshot --regions all --categories all
+    # Daily crawl (for automation - runs once)
+    python monitor_global_sources.py --regions all --categories news,research
 
     # Specific region/category
-    python monitor_global_sources.py --regions europe,asia --categories news,research
+    python monitor_global_sources.py --regions europe,asia --categories news
 """
 
 import argparse
@@ -366,48 +363,20 @@ class GlobalKnowledgeCrawler:
 
         return all_data
 
-    def run_realtime(self, check_interval_minutes=5, regions=['all'], categories=['news', 'research']):
-        """Run continuous real-time monitoring."""
-        print(f"\n{'='*60}")
-        print(f"GLOBAL KNOWLEDGE CRAWLER - REAL-TIME MODE")
-        print(f"{'='*60}")
-        print(f"Check interval: {check_interval_minutes} minutes")
-        print(f"Regions: {regions}")
-        print(f"Categories: {categories}")
-        print(f"Press Ctrl+C to stop")
-        print(f"{'='*60}\n")
-
-        iteration = 0
-        try:
-            while True:
-                iteration += 1
-                print(f"\n[ITERATION {iteration}] {datetime.now().isoformat()}")
-
-                self.run_snapshot(regions, categories)
-
-                print(f"\n[SLEEP] Waiting {check_interval_minutes} minutes until next check...")
-                time.sleep(check_interval_minutes * 60)
-
-        except KeyboardInterrupt:
-            print(f"\n\n[STOP] Real-time monitoring stopped by user")
-            print(f"Total iterations: {iteration}")
-            print(f"Stats: {dict(self.stats)}")
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Global Knowledge Crawler')
-    parser.add_argument('--mode', choices=['snapshot', 'realtime'], default='snapshot',
-                       help='Run mode: snapshot (once) or realtime (continuous)')
+    parser = argparse.ArgumentParser(description='Global Knowledge Crawler - Daily Snapshot Mode')
     parser.add_argument('--regions', default='all',
                        help='Comma-separated regions: all, russian, europe, americas, asia, etc.')
     parser.add_argument('--categories', default='news,research',
                        help='Comma-separated categories: news, research, data')
-    parser.add_argument('--interval', type=int, default=5,
-                       help='Check interval in minutes for realtime mode')
     parser.add_argument('--output', default='knowledge_base',
                        help='Output directory for knowledge base')
     parser.add_argument('--workers', type=int, default=10,
                        help='Number of parallel workers')
+    parser.add_argument('--limit-per-source', type=int, default=50,
+                       help='Limit articles per source to save storage')
 
     args = parser.parse_args()
 
@@ -418,15 +387,8 @@ def main():
     # Create crawler
     crawler = GlobalKnowledgeCrawler(output_dir=args.output, max_workers=args.workers)
 
-    # Run
-    if args.mode == 'snapshot':
-        crawler.run_snapshot(regions, categories)
-    else:
-        crawler.run_realtime(
-            check_interval_minutes=args.interval,
-            regions=regions,
-            categories=categories
-        )
+    # Run single snapshot (for daily automation)
+    crawler.run_snapshot(regions, categories)
 
 
 if __name__ == '__main__':
