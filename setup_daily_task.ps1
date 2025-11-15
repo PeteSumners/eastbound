@@ -2,8 +2,8 @@
 # Run this as Administrator
 
 $TaskName = "Eastbound Daily Automation"
-$TaskDescription = "Runs daily content generation for Eastbound using local SDXL and Claude Code"
-$ScriptPath = Join-Path $PSScriptRoot "run_daily_automation.bat"
+$TaskDescription = "Runs daily content generation for Eastbound using local SDXL and Claude Code (external runner)"
+$ScriptPath = Join-Path $PSScriptRoot "run_automation_with_claude.ps1"
 $WorkingDirectory = $PSScriptRoot
 
 # Set the time to run (8 AM daily)
@@ -15,8 +15,8 @@ Write-Host "Script: $ScriptPath"
 Write-Host "Time: $TriggerTime daily"
 Write-Host ""
 
-# Create the scheduled task action
-$Action = New-ScheduledTaskAction -Execute $ScriptPath -WorkingDirectory $WorkingDirectory
+# Create the scheduled task action (PowerShell script runner)
+$Action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "-ExecutionPolicy Bypass -File `"$ScriptPath`"" -WorkingDirectory $WorkingDirectory
 
 # Create the trigger (daily at 8 AM)
 $Trigger = New-ScheduledTaskTrigger -Daily -At $TriggerTime
