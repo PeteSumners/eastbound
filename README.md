@@ -2,176 +2,168 @@
 
 **Russian and East Asian media analysis for English-speaking audiences**
 
-[![Website](https://img.shields.io/badge/website-live-brightgreen)](https://petesandwich.github.io/Eastbound)
+[![Website](https://img.shields.io/badge/website-live-brightgreen)](https://eastboundreports.github.io/Eastbound)
 [![Twitter](https://img.shields.io/twitter/follow/eastboundreport?style=social)](https://twitter.com/eastboundreport)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Automation](https://img.shields.io/badge/automation-100%25-success)](Docs/content-generation-pipeline.md)
+[![Automation](https://img.shields.io/badge/automation-modular-success)](Docs/COMPONENT_REGISTRY.md)
 
 ---
 
 ## 🎯 About
 
-Eastbound Reports is a **fully automated media analysis platform** that monitors Russian (and optionally East Asian) news sources, generates AI-powered analysis, and publishes daily insights—all running **locally for FREE**.
+Eastbound Reports is a **modular automation system** that monitors Russian (and optionally East Asian) news sources, generates AI-powered analysis, and publishes insights—all running **locally for FREE**.
 
 **What makes us unique:**
-- 🤖 **100% automated** - Runs daily without manual intervention
-- 💰 **$0/month cost** - No API fees, no cloud hosting charges
+- 🧩 **Modular design** - Pick and choose components you need
+- 💰 **$0/month cost** - No API fees, uses Claude Code CLI (free)
 - 🔍 **Multi-source verification** - Requires 3+ sources before flagging trends
-- 🌍 **Global stakeholder perspectives** - Shows how narratives affect real people worldwide
-- 📊 **Data-driven analysis** - TF-IDF keyword extraction, sentiment analysis, visualizations
-- 🎨 **Local AI image generation** - SDXL creates news illustrations (no API costs)
+- 📊 **Data-driven analysis** - TF-IDF keyword extraction, sentiment analysis
+- 🤖 **Claude CLI integration** - Use Claude Code as a programmable API
+- 🚀 **Flexible automation** - From simple news monitoring to full publishing pipeline
 
 **Core Principles:**
-- ✅ Completely independent and transparent
+- ✅ Modular and extensible architecture
 - ✅ Open source everything (MIT License)
-- ✅ Objective reporting without partisan positions
+- ✅ Choose your own level of automation
 - ✅ Only public, open-source information
-- ✅ Journalism/research, NOT intelligence work
+- ✅ Independent and transparent
 
 ---
 
-## ⚡ Quick Start (3 Steps)
+## 📚 Documentation
 
-### Option 1: Use the Automation (Recommended)
+**→ [Docs/INDEX.md](Docs/INDEX.md)** - Complete documentation index
+
+**→ [Docs/COMPONENT_REGISTRY.md](Docs/COMPONENT_REGISTRY.md)** - **Start here!** Component catalog
+
+**→ [Docs/CLAUDE_CLI_API.md](Docs/CLAUDE_CLI_API.md)** - Claude Code CLI integration
+
+---
+
+## ⚡ Quick Start
+
+### Minimal Setup (News Monitoring Only)
 
 ```bash
 # Clone repository
-git clone https://github.com/PeteSandwich/Eastbound.git
+git clone https://github.com/eastboundreports/Eastbound.git
 cd Eastbound
 
+# Install minimal dependencies
+pip install feedparser pyyaml
+
+# Monitor news
+python scripts/monitor_russian_media.py --output daily.json
+```
+
+**What you get:** JSON briefing with articles, keywords, sentiment scores
+
+---
+
+### Simple Automation (Recommended)
+
+```powershell
 # Install dependencies
 pip install -r requirements.txt
 
-# Run daily automation (30-40 minutes)
-python scripts/run_daily_automation.py
+# Run simple automation (5-10 minutes)
+.\run_simple_automation.ps1
 ```
 
 **What happens:**
-1. ✅ Monitors 13 Russian media sources (or 23+ with `--include-asia`)
-2. ✅ Generates data visualizations
-3. ✅ Creates 1000-1500 word analysis with Claude Code (FREE)
-4. ✅ Generates SDXL image based on article title
-5. ✅ Auto-publishes to GitHub Pages
-6. ✅ Posts to Twitter/X and LinkedIn
+1. ✅ Monitors Russian media sources
+2. ✅ Generates analysis with Claude Code CLI (FREE)
+3. ✅ Commits to git
+4. ✅ GitHub Pages auto-deploys
 
-**Cost: $0** | **Time: 30-40 min** | **Human effort: 0 min**
-
-### Option 2: Manual Content Creation
-
-```bash
-# Create a draft
-python scripts/create_draft.py --type analysis --title "Your Title"
-
-# Edit the draft
-# Edit file in content/drafts/
-
-# Move to _posts when ready
-mv content/drafts/YYYY-MM-DD-your-title.md _posts/
-
-# Commit and push
-git add . && git commit -m "New post" && git push
-```
+**Cost: $0** | **Time: 5-10 min** | **Human effort: 0 min**
 
 ---
 
-## 🏗️ The System
+### Full Custom Pipeline
 
-This is a **fully automated, open-source publishing platform** that runs **entirely on your local machine**:
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│              AUTOMATED PIPELINE (6 STAGES)                  │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  1. Monitor Media      →  13-23 RSS feeds (parallel)       │
-│                           TF-IDF keyword extraction         │
-│                           Multi-source verification         │
-│                           ~5 minutes                        │
-│                                                             │
-│  2. Data Visuals       →  Keywords, sources, stats charts  │
-│                           Matplotlib + Seaborn              │
-│                           ~30 seconds                       │
-│                                                             │
-│  3. AI Content         →  Claude Code (FREE!)              │
-│                           1000-1500 word analysis           │
-│                           Stakeholder perspectives          │
-│                           ~2-3 minutes                      │
-│                                                             │
-│  4. SDXL Image         →  Stable Diffusion XL (local GPU)  │
-│                           Based on article title            │
-│                           ~15-20 minutes                    │
-│                                                             │
-│  5. Auto-Publish       →  Move to _posts/                  │
-│                           Git commit & push                 │
-│                           GitHub Pages rebuild              │
-│                           ~30 seconds                       │
-│                                                             │
-│  6. Social Media       →  Twitter/X + LinkedIn posting     │
-│                           Auto-generated excerpts           │
-│                           ~10 seconds                       │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-```
-
-**Total Runtime:** ~30-40 minutes | **Cost:** $0/month | **Hosting:** GitHub Pages (free)
+Mix and match components as needed. See **[Docs/COMPONENT_REGISTRY.md](Docs/COMPONENT_REGISTRY.md)** for:
+- 20+ modular components
+- Pick-and-choose examples
+- Custom pipeline configurations
 
 ---
 
-## ✨ Features
+## 🏗️ Modular Architecture
 
-### 🤖 AI-Powered Content Generation
-- **Multi-source monitoring:** 13 Russian media sources (TASS, RT, Kommersant, etc.)
-- **Optional East Asian sources:** +10 sources (China, Japan, NK, SK, Taiwan)
-- **Claude Code integration:** FREE AI content generation (no API costs!)
-- **TF-IDF keyword extraction:** Statistically identifies significant topics
-- **Multi-source verification:** Requires 3+ sources to flag trending stories
-- **Anti-hallucination system:** All article URLs extracted from briefing JSON (not AI-generated)
-- **Knowledge base grounding:** 17+ historical context files prevent AI fabrication
-- **Article structure:** 1000-1500 words with sources, context, Western comparison
-- 📖 See: [Content Generation Pipeline](Docs/content-generation-pipeline.md)
+Pick and choose components to build your own automation pipeline:
 
-### 👥 Stakeholder Perspective System
-- **Random persona generation:** 100+ occupations, 40+ countries, 10 global regions
-- **Topic-aware stakes:** Ukraine → refugees, Energy → oil workers, NATO → military families
-- **Humanizes geopolitics:** Shows how Russian narratives affect real people worldwide
-- **4 personas per article** with individualized analysis tied to that day's stories
-- **NOT opinion polls** - Concrete examples of material stakes, not representative samples
-- 📖 See: [Stakeholder System Documentation](Docs/stakeholder-perspective-system.md)
+```
+┌──────────────────────────────────────────────────────┐
+│              MODULAR COMPONENT SYSTEM                │
+├──────────────────────────────────────────────────────┤
+│                                                      │
+│  📡 Media Monitoring    →  RSS feeds, TF-IDF       │
+│                            Multi-source verification │
+│                            13-23 sources             │
+│                                                      │
+│  🤖 Content Generation  →  Claude CLI integration   │
+│                            Template system           │
+│                            Anti-hallucination        │
+│                                                      │
+│  📊 Visualization       →  Chart framework          │
+│                            Extensible system         │
+│                            Brand styling             │
+│                                                      │
+│  📢 Publishing          →  Twitter, LinkedIn        │
+│                            GitHub Pages              │
+│                            Git automation            │
+│                                                      │
+│  📚 Knowledge Base      →  Historical context       │
+│                            Search system             │
+│                            7 categories              │
+│                                                      │
+│  🎨 Image Gen (Optional)→  SDXL, LoRA models       │
+│                            Local generation          │
+│                            CPU/GPU support           │
+│                                                      │
+└──────────────────────────────────────────────────────┘
+```
 
-### 📊 Data Visualizations
-- **Trending topics chart:** Top 10 keywords by TF-IDF × source count
-- **Source distribution:** Pie chart showing which outlets published most
-- **Statistics panel:** Total articles, sources, trending topics
-- **All charts auto-generated:** Matplotlib + Seaborn, embedded in every article
-- **Local SDXL image generation:** Stable Diffusion XL creates news illustrations
-- **Article-aware prompts:** Images generated from article title (not generic keywords)
-- 📖 See: [Visualization Framework](scripts/generate_visuals.py)
+**See:** [Component Registry](Docs/COMPONENT_REGISTRY.md) for complete catalog
 
-### 📚 Knowledge Base System
-- **17+ comprehensive entries** across events, figures, policies, narratives
-- **Dual perspectives:** Russian AND Western viewpoints documented
-- **Prevents hallucinations:** AI references verified historical facts
-- **Examples:** 2022 Ukraine invasion, Putin worldview, NATO expansion narrative
-- **Narrative tracking:** How Russian messaging evolves over time
-- 📖 See: [Knowledge Base](knowledge_base/)
+---
 
-### 🚀 Fully Automated Local Pipeline
-- **Windows Task Scheduler:** Runs daily at 6:00 AM (or on-demand)
-- **Parallel RSS fetching:** 8 workers, monitors 13-23 sources in 5-15 min
-- **Zero API costs:** Claude Code CLI (free tier), local SDXL (no cloud fees)
-- **Auto-publishing:** Moves drafts to `_posts/`, commits, pushes to GitHub
-- **Social media posting:** Twitter/X + LinkedIn with auto-generated excerpts
-- **Graceful error handling:** Continues on failures (e.g., image gen timeout)
-- 📖 See: [Pipeline Documentation](Docs/content-generation-pipeline.md)
+## ✨ Key Features
 
-### 🌐 Self-Hosted Website
-- **Jekyll static site** on GitHub Pages (free hosting)
-- **Responsive design** with SEO optimization
-- **RSS feed** built-in for subscribers
-- **Custom domain support** (optional)
-- **Automatic rebuilds** on git push (~2 minutes)
-- **Cost:** $0/month (GitHub Pages is free)
-- 🌐 Visit: [petesandwich.github.io/Eastbound](https://petesandwich.github.io/Eastbound)
+### 🤖 Claude CLI Integration
+- **FREE AI integration** - Uses Claude Code CLI (no API costs)
+- **Programmable API** - Call from Python, PowerShell, Bash
+- **JSON output** - Structured responses with metadata
+- 📖 See: [Claude CLI API Guide](Docs/CLAUDE_CLI_API.md)
+
+### 📡 Media Monitoring
+- **13 Russian sources** - TASS, RT, Kommersant, RIA, etc.
+- **+10 East Asian sources** (optional) - China, Japan, Korea, Taiwan
+- **TF-IDF keyword extraction** - Statistical topic identification
+- **Multi-source verification** - Requires 3+ sources for trends
+- 📖 See: [Component Registry](Docs/COMPONENT_REGISTRY.md#media-monitoring)
+
+### 📊 Data & Analysis
+- **Anti-hallucination system** - Verified sources only
+- **Knowledge base** - Historical context (7 categories)
+- **Visualization framework** - Extensible chart system
+- **Sentiment analysis** - Keyword-based scoring
+- 📖 See: [Briefing Structure](Docs/briefing-database-structure.md)
+
+### 🚀 Flexible Automation
+- **Modular components** - Use what you need
+- **Simple pipeline** - 5-10 minute automation
+- **Full customization** - Mix and match features
+- **Windows/Linux support** - Cross-platform scripts
+- 📖 See: [Content Pipeline](Docs/content-generation-pipeline.md)
+
+### 🌐 Publishing Options
+- **GitHub Pages** - Free static site hosting
+- **Twitter/LinkedIn** - Social media integration
+- **Git automation** - Auto-commit and push
+- **Jekyll templating** - Customizable themes
+- 🌐 Visit: [eastboundreports.github.io/Eastbound](https://eastboundreports.github.io/Eastbound)
 
 ### 📱 Social Media Integration
 - **Twitter/X threads:** Auto-generated with article excerpts
@@ -188,7 +180,7 @@ This is a **fully automated, open-source publishing platform** that runs **entir
 ### 1. Clone & Install Dependencies
 
 ```bash
-git clone https://github.com/PeteSandwich/Eastbound.git
+git clone https://github.com/eastboundreports/Eastbound.git
 cd Eastbound
 pip install -r requirements.txt
 ```
@@ -511,7 +503,7 @@ Contributions welcome! This is an open-source project.
 - ❌ Handling classified information
 - ❌ Taking partisan positions
 
-Read more: [About Page](https://petesumners.github.io/eastbound/about)
+Read more: [About Page](https://eastboundreports.github.io/eastbound/about)
 
 ---
 
@@ -526,9 +518,9 @@ See [LICENSE](LICENSE) for details.
 
 ## Links
 
-- **Website:** https://petesumners.github.io/eastbound
+- **Website:** https://eastboundreports.github.io/eastbound
 - **Twitter:** https://twitter.com/eastboundreport
-- **GitHub:** https://github.com/PeteSumners/eastbound
+- **GitHub:** https://github.com/eastboundreports/eastbound
 
 ---
 

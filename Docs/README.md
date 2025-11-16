@@ -351,8 +351,8 @@ Coming soon:
 
 ## Support & Feedback
 
-**Issues:** Report bugs at [GitHub Issues](https://github.com/petesandwich/Eastbound/issues)
-**Discussions:** Join conversations at [GitHub Discussions](https://github.com/petesandwich/Eastbound/discussions)
+**Issues:** Report bugs at [GitHub Issues](https://github.com/eastboundreports/Eastbound/issues)
+**Discussions:** Join conversations at [GitHub Discussions](https://github.com/eastboundreports/Eastbound/discussions)
 
 ## License
 

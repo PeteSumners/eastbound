@@ -46,7 +46,7 @@ The Eastbound content generation pipeline is a fully automated system that monit
 │              STAGE 5: Auto-Publish & Git Push                    │
 │  Move draft to _posts/, commit, and push to GitHub Pages        │
 │  Runtime: ~30 seconds                                           │
-│  Output: Site live at petesandwich.github.io/Eastbound          │
+│  Output: Site live at eastboundreports.github.io/Eastbound      │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
@@ -224,7 +224,7 @@ Defined in `CLAUDE.md`:
 ### Site Publication
 
 - **Hosting:** GitHub Pages (FREE)
-- **URL:** https://petesandwich.github.io/Eastbound
+- **URL:** https://eastboundreports.github.io/Eastbound
 - **Rebuild time:** ~2 minutes after push
 - **SSL:** Automatic HTTPS via GitHub
 
