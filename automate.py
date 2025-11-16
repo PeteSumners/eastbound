@@ -55,7 +55,7 @@ def call_claude_code(prompt):
         print(f"❌ Error calling Claude Code: {e}")
         return None
 
-def post_to_twitter(summary, post_file):
+def post_to_twitter(summary, post_file, articles):
     """Post summary to Twitter/X."""
     try:
         import tweepy
@@ -78,15 +78,19 @@ def post_to_twitter(summary, post_file):
             access_token_secret=access_token_secret
         )
 
+        # Get unique sources
+        sources = sorted(set(article['source'] for article in articles))
+        source_list = ", ".join(sources)
+
         # Create tweet with summary
         today = datetime.now().strftime("%Y-%m-%d")
         gh_pages_link = "https://petesumners.github.io/eastbound/"
-        tweet_text = f"Russian Media Summary ({today})\n\n{summary}\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis"
+        tweet_text = f"Russian Media Summary ({today})\n\n{summary}\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis"
 
         # Truncate if needed
         if len(tweet_text) > 280:
-            max_summary = 280 - len(f"Russian Media Summary ({today})\n\n\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis")
-            tweet_text = f"Russian Media Summary ({today})\n\n{summary[:max_summary]}...\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis"
+            max_summary = 280 - len(f"Russian Media Summary ({today})\n\n\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis")
+            tweet_text = f"Russian Media Summary ({today})\n\n{summary[:max_summary]}...\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis"
 
         response = client.create_tweet(text=tweet_text)
         print(f"✓ Posted to Twitter (ID: {response.data['id']})")
@@ -96,7 +100,7 @@ def post_to_twitter(summary, post_file):
         print(f"⚠️  Twitter posting failed: {e}")
         return False
 
-def post_to_linkedin(summary, post_file):
+def post_to_linkedin(summary, post_file, articles):
     """Post summary to LinkedIn."""
     try:
         import requests
@@ -115,9 +119,13 @@ def post_to_linkedin(summary, post_file):
             'X-Restli-Protocol-Version': '2.0.0'
         }
 
+        # Get unique sources
+        sources = sorted(set(article['source'] for article in articles))
+        source_list = ", ".join(sources)
+
         today = datetime.now().strftime("%Y-%m-%d")
         gh_pages_link = "https://petesumners.github.io/eastbound/"
-        post_text = f"Russian Media Summary ({today})\n\n{summary}\n\nRead more: {gh_pages_link}\n\n#RussianMedia #MediaAnalysis #EastboundReports"
+        post_text = f"Russian Media Summary ({today})\n\n{summary}\n\nSources: {source_list}\n\nRead more: {gh_pages_link}\n\n#RussianMedia #MediaAnalysis #EastboundReports"
 
         payload = {
             'author': user_urn,
@@ -184,8 +192,8 @@ def main():
 
     # 5. Post to social media
     print("\n📱 Posting to social media...\n")
-    post_to_twitter(summary, post_file)
-    post_to_linkedin(summary, post_file)
+    post_to_twitter(summary, post_file, articles)
+    post_to_linkedin(summary, post_file, articles)
 
     print("\n" + "=" * 60)
     print("✓ AUTOMATION COMPLETE")
