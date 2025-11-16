@@ -25,17 +25,22 @@ def call_claude_code(prompt):
     print("🤖 Calling Claude Code to generate summary...\n")
 
     try:
+        # Create data directory if it doesn't exist
+        Path("data").mkdir(exist_ok=True)
+
         # Save prompt to temp file
         prompt_file = Path("data/temp_prompt.txt")
         with open(prompt_file, 'w', encoding='utf-8') as f:
             f.write(prompt)
 
-        # Call claude code with --print flag
+        # Call claude code with --print flag, reading prompt from stdin
         result = subprocess.run(
-            ['claude', 'code', '--print', prompt],
+            'claude code --print',
+            input=prompt,
             capture_output=True,
             text=True,
-            encoding='utf-8'
+            encoding='utf-8',
+            shell=True
         )
 
         if result.returncode == 0:
