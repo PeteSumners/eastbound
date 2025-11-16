@@ -80,12 +80,13 @@ def post_to_twitter(summary, post_file):
 
         # Create tweet with summary
         today = datetime.now().strftime("%Y-%m-%d")
-        tweet_text = f"Russian Media Summary ({today})\n\n{summary}\n\n#Russia #MediaAnalysis"
+        gh_pages_link = "https://petesumners.github.io/eastbound/"
+        tweet_text = f"Russian Media Summary ({today})\n\n{summary}\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis"
 
         # Truncate if needed
         if len(tweet_text) > 280:
-            max_summary = 280 - len(f"Russian Media Summary ({today})\n\n\n\n#Russia #MediaAnalysis")
-            tweet_text = f"Russian Media Summary ({today})\n\n{summary[:max_summary]}...\n\n#Russia #MediaAnalysis"
+            max_summary = 280 - len(f"Russian Media Summary ({today})\n\n\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis")
+            tweet_text = f"Russian Media Summary ({today})\n\n{summary[:max_summary]}...\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis"
 
         response = client.create_tweet(text=tweet_text)
         print(f"✓ Posted to Twitter (ID: {response.data['id']})")
@@ -115,7 +116,8 @@ def post_to_linkedin(summary, post_file):
         }
 
         today = datetime.now().strftime("%Y-%m-%d")
-        post_text = f"Russian Media Summary ({today})\n\n{summary}\n\n#RussianMedia #MediaAnalysis #EastboundReports"
+        gh_pages_link = "https://petesumners.github.io/eastbound/"
+        post_text = f"Russian Media Summary ({today})\n\n{summary}\n\nRead more: {gh_pages_link}\n\n#RussianMedia #MediaAnalysis #EastboundReports"
 
         payload = {
             'author': user_urn,
