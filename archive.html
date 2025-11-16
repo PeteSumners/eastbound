@@ -118,7 +118,12 @@
     </footer>
 
     <script>
-        // Fetch and display summaries
+        let allSummaries = [];
+        let currentIndex = 0;
+        const BATCH_SIZE = 10;
+        let isLoading = false;
+
+        // Fetch and display summaries with infinite scroll
         async function loadSummaries() {
             const summariesDiv = document.getElementById('summaries');
 
@@ -128,73 +133,117 @@
                 const files = await response.json();
 
                 // Filter for summary markdown files and sort by date (newest first)
-                const summaryFiles = files
+                allSummaries = files
                     .filter(file => file.name.endsWith('-summary.md'))
-                    .sort((a, b) => b.name.localeCompare(a.name))
-                    .slice(0, 10); // Show last 10 summaries
+                    .sort((a, b) => b.name.localeCompare(a.name));
 
-                if (summaryFiles.length === 0) {
+                if (allSummaries.length === 0) {
                     summariesDiv.innerHTML = '<p class="loading">No summaries available yet.</p>';
                     return;
                 }
 
-                // Fetch and display each summary
                 summariesDiv.innerHTML = '';
 
-                for (const file of summaryFiles) {
-                    const contentResponse = await fetch(file.download_url);
-                    const content = await contentResponse.text();
+                // Load first batch
+                await loadNextBatch();
 
-                    // Parse the markdown
-                    const lines = content.split('\n');
-                    const dateMatch = file.name.match(/(\d{4}-\d{2}-\d{2})/);
-                    const date = dateMatch ? dateMatch[1] : 'Unknown date';
-
-                    // Extract summary (everything between title and "---")
-                    let summaryText = '';
-                    let inSummary = false;
-                    for (const line of lines) {
-                        if (line.startsWith('#')) {
-                            inSummary = true;
-                            continue;
-                        }
-                        if (line.trim() === '---') break;
-                        if (inSummary && line.trim()) {
-                            summaryText += line + ' ';
-                        }
-                    }
-
-                    // Extract sources
-                    const sources = [];
-                    let inSources = false;
-                    for (const line of lines) {
-                        if (line.startsWith('## Sources')) {
-                            inSources = true;
-                            continue;
-                        }
-                        if (inSources && line.startsWith('- **')) {
-                            const sourceMatch = line.match(/\*\*(.+?)\*\*/);
-                            if (sourceMatch && !sources.includes(sourceMatch[1])) {
-                                sources.push(sourceMatch[1]);
-                            }
-                        }
-                    }
-
-                    // Create summary card
-                    const card = document.createElement('div');
-                    card.className = 'summary-card';
-                    card.innerHTML = `
-                        <div class="summary-date">${formatDate(date)}</div>
-                        <div class="summary-text">${summaryText.trim()}</div>
-                        <div class="summary-sources">Sources: ${sources.join(', ')}</div>
-                        <a href="posts/${file.name}" class="summary-link">View full details →</a>
-                    `;
-                    summariesDiv.appendChild(card);
-                }
+                // Set up infinite scroll
+                window.addEventListener('scroll', handleScroll);
 
             } catch (error) {
                 console.error('Error loading summaries:', error);
                 summariesDiv.innerHTML = '<p class="loading">Error loading summaries. Please try again later.</p>';
+            }
+        }
+
+        async function loadNextBatch() {
+            if (isLoading || currentIndex >= allSummaries.length) return;
+
+            isLoading = true;
+            const summariesDiv = document.getElementById('summaries');
+
+            const endIndex = Math.min(currentIndex + BATCH_SIZE, allSummaries.length);
+            const batch = allSummaries.slice(currentIndex, endIndex);
+
+            for (const file of batch) {
+                const contentResponse = await fetch(file.download_url);
+                const content = await contentResponse.text();
+
+                // Parse the markdown
+                const lines = content.split('\n');
+                const dateMatch = file.name.match(/(\d{4}-\d{2}-\d{2})/);
+                const date = dateMatch ? dateMatch[1] : 'Unknown date';
+
+                // Extract summary (everything between title and "---")
+                let summaryText = '';
+                let inSummary = false;
+                for (const line of lines) {
+                    if (line.startsWith('#')) {
+                        inSummary = true;
+                        continue;
+                    }
+                    if (line.trim() === '---') break;
+                    if (inSummary && line.trim()) {
+                        summaryText += line + ' ';
+                    }
+                }
+
+                // Extract sources
+                const sources = [];
+                let inSources = false;
+                for (const line of lines) {
+                    if (line.startsWith('## Sources')) {
+                        inSources = true;
+                        continue;
+                    }
+                    if (inSources && line.startsWith('- **')) {
+                        const sourceMatch = line.match(/\*\*(.+?)\*\*/);
+                        if (sourceMatch && !sources.includes(sourceMatch[1])) {
+                            sources.push(sourceMatch[1]);
+                        }
+                    }
+                }
+
+                // Create summary card
+                const card = document.createElement('div');
+                card.className = 'summary-card';
+                card.innerHTML = `
+                    <div class="summary-date">${formatDate(date)}</div>
+                    <div class="summary-text">${summaryText.trim()}</div>
+                    <div class="summary-sources">Sources: ${sources.join(', ')}</div>
+                    <a href="posts/${file.name}" class="summary-link">View full details →</a>
+                `;
+                summariesDiv.appendChild(card);
+            }
+
+            currentIndex = endIndex;
+            isLoading = false;
+
+            // Show count
+            if (currentIndex < allSummaries.length) {
+                updateLoadingIndicator();
+            }
+        }
+
+        function handleScroll() {
+            // Load more when user scrolls near bottom (within 500px)
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+                loadNextBatch();
+            }
+        }
+
+        function updateLoadingIndicator() {
+            const summariesDiv = document.getElementById('summaries');
+            let loader = document.getElementById('scroll-loader');
+
+            if (!loader) {
+                loader = document.createElement('div');
+                loader.id = 'scroll-loader';
+                loader.className = 'loading';
+                loader.textContent = `Showing ${currentIndex} of ${allSummaries.length} summaries. Scroll for more...`;
+                summariesDiv.appendChild(loader);
+            } else {
+                loader.textContent = `Showing ${currentIndex} of ${allSummaries.length} summaries. Scroll for more...`;
             }
         }
 
