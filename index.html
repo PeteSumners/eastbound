@@ -1,139 +1,110 @@
----
-layout: default
----
-
-<div class="mission">
-    <h3>Our Mission</h3>
-    <p>Eastbound Reports provides accurate translations, context, and analysis of Russian media sources to English-speaking audiences. We help readers understand Russian perspectives, compare them with Western coverage, and navigate the complex information landscape between Russia and the West.</p>
-</div>
-
-<h2>Latest Analysis</h2>
-
-{% if site.posts.size > 0 %}
-<div class="posts-list">
-    {% for post in site.posts limit:10 %}
-    <article class="post-preview">
-        {% if post.image %}
-        <div class="preview-image">
-            <a href="{{ site.baseurl }}{{ post.url }}">
-                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
-            </a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eastbound Reports</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .tagline {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .links {
+            margin: 30px 0;
+        }
+        .links a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .links a:hover {
+            background: #0052a3;
+        }
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+        }
+        .post {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid #0066cc;
+        }
+        .post-date {
+            color: #999;
+            font-size: 0.9em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eastbound Reports</h1>
+        <p class="tagline">Daily Russian media summaries</p>
+        <div class="links">
+            <a href="https://twitter.com/eastboundreport" target="_blank">Twitter</a>
+            <a href="https://github.com/petesumners/eastbound" target="_blank">GitHub</a>
         </div>
-        {% endif %}
-        <div class="preview-content">
-            <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-            {% if post.subtitle %}
-            <p class="subtitle">{{ post.subtitle }}</p>
-            {% endif %}
-            <div class="post-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                    {{ post.date | date: "%B %d, %Y" }}
-                </time>
-                {% if post.type %}
-                <span class="post-type">{{ post.type }}</span>
-                {% endif %}
-            </div>
-            {% if post.excerpt %}
-            <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-            {% endif %}
-            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read full post →</a>
-        </div>
-    </article>
-    {% endfor %}
-</div>
-{% else %}
-<p class="no-posts">No posts published yet. Check back soon!</p>
-{% endif %}
+    </header>
 
-<style>
-    .posts-list {
-        margin-top: 30px;
-    }
+    <main>
+        <h2>About</h2>
+        <p>Eastbound Reports provides daily summaries of Russian media coverage, automatically generated from major Russian news sources including TASS, RT, Sputnik, Interfax, and RIAN.</p>
 
-    .post-preview {
-        display: flex;
-        gap: 20px;
-        margin-bottom: 50px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid #ecf0f1;
-    }
+        <p>Each day, we fetch the latest articles and use AI to distill the main themes into 1-2 sentences, giving you a quick snapshot of what Russian media is focusing on.</p>
 
-    .post-preview:last-child {
-        border-bottom: none;
-    }
+        <h2>Recent Summaries</h2>
+        <p>Summaries are posted daily to <a href="https://twitter.com/eastboundreport">Twitter/X</a> and LinkedIn. Check back here for archived posts (coming soon).</p>
 
-    .preview-image {
-        flex-shrink: 0;
-        width: 300px;
-    }
+        <h2>How It Works</h2>
+        <ul>
+            <li>Automated RSS feed monitoring of 5 major Russian news sources</li>
+            <li>Full article content extraction (not just headlines)</li>
+            <li>AI-powered summarization using Claude Code</li>
+            <li>Daily posting to social media</li>
+            <li>100% open source</li>
+        </ul>
 
-    .preview-image img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+        <h2>Open Source</h2>
+        <p>All code is available on <a href="https://github.com/petesumners/eastbound">GitHub</a>. Feel free to fork, contribute, or use for your own projects.</p>
+    </main>
 
-    .preview-content {
-        flex: 1;
-    }
-
-    .post-preview h3 {
-        font-size: 1.8em;
-        margin-bottom: 8px;
-    }
-
-    .post-preview h3 a {
-        color: #2c3e50;
-        text-decoration: none;
-    }
-
-    .post-preview h3 a:hover {
-        color: #3498db;
-    }
-
-    .post-preview .subtitle {
-        font-size: 1.1em;
-        color: #7f8c8d;
-        margin-bottom: 12px;
-    }
-
-    .post-preview .post-meta {
-        color: #95a5a6;
-        font-size: 0.9em;
-        margin-bottom: 15px;
-    }
-
-    .post-type {
-        display: inline-block;
-        background: #ecf0f1;
-        padding: 2px 8px;
-        border-radius: 3px;
-        font-size: 0.85em;
-        margin-left: 10px;
-    }
-
-    .excerpt {
-        color: #555;
-        line-height: 1.6;
-        margin-bottom: 12px;
-    }
-
-    .read-more {
-        color: #3498db;
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    .read-more:hover {
-        text-decoration: underline;
-    }
-
-    .no-posts {
-        text-align: center;
-        color: #95a5a6;
-        padding: 60px 20px;
-        font-size: 1.1em;
-    }
-</style>
+    <footer>
+        <p>&copy; 2025 Eastbound Reports | Independent & Open Source</p>
+    </footer>
+</body>
+</html>
