@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive - Eastbound Reports</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .tagline {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .links {
+            margin: 30px 0;
+        }
+        .links a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .links a:hover {
+            background: #0052a3;
+        }
+        main {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .summary-card {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            border-radius: 5px;
+        }
+        .summary-date {
+            font-size: 0.9em;
+            color: #999;
+            margin-bottom: 10px;
+        }
+        .summary-text {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .summary-sources {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+        .summary-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .summary-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eastbound Reports</h1>
+        <p class="tagline">Archive</p>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="https://twitter.com/eastboundreport" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/peter-sumners/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/petesumners/eastbound" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <main>
+        <h2>Recent Summaries</h2>
+        <div id="summaries">
+            <div class="loading">Loading summaries...</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eastbound Reports | Independent & Open Source</p>
+    </footer>
+
+    <script>
+        // Fetch and display summaries
+        async function loadSummaries() {
+            const summariesDiv = document.getElementById('summaries');
+
+            try {
+                // Fetch list of summary files from GitHub API
+                const response = await fetch('https://api.github.com/repos/petesumners/eastbound/contents/posts');
+                const files = await response.json();
+
+                // Filter for summary markdown files and sort by date (newest first)
+                const summaryFiles = files
+                    .filter(file => file.name.endsWith('-summary.md'))
+                    .sort((a, b) => b.name.localeCompare(a.name))
+                    .slice(0, 10); // Show last 10 summaries
+
+                if (summaryFiles.length === 0) {
+                    summariesDiv.innerHTML = '<p class="loading">No summaries available yet.</p>';
+                    return;
+                }
+
+                // Fetch and display each summary
+                summariesDiv.innerHTML = '';
+
+                for (const file of summaryFiles) {
+                    const contentResponse = await fetch(file.download_url);
+                    const content = await contentResponse.text();
+
+                    // Parse the markdown
+                    const lines = content.split('\n');
+                    const dateMatch = file.name.match(/(\d{4}-\d{2}-\d{2})/);
+                    const date = dateMatch ? dateMatch[1] : 'Unknown date';
+
+                    // Extract summary (everything between title and "---")
+                    let summaryText = '';
+                    let inSummary = false;
+                    for (const line of lines) {
+                        if (line.startsWith('#')) {
+                            inSummary = true;
+                            continue;
+                        }
+                        if (line.trim() === '---') break;
+                        if (inSummary && line.trim()) {
+                            summaryText += line + ' ';
+                        }
+                    }
+
+                    // Extract sources
+                    const sources = [];
+                    let inSources = false;
+                    for (const line of lines) {
+                        if (line.startsWith('## Sources')) {
+                            inSources = true;
+                            continue;
+                        }
+                        if (inSources && line.startsWith('- **')) {
+                            const sourceMatch = line.match(/\*\*(.+?)\*\*/);
+                            if (sourceMatch && !sources.includes(sourceMatch[1])) {
+                                sources.push(sourceMatch[1]);
+                            }
+                        }
+                    }
+
+                    // Create summary card
+                    const card = document.createElement('div');
+                    card.className = 'summary-card';
+                    card.innerHTML = `
+                        <div class="summary-date">${formatDate(date)}</div>
+                        <div class="summary-text">${summaryText.trim()}</div>
+                        <div class="summary-sources">Sources: ${sources.join(', ')}</div>
+                        <a href="posts/${file.name}" class="summary-link">View full details →</a>
+                    `;
+                    summariesDiv.appendChild(card);
+                }
+
+            } catch (error) {
+                console.error('Error loading summaries:', error);
+                summariesDiv.innerHTML = '<p class="loading">Error loading summaries. Please try again later.</p>';
+            }
+        }
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        // Load summaries when page loads
+        loadSummaries();
+    </script>
+</body>
+</html>
