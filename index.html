@@ -162,7 +162,7 @@
 
             try {
                 // Fetch list of summary files from GitHub API
-                const response = await fetch('https://api.github.com/repos/petesumners/eastbound/contents/posts');
+                const response = await fetch('https://api.github.com/repos/PeteSumners/eastbound/contents/posts');
                 const files = await response.json();
 
                 // Filter for summary markdown files and sort by date (newest first)
