@@ -11,7 +11,7 @@ import os
 import sys
 
 # Import from daily_summary
-from daily_summary import fetch_articles, create_prompt, save_data
+from daily_summary import fetch_articles, create_prompt, save_data, get_utc_date
 
 # Load environment variables
 try:
@@ -83,7 +83,7 @@ def post_to_twitter(summary, post_file, articles):
         source_list = ", ".join(sources)
 
         # Create tweet with summary
-        today = datetime.now().strftime("%Y-%m-%d")
+        today = get_utc_date()
         gh_pages_link = "https://petesumners.github.io/eastbound/"
         tweet_text = f"Russian Media Summary ({today})\n\n{summary}\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis"
 
@@ -123,7 +123,7 @@ def post_to_linkedin(summary, post_file, articles):
         sources = sorted(set(article['source'] for article in articles))
         source_list = ", ".join(sources)
 
-        today = datetime.now().strftime("%Y-%m-%d")
+        today = get_utc_date()
         gh_pages_link = "https://petesumners.github.io/eastbound/"
         post_text = f"Russian Media Summary ({today})\n\n{summary}\n\nSources: {source_list}\n\nRead more: {gh_pages_link}\n\n#RussianMedia #MediaAnalysis #EastboundReports"
 
@@ -161,7 +161,7 @@ def post_to_linkedin(summary, post_file, articles):
 def commit_and_push():
     """Commit and push changes to GitHub."""
     try:
-        today = datetime.now().strftime("%Y-%m-%d")
+        today = get_utc_date()
 
         # Add all changes in posts/ (data/ is gitignored)
         subprocess.run(['git', 'add', 'posts/'], check=True)

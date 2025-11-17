@@ -10,6 +10,7 @@ from datetime import datetime
 from pathlib import Path
 import sys
 import io
+import requests
 
 # Fix Windows console encoding for emojis
 if sys.platform == 'win32':
@@ -62,9 +63,34 @@ def fetch_articles():
     print(f"\n✓ Total: {len(all_articles)} articles collected\n")
     return all_articles
 
+def get_utc_date():
+    """Get current UTC date from online API."""
+    try:
+        # Try worldtimeapi.org first
+        response = requests.get('http://worldtimeapi.org/api/timezone/Etc/UTC', timeout=5)
+        if response.status_code == 200:
+            data = response.json()
+            utc_datetime = datetime.fromisoformat(data['datetime'].replace('Z', '+00:00'))
+            return utc_datetime.strftime("%Y-%m-%d")
+    except:
+        pass
+
+    try:
+        # Fallback to timeapi.io
+        response = requests.get('https://timeapi.io/api/Time/current/zone?timeZone=UTC', timeout=5)
+        if response.status_code == 200:
+            data = response.json()
+            return f"{data['year']}-{data['month']:02d}-{data['day']:02d}"
+    except:
+        pass
+
+    # Last resort: use system UTC (might be wrong)
+    print("⚠️  Warning: Using system UTC time (may be incorrect)")
+    return datetime.utcnow().strftime("%Y-%m-%d")
+
 def save_data(articles, summary_text):
     """Save articles and summary to files."""
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = get_utc_date()
 
     # Create directories
     Path("data").mkdir(exist_ok=True)
