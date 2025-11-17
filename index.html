@@ -203,8 +203,10 @@
             const batch = allSummaries.slice(currentIndex, endIndex);
 
             for (const file of batch) {
+                console.log('Loading file:', file.name);
                 const contentResponse = await fetch(file.download_url);
                 const content = await contentResponse.text();
+                console.log('Content fetched, length:', content.length);
 
                 // Parse the markdown
                 const lines = content.split('\n');
@@ -224,6 +226,7 @@
                         summaryText += line + ' ';
                     }
                 }
+                console.log('Summary extracted:', summaryText.substring(0, 100) + '...');
 
                 // Extract sources
                 const sources = [];
@@ -250,7 +253,9 @@
                     <div class="summary-sources">Sources: ${sources.join(', ')}</div>
                     <a href="posts/${file.name}" class="summary-link">View full details →</a>
                 `;
+                console.log('Appending card for', date, 'to', summariesDiv);
                 summariesDiv.appendChild(card);
+                console.log('Card appended, summariesDiv children:', summariesDiv.children.length);
             }
 
             currentIndex = endIndex;
