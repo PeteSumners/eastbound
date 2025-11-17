@@ -158,6 +158,31 @@ def post_to_linkedin(summary, post_file, articles):
         print(f"⚠️  LinkedIn posting failed: {e}")
         return False
 
+def commit_and_push():
+    """Commit and push changes to GitHub."""
+    try:
+        today = datetime.now().strftime("%Y-%m-%d")
+
+        # Add all changes in posts/ (data/ is gitignored)
+        subprocess.run(['git', 'add', 'posts/'], check=True)
+
+        # Commit with automated message
+        commit_msg = f"Automated update: {today} Russian media summary"
+        subprocess.run(['git', 'commit', '-m', commit_msg], check=True)
+
+        # Push to main
+        subprocess.run(['git', 'push', 'origin', 'main'], check=True)
+
+        print("✓ Changes committed and pushed to GitHub")
+        return True
+
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️  Git operation failed: {e}")
+        return False
+    except Exception as e:
+        print(f"⚠️  Error during git operations: {e}")
+        return False
+
 def main():
     print("=" * 60)
     print("RUSSIAN MEDIA AUTOMATION")
@@ -194,6 +219,10 @@ def main():
     print("\n📱 Posting to social media...\n")
     post_to_twitter(summary, post_file, articles)
     post_to_linkedin(summary, post_file, articles)
+
+    # 6. Commit and push to GitHub
+    print("\n📤 Pushing to GitHub...\n")
+    commit_and_push()
 
     print("\n" + "=" * 60)
     print("✓ AUTOMATION COMPLETE")
