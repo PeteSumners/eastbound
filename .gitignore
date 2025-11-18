@@ -4,6 +4,9 @@
 # Data files
 data/
 
+# Logs
+LAST_RUN.log
+
 # Python
 __pycache__/
 *.pyc
@@ -11,3 +14,7 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# Virtual environment
+.venv/
+venv/

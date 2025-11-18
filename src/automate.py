@@ -9,6 +9,8 @@ from pathlib import Path
 from datetime import datetime
 import os
 import sys
+import traceback
+import platform
 
 # Import from daily_summary
 from daily_summary import fetch_articles, create_prompt, save_data, get_utc_date
@@ -16,26 +18,58 @@ from daily_summary import fetch_articles, create_prompt, save_data, get_utc_date
 # Load environment variables
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    # Load .env from project root (parent directory)
+    env_path = Path(__file__).parent.parent / '.env'
+    load_dotenv(env_path)
 except ImportError:
     pass
 
+# Debug logging
+def log_debug(message, error=None):
+    """Log debug message with timestamp."""
+    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+    log_msg = f"[{timestamp}] {message}"
+    print(log_msg)
+
+    if error:
+        print(f"[{timestamp}] ERROR DETAILS: {str(error)}")
+        print(f"[{timestamp}] TRACEBACK:")
+        traceback.print_exc()
+
+    return log_msg
+
 def call_claude_code(prompt):
     """Call Claude Code CLI to generate summary."""
-    print("🤖 Calling Claude Code to generate summary...\n")
+    log_debug("🤖 Calling Claude Code to generate summary...")
 
     try:
+        # Get project root
+        project_root = Path(__file__).parent.parent
+        data_dir = project_root / "data"
+
+        log_debug(f"Project root: {project_root}")
+        log_debug(f"Data directory: {data_dir}")
+
         # Create data directory if it doesn't exist
-        Path("data").mkdir(exist_ok=True)
+        data_dir.mkdir(exist_ok=True)
+        log_debug(f"Data directory created/verified")
 
         # Save prompt to temp file
-        prompt_file = Path("data/temp_prompt.txt")
+        prompt_file = data_dir / "temp_prompt.txt"
+        log_debug(f"Saving prompt to: {prompt_file}")
+        log_debug(f"Prompt length: {len(prompt)} characters")
+
         with open(prompt_file, 'w', encoding='utf-8') as f:
             f.write(prompt)
+        log_debug(f"Prompt saved successfully")
 
         # Call claude code with --print flag, reading prompt from stdin
+        cmd = 'claude code --print'
+        log_debug(f"Executing command: {cmd}")
+        log_debug(f"Working directory: {os.getcwd()}")
+
         result = subprocess.run(
-            'claude code --print',
+            cmd,
             input=prompt,
             capture_output=True,
             text=True,
@@ -43,16 +77,23 @@ def call_claude_code(prompt):
             shell=True
         )
 
+        log_debug(f"Command completed with return code: {result.returncode}")
+        log_debug(f"STDOUT length: {len(result.stdout)} chars")
+        log_debug(f"STDERR length: {len(result.stderr)} chars")
+
         if result.returncode == 0:
             summary = result.stdout.strip()
-            print("✓ Summary generated\n")
+            log_debug(f"✓ Summary generated successfully ({len(summary)} chars)")
+            log_debug(f"Summary preview: {summary[:200]}...")
             return summary
         else:
-            print(f"❌ Claude Code error: {result.stderr}")
+            log_debug(f"❌ Claude Code failed with return code {result.returncode}")
+            log_debug(f"STDERR: {result.stderr}")
+            log_debug(f"STDOUT: {result.stdout}")
             return None
 
     except Exception as e:
-        print(f"❌ Error calling Claude Code: {e}")
+        log_debug(f"❌ Exception in call_claude_code", error=e)
         return None
 
 def post_to_twitter(summary, post_file, articles):
@@ -163,8 +204,10 @@ def commit_and_push():
     try:
         today = get_utc_date()
 
-        # Add all changes in posts/ (data/ is gitignored)
+        # Add all changes: posts/, index.html, and src/ (data/ is gitignored)
         subprocess.run(['git', 'add', 'posts/'], check=True)
+        subprocess.run(['git', 'add', 'index.html'], check=True)
+        subprocess.run(['git', 'add', 'src/'], check=True)
 
         # Commit with automated message
         commit_msg = f"Automated update: {today} Russian media summary"
@@ -184,49 +227,97 @@ def commit_and_push():
         return False
 
 def main():
-    print("=" * 60)
-    print("RUSSIAN MEDIA AUTOMATION")
-    print("=" * 60)
+    start_time = datetime.now()
+
+    print("=" * 80)
+    print("RUSSIAN MEDIA AUTOMATION - SCHEDULED RUN")
+    print("=" * 80)
     print()
 
-    # 1. Fetch articles
-    articles = fetch_articles()
+    # Log environment info
+    log_debug("=== ENVIRONMENT INFO ===")
+    log_debug(f"Script: {__file__}")
+    log_debug(f"Working directory: {os.getcwd()}")
+    log_debug(f"Python: {sys.version}")
+    log_debug(f"Platform: {platform.platform()}")
+    log_debug(f"User: {os.getenv('USERNAME', 'unknown')}")
+    log_debug(f"Start time: {start_time.isoformat()}")
+    log_debug(f"PATH: {os.getenv('PATH', 'not set')[:200]}...")
 
-    if not articles:
-        print("❌ No articles fetched. Exiting.")
-        return
+    # Check environment variables
+    log_debug("=== CHECKING ENVIRONMENT VARIABLES ===")
+    env_vars = ['ANTHROPIC_API_KEY', 'TWITTER_API_KEY', 'LINKEDIN_ACCESS_TOKEN']
+    for var in env_vars:
+        value = os.getenv(var)
+        if value:
+            log_debug(f"{var}: SET (length={len(value)})")
+        else:
+            log_debug(f"{var}: NOT SET")
 
-    # 2. Create prompt
-    prompt = create_prompt(articles)
+    try:
+        # 1. Fetch articles
+        log_debug("=== STEP 1: FETCHING ARTICLES ===")
+        articles = fetch_articles()
 
-    # 3. Generate summary with Claude Code
-    summary = call_claude_code(prompt)
+        if not articles:
+            log_debug("❌ No articles fetched. Exiting.")
+            return 1
 
-    if not summary:
-        print("❌ Failed to generate summary. Exiting.")
-        return
+        log_debug(f"✓ Fetched {len(articles)} articles")
 
-    print("📄 Summary:")
-    print("-" * 60)
-    print(summary)
-    print("-" * 60)
-    print()
+        # 2. Create prompt
+        log_debug("=== STEP 2: CREATING PROMPT ===")
+        prompt = create_prompt(articles)
+        log_debug(f"✓ Prompt created ({len(prompt)} chars)")
 
-    # 4. Save data
-    post_file = save_data(articles, summary)
+        # 3. Generate summary with Claude Code
+        log_debug("=== STEP 3: GENERATING SUMMARY WITH CLAUDE CODE ===")
+        summary = call_claude_code(prompt)
 
-    # 5. Post to social media
-    print("\n📱 Posting to social media...\n")
-    post_to_twitter(summary, post_file, articles)
-    post_to_linkedin(summary, post_file, articles)
+        if not summary:
+            log_debug("❌ Failed to generate summary. Exiting.")
+            return 1
 
-    # 6. Commit and push to GitHub
-    print("\n📤 Pushing to GitHub...\n")
-    commit_and_push()
+        log_debug("📄 Summary:")
+        log_debug("-" * 60)
+        print(summary)
+        log_debug("-" * 60)
 
-    print("\n" + "=" * 60)
-    print("✓ AUTOMATION COMPLETE")
-    print("=" * 60)
+        # 4. Save data
+        log_debug("=== STEP 4: SAVING DATA ===")
+        post_file = save_data(articles, summary)
+        log_debug(f"✓ Data saved to: {post_file}")
+
+        # 5. Post to social media
+        log_debug("=== STEP 5: POSTING TO SOCIAL MEDIA ===")
+        twitter_success = post_to_twitter(summary, post_file, articles)
+        linkedin_success = post_to_linkedin(summary, post_file, articles)
+        log_debug(f"Twitter: {'✓ Success' if twitter_success else '✗ Failed/Skipped'}")
+        log_debug(f"LinkedIn: {'✓ Success' if linkedin_success else '✗ Failed/Skipped'}")
+
+        # 6. Commit and push to GitHub
+        log_debug("=== STEP 6: COMMITTING TO GITHUB ===")
+        git_success = commit_and_push()
+        log_debug(f"Git: {'✓ Success' if git_success else '✗ Failed'}")
+
+        # Final summary
+        end_time = datetime.now()
+        duration = (end_time - start_time).total_seconds()
+
+        log_debug("=" * 80)
+        log_debug("✓ AUTOMATION COMPLETE")
+        log_debug(f"Duration: {duration:.2f} seconds")
+        log_debug(f"End time: {end_time.isoformat()}")
+        log_debug("=" * 80)
+
+        return 0
+
+    except Exception as e:
+        log_debug("=" * 80)
+        log_debug("❌ AUTOMATION FAILED WITH EXCEPTION", error=e)
+        log_debug("=" * 80)
+        return 1
 
 if __name__ == '__main__':
-    main()
+    exit_code = main()
+    sys.exit(exit_code)

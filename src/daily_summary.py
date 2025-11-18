@@ -90,29 +90,39 @@ def get_utc_date():
 
 def save_data(articles, summary_text):
     """Save articles and summary to files."""
-    today = get_utc_date()
+    # Use UTC for consistency
+    utc_date = get_utc_date()
+    utc_now = datetime.utcnow()
+    timestamp = utc_now.strftime("%Y-%m-%d-%H%M%S")  # Include time to avoid overwriting
+
+    # Get project root (parent of src/)
+    project_root = Path(__file__).parent.parent
 
     # Create directories
-    Path("data").mkdir(exist_ok=True)
-    Path("posts").mkdir(exist_ok=True)
+    data_dir = project_root / "data"
+    posts_dir = project_root / "posts"
+    data_dir.mkdir(exist_ok=True)
+    posts_dir.mkdir(exist_ok=True)
 
-    # Save raw data
-    data_file = Path(f"data/{today}-articles.json")
+    # Save raw data with timestamp to avoid overwriting
+    data_file = data_dir / f"{timestamp}-articles.json"
     with open(data_file, 'w', encoding='utf-8') as f:
         json.dump({
-            'date': today,
+            'date': utc_date,
+            'timestamp': timestamp,
             'articles': articles,
             'summary': summary_text
         }, f, indent=2, ensure_ascii=False)
 
     print(f"✓ Saved data to {data_file}")
 
-    # Save formatted post
-    post_file = Path(f"posts/{today}-summary.md")
+    # Save formatted post with timestamp to avoid overwriting
+    post_file = posts_dir / f"{timestamp}-summary.md"
     with open(post_file, 'w', encoding='utf-8') as f:
-        f.write(f"# Russian Media Summary - {today}\n\n")
+        f.write(f"# Russian Media Summary - {utc_date} ({utc_now.strftime('%H:%M:%S')} UTC)\n\n")
         f.write(f"{summary_text}\n\n")
         f.write("---\n\n")
+        f.write(f"**Generated:** {utc_now.strftime('%Y-%m-%d at %H:%M:%S UTC')}\n\n")
         f.write("## Sources\n\n")
         for article in articles[:20]:  # Show first 20
             f.write(f"- **{article['source']}**: [{article['title']}]({article['link']})\n")
