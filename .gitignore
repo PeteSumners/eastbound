@@ -6,6 +6,7 @@ data/
 
 # Logs
 LAST_RUN.log
+logs/
 
 # Python
 __pycache__/
