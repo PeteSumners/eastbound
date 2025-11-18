@@ -6,7 +6,7 @@ Complete automation: fetch articles, summarize with Claude Code, post to social 
 import subprocess
 import json
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, UTC
 import os
 import sys
 import traceback
@@ -125,7 +125,7 @@ def post_to_twitter(summary, post_file, articles):
 
         # Create tweet with summary and UTC timestamp
         today = get_utc_date()
-        utc_now = datetime.utcnow()
+        utc_now = datetime.now(UTC)
         timestamp_str = utc_now.strftime("%H:%M UTC")
         gh_pages_link = "https://petesumners.github.io/eastbound/"
         tweet_text = f"Russian Media Summary ({today} {timestamp_str})\n\n{summary}\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis"
@@ -167,7 +167,7 @@ def post_to_linkedin(summary, post_file, articles):
         source_list = ", ".join(sources)
 
         today = get_utc_date()
-        utc_now = datetime.utcnow()
+        utc_now = datetime.now(UTC)
         timestamp_str = utc_now.strftime("%H:%M UTC")
         gh_pages_link = "https://petesumners.github.io/eastbound/"
         post_text = f"Russian Media Summary ({today} {timestamp_str})\n\n{summary}\n\nSources: {source_list}\n\nRead more: {gh_pages_link}\n\n#RussianMedia #MediaAnalysis #EastboundReports"

@@ -6,7 +6,7 @@ Core functions for fetching articles and creating summaries.
 
 import feedparser
 import json
-from datetime import datetime
+from datetime import datetime, UTC
 from pathlib import Path
 import sys
 import io
@@ -86,13 +86,13 @@ def get_utc_date():
 
     # Last resort: use system UTC (might be wrong)
     print("⚠️  Warning: Using system UTC time (may be incorrect)")
-    return datetime.utcnow().strftime("%Y-%m-%d")
+    return datetime.now(UTC).strftime("%Y-%m-%d")
 
 def save_data(articles, summary_text):
     """Save articles and summary to files."""
     # Use UTC for consistency
     utc_date = get_utc_date()
-    utc_now = datetime.utcnow()
+    utc_now = datetime.now(UTC)
     timestamp = utc_now.strftime("%Y-%m-%d-%H%M%S")  # Include time to avoid overwriting
 
     # Get project root (parent of src/)
