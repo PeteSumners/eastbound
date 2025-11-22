@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Simple daily Russian media summary generator.
-Core functions for fetching articles and creating summaries.
+Eastbound Financial Analysis
+Core functions for fetching articles from Eastern international media sources
+(Russian, Chinese, Japanese, Korean, North Korean) and creating finance-focused summaries.
 """
 
 import feedparser
@@ -26,66 +27,129 @@ RSS_SOURCES = {
     'RIAN': 'https://rian.ru/export/rss2/archive/index.xml',
 }
 
-def fetch_articles():
-    """Fetch latest articles (with full content) from Russian media sources."""
-    print("📰 Fetching articles from Russian media...\n")
+# CJK (Chinese, Japanese, Korean) + North Korea media RSS feeds
+CJK_SOURCES = {
+    'Xinhua': 'http://www.xinhuanet.com/english/rss/worldrss.xml',
+    'People\'s Daily': 'http://en.people.cn/rss/World.xml',
+    'CGTN': 'https://www.cgtn.com/subscribe/rss/section/world.xml',
+    'NHK': 'https://www3.nhk.or.jp/rss/news/cat6.xml',
+    'Kyodo News': 'https://english.kyodonews.net/rss/news.xml',
+    'Yonhap': 'https://en.yna.co.kr/RSS/news.xml',
+    'Korea Herald': 'https://www.koreaherald.com/common/rss_xml.php',
+    'KCNA': 'https://kcnawatch.org/feed/',
+}
+
+# Combine all sources
+ALL_SOURCES = {**RSS_SOURCES, **CJK_SOURCES}
+
+def fetch_articles(max_retries=2):
+    """Fetch latest articles (with full content) from all media sources."""
+    print("📰 Fetching articles from international media sources...\n")
 
     all_articles = []
+    failed_sources = []
 
-    for source_name, feed_url in RSS_SOURCES.items():
-        try:
-            print(f"  → {source_name}...", end=" ")
-            feed = feedparser.parse(feed_url)
+    for source_name, feed_url in ALL_SOURCES.items():
+        success = False
+        last_error = None
 
-            for entry in feed.entries[:10]:  # Get 10 most recent from each
-                # Get full content from summary/description/content fields
-                content = ""
-                if hasattr(entry, 'content') and entry.content:
-                    content = entry.content[0].value
-                elif hasattr(entry, 'summary') and entry.summary:
-                    content = entry.summary
-                elif hasattr(entry, 'description') and entry.description:
-                    content = entry.description
+        for attempt in range(max_retries):
+            try:
+                if attempt > 0:
+                    print(f"  → {source_name} (retry {attempt})...", end=" ")
+                else:
+                    print(f"  → {source_name}...", end=" ")
 
-                article = {
-                    'source': source_name,
-                    'title': entry.get('title', 'No title'),
-                    'link': entry.get('link', ''),
-                    'published': entry.get('published', ''),
-                    'content': content[:1000] if content else '',  # Limit to 1000 chars per article
-                }
-                all_articles.append(article)
+                # Parse feed (timeout is handled via requests session if needed)
+                feed = feedparser.parse(feed_url)
 
-            print(f"✓ ({len(feed.entries[:10])} articles)")
-        except Exception as e:
-            print(f"✗ Error: {e}")
+                # Check for feed errors
+                if hasattr(feed, 'bozo') and feed.bozo:
+                    if hasattr(feed, 'bozo_exception'):
+                        raise feed.bozo_exception
 
-    print(f"\n✓ Total: {len(all_articles)} articles collected\n")
+                if not hasattr(feed, 'entries') or len(feed.entries) == 0:
+                    raise ValueError("No entries found in feed")
+
+                for entry in feed.entries[:10]:  # Get 10 most recent from each
+                    # Get full content from summary/description/content fields
+                    content = ""
+                    if hasattr(entry, 'content') and entry.content:
+                        content = entry.content[0].value
+                    elif hasattr(entry, 'summary') and entry.summary:
+                        content = entry.summary
+                    elif hasattr(entry, 'description') and entry.description:
+                        content = entry.description
+
+                    article = {
+                        'source': source_name,
+                        'title': entry.get('title', 'No title'),
+                        'link': entry.get('link', ''),
+                        'published': entry.get('published', ''),
+                        'content': content[:1000] if content else '',  # Limit to 1000 chars per article
+                    }
+                    all_articles.append(article)
+
+                print(f"✓ ({len(feed.entries[:10])} articles)")
+                success = True
+                break  # Success, no need to retry
+
+            except Exception as e:
+                last_error = e
+                if attempt < max_retries - 1:
+                    continue  # Retry
+                else:
+                    print(f"✗ Failed after {max_retries} attempts: {type(e).__name__}")
+
+        if not success:
+            failed_sources.append((source_name, str(last_error)))
+
+    print(f"\n✓ Total: {len(all_articles)} articles collected from {len(ALL_SOURCES) - len(failed_sources)}/{len(ALL_SOURCES)} sources")
+
+    if failed_sources:
+        print(f"⚠️  Failed sources ({len(failed_sources)}):")
+        for source, error in failed_sources:
+            print(f"   - {source}: {error[:80]}")
+
+    print()
     return all_articles
 
 def get_utc_date():
-    """Get current UTC date from online API."""
+    """Get current UTC date from online API with proper error handling."""
+    errors = []
+
+    # Try worldtimeapi.org first
     try:
-        # Try worldtimeapi.org first
         response = requests.get('http://worldtimeapi.org/api/timezone/Etc/UTC', timeout=5)
         if response.status_code == 200:
             data = response.json()
             utc_datetime = datetime.fromisoformat(data['datetime'].replace('Z', '+00:00'))
             return utc_datetime.strftime("%Y-%m-%d")
-    except:
-        pass
+        else:
+            errors.append(f"worldtimeapi.org returned status {response.status_code}")
+    except requests.RequestException as e:
+        errors.append(f"worldtimeapi.org request failed: {type(e).__name__}")
+    except (KeyError, ValueError) as e:
+        errors.append(f"worldtimeapi.org parse error: {type(e).__name__}")
 
+    # Fallback to timeapi.io
     try:
-        # Fallback to timeapi.io
         response = requests.get('https://timeapi.io/api/Time/current/zone?timeZone=UTC', timeout=5)
         if response.status_code == 200:
             data = response.json()
             return f"{data['year']}-{data['month']:02d}-{data['day']:02d}"
-    except:
-        pass
+        else:
+            errors.append(f"timeapi.io returned status {response.status_code}")
+    except requests.RequestException as e:
+        errors.append(f"timeapi.io request failed: {type(e).__name__}")
+    except (KeyError, ValueError) as e:
+        errors.append(f"timeapi.io parse error: {type(e).__name__}")
 
     # Last resort: use system UTC (might be wrong)
-    print("⚠️  Warning: Using system UTC time (may be incorrect)")
+    print("⚠️  Warning: All time APIs failed, using system UTC time (may be incorrect)")
+    for error in errors:
+        print(f"   - {error}")
+
     return datetime.now(UTC).strftime("%Y-%m-%d")
 
 def save_data(articles, summary_text):
@@ -119,12 +183,14 @@ def save_data(articles, summary_text):
     # Save formatted post with timestamp to avoid overwriting
     post_file = posts_dir / f"{timestamp}-summary.md"
     with open(post_file, 'w', encoding='utf-8') as f:
-        f.write(f"# Russian Media Summary - {utc_date} ({utc_now.strftime('%H:%M:%S')} UTC)\n\n")
+        f.write(f"# Eastbound Financial Analysis - {utc_date} ({utc_now.strftime('%H:%M:%S')} UTC)\n\n")
+        f.write(f"## Economic & Financial Summary\n\n")
         f.write(f"{summary_text}\n\n")
         f.write("---\n\n")
         f.write(f"**Generated:** {utc_now.strftime('%Y-%m-%d at %H:%M:%S UTC')}\n\n")
+        f.write(f"**Coverage:** Russian, Chinese, Japanese, Korean, and North Korean media sources\n\n")
         f.write("## Sources\n\n")
-        for article in articles[:20]:  # Show first 20
+        for article in articles[:30]:  # Show first 30
             f.write(f"- **{article['source']}**: [{article['title']}]({article['link']})\n")
 
     print(f"✓ Saved post to {post_file}")
@@ -132,8 +198,18 @@ def save_data(articles, summary_text):
     return post_file
 
 def create_prompt(articles):
-    """Create prompt for Claude Code to summarize the articles."""
-    prompt = """Summarize these Russian media articles in 1-2 concise sentences. Focus ONLY on the main themes. Do not include any preamble, thinking process, or meta-commentary. Start directly with the summary.
+    """Create prompt for Claude Code to summarize the articles with finance/economic focus."""
+    prompt = """Analyze these international media articles (Russian, Chinese, Japanese, Korean, North Korean) and provide a 1-2 sentence summary focused specifically on ECONOMIC and FINANCIAL implications, trends, and developments.
+
+Prioritize:
+- Economic policy changes and monetary decisions
+- Trade relationships and sanctions
+- Energy markets and commodities
+- Currency movements and financial markets
+- Corporate developments and business activity
+- Infrastructure and investment projects
+
+Do not include any preamble, thinking process, or meta-commentary. Start directly with the financially-focused summary.
 
 Articles:
 
@@ -144,6 +220,6 @@ Articles:
         prompt += f"{article['content']}\n"
         prompt += f"URL: {article['link']}\n\n"
 
-    prompt += "\nProvide ONLY the 1-2 sentence summary, nothing else:"
+    prompt += "\nProvide ONLY the 1-2 sentence finance-focused summary, nothing else:"
 
     return prompt

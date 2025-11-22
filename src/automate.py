@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
-Complete automation: fetch articles, summarize with Claude Code, post to social media.
+Eastbound Financial Analysis Automation
+Fetches articles from Russian, Chinese, Japanese, Korean, and North Korean media sources,
+generates finance-focused summary with Claude Code, and posts to social media.
 """
 
 import subprocess
@@ -128,12 +130,12 @@ def post_to_twitter(summary, post_file, articles):
         utc_now = datetime.now(UTC)
         timestamp_str = utc_now.strftime("%H:%M UTC")
         gh_pages_link = "https://petesumners.github.io/eastbound/"
-        tweet_text = f"Russian Media Summary ({today} {timestamp_str})\n\n{summary}\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis"
+        tweet_text = f"Eastbound Financial Analysis ({today} {timestamp_str})\n\n{summary}\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Finance #Economics #EastAsia #Russia"
 
         # Truncate if needed
         if len(tweet_text) > 280:
-            max_summary = 280 - len(f"Russian Media Summary ({today} {timestamp_str})\n\n\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis")
-            tweet_text = f"Russian Media Summary ({today} {timestamp_str})\n\n{summary[:max_summary]}...\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Russia #MediaAnalysis"
+            max_summary = 280 - len(f"Eastbound Financial Analysis ({today} {timestamp_str})\n\n\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Finance #Economics #EastAsia #Russia")
+            tweet_text = f"Eastbound Financial Analysis ({today} {timestamp_str})\n\n{summary[:max_summary]}...\n\nSources: {source_list}\n\n{gh_pages_link}\n\n#Finance #Economics #EastAsia #Russia"
 
         response = client.create_tweet(text=tweet_text)
         print(f"✓ Posted to Twitter (ID: {response.data['id']})")
@@ -170,7 +172,7 @@ def post_to_linkedin(summary, post_file, articles):
         utc_now = datetime.now(UTC)
         timestamp_str = utc_now.strftime("%H:%M UTC")
         gh_pages_link = "https://petesumners.github.io/eastbound/"
-        post_text = f"Russian Media Summary ({today} {timestamp_str})\n\n{summary}\n\nSources: {source_list}\n\nRead more: {gh_pages_link}\n\n#RussianMedia #MediaAnalysis #EastboundReports"
+        post_text = f"Eastbound Financial Analysis ({today} {timestamp_str})\n\nEconomic & Financial developments from Russian, Chinese, Japanese, Korean, and North Korean media:\n\n{summary}\n\nSources: {source_list}\n\nRead more: {gh_pages_link}\n\n#Finance #Economics #EastAsia #Russia #Markets #EastboundReports"
 
         payload = {
             'author': user_urn,
@@ -214,7 +216,7 @@ def commit_and_push():
         subprocess.run(['git', 'add', 'src/'], check=True)
 
         # Commit with automated message
-        commit_msg = f"Automated update: {today} Russian media summary"
+        commit_msg = f"Automated update: {today} Eastbound financial analysis"
         subprocess.run(['git', 'commit', '-m', commit_msg], check=True)
 
         # Push to main
@@ -234,7 +236,7 @@ def main():
     start_time = datetime.now()
 
     print("=" * 80)
-    print("RUSSIAN MEDIA AUTOMATION - SCHEDULED RUN")
+    print("EASTBOUND FINANCIAL ANALYSIS - AUTOMATED RUN")
     print("=" * 80)
     print()
 
