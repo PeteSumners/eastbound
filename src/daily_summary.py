@@ -12,6 +12,10 @@ from pathlib import Path
 import sys
 import io
 import requests
+import urllib3
+
+# Suppress SSL warnings for sources with cert issues
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Fix Windows console encoding for emojis
 if sys.platform == 'win32':
@@ -23,7 +27,6 @@ RSS_SOURCES = {
     'TASS': 'https://tass.com/rss/v2.xml',
     'RT': 'https://www.rt.com/rss/',
     'Sputnik': 'https://sputniknews.com/export/rss2/archive/index.xml',
-    'Interfax': 'https://interfax.com/newsfeed.xml',
     'RIAN': 'https://rian.ru/export/rss2/archive/index.xml',
 }
 
@@ -33,11 +36,14 @@ CJK_SOURCES = {
     'People\'s Daily': 'http://en.people.cn/rss/World.xml',
     'CGTN': 'https://www.cgtn.com/subscribe/rss/section/world.xml',
     'NHK': 'https://www3.nhk.or.jp/rss/news/cat6.xml',
-    'Kyodo News': 'https://english.kyodonews.net/rss/news.xml',
+    'Japan Times': 'https://www.japantimes.co.jp/feed/',
     'Yonhap': 'https://en.yna.co.kr/RSS/news.xml',
-    'Korea Herald': 'https://www.koreaherald.com/common/rss_xml.php',
-    'KCNA': 'https://kcnawatch.org/feed/',
+    '38 North': 'https://www.38north.org/feed/',
+    'Daily NK': 'https://www.dailynk.com/english/feed/',
 }
+
+# Feeds that require SSL verification bypass due to cert issues
+SSL_BYPASS_SOURCES = {'RIAN', 'NHK'}
 
 # Combine all sources
 ALL_SOURCES = {**RSS_SOURCES, **CJK_SOURCES}
@@ -60,13 +66,24 @@ def fetch_articles(max_retries=2):
                 else:
                     print(f"  → {source_name}...", end=" ")
 
-                # Parse feed (timeout is handled via requests session if needed)
-                feed = feedparser.parse(feed_url)
+                # For sources with SSL cert issues, fetch with verify=False
+                if source_name in SSL_BYPASS_SOURCES:
+                    response = requests.get(feed_url, timeout=10, verify=False)
+                    response.raise_for_status()
+                    feed = feedparser.parse(response.content)
+                else:
+                    # Parse feed normally
+                    feed = feedparser.parse(feed_url)
 
-                # Check for feed errors
+                # Check for feed errors (but ignore harmless encoding warnings)
                 if hasattr(feed, 'bozo') and feed.bozo:
                     if hasattr(feed, 'bozo_exception'):
-                        raise feed.bozo_exception
+                        exception = feed.bozo_exception
+                        # Ignore CharacterEncodingOverride - it's harmless
+                        if not isinstance(exception, feedparser.CharacterEncodingOverride):
+                            # Check if we still got entries despite the error
+                            if not hasattr(feed, 'entries') or len(feed.entries) == 0:
+                                raise exception
 
                 if not hasattr(feed, 'entries') or len(feed.entries) == 0:
                     raise ValueError("No entries found in feed")
