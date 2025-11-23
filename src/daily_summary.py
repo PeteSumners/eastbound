@@ -216,9 +216,18 @@ def save_data(articles, summary_text):
 
 def create_prompt(articles):
     """Create prompt for Claude Code to summarize the articles with finance/economic focus."""
-    prompt = """Analyze these international media articles (Russian, Chinese, Japanese, Korean, North Korean) and provide a 1-2 sentence summary focused specifically on ECONOMIC and FINANCIAL implications, trends, and developments.
+    prompt = """Analyze these international media articles from ALL regions (Russian, Chinese, Japanese, Korean, North Korean) and provide a 1-2 sentence summary focused specifically on ECONOMIC and FINANCIAL implications, trends, and developments.
 
-Prioritize:
+CRITICAL REQUIREMENT: Your summary MUST include balanced coverage across ALL geographic regions represented in the articles:
+- Russia (TASS, RT, Sputnik, RIAN)
+- China (Xinhua, People's Daily, CGTN)
+- Japan (NHK, Japan Times)
+- Korea (Yonhap)
+- North Korea (38 North, Daily NK)
+
+Do NOT focus exclusively on Europe/Russia/Ukraine. Ensure Asian economic developments (China, Japan, Korea, North Korea) receive EQUAL prominence.
+
+Focus on ECONOMIC and FINANCIAL implications only:
 - Economic policy changes and monetary decisions
 - Trade relationships and sanctions
 - Energy markets and commodities
@@ -226,7 +235,7 @@ Prioritize:
 - Corporate developments and business activity
 - Infrastructure and investment projects
 
-Do not include any preamble, thinking process, or meta-commentary. Start directly with the financially-focused summary.
+Do not include any preamble, thinking process, or meta-commentary. Start directly with the financially-focused summary that represents ALL regions.
 
 Articles:
 

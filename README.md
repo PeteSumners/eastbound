@@ -1,13 +1,23 @@
 # Eastbound Reports
 
-Simple daily Russian media summary generator.
+Daily financial analysis from Eastern international media sources.
 
 ## What It Does
 
-- Fetches recent articles from Russian media sources (TASS, RT, Sputnik, Interfax, RIAN)
-- Uses Claude Code to generate a 1-2 sentence summary
+**Fetches from 12 international sources:**
+- **Russian media:** TASS, RT, Sputnik, RIAN
+- **Chinese media:** Xinhua, People's Daily, CGTN
+- **Japanese media:** NHK, Japan Times
+- **Korean media:** Yonhap
+- **North Korean analysis:** 38 North, Daily NK
+
+Then:
+- Uses Claude Code to generate a finance-focused 1-2 sentence summary
 - Posts to Twitter/X and LinkedIn
+- Commits and pushes to GitHub
 - Saves all data locally
+
+**Focus:** Economic policy, trade, energy markets, commodities, currencies, corporate developments, and infrastructure projects
 
 ## Setup
 
@@ -35,40 +45,44 @@ claude --version
 
 ## Usage
 
-### Run Full Automation
+### Scheduled Automation
+
+**The system runs automatically every day at 10:00 AM (local time)** via Windows Task Scheduler.
+
+- See `SCHEDULE.md` for details on viewing, modifying, or disabling the schedule
+- Logs saved to `LAST_RUN.log` and `logs/automation.log`
+
+### Manual Run
 
 ```bash
-python automate.py
+python src/automate.py
 ```
+
+Or double-click `run_daily.bat`
 
 This will:
-1. Fetch articles from Russian media
-2. Generate summary with Claude Code
+1. Fetch articles from all media sources
+2. Generate finance-focused summary with Claude Code
 3. Save data to `data/` and posts to `posts/`
 4. Post to Twitter and LinkedIn (if credentials provided)
-
-### Manual Mode
-
-```bash
-python daily_summary.py
-```
-
-This creates a prompt file, then you manually run:
-```bash
-claude code --print "$(cat data/prompt.txt)"
-```
+5. Commit and push to GitHub
 
 ## Files
 
-- `daily_summary.py` - Fetches articles and creates prompt
-- `automate.py` - Full automation with social posting
+- `src/daily_summary.py` - Core functions for fetching articles and creating prompts
+- `src/automate.py` - Full automation with Claude Code, social posting, and git
+- `run_daily.bat` - Windows entry point for scheduled task
+- `setup_schedule.ps1` - PowerShell script to configure Task Scheduler
+- `SCHEDULE.md` - Documentation on the automation schedule
 - `requirements.txt` - Python dependencies
 - `.gitignore` - Excludes data/ and .env from git
 
 ## Output
 
-- `data/YYYY-MM-DD-articles.json` - Raw article data + summary
-- `posts/YYYY-MM-DD-summary.md` - Formatted post with sources
+- `data/YYYY-MM-DD-HHMMSS-articles.json` - Raw article data + summary (timestamped)
+- `posts/YYYY-MM-DD-HHMMSS-summary.md` - Formatted financial analysis post with sources
+- `LAST_RUN.log` - Most recent automation run log
+- `logs/automation.log` - Complete history of all runs
 
 ## Social Media
 
