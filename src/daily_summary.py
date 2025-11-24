@@ -207,7 +207,20 @@ def save_data(articles, summary_text):
         f.write(f"**Generated:** {utc_now.strftime('%Y-%m-%d at %H:%M:%S UTC')}\n\n")
         f.write(f"**Coverage:** Russian, Chinese, Japanese, Korean, and North Korean media sources\n\n")
         f.write("## Sources\n\n")
-        for article in articles[:30]:  # Show first 30
+
+        # Show articles from all sources by taking proportional samples
+        # Group articles by source
+        from collections import defaultdict
+        by_source = defaultdict(list)
+        for article in articles:
+            by_source[article['source']].append(article)
+
+        # Take up to 3 articles from each source to ensure geographic diversity
+        displayed_articles = []
+        for source_name in sorted(by_source.keys()):
+            displayed_articles.extend(by_source[source_name][:3])
+
+        for article in displayed_articles:
             f.write(f"- **{article['source']}**: [{article['title']}]({article['link']})\n")
 
     print(f"✓ Saved post to {post_file}")
@@ -216,16 +229,31 @@ def save_data(articles, summary_text):
 
 def create_prompt(articles):
     """Create prompt for Claude Code to summarize the articles with finance/economic focus."""
-    prompt = """Analyze these international media articles from ALL regions (Russian, Chinese, Japanese, Korean, North Korean) and provide a 1-2 sentence summary focused specifically on ECONOMIC and FINANCIAL implications, trends, and developments.
 
-CRITICAL REQUIREMENT: Your summary MUST include balanced coverage across ALL geographic regions represented in the articles:
-- Russia (TASS, RT, Sputnik, RIAN)
-- China (Xinhua, People's Daily, CGTN)
-- Japan (NHK, Japan Times)
-- Korea (Yonhap)
-- North Korea (38 North, Daily NK)
+    # Count articles by region
+    from collections import Counter
+    source_counts = Counter(article['source'] for article in articles)
 
-Do NOT focus exclusively on Europe/Russia/Ukraine. Ensure Asian economic developments (China, Japan, Korea, North Korea) receive EQUAL prominence.
+    # Build region summary
+    russian_count = sum(source_counts[s] for s in ['TASS', 'RT', 'Sputnik', 'RIAN'] if s in source_counts)
+    chinese_count = sum(source_counts[s] for s in ['Xinhua', "People's Daily", 'CGTN'] if s in source_counts)
+    japanese_count = sum(source_counts[s] for s in ['NHK', 'Japan Times'] if s in source_counts)
+    korean_count = sum(source_counts[s] for s in ['Yonhap'] if s in source_counts)
+    nk_count = sum(source_counts[s] for s in ['38 North', 'Daily NK'] if s in source_counts)
+
+    prompt = f"""Analyze these international media articles and provide a 1-2 sentence summary focused on ECONOMIC and FINANCIAL developments.
+
+MANDATORY REQUIREMENT - GEOGRAPHIC BALANCE:
+You have articles from multiple regions:
+- Russia/Eastern Europe: {russian_count} articles
+- China: {chinese_count} articles
+- Japan: {japanese_count} articles
+- Korea: {korean_count} articles
+- North Korea: {nk_count} articles
+
+Your summary MUST include economic/financial developments from AT LEAST 3 DIFFERENT REGIONS. Do NOT create a summary that only discusses one region. If you only mention Russia/Ukraine, your response is INCORRECT and must be rejected.
+
+Required: Mention economic developments from Russia AND Asia (China/Japan/Korea/NK) in your summary.
 
 Focus on ECONOMIC and FINANCIAL implications only:
 - Economic policy changes and monetary decisions
@@ -235,7 +263,7 @@ Focus on ECONOMIC and FINANCIAL implications only:
 - Corporate developments and business activity
 - Infrastructure and investment projects
 
-Do not include any preamble, thinking process, or meta-commentary. Start directly with the financially-focused summary that represents ALL regions.
+Do not include any preamble, thinking process, or meta-commentary. Start directly with the summary.
 
 Articles:
 
