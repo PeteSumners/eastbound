@@ -1,11 +1,11 @@
 # Eastbound Automation Schedule
 
 ## Current Schedule
-**Runs daily at 10:00 AM local time** (displays UTC timestamps in output)
+**Runs weekly on Mondays at 10:00 AM local time** (displays UTC timestamps in output)
 
 ## Task Details
-- **Task Name:** EastboundDailyAnalysis
-- **Script:** run_daily.bat
+- **Task Name:** EastboundWeeklyAnalysis
+- **Script:** run_weekly.bat
 - **Scheduler:** Windows Task Scheduler
 - **Settings:**
   - Runs even on battery power
@@ -19,16 +19,16 @@ Open Task Scheduler:
 taskschd.msc
 ```
 
-Look for **EastboundDailyAnalysis** in the task list.
+Look for **EastboundWeeklyAnalysis** in the task list.
 
 ## Running Manually
 
 To trigger an immediate run:
 ```
-schtasks /run /tn EastboundDailyAnalysis
+schtasks /run /tn EastboundWeeklyAnalysis
 ```
 
-Or simply double-click `run_daily.bat`
+Or simply double-click `run_weekly.bat`
 
 ## Logs
 
@@ -49,10 +49,10 @@ All output is saved to:
 
 To stop automatic runs:
 ```
-schtasks /change /tn EastboundDailyAnalysis /disable
+schtasks /change /tn EastboundWeeklyAnalysis /disable
 ```
 
 To delete the task entirely:
 ```
-schtasks /delete /tn EastboundDailyAnalysis /f
+schtasks /delete /tn EastboundWeeklyAnalysis /f
 ```

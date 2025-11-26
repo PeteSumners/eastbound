@@ -1,15 +1,22 @@
-# Eastbound Daily Analysis - Task Scheduler Setup
-# Schedules the automation to run at 10:00 AM every day (local time)
+# Eastbound Weekly Analysis - Task Scheduler Setup
+# Schedules the automation to run at 10:00 AM every Monday (local time)
 
-$TaskName = "EastboundDailyAnalysis"
-$ScriptPath = Join-Path $PSScriptRoot "run_daily.bat"
+$TaskName = "EastboundWeeklyAnalysis"
+$ScriptPath = Join-Path $PSScriptRoot "run_weekly.bat"
 $WorkingDir = $PSScriptRoot
 
-Write-Host "Setting up daily schedule for Eastbound Financial Analysis..."
+Write-Host "Setting up weekly schedule for Eastbound Financial Analysis..."
 Write-Host "Task Name: $TaskName"
 Write-Host "Script: $ScriptPath"
-Write-Host "Schedule: Daily at 10:00 AM (local time)"
+Write-Host "Schedule: Weekly on Mondays at 10:00 AM (local time)"
 Write-Host ""
+
+# Delete existing daily task if it exists
+$oldTask = Get-ScheduledTask -TaskName "EastboundDailyAnalysis" -ErrorAction SilentlyContinue
+if ($oldTask) {
+    Write-Host "Removing old daily task..."
+    Unregister-ScheduledTask -TaskName "EastboundDailyAnalysis" -Confirm:$false
+}
 
 # Delete existing task if it exists
 $existingTask = Get-ScheduledTask -TaskName $TaskName -ErrorAction SilentlyContinue
@@ -21,8 +28,8 @@ if ($existingTask) {
 # Create the scheduled task action
 $action = New-ScheduledTaskAction -Execute $ScriptPath -WorkingDirectory $WorkingDir
 
-# Create the trigger (daily at 10:00 AM)
-$trigger = New-ScheduledTaskTrigger -Daily -At "10:00AM"
+# Create the trigger (weekly on Monday at 10:00 AM)
+$trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Monday -At "10:00AM"
 
 # Create settings
 $settings = New-ScheduledTaskSettingsSet `
@@ -37,7 +44,7 @@ Register-ScheduledTask `
     -Action $action `
     -Trigger $trigger `
     -Settings $settings `
-    -Description "Eastbound Financial Analysis - Daily automated run at 10:00 AM" `
+    -Description "Eastbound Financial Analysis - Weekly automated run every Monday at 10:00 AM" `
     -User $env:USERNAME
 
 Write-Host ""

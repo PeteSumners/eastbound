@@ -2,18 +2,29 @@
 
 ## Windows Task Scheduler Setup
 
-To run the automation daily at 6:00 AM:
+To run the automation weekly on Mondays at 10:00 AM:
+
+**Option 1: Automated Setup (Recommended)**
+
+Run the PowerShell setup script:
+```powershell
+powershell -ExecutionPolicy Bypass -File setup_schedule.ps1
+```
+
+This will automatically create the scheduled task.
+
+**Option 2: Manual Setup**
 
 1. Open Task Scheduler (search "Task Scheduler" in Start menu)
 
 2. Click "Create Basic Task..."
 
-3. Name: `Eastbound Daily Automation`
+3. Name: `Eastbound Weekly Automation`
 
-4. Trigger: Daily at 6:00 AM
+4. Trigger: Weekly on Mondays at 10:00 AM
 
 5. Action: Start a program
-   - Program/script: `C:\Users\PeteS\Desktop\Eastbound\run_daily.bat`
+   - Program/script: `C:\Users\PeteS\Desktop\Eastbound\run_weekly.bat`
    - Start in: `C:\Users\PeteS\Desktop\Eastbound`
 
 6. Check "Open Properties dialog when I click Finish"
