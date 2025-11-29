@@ -3,7 +3,7 @@
 Eastbound Financial Analysis
 Core functions for fetching articles from Eastern international media sources
 (Russian, Chinese, Japanese, Korean, North Korean) and creating finance-focused summaries.
-Runs weekly on Mondays.
+Runs daily.
 """
 
 import feedparser

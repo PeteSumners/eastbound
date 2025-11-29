@@ -2,7 +2,7 @@
 
 ## Windows Task Scheduler Setup
 
-To run the automation weekly on Mondays at 10:00 AM:
+To run the automation daily at 10:00 AM:
 
 **Option 1: Automated Setup (Recommended)**
 
@@ -19,12 +19,12 @@ This will automatically create the scheduled task.
 
 2. Click "Create Basic Task..."
 
-3. Name: `Eastbound Weekly Automation`
+3. Name: `EastboundDailyAnalysis`
 
-4. Trigger: Weekly on Mondays at 10:00 AM
+4. Trigger: Daily at 10:00 AM
 
 5. Action: Start a program
-   - Program/script: `C:\Users\PeteS\Desktop\Eastbound\run_weekly.bat`
+   - Program/script: `C:\Users\PeteS\Desktop\Eastbound\run_daily.bat`
    - Start in: `C:\Users\PeteS\Desktop\Eastbound`
 
 6. Check "Open Properties dialog when I click Finish"
@@ -41,7 +41,7 @@ To test the automation manually:
 
 ```bash
 cd C:\Users\PeteS\Desktop\Eastbound
-python automate.py
+python src/automate.py
 ```
 
 ## Viewing Logs

@@ -1,6 +1,6 @@
 # Eastbound Reports
 
-Weekly financial analysis from Eastern international media sources.
+Daily financial analysis from Eastern international media sources.
 
 ## What It Does
 
@@ -47,7 +47,7 @@ claude --version
 
 ### Scheduled Automation
 
-**The system runs automatically every Monday at 10:00 AM (local time)** via Windows Task Scheduler.
+**The system runs automatically every day at 10:00 AM (local time)** via Windows Task Scheduler.
 
 - See `SCHEDULE.md` for details on viewing, modifying, or disabling the schedule
 - Logs saved to `LAST_RUN.log` and `logs/automation.log`
@@ -58,21 +58,16 @@ claude --version
 python src/automate.py
 ```
 
-Or double-click `run_weekly.bat`
+Or double-click `run_daily.bat`
 
-This will:
-1. Fetch articles from all media sources
-2. Generate finance-focused summary with Claude Code
-3. Save data to `data/` and posts to `posts/`
-4. Post to Twitter and LinkedIn (if credentials provided)
-5. Commit and push to GitHub
+This fetches articles, generates a finance-focused summary with Claude Code, saves to `data/` and `posts/`, posts to social media (if credentials provided), and pushes to GitHub.
 
 ## Files
 
 - `src/daily_summary.py` - Core functions for fetching articles and creating prompts
 - `src/automate.py` - Full automation with Claude Code, social posting, and git
-- `run_weekly.bat` - Windows entry point for scheduled task (runs Mondays)
-- `run_daily.bat` - Legacy batch file (kept for manual runs)
+- `run_daily.bat` - Windows entry point for scheduled task (runs daily at 10:00 AM)
+- `run_weekly.bat` - Legacy batch file (kept for backwards compatibility)
 - `setup_schedule.ps1` - PowerShell script to configure Task Scheduler
 - `SCHEDULE.md` - Documentation on the automation schedule
 - `requirements.txt` - Python dependencies

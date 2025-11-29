@@ -3,7 +3,7 @@
 Eastbound Financial Analysis Automation
 Fetches articles from Russian, Chinese, Japanese, Korean, and North Korean media sources,
 generates finance-focused summary with Claude Code, and posts to social media.
-Runs weekly on Mondays via Windows Task Scheduler.
+Runs daily via Windows Task Scheduler.
 """
 
 import subprocess
@@ -217,7 +217,7 @@ def commit_and_push():
         subprocess.run(['git', 'add', 'src/'], check=True)
 
         # Commit with automated message
-        commit_msg = f"Automated weekly update: {today} Eastbound financial analysis"
+        commit_msg = f"Automated daily update: {today} Eastbound financial analysis"
         subprocess.run(['git', 'commit', '-m', commit_msg], check=True)
 
         # Push to main
