@@ -229,7 +229,7 @@ def save_data(articles, summary_text):
     return post_file
 
 def create_prompt(articles):
-    """Create prompt for Claude Code to summarize the articles with finance/economic focus."""
+    """Create prompt for Claude Code to generate a newscast script with finance/economic focus."""
 
     # Count articles by region
     from collections import Counter
@@ -242,29 +242,39 @@ def create_prompt(articles):
     korean_count = sum(source_counts[s] for s in ['Yonhap'] if s in source_counts)
     nk_count = sum(source_counts[s] for s in ['38 North', 'Daily NK'] if s in source_counts)
 
-    prompt = f"""Analyze these international media articles and provide a 1-2 sentence summary focused on ECONOMIC and FINANCIAL developments.
+    prompt = f"""You are a news anchor for Eastbound Reports, a daily financial briefing covering Eastern markets.
 
-MANDATORY REQUIREMENT - GEOGRAPHIC BALANCE:
-You have articles from multiple regions:
+Write a SHORT, ENERGETIC newscast script (60-90 seconds when read aloud, approximately 150-200 words).
+
+VOICE STYLE (optimized for engagement):
+- HIGH ENERGY delivery - speak with enthusiasm and conviction
+- VARIED PACING - mix short punchy sentences with longer explanations
+- DYNAMIC TONE - modulate between serious and conversational
+- CLEAR ARTICULATION - professional broadcast quality
+
+SCRIPT STRUCTURE:
+1. OPENING (1 sentence): Energetic greeting with date
+2. TOP STORY (2-3 sentences): Most significant economic development
+3. REGIONAL ROUNDUP (3-4 sentences): Quick hits from other regions
+4. CLOSING (1 sentence): Sign-off with call to action
+
+MANDATORY GEOGRAPHIC BALANCE:
 - Russia/Eastern Europe: {russian_count} articles
 - China: {chinese_count} articles
 - Japan: {japanese_count} articles
 - Korea: {korean_count} articles
 - North Korea: {nk_count} articles
 
-Your summary MUST include economic/financial developments from AT LEAST 3 DIFFERENT REGIONS. Do NOT create a summary that only discusses one region. If you only mention Russia/Ukraine, your response is INCORRECT and must be rejected.
+You MUST cover AT LEAST 3 DIFFERENT REGIONS. Focus only on ECONOMIC/FINANCIAL news:
+- Economic policy, monetary decisions, trade, sanctions
+- Energy markets, commodities, currencies
+- Corporate developments, infrastructure, investments
 
-Required: Mention economic developments from Russia AND Asia (China/Japan/Korea/NK) in your summary.
-
-Focus on ECONOMIC and FINANCIAL implications only:
-- Economic policy changes and monetary decisions
-- Trade relationships and sanctions
-- Energy markets and commodities
-- Currency movements and financial markets
-- Corporate developments and business activity
-- Infrastructure and investment projects
-
-Do not include any preamble, thinking process, or meta-commentary. Start directly with the summary.
+DO NOT include:
+- Stage directions or [brackets]
+- "Um", "uh", or filler words
+- Meta-commentary about the script
+- Non-economic news (military, political drama without economic angle)
 
 Articles:
 
@@ -275,6 +285,6 @@ Articles:
         prompt += f"{article['content']}\n"
         prompt += f"URL: {article['link']}\n\n"
 
-    prompt += "\nProvide ONLY the 1-2 sentence finance-focused summary, nothing else:"
+    prompt += "\nWrite the newscast script now, starting directly with the opening greeting:"
 
     return prompt

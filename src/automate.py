@@ -18,6 +18,13 @@ import platform
 # Import from daily_summary
 from daily_summary import fetch_articles, create_prompt, save_data, get_utc_date
 
+# Import video generation (optional)
+try:
+    from generate_video import generate_newscast_video
+    VIDEO_ENABLED = True
+except ImportError:
+    VIDEO_ENABLED = False
+
 # Load environment variables
 try:
     from dotenv import load_dotenv
@@ -294,6 +301,25 @@ def main():
         log_debug("=== STEP 4: SAVING DATA ===")
         post_file = save_data(articles, summary)
         log_debug(f"✓ Data saved to: {post_file}")
+
+        # 4.5. Generate video (if enabled)
+        video_result = None
+        if VIDEO_ENABLED and os.getenv('HEYGEN_API_KEY'):
+            log_debug("=== STEP 4.5: GENERATING VIDEO ===")
+            try:
+                video_result = generate_newscast_video(summary)
+                if video_result and video_result.get('video_path'):
+                    log_debug(f"✓ Video generated: {video_result['video_path']}")
+                else:
+                    log_debug("⚠️ Video generation incomplete (check API keys)")
+            except Exception as e:
+                log_debug(f"⚠️ Video generation failed: {e}")
+        else:
+            log_debug("=== STEP 4.5: VIDEO GENERATION SKIPPED ===")
+            if not VIDEO_ENABLED:
+                log_debug("   Reason: generate_video module not available")
+            else:
+                log_debug("   Reason: HEYGEN_API_KEY not set")
 
         # 5. Post to social media
         log_debug("=== STEP 5: POSTING TO SOCIAL MEDIA ===")

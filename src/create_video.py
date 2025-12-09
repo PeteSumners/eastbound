@@ -165,9 +165,72 @@ def poll_heygen_status(video_id: str, headers: dict, timeout: int = 600) -> str:
     raise TimeoutError("Video generation timed out")
 
 
+def create_text_frame(text: str, width: int, height: int,
+                      title: str = None, date_str: str = None) -> Image.Image:
+    """Create a single frame with text using PIL (no ImageMagick needed)."""
+    if not PIL_AVAILABLE:
+        raise ImportError("PIL not installed. Run: pip install pillow")
+
+    # Create image
+    img = Image.new('RGB', (width, height), color=BACKGROUND_COLOR)
+    draw = ImageDraw.Draw(img)
+
+    # Try to load fonts
+    try:
+        font_title = ImageFont.truetype("arial.ttf", 60)
+        font_date = ImageFont.truetype("arial.ttf", 30)
+        font_text = ImageFont.truetype("arial.ttf", 36)
+    except:
+        font_title = ImageFont.load_default()
+        font_date = font_title
+        font_text = font_title
+
+    # Draw title
+    if title:
+        draw.text((width // 2, 80), title, fill=ACCENT_COLOR, font=font_title, anchor="mm")
+
+    # Draw date
+    if date_str:
+        draw.text((width // 2, 150), date_str, fill='gray', font=font_date, anchor="mm")
+
+    # Draw main text - word wrap
+    if text:
+        # Simple word wrap
+        words = text.split()
+        lines = []
+        current_line = []
+        max_width = width - 200
+
+        for word in words:
+            test_line = ' '.join(current_line + [word])
+            try:
+                bbox = draw.textbbox((0, 0), test_line, font=font_text)
+                line_width = bbox[2] - bbox[0]
+            except:
+                line_width = len(test_line) * 20  # Fallback
+
+            if line_width < max_width:
+                current_line.append(word)
+            else:
+                if current_line:
+                    lines.append(' '.join(current_line))
+                current_line = [word]
+
+        if current_line:
+            lines.append(' '.join(current_line))
+
+        # Draw lines centered
+        y_start = height // 2 - (len(lines) * 45) // 2
+        for i, line in enumerate(lines):
+            y = y_start + i * 45
+            draw.text((width // 2, y), line, fill='white', font=font_text, anchor="mm")
+
+    return img
+
+
 def create_video_moviepy(text: str, audio_file: str, output_file: str) -> str:
     """
-    Create simple video using MoviePy (free, local).
+    Create simple video using MoviePy + PIL (no ImageMagick needed).
 
     Creates animated text slides with voiceover.
 
@@ -181,19 +244,16 @@ def create_video_moviepy(text: str, audio_file: str, output_file: str) -> str:
     """
     if not MOVIEPY_AVAILABLE:
         raise ImportError("moviepy not installed. Run: pip install moviepy")
+    if not PIL_AVAILABLE:
+        raise ImportError("PIL not installed. Run: pip install pillow")
 
-    print("Creating video with MoviePy...")
+    print("Creating video with MoviePy + PIL...")
+
+    import numpy as np
 
     # Load audio to get duration
     audio = AudioFileClip(audio_file)
     duration = audio.duration
-
-    # Create background
-    background = ColorClip(
-        size=(VIDEO_WIDTH, VIDEO_HEIGHT),
-        color=BACKGROUND_COLOR,
-        duration=duration
-    )
 
     # Split text into slides
     paragraphs = [p.strip() for p in text.split('\n\n') if p.strip()]
@@ -202,49 +262,30 @@ def create_video_moviepy(text: str, audio_file: str, output_file: str) -> str:
 
     # Time per slide
     time_per_slide = duration / len(paragraphs)
-
-    clips = [background]
-
-    # Create title
-    title_clip = TextClip(
-        "EASTBOUND REPORTS",
-        fontsize=60,
-        color=ACCENT_COLOR,
-        font='Arial-Bold',
-        size=(VIDEO_WIDTH - 200, None)
-    ).set_position(('center', 50)).set_duration(duration)
-    clips.append(title_clip)
-
-    # Create date
     date_text = datetime.now().strftime('%B %d, %Y')
-    date_clip = TextClip(
-        date_text,
-        fontsize=30,
-        color='gray',
-        font='Arial',
-        size=(VIDEO_WIDTH - 200, None)
-    ).set_position(('center', 130)).set_duration(duration)
-    clips.append(date_clip)
 
-    # Create text slides
+    # Create frames for each slide
+    clips = []
+
     for i, paragraph in enumerate(paragraphs):
-        start_time = i * time_per_slide
+        # Create PIL image
+        img = create_text_frame(
+            text=paragraph,
+            width=VIDEO_WIDTH,
+            height=VIDEO_HEIGHT,
+            title="EASTBOUND REPORTS",
+            date_str=date_text
+        )
 
-        # Main text
-        text_clip = TextClip(
-            paragraph,
-            fontsize=36,
-            color=TEXT_COLOR,
-            font='Arial',
-            size=(VIDEO_WIDTH - 300, None),
-            method='caption',
-            align='center'
-        ).set_position('center').set_start(start_time).set_duration(time_per_slide)
+        # Convert PIL image to numpy array
+        frame = np.array(img)
 
-        clips.append(text_clip)
+        # Create ImageClip
+        clip = ImageClip(frame).set_duration(time_per_slide)
+        clips.append(clip)
 
-    # Compose all clips
-    video = CompositeVideoClip(clips)
+    # Concatenate all clips
+    video = concatenate_videoclips(clips, method="compose")
     video = video.set_audio(audio)
 
     # Export
