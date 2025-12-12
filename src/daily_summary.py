@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 Eastbound Financial Analysis
-Core functions for fetching articles from Eastern international media sources
-(Russian, Chinese, Japanese, Korean, North Korean) and creating finance-focused summaries.
+Core functions for fetching articles from international media sources
+covering Russia, China, Japan, Korea, Ukraine, Eastern Europe, Middle East,
+South Asia, Southeast Asia, and Central Asia. Creates finance-focused summaries.
 Runs daily.
 """
 
@@ -24,11 +25,50 @@ if sys.platform == 'win32':
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 # Russian media RSS feeds
-RSS_SOURCES = {
+RUSSIAN_SOURCES = {
     'TASS': 'https://tass.com/rss/v2.xml',
     'RT': 'https://www.rt.com/rss/',
     'Sputnik': 'https://sputniknews.com/export/rss2/archive/index.xml',
     'RIAN': 'https://rian.ru/export/rss2/archive/index.xml',
+}
+
+# Ukrainian media RSS feeds
+UKRAINIAN_SOURCES = {
+    'Kyiv Independent': 'https://kyivindependent.com/feed/rss/',
+    'Ukrinform': 'https://www.ukrinform.net/rss/block-lastnews',
+    'Interfax-Ukraine': 'https://en.interfax.com.ua/news/last.rss',
+}
+
+# Eastern European / Post-Soviet media RSS feeds
+EASTERN_EUROPE_SOURCES = {
+    'Belta (Belarus)': 'https://eng.belta.by/rss',
+}
+
+# Middle East media RSS feeds
+MIDDLE_EAST_SOURCES = {
+    'Tehran Times': 'https://www.tehrantimes.com/rss',
+    'Anadolu Agency': 'https://www.aa.com.tr/en/rss/default?cat=economy',
+    'Daily Sabah': 'https://www.dailysabah.com/rssFeed/economy',
+    'Jerusalem Post': 'https://www.jpost.com/rss/rssfeedsheadlines.aspx',
+}
+
+# South Asian media RSS feeds
+SOUTH_ASIA_SOURCES = {
+    'The Hindu': 'https://www.thehindu.com/business/feeder/default.rss',
+    'Times of India': 'https://timesofindia.indiatimes.com/rssfeeds/1898055.cms',
+    'NDTV': 'https://feeds.feedburner.com/ndtvprofit-latest',
+}
+
+# Southeast Asian media RSS feeds
+SOUTHEAST_ASIA_SOURCES = {
+    'VNExpress': 'https://vnexpress.net/rss/tin-moi-nhat.rss',
+    'Bangkok Post': 'https://www.bangkokpost.com/rss/data/business.xml',
+}
+
+# Central Asian media RSS feeds
+CENTRAL_ASIA_SOURCES = {
+    'Gazeta.uz (Uzbekistan)': 'https://www.gazeta.uz/en/rss/',
+    'Asia-Plus (Tajikistan)': 'https://asiaplustj.info/en/rss',
 }
 
 # CJK (Chinese, Japanese, Korean) + North Korea media RSS feeds
@@ -44,10 +84,24 @@ CJK_SOURCES = {
 }
 
 # Feeds that require SSL verification bypass due to cert issues
-SSL_BYPASS_SOURCES = {'RIAN', 'NHK'}
+SSL_BYPASS_SOURCES = {'RIAN', 'NHK', 'Belta (Belarus)', 'Asia-Plus (Tajikistan)', 'VNExpress'}
+
+# User-Agent header to avoid 403 blocks
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+}
 
 # Combine all sources
-ALL_SOURCES = {**RSS_SOURCES, **CJK_SOURCES}
+ALL_SOURCES = {
+    **RUSSIAN_SOURCES,
+    **UKRAINIAN_SOURCES,
+    **EASTERN_EUROPE_SOURCES,
+    **MIDDLE_EAST_SOURCES,
+    **SOUTH_ASIA_SOURCES,
+    **SOUTHEAST_ASIA_SOURCES,
+    **CENTRAL_ASIA_SOURCES,
+    **CJK_SOURCES,
+}
 
 def fetch_articles(max_retries=2):
     """Fetch latest articles (with full content) from all media sources."""
@@ -67,14 +121,13 @@ def fetch_articles(max_retries=2):
                 else:
                     print(f"  → {source_name}...", end=" ")
 
-                # For sources with SSL cert issues, fetch with verify=False
+                # Use requests with User-Agent for all sources to avoid 403 blocks
                 if source_name in SSL_BYPASS_SOURCES:
-                    response = requests.get(feed_url, timeout=10, verify=False)
-                    response.raise_for_status()
-                    feed = feedparser.parse(response.content)
+                    response = requests.get(feed_url, headers=HEADERS, timeout=15, verify=False)
                 else:
-                    # Parse feed normally
-                    feed = feedparser.parse(feed_url)
+                    response = requests.get(feed_url, headers=HEADERS, timeout=15)
+                response.raise_for_status()
+                feed = feedparser.parse(response.content)
 
                 # Check for feed errors (but ignore harmless encoding warnings)
                 if hasattr(feed, 'bozo') and feed.bozo:
@@ -206,7 +259,7 @@ def save_data(articles, summary_text):
         f.write(f"{summary_text}\n\n")
         f.write("---\n\n")
         f.write(f"**Generated:** {utc_now.strftime('%Y-%m-%d at %H:%M:%S UTC')}\n\n")
-        f.write(f"**Coverage:** Russian, Chinese, Japanese, Korean, and North Korean media sources\n\n")
+        f.write(f"**Coverage:** Russia, Ukraine, Eastern Europe, Middle East, South Asia, Southeast Asia, Central Asia, China, Japan, Korea\n\n")
         f.write("## Sources\n\n")
 
         # Show articles from all sources by taking proportional samples
@@ -237,14 +290,20 @@ def create_prompt(articles):
 
     # Build region summary
     russian_count = sum(source_counts[s] for s in ['TASS', 'RT', 'Sputnik', 'RIAN'] if s in source_counts)
+    ukrainian_count = sum(source_counts[s] for s in ['Kyiv Independent', 'Ukrinform', 'Interfax-Ukraine'] if s in source_counts)
+    eastern_europe_count = sum(source_counts[s] for s in ['Belta (Belarus)'] if s in source_counts)
+    middle_east_count = sum(source_counts[s] for s in ['Tehran Times', 'Anadolu Agency', 'Daily Sabah', 'Jerusalem Post'] if s in source_counts)
+    south_asia_count = sum(source_counts[s] for s in ['The Hindu', 'Times of India', 'NDTV'] if s in source_counts)
+    southeast_asia_count = sum(source_counts[s] for s in ['VNExpress', 'Bangkok Post'] if s in source_counts)
+    central_asia_count = sum(source_counts[s] for s in ['Gazeta.uz (Uzbekistan)', 'Asia-Plus (Tajikistan)'] if s in source_counts)
     chinese_count = sum(source_counts[s] for s in ['Xinhua', "People's Daily", 'CGTN'] if s in source_counts)
     japanese_count = sum(source_counts[s] for s in ['NHK', 'Japan Times'] if s in source_counts)
     korean_count = sum(source_counts[s] for s in ['Yonhap'] if s in source_counts)
     nk_count = sum(source_counts[s] for s in ['38 North', 'Daily NK'] if s in source_counts)
 
-    prompt = f"""You are a news anchor for Eastbound Reports, a daily financial briefing covering Eastern markets.
+    prompt = f"""You are a news anchor for Eastbound Reports, a daily financial briefing covering Eastern and emerging markets worldwide.
 
-Write a SHORT, ENERGETIC newscast script (60-90 seconds when read aloud, approximately 150-200 words).
+Write a SHORT, ENERGETIC newscast script (90-120 seconds when read aloud, approximately 200-280 words).
 
 VOICE STYLE (optimized for engagement):
 - HIGH ENERGY delivery - speak with enthusiasm and conviction
@@ -255,17 +314,23 @@ VOICE STYLE (optimized for engagement):
 SCRIPT STRUCTURE:
 1. OPENING (1 sentence): Energetic greeting with date
 2. TOP STORY (2-3 sentences): Most significant economic development
-3. REGIONAL ROUNDUP (3-4 sentences): Quick hits from other regions
+3. REGIONAL ROUNDUP (4-6 sentences): Quick hits from other regions
 4. CLOSING (1 sentence): Sign-off with call to action
 
-MANDATORY GEOGRAPHIC BALANCE:
-- Russia/Eastern Europe: {russian_count} articles
+MANDATORY GEOGRAPHIC BALANCE (articles available):
+- Russia: {russian_count} articles
+- Ukraine: {ukrainian_count} articles
+- Eastern Europe (Belarus): {eastern_europe_count} articles
+- Middle East (Iran, Turkey, Israel): {middle_east_count} articles
+- South Asia (India): {south_asia_count} articles
+- Southeast Asia (Vietnam, Thailand): {southeast_asia_count} articles
+- Central Asia (Uzbekistan, Tajikistan): {central_asia_count} articles
 - China: {chinese_count} articles
 - Japan: {japanese_count} articles
 - Korea: {korean_count} articles
 - North Korea: {nk_count} articles
 
-You MUST cover AT LEAST 3 DIFFERENT REGIONS. Focus only on ECONOMIC/FINANCIAL news:
+You MUST cover AT LEAST 4 DIFFERENT REGIONS. Focus only on ECONOMIC/FINANCIAL news:
 - Economic policy, monetary decisions, trade, sanctions
 - Energy markets, commodities, currencies
 - Corporate developments, infrastructure, investments
